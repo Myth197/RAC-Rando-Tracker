@@ -1,0 +1,590 @@
+
+[
+  {
+    "name":"World",
+    "chest_unopened_img":"images/chest_closed.png",
+    "chest_opened_img":"images/chest_open.png",
+    "children":
+    [
+	//Novalis
+{
+        "name":"Novalis",
+        "access_rules":["Novalis"],
+        "children":[
+                  //Save the Chairman
+                  {
+                    "name":"Save the Chairman",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":280,
+                        "y":180
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Chairman",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Chairman.png",
+                	"chest_opened_img":"images/Chairman.png"
+                      }
+                    ]
+                  },
+                  //Plumber
+                  {
+                    "name":"Explore the waterworks",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":390,
+                        "y":210
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Plumber",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Plumber.png",
+                	"chest_opened_img":"images/Plumber.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Kerwan
+{
+        "name":"Kerwan",
+        "access_rules":["Kerwan"],
+        "children":[
+                  //Al's Shack
+                  {
+                    "name":"Al's Roboshack",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":860,
+                        "y":290
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Al",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Al.png",
+                	"chest_opened_img":"images/Al.png"
+                      }
+                    ]
+                  },
+                  //Helga
+                  {
+                    "name":"Fitness Course",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":640,
+                        "y":480
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Helga",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Helga.png",
+                	"chest_opened_img":"images/Helga.png"
+                      }
+                    ]
+                  },
+                  //Train
+                  {
+                    "name":"Ride the Robot Train",
+                    "access_rules":["Heli","Thruster","PDA,[Heli]","PDA,[Thruster]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":840,
+                        "y":440
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Train",
+                        "item_count":1
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Aridia
+{
+        "name":"Aridia",
+        "access_rules":["Aridia"],
+        "children":[
+                  //Skid
+                  {
+                    "name":"Help Skid get to his ship",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1430,
+                        "y":350
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Skid",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Skid.png",
+                	"chest_opened_img":"images/Skid.png"
+                      }
+                    ]
+                  },
+                  //Trespasser
+                  {
+                    "name":"Use your Swingshot",
+                    "access_rules":["Thruster,[Swingshot]","Heli,[Swingshot]","PDA,[Swingshot]","Swingshot"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1145,
+                        "y":110
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Trespasser",
+                        "item_count":1
+                      }
+                    ]
+                  },
+                  //Agent
+                  {
+                    "name":"Bring Prize to agent",
+                    "access_rules":["Zoom"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1430,
+                        "y":110
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Agent",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Agent.png",
+                	"chest_opened_img":"images/Agent.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Eudora
+{
+        "name":"Eudora",
+        "access_rules":["Eudora"],
+        "children":[
+                  //Confront Robot Lieutenant
+                  {
+                    "name":"Confront Robot Lieutenant",
+                    "access_rules":["Tres,Swingshot","Heli,[Tres],[Swingshot]","Thruster,[Tres],[Swingshot]","PDA,[Tres],[Swingshot]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1850,
+                        "y":350
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Robot Lieutenant",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Lieutenant.png",
+                	"chest_opened_img":"images/Lieutenant.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Blarg
+{
+        "name":"Blarg Station",
+        "access_rules":["Blarg"],
+        "children":[
+                  //Clank section
+                  {
+                    "name":"Journey outside the airlock",
+                    "access_rules":["Tres","Heli,[Tres]","Thruster,[Tres]","PDA,[Tres]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2220,
+                        "y":350
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Outside",
+                        "item_count":1
+                      }
+                    ]
+                  },
+                  //Warship
+                  {
+                    "name":"Destroy the warship",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2580,
+                        "y":380
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Warship",
+                        "item_count":1
+                      }
+                    ]
+                  },
+                  //Agent
+                  {
+                    "name":"Explore the space station",
+                    "access_rules":["Swingshot","PDA,[Swingshot]","Heli,[Swingshot]","Thruster,[Swingshot]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2160,
+                        "y":185
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Fred",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Fred.png",
+                	"chest_opened_img":"images/Fred.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Blackwater
+{
+        "name":"Rilgar",
+        "access_rules":["Rilgar"],
+        "children":[
+                  //Sewers
+                  {
+                    "name":"Locate Captain Qwark",
+                    "access_rules":["Hydrod,Swingshot","Heli,[Hydrod],[Swingshot]","Thruster,[Hydrod],[Swingshot]","PDA,[Hydrod],[Swingshot]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2760,
+                        "y":335
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Bouncer",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Bouncer.png",
+                	"chest_opened_img":"images/Bouncer.png"
+                      }
+                    ]
+                  },
+                  //Hoverboard Race
+                  {
+                    "name":"Win the Hoverboard Race",
+                    "access_rules":["Hover,Heli","Hover,Thruster","Hover,[Heli]","Hover,[Thruster]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2845,
+                        "y":290
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Hoverboard Girl",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Hoverboard_Girl.png",
+                	"chest_opened_img":"images/Hoverboard_Girl.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Umbris
+{
+        "name":"Umbris",
+        "access_rules":["Umbris"],
+        "children":[
+                  //Snagglebeast
+                  {
+                    "name":"Destroy the Snagglebeast",
+                    "access_rules":["Hydrod,Swingshot","Heli,Swingshot,[Hydrod]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":220,
+                        "y":560
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Snagglebeast",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Snaggle.png",
+                	"chest_opened_img":"images/Snaggle.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+	//Batalia
+{
+        "name":"Batalia",
+        "access_rules":["Batalia"],
+        "children":[
+                  //Commando
+                  {
+                    "name":"Meet the Commando at city",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":775,
+                        "y":610
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Commando",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Commando.png",
+                	"chest_opened_img":"images/Commando.png"
+                      }
+                    ]
+                  },
+                  //Grind Rail
+                  {
+                    "name":"Ride the grind rail",
+                    "access_rules":["Grind","Heli,[Grind]","Thruster,[Grind]","PDA,[Grind]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":850,
+                        "y":900
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Deserter",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Deserter.png",
+                	"chest_opened_img":"images/Deserter.png"
+                      }
+                    ]
+                  },
+                  //Turret
+                  {
+                    "name":"Destroy the bombers",
+                    "access_rules":["Magne","Thruster,[Magne]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":570,
+                        "y":590
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Plumber",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Plumber.png",
+                	"chest_opened_img":"images/Plumber.png"
+                      }
+                    ]
+                  },
+    		]
+	},
+	//Orxon
+{
+        "name":"Orxon",
+        "access_rules":["Orxon"],
+        "children":[
+                  //Clank 1st item
+                  {
+                    "name":"Search the labs",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1250,
+                        "y":900
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Magneboots",
+                        "item_count":1
+                      }
+                    ]
+                  },
+                  //Clank 2nd item
+                  {
+                    "name":"Traverse the wilderness",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1270,
+                        "y":850
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Infobot",
+                        "item_count":1
+                      }
+                    ]
+                  },
+		// Nanotech Vendor
+                  {
+                    "name":"Nanotech Vendor",
+                    "access_rules":["O2,Thruster","O2,Heli"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1120,
+                        "y":850
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Buy Nanotech",
+                        "item_count":2
+                      }
+                    ]
+                  },
+                  //Infobot chase
+                  {
+                    "name":"Explore as Ratchet",
+                    "access_rules":["O2,Thruster,[Swingshot],[Magne]","O2,Thruster,Swingshot,Magne","O2,PDA,[Thruster],[Swingshot],[Magne]"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1385,
+                        "y":760
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Infobot",
+                        "item_count":1
+                      }
+                    ]
+                  },
+    		]
+	},
+	//Gaspar
+{
+        "name":"Gaspar",
+        "access_rules":["Gaspar"],
+        "children":[
+                  //Pilots Helmet
+                  {
+                    "name":"Find the Pilot's Helmet",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1940,
+                        "y":715
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Pilot's Helmet",
+                        "item_count":1
+                      }
+                    ]
+                  },
+    		]
+	},
+	//Poki
+{
+        "name":"Pokitaru",
+        "access_rules":["Poki"],
+        "children":[
+                  //Bob
+                  {
+                    "name":"Buy Thruster Pack",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2460,
+                        "y":660
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Bob",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Bob.png",
+                	"chest_opened_img":"images/Bob.png"
+                      }
+                    ]
+                  },
+                  //Shoot planes
+                  {
+                    "name":"Destroy the blarg ships",
+                    "access_rules":["Pilot"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2520,
+                        "y":660
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Guy",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Guy.png",
+                	"chest_opened_img":"images/Guy.png"
+                      }
+                    ]
+                  },
+                  //Sewers
+                  {
+                    "name":"Give Raritanium",
+                    "access_rules":["Tres,Raritanium"],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2380,
+                        "y":1000
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Fred",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Fred_beach.png",
+                	"chest_opened_img":"images/Fred_beach.png"
+                      }
+                    ]
+                  },
+    		]
+      },
+    ]
+  }
+]

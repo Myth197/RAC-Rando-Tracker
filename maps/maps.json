@@ -1,0 +1,8 @@
+﻿[
+  {
+    "name": "map",
+    "img": "images/map.png",
+    "map_locations":5,
+    "location_size": 50
+  }
+]

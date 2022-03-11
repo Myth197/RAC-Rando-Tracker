@@ -1,0 +1,66 @@
+items = {
+    {id=2, name="Heli-pack", req_items={} },
+    {id=3, name="Thruster-pack", req_items={} },
+    {id=4, name="Hydro-pack", req_items={{0x16}, {2}} },
+    {id=5, name="Sonic Summoner", req_items={{0x30}} },
+    {id=6, name="O2 Mask", req_items={{7}} },
+    {id=7, name="Pilot's Helmet", req_items={} },
+    {id=0xc, name="Swingshot", req_items={} },
+    {id=0x16, name="Hydrodisplacer", req_items={{0x1a}} },
+    {id=0x1a, name="Trespasser", req_items={{0xc}} },
+    {id=0x1b, name="MetalDetector", req_items={{0x1c}} },
+    {id=0x1c, name="Magneboots", req_items={} },
+    {id=0x1d, name="Grindboots", req_items={{0xc}} },
+    {id=0x1e, name="Hoverboard", req_items={} },
+    {id=0x1f, name="Hologuise", req_items={{0x1e}} },
+    {id=0x20, name="PDA", req_items={{0x1c}} },
+    {id=0x21, name="Map-O-Matic", req_items={{0x1d}} },
+    {id=0x22, name="Bolt Grabber", req_items={{4, 6}} },
+    {id=0x23, name="Persuader", req_items={{0x1a, 0x31, 0x16}} },
+    {id=0x30, name="Zoomerator", req_items={{0x1e,2},{0x1e,3}} },
+    {id=0x31, name="Raritanium", req_items={{0xc}, {3}} },
+    {id=0x32, name="Codebot", req_items={{0xc}, {3}} },
+    {id=0x34, name="Premium Nanotech", req_items={{6, 2}, {6, 3}} },
+    {id=0x35, name="Ultra Nanotech", req_items={{6, 3, 0x34}, {6, 2, 0x34}} },
+}
+
+infobots = {
+    {id=1, req_items={} },	-- Novalis "infobot" on Veldin1
+    {id=2, req_items={} },	-- Aridia infobot on Novalis
+    {id=3, req_items={} },	-- Kerwan infobot on Novalis 
+    {id=4, req_items={{2}, {3}} },	-- Eudora infobot on Kerwan
+    {id=5, req_items={} },	-- Rilgar infobot on Blarg
+    {id=6, req_items={{0x1a,0xc}}},	-- Blarg infobot on Eudora
+    {id=7, req_items={{0xc,0x16}}},	-- Umbris infobot on Rilgar
+    {id=8, req_items={{0xc,0x16}}},	-- Batalia infobot on Umbris
+    {id=9, req_items={{0x1d}} },	-- Gaspar infobot on Batalia
+    {id=10, req_items={} },	-- Orxon infobot on Batalia
+    {id=0xb, req_items={} },	-- Pokitaru infobot on Orxon
+    {id=0xc, req_items={{6,0xc,0x1c, 3}} },        -- Hoven infobot on Orxon
+    {id=0xd, req_items={} },                    -- Gemlik infobot on Hoven
+    {id=0xe, req_items={{0xc, 0x1c, 0x1a}, {3}} }, -- Oltanis infobot on Gemlik
+    {id=0xf, req_items={{0x1c}} },                -- Quartu infobot on Oltanis
+    {id=0x10, req_items={{2}, {3}, {0xc}} },    -- KaleboIII infobot on Quartu
+    {id=0x11, req_items={{3, 0xc}} },            -- Fleet infobot on Quartu
+    {id=0x12, req_items={{3}, {0x1c}, {3}} }    -- Veldin2 infobot on Fleet
+}
+
+planets = {
+    {id=1, name="Novalis", infobots={2,3}, items={}},
+    {id=2, name="Aridia", infobots={},items={0x1e, 0x1a, 5}},
+    {id=3, name="Kerwan", infobots={4}, items={0xc, 2}},
+    {id=4, name="Eudora", infobots={6}, items={}},
+    {id=5, name="Rilgar", infobots={7}, items={0x30}},
+    {id=6, name="Blarg", infobots={5}, items={0x1d, 0x16}},
+    {id=7, name="Umbris", infobots={8}, items={}},
+    {id=8, name="Batalia", infobots={9, 10}, items={0x1b}},
+    {id=9, name="Gaspar", infobots={}, items={7}},
+    {id=10,name="Orxon",  infobots={0xb, 0xc}, items={0x34, 0x35, 0x1c}},
+    {id=11,name="Pokitaru",  infobots={}, items={3, 6, 0x23}},
+    {id=12,name="Hoven",  infobots={0xd}, items={0x31, 4}},
+    {id=13,name="Gemlik",  infobots={0xe}, items={}},
+    {id=14,name="Oltanis",  infobots={0xf}, items={0x20}},
+    {id=15,name="Quartu",  infobots={0x10, 0x11}, items={0x22}},
+    {id=16,name="KaleboIII",  infobots={}, items={0x1f, 0x21}},
+    {id=17,name="Fleet",  infobots={0x12}, items={0x32}}
+}
