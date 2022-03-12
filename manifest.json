@@ -5,4 +5,12 @@
   "package_version": "0.0.0.1",
   "package_uid": "r&crando_itemtracker_myth",
   "author": "Myth197 & DukeDraon28",
+  "variants": {
+    "Standard": {
+      "display_name": "Standard Map Tracker"
+    },
+    "items_only": {
+      "display_name": "Item Only Tracker"
+    }
+  }
 }

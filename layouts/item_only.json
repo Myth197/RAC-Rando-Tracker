@@ -1,0 +1,56 @@
+{
+   "shared_item_grid": {
+       "type": "array",
+       "orientation": "horizontal",
+       "content": [
+ 		{
+       		"type": "itemgrid",
+        	"h_alignment": "center",
+		"item_size": 45,
+        	"item_margin": "3,3",
+        	"rows": [             
+	   	["Tres",	"Hydrod",		"Swingshot"	],
+                ["PDA",		"Metal",		"Hologuise"	],
+            	["Heli",	"Thruster",		"Hydro"		],
+            	["O2",		"Sonic",		"Pilot"		],
+           	["",		"grind",	"magne",	""      ],
+                ["Hover",	"Persuader",		"Bolt_Grabber"	],
+           	["Nanotech1",	"Nanotech2",		"Map-o-Matic"	],
+           	["Zoom",	"Raritanium",		"Codebot"	],
+	]
+      },
+	{
+		"type": "itemgrid",
+       "v_alignment": "top",
+       "margin": "2,0,2,0",
+		"item_size": 64,
+       "item_margin": "3,3",
+       "rows": [
+           [ "Novalis", "Kerwan", "Aridia"],
+           [ "Eudora",  "Blarg",  "Rilgar"],
+	   [ "Umbris", "Batalia", "Orxon" ],
+	   [ "Gaspar", "Poki",    "Hoven" ],
+	   [ "Gemlik", "Oltanis", "Quartu"],
+	   [ "Kalebo", "Fleet",   "Veldin"]
+        ]
+	}
+    ]
+ },
+ "tracker_capture_item": {
+        "type": "container",
+        "content": {
+            "type": "layout",
+            "key": "shared_item_grid"
+        }
+    },
+    "tracker_default": {
+        "type": "container",
+        "background": "#443c3c",
+        "content": {
+            "dropshadow": true,
+            "margin": 5,
+            "type": "layout",
+            "key": "shared_item_grid"
+        }
+    }
+}
