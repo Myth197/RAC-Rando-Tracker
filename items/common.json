@@ -127,14 +127,14 @@
   {
     "name": "Premium Nanotech",
     "type": "toggle",
-    "img": "images/Nanotech1.PNG",
+    "img": "images/Nanotech1.png",
     "codes": "Nanotech1"
   },
   //Nanotech2
   {
     "name": "Ultra Nanotech",
     "type": "toggle",
-    "img": "images/Nanotech2.PNG",
+    "img": "images/Nanotech2.png",
     "codes": "Nanotech2"
   },
   //Map-o-Matic
@@ -155,7 +155,7 @@
   {
     "name": "Raritanium",
     "type": "toggle",
-    "img": "images/Raritanium.PNG",
+    "img": "images/Raritanium.png",
     "codes": "Raritanium"
   },
   //Codebot
