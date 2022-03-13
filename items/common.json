@@ -4,42 +4,42 @@
   {
     "name": "Trespasser",
     "type": "toggle",
-    "img": "images/Trespasser.WEBP",
+    "img": "images/Trespasser.png",
     "codes": "Tres"
   },
   //Hydrodisplacer
   {
     "name": "Hydrodisplacer",
     "type": "toggle",
-    "img": "images/Hydrodisplacer.WEBP",
+    "img": "images/Hydrodisplacer.png",
     "codes": "Hydrod"
   },
   //Swingshot
   {
     "name": "Swingshot",
     "type": "toggle",
-    "img": "images/Swingshot.WEBP",
+    "img": "images/Swingshot.png",
     "codes": "Swingshot"
   },
   //PDA
   {
     "name": "PDA",
     "type": "toggle",
-    "img": "images/PDA.WEBP",
+    "img": "images/PDA.png",
     "codes": "PDA"
   },
   //Metal_Detector
   {
     "name": "Metal Detector",
     "type": "toggle",
-    "img": "images/Metal_Detector.WEBP",
+    "img": "images/Metal_Detector.png",
     "codes": "Metal"
   },
   //Hologuise
   {
     "name": "Hologuise",
     "type": "toggle",
-    "img": "images/Hologuise.WEBP",
+    "img": "images/Hologuise.png",
     "codes": "Hologuise"
   },
 	//Packs
@@ -47,21 +47,21 @@
   {
     "name": "Heli-pack",
     "type": "toggle",
-    "img": "images/Heli.WEBP",
+    "img": "images/Heli.png",
     "codes": "Heli"
   },
   //Thruster
   {
     "name": "Thruster-pack",
     "type": "toggle",
-    "img": "images/Thruster.WEBP",
+    "img": "images/Thruster.png",
     "codes": "Thruster"
   },
   //Hydro
   {
     "name": "Hydro-pack",
     "type": "toggle",
-    "img": "images/Hydro.WEBP",
+    "img": "images/Hydro.png",
     "codes": "Hydro"
   },
 	//Helmets
@@ -69,21 +69,21 @@
   {
     "name": "O2 Mask",
     "type": "toggle",
-    "img": "images/O2.WEBP",
+    "img": "images/O2.png",
     "codes": "O2"
   },
   //Sonic
   {
     "name": "Sonic Summoner",
     "type": "toggle",
-    "img": "images/Sonic.WEBP",
+    "img": "images/Sonic.png",
     "codes": "Sonic"
   },
   //Pilot
   {
     "name": "Pilot Helmet",
     "type": "toggle",
-    "img": "images/Pilot.WEBP",
+    "img": "images/Pilot.png",
     "codes": "Pilot"
   },
 	//Boots
@@ -91,14 +91,14 @@
   {
     "name": "Grind Boots",
     "type": "toggle",
-    "img": "images/Grind.WEBP",
+    "img": "images/Grind.png",
     "codes": "Grind"
   },
   //Magneboots
   {
     "name": "Magneboots",
     "type": "toggle",
-    "img": "images/Magneboots.WEBP",
+    "img": "images/Magneboots.png",
     "codes": "Magne"
   },
 	//Items
@@ -106,21 +106,21 @@
   {
     "name": "Hoverboard",
     "type": "toggle",
-    "img": "images/Hoverboard.WEBP",
+    "img": "images/Hoverboard.png",
     "codes": "Hover"
   },
   //Persuader
   {
     "name": "Persuader",
     "type": "toggle",
-    "img": "images/Persuader.WEBP",
+    "img": "images/Persuader.png",
     "codes": "Persuader"
   },
   //Bolt_Grabber
   {
     "name": "Bolt Grabber",
     "type": "toggle",
-    "img": "images/Bolt_Grabber.WEBP",
+    "img": "images/Bolt_Grabber.png",
     "codes": "Bolt_Grabber"
   },
   //Nanotech1
@@ -141,14 +141,14 @@
   {
     "name": "Map-o-Matic",
     "type": "toggle",
-    "img": "images/Map-o-Matic.WEBP",
+    "img": "images/Map-o-Matic.png",
     "codes": "Map-o-Matic"
   },
   //Zoomerator
   {
     "name": "Zoomerator",
     "type": "toggle",
-    "img": "images/Zoomerator.WEBP",
+    "img": "images/Zoomerator.png",
     "codes": "Zoom"
   },
   //Raritanium
@@ -162,7 +162,7 @@
   {
     "name": "Codebot",
     "type": "toggle",
-    "img": "images/Codebot.WEBP",
+    "img": "images/Codebot.png",
     "codes": "Codebot"
   },
 	//Info Bots
