@@ -1,5 +1,5 @@
 
-Myth197's Ratchet and Clank Randomizer Tracker
+Myth197 and DukeDragon28's Ratchet and Clank Randomizer Tracker
 
 ----- INSTALATION--------
 To use it, place the files in C:\Users__\Documents\EmoTracker\packs
