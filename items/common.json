@@ -176,6 +176,7 @@
       {
         "img": "images/Novalis.png",
         "inherit_codes": false,
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -194,6 +195,7 @@
       {
         "img": "images/Kerwan.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -212,6 +214,7 @@
       {
         "img": "images/Aridia.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -230,6 +233,7 @@
       {
         "img": "images/Eudora.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -248,6 +252,7 @@
       {
         "img": "images/Blarg.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -266,6 +271,7 @@
       {
         "img": "images/Rilgar.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -284,6 +290,7 @@
       {
         "img": "images/Umbris.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -302,6 +309,7 @@
       {
         "img": "images/Batalia.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -320,6 +328,7 @@
       {
         "img": "images/Orxon.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -338,6 +347,7 @@
       {
         "img": "images/Gaspar.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -356,6 +366,7 @@
       {
         "img": "images/Poki.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -374,6 +385,7 @@
       {
         "img": "images/Hoven.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -392,6 +404,7 @@
       {
         "img": "images/Gemlik.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -410,6 +423,7 @@
       {
         "img": "images/Oltanis.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -428,6 +442,7 @@
       {
         "img": "images/Quartu.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -446,11 +461,12 @@
       {
         "img": "images/Kalebo III.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Kalebo III_i.png",
-        "codes":"Kalebo III"
+        "codes":"Kalebo"
       }
     ]
   },
@@ -464,6 +480,7 @@
       {
         "img": "images/Fleet.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
@@ -482,6 +499,7 @@
       {
         "img": "images/Veldin.png",
         "inherit_codes": false,
+	"img_mods": "@disabled",
         "codes": ""
       },
       {
