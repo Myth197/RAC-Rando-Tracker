@@ -470,6 +470,7 @@
 		// Nanotech Vendor
                   {
                     "name":"Nanotech Vendor",
+                    "clear_as_group": false,
                     "access_rules":["O2,Thruster","O2,Heli","PDA,O2,[Heli]","PDA,O2,[Thruster]"],
                     "map_locations":[
                       {
@@ -611,7 +612,7 @@
                   //planetbuster
                   {
                     "name":"Destory the Planetbuster",
-                    "access_rules":[""],
+                    "access_rules":["[Pyro]","[Blaster]","[Suck]","[Dev]","[Vis]","[Tesla]","[RYNO]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -631,7 +632,7 @@
                   //Shoot planes
                   {
                     "name":"Buy the Hydro-pack",
-                    "access_rules":["Hydrod"],
+                    "access_rules":["Hydrod","PDA,[Hydrod]","Thruster,[Hydrod]","Heli,[Hydrod]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -651,7 +652,7 @@
                   //Sewers
                   {
                     "name":"Explore the Icy Wastes",
-                    "access_rules":["Swingshot,Heli","Swingshot,Thruster","Swingshot,[Heli]","Swingshot,[Thruster]","Thruster,[Swingshot]","Heli,[Swingshot]"],
+                    "access_rules":["Swingshot,Heli","Swingshot,Thruster","Swingshot,[Heli]","Swingshot,[Thruster]","Thruster,[Swingshot]","Heli,[Swingshot]","PDA,[Swingshot],[Heli]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -678,7 +679,7 @@
                   //qwark
                   {
                     "name":"Explore Base",
-                    "access_rules":["Tres,Magne,Swingshot,Batalia","Tres,Magne,Swingshot,Orxon","Thruster,[Magne],[Tres],[Swingshot],[Batalia]","Thruster,[Magne],[Tres],[Swingshot],[Orxon]","Heli,[Magne],[Tres],[Swingshot],[Batalia]","Heli,[Magne],[Tres],[Swingshot],[Orxon]","PDA,[Magne],[Tres],[Swingshot],[Batalia]","PDA,[Magne],[Tres],[Swingshot],[Orxon]"],
+                    "access_rules":["Tres,Magne,Swingshot,Dev","Tres,Magne,Swingshot,Vis","Thruster,[Magne],[Tres],[Swingshot],[Dev]","Thruster,[Magne],[Tres],[Swingshot],[Vis]","Heli,[Magne],[Tres],[Swingshot],[Dev]","Heli,[Magne],[Tres],[Swingshot],[Vis]","PDA,[Magne],[Tres],[Swingshot],[Dev]","PDA,[Magne],[Tres],[Swingshot],[Vis]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -752,7 +753,7 @@
                   //Giant Clank
                   {
                     "name":"Destroy the Ultra-Mechs",
-                    "access_rules":["Swingshot","Heli,[Swingshot]","Thruster,[Swingshot]"],
+                    "access_rules":["Swingshot","Heli,[Swingshot]","Thruster,[Swingshot]","PDA,[Swingshot]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -839,7 +840,7 @@
                   //War path
                   {
                     "name":"Win Hoverboard Race",
-                    "access_rules":["Heli,Swingshot,Grind,Hover","Thruster,Swingshot,Grind,Hover","PDA,Hover,[Swingshot],[Grind],[Heli]","Orxon,Hover,[Swingshot],[Grind],[Heli]","Heli,Hover,Swingshot,[Grind]","Thruster,Hover,Swingshot,[Grind]"],
+                    "access_rules":["Bomb,Heli,Swingshot,Grind,Hover","Bomb,Thruster,Swingshot,Grind,Hover","PDA,Hover,[Swingshot],[Grind],[Heli],[Bomb]","Vis,Hover,[Swingshot],[Grind],[Heli],[Bomb]","Heli,Hover,Swingshot,[Grind],[Bomb]","Thruster,Hover,Swingshot,[Grind],[Bomb]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -886,7 +887,7 @@
                   //War path
                   {
                     "name":"Fight through the ships",
-                    "access_rules":["Hologuise,Magne","PDA,[Hologuise],[Magne]","Thruster,[Hologuise],[Magne]","Magne,[Hologuise]"],
+                    "access_rules":["Bomb,Hologuise,Magne","PDA,[Bomb],[Hologuise],[Magne]","Thruster,Bomb,[Hologuise],[Magne]","Bomb,Magne,[Hologuise]"],
                     "map_locations":[
                       {
                         "map":"map",

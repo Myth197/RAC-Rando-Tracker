@@ -8,30 +8,26 @@
         	"h_alignment": "center",
 		"item_size": 40,
         	"item_margin": "3,3",
-        	"rows": [             
-	   	["Tres",	"Hydrod",		"Swingshot"	],
-                ["PDA",		"Metal",		"Hologuise"	],
-            	["Heli",	"Thruster",		"Hydro"		],
-            	["O2",		"Sonic",		"Pilot"		],
-           	["",		"grind",	"magne",	""      ],
-                ["Hover",	"Persuader",		"Bolt_Grabber"	],
-           	["Nanotech1",	"Nanotech2",		"Map-o-Matic"	],
-           	["Zoom",	"Raritanium",		"Codebot"	],
+        	"rows": [
+		["Bomb",	"Pyro",		"Blaster",	"Doom",		"Mine"	],
+		["Taunt",	"Suck",		"Dev",		"Wallop",	"Visi"	],
+		["Decoy",	"Drone",	"Tesla",	"Morph",	"RYNO"	],
+	   	["Tres",	"Hydrod",	"Swingshot",	"Hover",	"Persuader",	"Bolt_Grabber"	],
+                ["PDA",		"Metal",	"Hologuise",	"Nanotech1",	"Nanotech2",	"Map-o-Matic"	],
+            	["Heli",	"Thruster",	"Hydro",	"Zoom",		"Raritanium",	"Codebot"	],
+            	["O2",		"Sonic",	"Pilot",	"Grind",	"Magne",	""		],
 	]
       },
 	{
 		"type": "itemgrid",
-       "v_alignment": "top",
-       "margin": "2,0,2,0",
-		"item_size": 60,
-       "item_margin": "3,3",
-       "rows": [
-           [ "Novalis", "Kerwan", "Aridia"],
-           [ "Eudora",  "Blarg",  "Rilgar"],
-	   [ "Umbris", "Batalia", "Orxon" ],
-	   [ "Gaspar", "Poki",    "Hoven" ],
-	   [ "Gemlik", "Oltanis", "Quartu"],
-	   [ "Kalebo", "Fleet",   "Veldin"]
+       	"v_alignment": "top",
+       	"margin": "2,0,2,0",
+	"item_size": 60,
+       	"item_margin": "3,3",
+       	"rows": [
+           [ "NovalisName", "KerwanName", "AridiaName",  "EudoraName",  "BlargName",  "RilgarName"],
+	   [ "UmbrisName", "BataliaName", "OrxonName",  "GasparName", "PokiName",    "HovenName" ],
+	   [ "GemlikName", "OltanisName", "QuartuName", "KaleboName", "FleetName",   "VeldinName"],
         ]
 	}
     ]

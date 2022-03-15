@@ -1,5 +1,5 @@
 [
-	//Gadgets
+							//Gadgets
   //Tresspasser
   {
     "name": "Trespasser",
@@ -165,12 +165,13 @@
     "img": "images/Codebot.png",
     "codes": "Codebot"
   },
-	//Info Bots
+						//Info Bots
   //Novalis
   {
     "name": "Novalis",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -185,11 +186,19 @@
       }
     ]
   },
+ {
+   "name": "Novalis",
+   "type": "toggle_badged",
+   "base_item": "Novalis",
+   "img": "images/Overlay_Novalis.png",
+   "codes": "NovalisName"
+ },
   //Kerwan
   {
     "name": "Kerwan",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -204,11 +213,19 @@
       }
     ]
   },
+ {
+   "name": "Kerwan",
+   "type": "toggle_badged",
+   "base_item": "Kerwan",
+   "img": "images/Overlay_Kerwan.png",
+   "codes": "KerwanName"
+ },
   //Aridia
   {
     "name": "Aridia",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -223,11 +240,19 @@
       }
     ]
   },
+ {
+   "name": "Aridia",
+   "type": "toggle_badged",
+   "base_item": "Aridia",
+   "img": "images/Overlay_Aridia.png",
+   "codes": "AridiaName"
+ },
   //Eudora
   {
     "name": "Eudora",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -242,11 +267,19 @@
       }
     ]
   },
+ {
+   "name": "Eudora",
+   "type": "toggle_badged",
+   "base_item": "Eudora",
+   "img": "images/Overlay_Eudora.png",
+   "codes": "EudoraName"
+ },
   //Blarg
   {
     "name": "Blarg Station",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -261,12 +294,20 @@
       }
     ]
   },
+ {
+   "name": "Blarg",
+   "type": "toggle_badged",
+   "base_item": "Blarg",
+   "img": "images/Overlay_Blarg.png",
+   "codes": "BlargName"
+ },
   //Rilgar
   {
     "name": "Rilgar",
     "type": "progressive",
     "allow_disabled": false,
     "initial_stage_idx": 0,
+    "loop": true,
     "stages":[
       {
         "img": "images/Rilgar.png",
@@ -280,11 +321,19 @@
       }
     ]
   },
+ {
+   "name": "Rilgar",
+   "type": "toggle_badged",
+   "base_item": "Rilgar",
+   "img": "images/Overlay_Rilgar.png",
+   "codes": "RilgarName"
+ },
   //Umbris
   {
     "name": "Umbris",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -299,10 +348,18 @@
       }
     ]
   },
+ {
+   "name": "Umbris",
+   "type": "toggle_badged",
+   "base_item": "Umbris",
+   "img": "images/Overlay_Umbris.png",
+   "codes": "UmbrisName"
+ },
   //Batalia
   {
     "name": "Batalia",
     "type": "progressive",
+    "loop": true,
     "allow_disabled": false,
     "initial_stage_idx": 0,
     "stages":[
@@ -318,11 +375,19 @@
       }
     ]
   },
+ {
+   "name": "Batalia",
+   "type": "toggle_badged",
+   "base_item": "Batalia",
+   "img": "images/Overlay_Batalia.png",
+   "codes": "BataliaName"
+ },
   //Orxon
   {
     "name": "Orxon",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -337,11 +402,19 @@
       }
     ]
   },
+ {
+   "name": "Orxon",
+   "type": "toggle_badged",
+   "base_item": "Orxon",
+   "img": "images/Overlay_Orxon.png",
+   "codes": "OrxonName"
+ },
   //Gaspar
   {
     "name": "Gaspar",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -356,11 +429,19 @@
       }
     ]
   },
+ {
+   "name": "Gaspar",
+   "type": "toggle_badged",
+   "base_item": "Gaspar",
+   "img": "images/Overlay_Gaspar.png",
+   "codes": "GasparName"
+ },
   //Poki
   {
     "name": "Pokitaru",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -375,11 +456,19 @@
       }
     ]
   },
+ {
+   "name": "Pokitaru",
+   "type": "toggle_badged",
+   "base_item": "Poki",
+   "img": "images/Overlay_Poki.png",
+   "codes": "PokiName"
+ },
   //Hoven
   {
     "name": "Hoven",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -394,11 +483,19 @@
       }
     ]
   },
+ {
+   "name": "Hoven",
+   "type": "toggle_badged",
+   "base_item": "Hoven",
+   "img": "images/Overlay_Hoven.png",
+   "codes": "HovenName"
+ },
   //Gemlik
   {
-    "name": "Gemlik Bade",
+    "name": "Gemlik Base",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -413,11 +510,19 @@
       }
     ]
   },
+ {
+   "name": "Gemlik Base",
+   "type": "toggle_badged",
+   "base_item": "Gemlik",
+   "img": "images/Overlay_Gemlik.png",
+   "codes": "GemlikName"
+ },
   //Oltanis
   {
     "name": "Oltanis",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -432,11 +537,19 @@
       }
     ]
   },
+ {
+   "name": "Oltanis",
+   "type": "toggle_badged",
+   "base_item": "Oltanis",
+   "img": "images/Overlay_Oltanis.png",
+   "codes": "OltanisName"
+ },
   //Quartu
   {
     "name": "Quartu",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -451,11 +564,19 @@
       }
     ]
   },
+ {
+   "name": "Quartu",
+   "type": "toggle_badged",
+   "base_item": "Quartu",
+   "img": "images/Overlay_Quartu.png",
+   "codes": "QuartuName"
+ },
   //Kalebo III
   {
     "name": "Kalebo III",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -470,11 +591,19 @@
       }
     ]
   },
+ {
+   "name": "Kalebo III",
+   "type": "toggle_badged",
+   "base_item": "Kalebo",
+   "img": "images/Overlay_Kalebo.png",
+   "codes": "KaleboName"
+ },
   //Fleet
   {
     "name": "Drek's Fleet",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -489,11 +618,19 @@
       }
     ]
   },
+ {
+   "name": "Drek's Fleet",
+   "type": "toggle_badged",
+   "base_item": "Fleet",
+   "img": "images/Overlay_Fleet.png",
+   "codes": "FleetName"
+ },
   //Veldin
   {
     "name": "Veldin",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
     "initial_stage_idx": 0,
     "stages":[
       {
@@ -507,5 +644,209 @@
         "codes":"Veldin"
       }
     ]
+  },
+ {
+   "name": "Veldin",
+   "type": "toggle_badged",
+   "base_item": "Veldin",
+   "img": "images/Overlay_Veldin.png",
+   "codes": "VeldinName"
+ },
+  						//Weapons
+	//Bombs
+  {
+    "name": "Bomb Glove",
+    "type": "progressive",
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Bomb.png",
+        "inherit_codes": false,
+        "codes": "Bomb"
+      },
+      {
+        "img": "images/Bomb_G.png",
+        "codes":"Bomb_G"
+      }
+    ]
+  },
+	//Pyro
+  {
+    "name": "Pyrocitor",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Pyro.png",
+        "inherit_codes": false,
+        "codes": "Pyro"
+      },
+      {
+        "img": "images/Pyro_G.png",
+        "codes":"Pyro_G"
+      }
+    ]
+  },
+	//Blaster
+  {
+    "name": "Blaster",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Blaster.png",
+        "inherit_codes": false,
+        "codes": "Blaster"
+      },
+      {
+        "img": "images/Blaster_G.png",
+        "codes":"Blaster_G"
+      }
+    ]
+  },
+	//Doom
+  {
+    "name": "Glove of Doom",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Doom.png",
+        "inherit_codes": false,
+        "codes": "Doom"
+      },
+      {
+        "img": "images/Doom_G.png",
+        "codes":"Doom_G"
+      }
+    ]
+  },
+	//Mine
+  {
+    "name": "Mine Glove",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Mine.png",
+        "inherit_codes": false,
+        "codes": "Mine"
+      },
+      {
+        "img": "images/Mine_G.png",
+        "codes":"Mine_G"
+      }
+    ]
+  },
+	//Taunter
+  {
+    "name": "Taunter",
+    "type": "toggle",
+    "img": "images/Taunt.png",
+    "codes": "Taunt"
+  },
+	//Suck
+  {
+    "name": "Suck Canon",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Suck.png",
+        "inherit_codes": false,
+        "codes": "Suck"
+      },
+      {
+        "img": "images/Suck_G.png",
+        "codes":"Suck_G"
+      }
+    ]
+  },
+	//Devastator
+  {
+    "name": "Devastator",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Dev.png",
+        "inherit_codes": false,
+        "codes": "Dev"
+      },
+      {
+        "img": "images/Dev_G.png",
+        "codes":"Dev_G"
+      }
+    ]
+  },
+	//Walloper
+  {
+    "name": "Walloper",
+    "type": "toggle",
+    "img": "images/Wallop.png",
+    "codes": "Wallop"
+  },
+	//Visibomb
+  {
+    "name": "Visibomb",
+    "type": "toggle",
+    "img": "images/Visi.png",
+    "codes": "Visi"
+  },
+	//Decoy
+  {
+    "name": "Decoy Glove",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Decoy.png",
+        "inherit_codes": false,
+        "codes": "Decoy"
+      },
+      {
+        "img": "images/Decoy_G.png",
+        "codes":"Decoy_G"
+      }
+    ]
+  },
+	//Drone
+  {
+    "name": "Drone Devices",
+    "type": "toggle",
+    "img": "images/Drone.png",
+    "codes": "Drone"
+  },
+	//Tesla
+  {
+    "name": "Tesla Claw",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Tesla.png",
+        "inherit_codes": false,
+        "codes": "Tesla"
+      },
+      {
+        "img": "images/Tesla_G.png",
+        "codes":"Tesla_G"
+      }
+    ]
+  },
+	//Morph
+  {
+    "name": "Morph-o-Ray",
+    "type": "progressive",
+    "stages":[
+      {
+        "img": "images/Morph.png",
+        "inherit_codes": false,
+        "codes": "Morph"
+      },
+      {
+        "img": "images/Morph_G.png",
+        "codes":"Morph_G"
+      }
+    ]
+  },
+	//RYNO
+  {
+    "name": "R.Y.N.O.",
+    "type": "toggle",
+    "img": "images/RYNO.png",
+    "codes": "RYNO"
   },
 ]
