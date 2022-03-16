@@ -195,7 +195,7 @@
                   //Confront Robot Lieutenant
                   {
                     "name":"Confront Robot Lieutenant",
-                    "access_rules":["Tres,Swingshot,Heli","Tres,Swingshot,Thruster","Heli,[Tres],[Swingshot]","Thruster,[Tres],[Swingshot]","PDA,[Tres],[Swingshot],[Heli]","PDA,[Tres],[Swingshot],[Thruster]"],
+                    "access_rules":["Tres,Swingshot,Heli","Tres,Swingshot,Thruster","Heli,[Tres],[Swingshot]","Thruster,[Tres],[Swingshot]","PDA,[Tres],[Swingshot],[Heli]","PDA,[Tres],[Swingshot],[Thruster]","Decoy,[Tres],[Swingshot],[Heli]","Decoy,[Tres],[Swingshot],[Thruster]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -289,7 +289,7 @@
                   //Sewers
                   {
                     "name":"Locate Captain Qwark",
-                    "access_rules":["Heli,Hydrod,Swingshot","Thruster,Hydrod,Swingshot","Heli,[Hydrod],[Swingshot]","Thruster,[Hydrod],[Swingshot]","PDA,[Hydrod],[Swingshot]"],
+                    "access_rules":["Heli,Hydrod,Swingshot","Thruster,Hydrod,Swingshot","Heli,[Hydrod],[Swingshot]","Thruster,[Hydrod],[Swingshot]","PDA,[Hydrod],[Swingshot]","Swingshot,[Heli],[Hydrod]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -309,7 +309,7 @@
                   //Hoverboard Race
                   {
                     "name":"Win the Hoverboard Race",
-                    "access_rules":["Hover,Heli","Hover,Thruster","PDA,Hover,[Heli]","PDA,Hover,[Thruster]"],
+                    "access_rules":["Hover,[Heli]","Hover,[Thruster]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -336,7 +336,7 @@
                   //Snagglebeast
                   {
                     "name":"Destroy the Snagglebeast",
-                    "access_rules":["Hydrod,Swingshot,Heli","Hydrod,Swingshot,Thruster","Heli,Swingshot,[Hydrod]","Thruster,Swingshot,[Hydrod]","PDA,[Swingshot],[Hydrod],[Heli]","PDA,[Swingshot],[Hydrod],[Thruster]"],
+                    "access_rules":["Hydrod,Swingshot,Heli","Hydrod,Swingshot,Thruster","Heli,[Swingshot],[Hydrod]","Thruster,Swingshot,[Hydrod]","PDA,[Swingshot],[Hydrod],[Heli]","PDA,[Swingshot],[Hydrod],[Thruster]"],
                     "map_locations":[
                       {
                         "map":"map",
