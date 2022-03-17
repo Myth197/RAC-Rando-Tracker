@@ -309,7 +309,7 @@
                   //Hoverboard Race
                   {
                     "name":"Win the Hoverboard Race",
-                    "access_rules":["Hover,[Heli]","Hover,[Thruster]"],
+                    "access_rules":["Hover,[Heli]","Hover,[Thruster]","Thruster,[Hover]","Heli,[Hover]","PDA,[Hover]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -577,15 +577,15 @@
                       {
                         "name":"Guy",
                         "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
+                	"chest_unopened_img":"images/Gadget.png",
+                	"chest_opened_img":"images/Gadget.png",
                       }
                     ]
                   },
                   //Sewers
                   {
                     "name":"Give Raritanium",
-                    "access_rules":["Hydrod,Tres,Raritanium"],
+                    "access_rules":["Hydrod,Tres,Raritanium","Hydro,O2,Raritanium,[Tres],[Hydrod]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -887,7 +887,7 @@
                   //War path
                   {
                     "name":"Fight through the ships",
-                    "access_rules":["Bomb,Hologuise,Magne","PDA,[Bomb],[Hologuise],[Magne]","Thruster,Bomb,[Hologuise],[Magne]","Bomb,Magne,[Hologuise]"],
+                    "access_rules":["Hologuise,Magne","PDA,[Hologuise],[Magne]","Thruster,Bomb,[Hologuise],[Magne]","Bomb,Magne,[Hologuise]"],
                     "map_locations":[
                       {
                         "map":"map",
