@@ -16,22 +16,37 @@
                 "content": 
       [
        {
-                        "type": "itemgrid",
-                        "h_alignment": "center",
-                        "v_alignment": "center",
-                        "item_margin": "4,5",
-                        "rows": 
-	[
-	    [	"Novalis",	"Kerwan",	,"Tres",	"Hydrod",		"Swingshot"	],
-            [	"Aridia",	"Eudora",	,"PDA",		"Metal",		"Hologuise"	],
-            [	"Blarg",	"Rilgar",	,"Heli",	"Thruster",		"Hydro"		],
-            [	"Umbris",	"Batalia",	,"O2",		"Sonic",		"Pilot"		],
-            [	"Orxon",	"Gaspar",	,,		"Grind",		"Magne"		],
-            [	"Poki",		"Hoven",	,,		,			,		],
-            [	"Gemlik",	"Oltanis",	,"Hover",	"Persuader",		"Bolt_Grabber"	],
-            [	"Quartu",	"Kalebo",	,"Nanotech1",	"Nanotech2",		"Map-o-Matic"	],
-            [	"Fleet",	"Veldin",	,"Zoom",	"Raritanium",		"Codebot"	],
+       "type": "array",
+       "orientation": "vertical",
+       "content": [
+ 		{
+       		"type": "itemgrid",
+        	"h_alignment": "center",
+		"item_size": 45,
+        	"item_margin": "3,3",
+        	"rows": [             
+		["Bomb",	"Pyro",		"Blaster",	"Doom",		"Mine"	],
+		["Taunt",	"Suck",		"Dev",		"Wallop",	"Visi"	],
+		["Decoy",	"Drone",	"Tesla",	"Morph",	"RYNO"	],
+	   	["Tres",	"Hydrod",	"Swingshot",	"Hover",	"Persuader",	"Bolt_Grabber"	],
+                ["PDA",		"Metal",	"Hologuise",	"Nanotech1",	"Nanotech2",	"Map-o-Matic"	],
+            	["Heli",	"Thruster",	"Hydro",	"Zoom",		"Raritanium",	"Codebot"	],
+            	["O2",		"Sonic",	"Pilot",	"Grind",	"Magne",	""		],
+	]
+      },
+	{
+		"type": "itemgrid",
+       "v_alignment": "top",
+       "margin": "2,0,2,0",
+		"item_size": 64,
+       "item_margin": "3,3",
+       "rows": [
+          	[ "NovalisName", "KerwanName", "AridiaName",  "EudoraName",  "BlargName",  "RilgarName"],
+	   	[ "UmbrisName", "BataliaName", "OrxonName",  "GasparName", "PokiName",    "HovenName" ],
+	   	[ "GemlikName", "OltanisName", "QuartuName", "KaleboName", "FleetName",   "VeldinName"],
         ]
+	}
+    ]
        },
        {
                 "type": "array",
