@@ -101,7 +101,12 @@
                   //Train
                   {
                     "name":"Ride the Robot Train",
-                    "access_rules":["Heli","Thruster","PDA,[Heli]","PDA,[Thruster]"],
+                    "access_rules":[	
+			"Heli",
+			"Thruster",
+			"PDA,[Heli]",		//PDA Sideflips
+			"PDA,[Thruster]"	//PDA Sideflips
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -148,7 +153,12 @@
                   //Trespasser
                   {
                     "name":"Use your Swingshot",
-                    "access_rules":["Thruster,[Swingshot]","Heli,[Swingshot]","PDA,[Swingshot]","Swingshot"],
+                    "access_rules":[
+			"Thruster,[Swingshot]",		//ISF
+			"Heli,[Swingshot]",		//Sinaflips
+			"PDA,[Swingshot]",		//PDA Sideflips
+			"Swingshot"
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -195,7 +205,18 @@
                   //Confront Robot Lieutenant
                   {
                     "name":"Confront Robot Lieutenant",
-                    "access_rules":["Tres,Swingshot,Heli","Tres,Swingshot,Thruster","Heli,[Tres],[Swingshot]","Thruster,[Tres],[Swingshot]","PDA,[Tres],[Swingshot],[Heli]","PDA,[Tres],[Swingshot],[Thruster]"],
+                    "access_rules":[
+			"Tres,Swingshot,Heli",
+			"Tres,Swingshot,Thruster",
+			"Heli,[Tres],[Swingshot]",			//SI
+			"Thruster,[Tres],[Swingshot]",			//SI
+			"[Tres],[Swingshot]",				//Packless SI (This Sucks)
+			"PDA,[Tres],[Swingshot],[Heli]",		//PDA sideflips
+			"PDA,[Tres],[Swingshot],[Thruster]",		//PDA sideflips
+			"Decoy,[Tres],[Swingshot],[Heli]",		//Decoy Clip
+			"Decoy,[Tres],[Swingshot],[Thruster]"		//Decoy Clip
+			
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -222,7 +243,12 @@
                   //Clank section
                   {
                     "name":"Journey outside the airlock",
-                    "access_rules":["Tres","Heli,[Tres]","Thruster,[Tres]","PDA,[Tres]"],
+                    "access_rules":[
+			"Tres",
+			"Heli,[Tres]",		//Glide Out of Bounds
+			"Thruster,[Tres]",	//Glide Out of Bounds
+			"PDA,[Tres]"		//PDA sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -259,10 +285,15 @@
                       }
                     ]
                   },
-                  //Agent
+                  //Alien Queen
                   {
                     "name":"Explore the space station",
-                    "access_rules":["Swingshot","PDA,[Swingshot]","Heli,[Swingshot]","Thruster,[Swingshot]"],
+                    "access_rules":[
+			"Swingshot",
+			"PDA,[Swingshot]",	//PDA Sideflip
+			"Heli,[Swingshot]",	//Tight jump
+			"Thruster,[Swingshot]"	//Tight jump
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -289,7 +320,14 @@
                   //Sewers
                   {
                     "name":"Locate Captain Qwark",
-                    "access_rules":["Heli,Hydrod,Swingshot","Thruster,Hydrod,Swingshot","Heli,[Hydrod],[Swingshot]","Thruster,[Hydrod],[Swingshot]","PDA,[Hydrod],[Swingshot]"],
+                    "access_rules":[
+			"Heli,Hydrod,Swingshot",
+			"Thruster,Hydrod,Swingshot",
+			"Heli,[Hydrod],[Swingshot]",		//Sinaflip or ILJ
+			"Thruster,[Hydrod],[Swingshot]",	//ISF
+			"PDA,[Hydrod],[Swingshot]",		//PDA sideflip
+			"Swingshot,[Heli],[Hydrod]"		//Under map swim
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -309,7 +347,15 @@
                   //Hoverboard Race
                   {
                     "name":"Win the Hoverboard Race",
-                    "access_rules":["Hover,Heli","Hover,Thruster","PDA,Hover,[Heli]","PDA,Hover,[Thruster]"],
+                    "access_rules":[
+			"Hover,Heli",
+			"Hover,Thruster",
+			"Hover,[Heli]",		//Under map swim
+			"Hover,[Thruster]",	//Under map swim
+			"Thruster,[Hover]",	//ISF into racetrack
+			"Heli,[Hover]",		//Sinaflip or ISJ into racetrack
+			"PDA,[Hover]"		//PDA sideflip to racetrack
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -336,7 +382,16 @@
                   //Snagglebeast
                   {
                     "name":"Destroy the Snagglebeast",
-                    "access_rules":["Hydrod,Swingshot,Heli","Hydrod,Swingshot,Thruster","Heli,Swingshot,[Hydrod]","Thruster,Swingshot,[Hydrod]","PDA,[Swingshot],[Hydrod],[Heli]","PDA,[Swingshot],[Hydrod],[Thruster]"],
+                    "access_rules":[
+			"Hydrod,Swingshot,Heli",
+			"Hydrod,Swingshot,Thruster",
+			"Heli,[Swingshot],[Hydrod]",		//ILJ
+			"Thruster,Swingshot,[Hydrod]",		//ISF
+			"PDA,[Swingshot],[Hydrod],[Heli]",	//PDA sideflip
+			"PDA,[Swingshot],[Hydrod],[Thruster]",	//PDA sideflip
+			"Swingshot,[Hydrod],[Heli]",		//Tight swing at start, Ghost Ratchet
+			"Swingshot,[Hydrod],[Thruster]",	//Tight swing at start, Ghost Ratchet
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -383,7 +438,10 @@
                   //Grind Rail
                   {
                     "name":"Ride the grind rail",
-                    "access_rules":["Grind","Heli,[Grind]","Thruster,[Grind]","PDA,[Grind]"],
+                    "access_rules":[
+			"Grind",
+			"Heli,[Grind]",		//SI
+			"PDA,[Grind]"],		//PDA Sideflip
                     "map_locations":[
                       {
                         "map":"map",
@@ -403,7 +461,14 @@
                   //Turret
                   {
                     "name":"Destroy the bombers",
-                    "access_rules":["Magne","Thruster","PDA,[Magne]","PDA,[Thruster]","Heli,[Magne]","Heli,[Thruster]"],
+                    "access_rules":[
+			"Magne",
+			"Thruster",
+			"PDA,[Magne]",		//PDA Sideflip
+			"PDA,[Thruster]",	//PDA Sideflip
+			"Heli,[Magne]",		//Tight Jump and SI
+			"Heli,[Thruster]"	//Tight Jump and SI
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -471,7 +536,12 @@
                   {
                     "name":"Nanotech Vendor",
                     "clear_as_group": false,
-                    "access_rules":["O2,Thruster","O2,Heli","PDA,O2,[Heli]","PDA,O2,[Thruster]"],
+                    "access_rules":[
+			"O2,Thruster",
+			"O2,Heli",
+			"PDA,O2,[Heli]",	//PDA Sideflip
+			"PDA,O2,[Thruster]"	//PDA Sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -491,7 +561,12 @@
                   //Infobot chase
                   {
                     "name":"Explore as Ratchet",
-                    "access_rules":["O2,Thruster,[Swingshot],[Magne]","O2,Thruster,Swingshot,Magne","O2,Heli,Swingshot,Magne","O2,PDA,[Thruster],[Swingshot],[Magne]"],
+                    "access_rules":[
+			"O2,Thruster,[Swingshot],[Magne]",	//Tiptoes, SIs and Tight jumps
+			"O2,Thruster,Swingshot,Magne",		
+			"O2,Heli,Swingshot,Magne",
+			"O2,PDA,[Thruster],[Swingshot],[Magne]"	//PDA Sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -565,7 +640,10 @@
                   //Shoot planes
                   {
                     "name":"Destroy the blarg ships",
-                    "access_rules":["Pilot,Thruster","Pilot,[Thruster]"],
+                    "access_rules":[
+			"Pilot,Thruster",
+			"Decoy,Pilot,[Thruster]"	//Decoy Clip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -577,15 +655,18 @@
                       {
                         "name":"Guy",
                         "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
+                	"chest_unopened_img":"images/Gadget.png",
+                	"chest_opened_img":"images/Gadget.png",
                       }
                     ]
                   },
                   //Sewers
                   {
                     "name":"Give Raritanium",
-                    "access_rules":["Hydrod,Tres,Raritanium"],
+                    "access_rules":[
+			"Hydrod,Tres,Raritanium",
+			"Hydro,O2,Raritanium,[Tres],[Hydrod]"	//Under Map Swim
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -612,7 +693,14 @@
                   //planetbuster
                   {
                     "name":"Destory the Planetbuster",
-                    "access_rules":["[Pyro]","[Blaster]","[Suck]","[Dev]","[Vis]","[Tesla]","[RYNO]"],
+                    "access_rules":[
+			"[Pyro]",
+			"[Blaster]",
+			"[Suck]",
+			"[Dev]",
+			"[Vis]",
+			"[Tesla]",
+			"[RYNO]"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -632,7 +720,12 @@
                   //Shoot planes
                   {
                     "name":"Buy the Hydro-pack",
-                    "access_rules":["Hydrod","PDA,[Hydrod]","Thruster,[Hydrod]","Heli,[Hydrod]"],
+                    "access_rules":[
+			"Hydrod",
+			"PDA,[Hydrod]",		//PDA Sideflip
+			"Thruster,[Hydrod]",	//ISF
+			"Heli,[Hydrod]"		//Sinaflip or ILJ
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -649,10 +742,19 @@
                       }
                     ]
                   },
-                  //Sewers
+                  //Drill Guy
                   {
                     "name":"Explore the Icy Wastes",
-                    "access_rules":["Swingshot,Heli","Swingshot,Thruster","Swingshot,[Heli]","Swingshot,[Thruster]","Thruster,[Swingshot]","Heli,[Swingshot]","PDA,[Swingshot],[Heli]"],
+                    "access_rules":[
+			"Swingshot,Heli",		
+			"Swingshot,Thruster",		
+			"Swingshot,[Heli]",		//Swingshot Swag
+			"Swingshot,[Thruster]",		//Swingshot Swag
+			"Thruster,[Swingshot]",		//ISF
+			"Heli,[Swingshot]",		//Sinaflip, ILJ or Tight jumps
+			"PDA,[Swingshot],[Heli]",	//PDA Sideflips
+			"PDA,[Swingshot],[Thruster]"	//PDA Sideflips
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -679,7 +781,16 @@
                   //qwark
                   {
                     "name":"Explore Base",
-                    "access_rules":["Tres,Magne,Swingshot,Dev","Tres,Magne,Swingshot,Vis","Thruster,[Magne],[Tres],[Swingshot],[Dev]","Thruster,[Magne],[Tres],[Swingshot],[Vis]","Heli,[Magne],[Tres],[Swingshot],[Dev]","Heli,[Magne],[Tres],[Swingshot],[Vis]","PDA,[Magne],[Tres],[Swingshot],[Dev]","PDA,[Magne],[Tres],[Swingshot],[Vis]"],
+                    "access_rules":[
+			"Tres,Magne,Swingshot,Dev",
+			"Tres,Magne,Swingshot,Vis",
+			"Thruster,[Magne],[Tres],[Swingshot],[Dev]",	//Ground Pound Cancel, Neutral Double Jump
+			"Thruster,[Magne],[Tres],[Swingshot],[Vis]",	//Ground Pound Cancel, Neutral Double Jump
+			"Heli,[Magne],[Tres],[Swingshot],[Dev]",	//Tight High Jump, Momentum Chain
+			"Heli,[Magne],[Tres],[Swingshot],[Vis]",	//Tight High Jump, Momentum Chain	
+			"PDA,[Magne],[Tres],[Swingshot],[Dev]",		//PDA Sideflip
+			"PDA,[Magne],[Tres],[Swingshot],[Vis]"		//PDA Sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -706,7 +817,10 @@
                   //qwark
                   {
                     "name":"Purchase the PDA from 'Steve'",
-                    "access_rules":["Magne","PDA,[Magne]"],
+                    "access_rules":[
+			"Magne",
+			"PDA,[Magne]"	//PDA Sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -716,7 +830,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Steve",
+                        "name":"'Steve'",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -726,7 +840,11 @@
                   //deafguy
                   {
                     "name":"Find Survivors",
-                    "access_rules":["Grind","PDA,[Grind]","Magne,[Grind]"],
+                    "access_rules":[
+			"Grind",
+			"PDA,[Grind]",		//PDA Sideflip
+			"Magne,[Grind]"		//Magnewalk
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -753,7 +871,12 @@
                   //Giant Clank
                   {
                     "name":"Destroy the Ultra-Mechs",
-                    "access_rules":["Swingshot","Heli,[Swingshot]","Thruster,[Swingshot]","PDA,[Swingshot]"],
+                    "access_rules":[
+			"Swingshot",
+			"Heli,[Swingshot]",	//Momentum Chain
+			"Thruster,[Swingshot]",	//Neutral double jump ground pound cancel
+			"PDA,[Swingshot]"	//PDA sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -793,7 +916,12 @@
                   //Robot Section
                   {
                     "name":"Robot Facility",
-                    "access_rules":["Hologuise,Thruster,Swingshot","Thruster,[Hologuise],[Swingshot]","PDA,[Thruster],[Hologuise],[Swingshot]","Hologuise,Swingshot,Poki,[Thruster]"],
+                    "access_rules":[
+			"Hologuise,Thruster,Swingshot",
+			"Thruster,[Hologuise],[Swingshot]",		//Slide Edge Glide
+			"PDA,[Thruster],[Hologuise],[Swingshot]",	//PDA Sideflip
+			"Hologuise,Swingshot,[Thruster]"		//OoB jumps, Ghost Ratchet
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -820,7 +948,10 @@
                   //Giant Cock
                   {
                     "name":"Gadgetron Help Desk",
-                    "access_rules":["Grind","PDA,[Grind]"],
+                    "access_rules":[
+			"Grind",
+			"PDA,[Grind]"	//PDA Sideflip
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -840,7 +971,14 @@
                   //War path
                   {
                     "name":"Win Hoverboard Race",
-                    "access_rules":["Bomb,Heli,Swingshot,Grind,Hover","Bomb,Thruster,Swingshot,Grind,Hover","PDA,Hover,[Swingshot],[Grind],[Heli],[Bomb]","Vis,Hover,[Swingshot],[Grind],[Heli],[Bomb]","Heli,Hover,Swingshot,[Grind],[Bomb]","Thruster,Hover,Swingshot,[Grind],[Bomb]"],
+                    "access_rules":[
+			"$Kalebo_switch,Heli,Swingshot,Grind,Hover",
+			"$Kalebo_switch,Thruster,Swingshot,Grind,Hover",
+			"PDA,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//PDA Sideflip
+			"Vis,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//Visibomb the switch
+			"Suck,Heli,Hover,Swingshot,[Grind],[$Kalebo_switch]",			//Swingshot Swag
+			"Suck,Thruster,Hover,Swingshot,[Grind],[$Kalebo_switch]"		//Swingshot Swag
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -867,7 +1005,10 @@
                   //Codebot
                   {
                     "name":"Water Path",
-                    "access_rules":["O2,Hydro","[O2],[Hydro]"],
+                    "access_rules":[
+			"O2,Hydro",
+			"[O2],[Hydro]"	//Out of Bounds walk
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -887,7 +1028,13 @@
                   //War path
                   {
                     "name":"Fight through the ships",
-                    "access_rules":["Bomb,Hologuise,Magne","PDA,[Bomb],[Hologuise],[Magne]","Thruster,Bomb,[Hologuise],[Magne]","Bomb,Magne,[Hologuise]"],
+                    "access_rules":[
+			"Hologuise,Magne",
+			"PDA,[Hologuise],[Magne]",		//PDA Sideflip
+			"Magne,[Hologuise]",			//Hyperstrike Robots through shields
+			"Thruster,[Hologuise],[Magne]"		//Ground Poun Clip or Ground Pound Cancel
+
+			],
                     "map_locations":[
                       {
                         "map":"map",
@@ -914,7 +1061,11 @@
                   //Drek
                   {
                     "name":"Defeat Drek",
-                    "access_rules":["Tres,Magne,Hydrod,Thruster,Swingshot","Thruster,Swingshot,[Tres],[Magne],[Hydrod]","Thruster,PDA,[Swingshot],[Tres],[Magne],[Hydrod]"],
+                    "access_rules":[
+			"Tres,Magne,Hydrod,Thruster,Swingshot",
+			"Thruster, Heli, Swingshot,[Tres],[Magne],[Hydrod]",	//SI and Ghost Ratchet
+			"Thruster,PDA,[Swingshot],[Tres],[Magne],[Hydrod]"	//PDA Sideflips
+			],
                     "map_locations":[
                       {
                         "map":"map",
