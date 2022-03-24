@@ -896,7 +896,10 @@
                   //Water Section
                   {
                     "name":"Water Path",
-                    "access_rules":["O2,Hydro"],
+                    "access_rules":[
+			"O2,Hydro",
+			"Heli,PDA,[O2],[Hydro]"		//PDA momentum storage through wall, glide to under bolt-grabber
+			],
                     "map_locations":[
                       {
                         "map":"map",
