@@ -21,7 +21,7 @@ items = {
     {id=0x31, name="Raritanium", req_items={{0xc,2}, {0xc,3}} },
     {id=0x32, name="Codebot", req_items={{4,6}} },
     {id=0x34, name="Premium Nanotech", req_items={{6, 2}, {6, 3}} },
-    {id=0x35, name="Ultra Nanotech", req_items={{6, 3, 0x34}, {6, 2, 0x34} },
+    {id=0x35, name="Ultra Nanotech", req_items={{6, 3, 0x34}, {6, 2, 0x34} }},
 }
 
 infobots = {
@@ -40,8 +40,8 @@ infobots = {
     {id=0xd, req_items={} },                    -- Gemlik infobot on Hoven
     {id=0xe, req_items={{0xc, 0x1c, 0x1a}} }, -- Oltanis infobot on Gemlik
     {id=0xf, req_items={{0x1d}} },                -- Quartu infobot on Oltanis
-    {id=0x10, req_items={{{0xc}} },    -- KaleboIII infobot on Quartu
-    {id=0x11, req_items={{3, 0xc}} },            -- Fleet infobot on Quartu
+    {id=0x10, req_items={{0xc}} },    -- KaleboIII infobot on Quartu
+    {id=0x11, req_items={{3, 0xc, 0x1f}} },            -- Fleet infobot on Quartu
     {id=0x12, req_items={{0x1c,0x1f}} }    -- Veldin2 infobot on Fleet
 }
 
