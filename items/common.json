@@ -849,4 +849,12 @@
     "img": "images/RYNO.png",
     "codes": "RYNO"
   },
+  	//Gold Bolts
+  {
+    "name": "Gold Bolts",
+    "type": "consumable",
+    "img": "images/Gold_Bolt.png",
+    "codes": "Gold",
+  "max_quantity": 40
+  },
 ]

@@ -11,6 +11,24 @@
         "name":"Novalis",
         "access_rules":["Novalis"],
         "children":[
+		         //Vendor
+                  {
+                    "name":"Vendor - Pyrocitor",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":270,
+                        "y":280
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"2,500 Bolts",
+						"hosted_item": "Pyro"
+						},
+                    ]
+                  },
                   //Save the Chairman
                   {
                     "name":"Save the Chairman",
@@ -44,7 +62,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Plumber",
+                        "name":"Plumber - 500 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Infobot.png",
                 	"chest_opened_img":"images/Infobot.png",
@@ -58,6 +76,24 @@
         "name":"Kerwan",
         "access_rules":["Kerwan"],
         "children":[
+				    //Vendor
+                  {
+                    "name":"Vendor - Blaster",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":800,
+                        "y":400
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"2,500 Bolts",
+						"hosted_item": "Blaster"
+						},
+                    ]
+                  },
                   //Al's Shack
                   {
                     "name":"Al's Roboshack",
@@ -71,7 +107,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Al",
+                        "name":"Al - 1,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -91,7 +127,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Helga",
+                        "name":"Helga - 1,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -202,6 +238,46 @@
         "name":"Eudora",
         "access_rules":["Eudora"],
         "children":[
+						    //Vendor
+                  {
+                    "name":"Vendor - Glove of Doom",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1800,
+                        "y":300
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"7,500 Bolts",
+						"hosted_item": "Doom"
+						},
+                    ]
+                  },
+				  	//Suck Canon
+                  {
+                    "name":"Suck Canon",
+                    "access_rules":[
+						"Heli",
+						"Thruster",
+						"PDA,[Heli]"	//PDA Sideflip
+						],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1960,
+                        "y":200
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"Suck Canon",
+						"hosted_item": "Suck"
+						},
+                    ]
+                  },
                   //Confront Robot Lieutenant
                   {
                     "name":"Confront Robot Lieutenant",
@@ -215,7 +291,6 @@
 			"PDA,[Tres],[Swingshot],[Thruster]",		//PDA sideflips
 			"Decoy,[Tres],[Swingshot],[Heli]",		//Decoy Clip
 			"Decoy,[Tres],[Swingshot],[Thruster]"		//Decoy Clip
-			
 			],
                     "map_locations":[
                       {
@@ -240,6 +315,24 @@
         "name":"Blarg Station",
         "access_rules":["Blarg"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Taunter",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2300,
+                        "y":400
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"2,500 Bolts",
+						"hosted_item": "Taunt"
+						},
+                    ]
+                  },
                   //Clank section
                   {
                     "name":"Journey outside the airlock",
@@ -303,7 +396,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Fred",
+                        "name":"Fred - 2,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -317,6 +410,45 @@
         "name":"Rilgar",
         "access_rules":["Rilgar"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Mine Glove",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2900,
+                        "y":450
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"7,500 Bolts",
+						"hosted_item": "Mine"
+						},
+                    ]
+                  },
+				  	//Salesman
+                  {
+                    "name":"RYNO Salesman",
+                    "access_rules":[
+					"[Heli]",
+					"[Thruster]"
+					],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":3000,
+                        "y":150
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"150,000 Bolts",
+						"hosted_item": "RYNO"
+						},
+                    ]
+                  },
                   //Sewers
                   {
                     "name":"Locate Captain Qwark",
@@ -325,8 +457,9 @@
 			"Thruster,Hydrod,Swingshot",
 			"Heli,[Hydrod],[Swingshot]",		//Sinaflip or ILJ
 			"Thruster,[Hydrod],[Swingshot]",	//ISF
-			"PDA,[Hydrod],[Swingshot]",		//PDA sideflip
-			"Swingshot,[Heli],[Hydrod]"		//Under map swim
+			"PDA,[Heli],[Hydrod],[Swingshot]",		//PDA sideflip
+			"Swingshot,[Heli],[Hydrod]",		//Under map swim
+			"O2,Hydro,[Heli],[Hydrod],[Swingshot]"			//Under map swim
 			],
                     "map_locations":[
                       {
@@ -337,7 +470,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Bouncer",
+                        "name":"Bouncer - 4,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Infobot.png",
                 	"chest_opened_img":"images/Infobot.png",
@@ -385,9 +518,9 @@
                     "access_rules":[
 			"Hydrod,Swingshot,Heli",
 			"Hydrod,Swingshot,Thruster",
-			"Heli,[Swingshot],[Hydrod]",		//ILJ
-			"Thruster,Swingshot,[Hydrod]",		//ISF
-			"PDA,[Swingshot],[Hydrod],[Heli]",	//PDA sideflip
+			"Heli,[Swingshot],[Hydrod]",	//ILJ
+			"Thruster,[Swingshot],[Hydrod]",	//ISF
+			"PDA,[Swingshot],[Hydrod],[Heli]",		//PDA sideflip
 			"PDA,[Swingshot],[Hydrod],[Thruster]",	//PDA sideflip
 			"Swingshot,[Hydrod],[Heli]",		//Tight swing at start, Ghost Ratchet
 			"Swingshot,[Hydrod],[Thruster]",	//Tight swing at start, Ghost Ratchet
@@ -415,6 +548,24 @@
         "name":"Batalia",
         "access_rules":["Batalia"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Devestator",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":620,
+                        "y":750
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"10,000 Bolts",
+						"hosted_item": "Dev"
+						},
+                    ]
+                  },
                   //Commando
                   {
                     "name":"Meet the Commando at city",
@@ -451,7 +602,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Deserter",
+                        "name":"Deserter - 2,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Infobot.png",
                 	"chest_opened_img":"images/Infobot.png",
@@ -492,6 +643,24 @@
         "name":"Orxon",
         "access_rules":["Orxon"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Visibomb",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1220,
+                        "y":830
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"15,000 Bolts",
+						"hosted_item": "Visi"
+						},
+                    ]
+                  },
                   //Clank 1st item
                   {
                     "name":"Search the labs",
@@ -532,10 +701,9 @@
                       }
                     ]
                   },
-		// Nanotech Vendor
+		// Nanotech Vendor 1
                   {
                     "name":"Nanotech Vendor",
-                    "clear_as_group": false,
                     "access_rules":[
 			"O2,Thruster",
 			"O2,Heli",
@@ -545,14 +713,39 @@
                     "map_locations":[
                       {
                         "map":"map",
-                        "x":1120,
+                        "x":1100,
                         "y":850
                       }
                     ],
                     "sections": [
                       {
-                        "name":"Buy Nanotech",
-                        "item_count":2,
+                        "name":"Buy Premium Nanotech - 4,000 Bolts",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Gadget.png",
+                	"chest_opened_img":"images/Gadget.png",
+                      }
+                    ]
+                  },
+		// Nanotech Vendor 2
+                  {
+                    "name":"Nanotech Vendor",
+                    "access_rules":[
+			"O2,Thruster",
+			"O2,Heli",
+			"PDA,O2,[Heli]",	//PDA Sideflip
+			"PDA,O2,[Thruster]"	//PDA Sideflip
+			],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1145,
+                        "y":850
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Buy Ultra Nanotech - 30,000 Bolts",
+                        "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
                       }
@@ -590,6 +783,24 @@
         "name":"Gaspar",
         "access_rules":["Gaspar"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Walloper",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1850,
+                        "y":580
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"7,500 Bolts",
+						"hosted_item": "Wallop"
+						},
+                    ]
+                  },
                   //Pilots Helmet
                   {
                     "name":"Find the Pilot's Helmet",
@@ -617,6 +828,24 @@
         "name":"Pokitaru",
         "access_rules":["Poki"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Decoy Glove",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2300,
+                        "y":930
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"7,500 Bolts",
+						"hosted_item": "Decoy"
+						},
+                    ]
+                  },
                   //Bob
                   {
                     "name":"Buy Thruster Pack",
@@ -630,7 +859,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Bob",
+                        "name":"Bob - 2,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -690,6 +919,24 @@
         "name":"Hoven",
         "access_rules":["Hoven"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Drone Devices",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2880,
+                        "y":910
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"7,500 Bolts",
+						"hosted_item": "Drone"
+						},
+                    ]
+                  },
                   //planetbuster
                   {
                     "name":"Destory the Planetbuster",
@@ -698,7 +945,7 @@
 			"[Blaster]",
 			"[Suck]",
 			"[Dev]",
-			"[Vis]",
+			"[Visi]",
 			"[Tesla]",
 			"[RYNO]"],
                     "map_locations":[
@@ -735,7 +982,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Edwina",
+                        "name":"Edwina - 2,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -783,13 +1030,13 @@
                     "name":"Explore Base",
                     "access_rules":[
 			"Tres,Magne,Swingshot,Dev",
-			"Tres,Magne,Swingshot,Vis",
+			"Tres,Magne,Swingshot,Visi",
 			"Thruster,[Magne],[Tres],[Swingshot],[Dev]",	//Ground Pound Cancel, Neutral Double Jump
-			"Thruster,[Magne],[Tres],[Swingshot],[Vis]",	//Ground Pound Cancel, Neutral Double Jump
+			"Thruster,[Magne],[Tres],[Swingshot],[Visi]",	//Ground Pound Cancel, Neutral Double Jump
 			"Heli,[Magne],[Tres],[Swingshot],[Dev]",	//Tight High Jump, Momentum Chain
-			"Heli,[Magne],[Tres],[Swingshot],[Vis]",	//Tight High Jump, Momentum Chain	
+			"Heli,[Magne],[Tres],[Swingshot],[Visi]",	//Tight High Jump, Momentum Chain	
 			"PDA,[Magne],[Tres],[Swingshot],[Dev]",		//PDA Sideflip
-			"PDA,[Magne],[Tres],[Swingshot],[Vis]"		//PDA Sideflip
+			"PDA,[Magne],[Tres],[Swingshot],[Visi]"		//PDA Sideflip
 			],
                     "map_locations":[
                       {
@@ -814,6 +1061,42 @@
         "name":"Oltanis",
         "access_rules":["Oltanis"],
         "children":[
+					//Vendor
+                  {
+                    "name":"Vendor - Tesla Claw",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":810,
+                        "y":1340
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"40,000 Bolts",
+						"hosted_item": "Tesla"
+						},
+                    ]
+                  },
+					//Stealth Path
+                  {
+                    "name":"Search the destroyed city",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":890,
+                        "y":1440
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"Morph-o-ray",
+						"hosted_item": "Morph"
+						},
+                    ]
+                  },
                   //qwark
                   {
                     "name":"Purchase the PDA from 'Steve'",
@@ -830,7 +1113,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"'Steve'",
+                        "name":"'Steve' - 1,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -854,7 +1137,7 @@
                     ],
                     "sections": [
                       {
-                        "name":"Scrap Merchant",
+                        "name":"Scrap Merchant - 2,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Infobot.png",
                 	"chest_opened_img":"images/Infobot.png",
@@ -898,7 +1181,8 @@
                     "name":"Water Path",
                     "access_rules":[
 			"O2,Hydro",
-			"Heli,PDA,[O2],[Hydro]"		//PDA momentum storage through wall, glide to under bolt-grabber
+			"Heli,[O2],[Hydro]",		//SI
+			"PDA,[O2],[Hydro]"		//PDA Sideflip
 			],
                     "map_locations":[
                       {
@@ -978,7 +1262,7 @@
 			"$Kalebo_switch,Heli,Swingshot,Grind,Hover",
 			"$Kalebo_switch,Thruster,Swingshot,Grind,Hover",
 			"PDA,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//PDA Sideflip
-			"Vis,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//Visibomb the switch
+			"Visi,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//Visibomb the switch
 			"Suck,Heli,Hover,Swingshot,[Grind],[$Kalebo_switch]",			//Swingshot Swag
 			"Suck,Thruster,Hover,Swingshot,[Grind],[$Kalebo_switch]"		//Swingshot Swag
 			],
