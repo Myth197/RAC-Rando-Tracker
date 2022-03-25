@@ -6,8 +6,8 @@
  		{
        		"type": "itemgrid",
         	"h_alignment": "center",
-		"item_size": 40,
-        	"item_margin": "3,3",
+			"item_size": 40,
+        	"item_margin": "1,1",
         	"rows": [
 		["Bomb",	"Pyro",		"Blaster",	"Doom",		"Mine"	],
 		["Taunt",	"Suck",		"Dev",		"Wallop",	"Visi"	],
@@ -15,14 +15,14 @@
 	   	["Tres",	"Hydrod",	"Swingshot",	"Hover",	"Persuader",	"Bolt_Grabber"	],
                 ["PDA",		"Metal",	"Hologuise",	"Nanotech1",	"Nanotech2",	"Map-o-Matic"	],
             	["Heli",	"Thruster",	"Hydro",	"Zoom",		"Raritanium",	"Codebot"	],
-            	["O2",		"Sonic",	"Pilot",	"Grind",	"Magne",	""		],
+            	["O2",		"Sonic",	"Pilot",	"Grind",	"Magne",	"Gold"		],
 	]
       },
 	{
 		"type": "itemgrid",
        	"v_alignment": "top",
        	"margin": "2,0,2,0",
-	"item_size": 60,
+		"item_size": 60,
        	"item_margin": "3,3",
        	"rows": [
            [ "NovalisName", "KerwanName", "AridiaName",  "EudoraName",  "BlargName",  "RilgarName"],
@@ -43,7 +43,7 @@
             [	"Aridia",	"Eudora",	,"PDA",		"Metal",		"Hologuise"	],
             [	"Blarg",	"Rilgar",	,"Heli",	"Thruster",		"Hydro"		],
             [	"Umbris",	"Batalia",	,"O2",		"Sonic",		"Pilot"		],
-            [	"Orxon",	"Gaspar",	,,		"Grind",		"Magne"		],
+            [	"Orxon",	"Gaspar",	,"Grind",	"Magne",		"Gold"		],
             [	"Poki",		"Hoven",	,,		,			,		],
             [	"Gemlik",	"Oltanis",	,"Hover",	"Persuader",		"Bolt_Grabber"	],
             [	"Quartu",	"Kalebo III",	,"Nanotech1",	"Nanotech2",		"Map-o-Matic"	],
@@ -62,7 +62,7 @@
                     "type": "dock",
                     "dock": "bottom",
                     "v_alignment": "stretch",
-                    "margin":"0,0,0,0",
+                    "margin":"0,0,3,0",
                     "content": [
                         {
                             "type": "group",
@@ -72,6 +72,17 @@
                             "content": {
                                 "type": "layout",
                                 "key": "shared_item_grid"
+                            }
+						},
+						    {
+                            "type": "group",
+                            "header": "Pinned Locations",
+                            "content": {
+                                "type": "recentpins",
+                                "style": "wrap",
+                                "v_alignment": "stretch",
+                                "orientation": "vertical",
+                                "compact": true
                             }
                         },
 		       ]
