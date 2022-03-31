@@ -857,4 +857,309 @@
     "codes": "Gold",
   "max_quantity": 40
   },
+									//Vendor
+	//Novalis Weapon
+	  {
+    "name": "Novalis Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Novalis_v"
+      }
+    ]
+  },
+   {
+   "name": "Novalis Vendor",
+   "type": "toggle_badged",
+   "base_item": "Novalis_v",
+   "img": "images/Overlay_Novalis.png",
+   "codes": "NovalisName_v"
+ },	
+	//Kerwan	Weapon
+	  {
+    "name": "Kerwan Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Kerwan_v"
+      }
+    ]
+  },
+   {
+   "name": "Kerwan Vendor",
+   "type": "toggle_badged",
+   "base_item": "Kerwan_v",
+   "img": "images/Overlay_Kerwan.png",
+   "codes": "KerwanName_v"
+ },
+ 	//Eudora	Weapon
+	  {
+    "name": "Eudora Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Eudora_v"
+      }
+    ]
+  },
+   {
+   "name": "Eudora Vendor",
+   "type": "toggle_badged",
+   "base_item": "Eudora_v",
+   "img": "images/Overlay_Eudora.png",
+   "codes": "EudoraName_v"
+ },
+ 	//Blarg	Weapon
+	  {
+    "name": "Blarg Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Blarg_v"
+      }
+    ]
+  },
+   {
+   "name": "Blarg Vendor",
+   "type": "toggle_badged",
+   "base_item": "Blarg_v",
+   "img": "images/Overlay_Blarg.png",
+   "codes": "BlargName_v"
+ },
+ 	//Rilgar	Weapon
+	  {
+    "name": "Rilgar Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Rilgar_v"
+      }
+    ]
+  },
+   {
+   "name": "Rilgar Vendor",
+   "type": "toggle_badged",
+   "base_item": "Rilgar_v",
+   "img": "images/Overlay_Rilgar.png",
+   "codes": "RilgarName_v"
+ },
+ 	//Batalia	Weapon
+	  {
+    "name": "Batalia Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Batalia_v"
+      }
+    ]
+  },
+   {
+   "name": "Batalia Vendor",
+   "type": "toggle_badged",
+   "base_item": "Batalia_v",
+   "img": "images/Overlay_Batalia.png",
+   "codes": "BataliaName_v"
+ },
+ 	//Orxon	Weapon
+	  {
+    "name": "Orxon Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Orxon_v"
+      }
+    ]
+  },
+   {
+   "name": "Orxon Vendor",
+   "type": "toggle_badged",
+   "base_item": "Orxon_v",
+   "img": "images/Overlay_Orxon.png",
+   "codes": "OrxonName_v"
+ },
+ 	//Gaspar Weapon
+	  {
+    "name": "Gaspar Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Gaspar_v"
+      }
+    ]
+  },
+   {
+   "name": "Gaspar Vendor",
+   "type": "toggle_badged",
+   "base_item": "Gaspar_v",
+   "img": "images/Overlay_Gaspar.png",
+   "codes": "GasparName_v"
+ },
+ 	//Poki Weapon
+	  {
+    "name": "Pokitaru Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Poki_v"
+      }
+    ]
+  },
+   {
+   "name": "Pokitaru Vendor",
+   "type": "toggle_badged",
+   "base_item": "Poki_v",
+   "img": "images/Overlay_Poki.png",
+   "codes": "PokiName_v"
+ },
+ 	//Hoven Weapon
+	  {
+    "name": "Hoven Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Hoven_v"
+      }
+    ]
+  },
+   {
+   "name": "Hoven Vendor",
+   "type": "toggle_badged",
+   "base_item": "Hoven_v",
+   "img": "images/Overlay_Hoven.png",
+   "codes": "HovenName_v"
+ },
+ 	//Oltanis Weapon
+	  {
+    "name": "Oltanis Vendor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes":"Oltanis_v"
+      }
+    ]
+  },
+   {
+   "name": "Oltanis Vendor",
+   "type": "toggle_badged",
+   "base_item": "Oltanis_v",
+   "img": "images/Overlay_Oltanis.png",
+   "codes": "OltanisName_v"
+ },
+	//Novalis Gold Weapon Room OoB
+  {
+    "name": "Novalis Gold Weapon Room OoB",
+    "type": "toggle",
+    "img": "images/Chicken.png",
+    "codes": "NGWRO"
+  },
 ]

@@ -25,12 +25,24 @@
 		"item_size": 60,
        	"item_margin": "3,3",
        	"rows": [
-           [ "NovalisName", "KerwanName", "AridiaName",  "EudoraName",  "BlargName",  "RilgarName"],
-	   [ "UmbrisName", "BataliaName", "OrxonName",  "GasparName", "PokiName",    "HovenName" ],
-	   [ "GemlikName", "OltanisName", "QuartuName", "KaleboName", "FleetName",   "VeldinName"],
+		[ "NovalisName", "KerwanName", "AridiaName",  "EudoraName",  "BlargName",  "RilgarName"],
+		[ "UmbrisName", "BataliaName", "OrxonName",  "GasparName", "PokiName",    "HovenName" ],
+		[ "GemlikName", "OltanisName", "QuartuName", "KaleboName", "FleetName",   "VeldinName"],
         ]
 	}
     ]
+ },
+ "shared_vendor_grid": {
+	        "type": "container",
+			"content": {
+				            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "3,3",
+            "rows": [
+			[	"NovalisName_v",	"KerwanName_v",	,					"EudoraName_v",		"BlargName_v",	"RilgarName_v"	],
+            [	"BataliaName_v",	"OrxonName_v",	"GasparName_v",		"PokiName_v",		"HovenName_v",	"OltanisName_v"	]
+	]
+        }
  },
  "tracker_capture_item": {
         "type": "container",
@@ -39,7 +51,7 @@
             "h_alignment": "center",
             "item_margin": "3,3",
             "rows": [
-	    [	"Novalis",	"Kerwan",	,"Tres",	"Hydrod",		"Swingshot"	],
+			[	"Novalis",	"Kerwan",	,"Tres",	"Hydrod",		"Swingshot"	],
             [	"Aridia",	"Eudora",	,"PDA",		"Metal",		"Hologuise"	],
             [	"Blarg",	"Rilgar",	,"Heli",	"Thruster",		"Hydro"		],
             [	"Umbris",	"Batalia",	,"O2",		"Sonic",		"Pilot"		],
@@ -67,23 +79,23 @@
                         {
                             "type": "group",
                             "header": "Items",
-		    	    "h_alignment": "stretch",
+							"h_alignment": "stretch",
                             "dock": "left",
                             "content": {
                                 "type": "layout",
                                 "key": "shared_item_grid"
                             }
 						},
-						    {
-                            "type": "group",
-                            "header": "Pinned Locations",
-                            "content": {
-                                "type": "recentpins",
-                                "style": "wrap",
-                                "v_alignment": "stretch",
-                                "orientation": "vertical",
-                                "compact": true
-                            }
+						{
+								"type": "group",
+								"header": "Pinned Locations",
+								"content": {
+									"type": "recentpins",
+									"style": "wrap",
+									"v_alignment": "stretch",
+									"orientation": "vertical",
+									"compact": true
+								}
                         },
 		       ]
 		      },
@@ -110,12 +122,26 @@
                         {
                             "type": "group",
                             "header": "Items",
-		    	    "h_alignment": "stretch",
+							"h_alignment": "stretch",
                             "dock": "top",
                             "content": {
                                 "type": "layout",
                                 "key": "shared_item_grid"
                             }
+                        },
+                        {
+                            "type": "group",
+							"width": 413,
+                            "header": "Pinned Items",
+							"h_alignment": "stretch",
+                            "dock": "top",
+                            "content": {
+									"type": "recentpins",
+									"style": "wrap",
+									"v_alignment": "stretch",
+									"orientation": "vertical",
+									"compact": true
+								}
                         },
 		       ]
 		      },

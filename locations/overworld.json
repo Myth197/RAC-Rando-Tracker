@@ -2,10 +2,97 @@
 [
   {
     "name":"World",
-    "chest_unopened_img":"images/chest_open.png",
-    "chest_opened_img":"images/chest_open.png",
+    "chest_unopened_img":"images/chicken.png",
+    "chest_opened_img":"images/chicken.png",
     "children":
     [
+	//Vendor
+	                  {
+                    "name":"Vendor",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2700,
+                        "y":1400,
+                      }
+                    ],
+                    "sections": [
+						{
+						"name":"Novalis Vendor",
+						"access_rules":["Novalis"],
+						"hosted_item": "NovalisName_v"
+						},
+						{
+						"name":"Kerwan Vendor",
+						"access_rules":["Kerwan"],
+						"hosted_item": "KerwanName_v"
+						},						
+						{
+						"name":"Eudora Vendor",
+						"access_rules":["Eudora"],
+						"hosted_item": "EudoraName_v"
+						},
+						{
+						"name":"Blarg Vendor",
+						"access_rules":["Blarg"],
+						"hosted_item": "BlargName_v"
+						},
+						{
+						"name":"Rilgar Vendor",
+						"access_rules":["Rilgar"],
+						"hosted_item": "RilgarName_v"
+						},
+						{
+						"name":"Batalia Vendor",
+						"access_rules":["Batalia"],
+						"hosted_item": "BataliaName_v"
+						},
+						{
+						"name":"Orxon Vendor",
+						"access_rules":[
+						"Orxon,[Novalis]",
+						"Orxon,[Kerwan]",
+						"Orxon,[Aridia]",
+						"Orxon,[Eudora]",
+						"Orxon,[Blarg]",
+						"Orxon,[Rilgar]",
+						"Orxon,[Umbris]",
+						"Orxon,[Batalia]",
+						"Orxon,[Gaspar]",
+						"Orxon,[Poki]",
+						"Orxon,[Hoven]",
+						"Orxon,[Gemlik]",
+						"Orxon,[Oltanis]",
+						"Orxon,[Quartu]",
+						"Orxon,[Kalebo]",
+						"Orxon,[Fleet]",
+						"Orxon,[Veldin]",
+						],
+						"hosted_item": "OrxonName_v"
+						},
+						{
+						"name":"Gaspar Vendor",
+						"access_rules":["Gaspar"],
+						"hosted_item": "GasparName_v"
+						},
+						{
+						"name":"Poki Vendor",
+						"access_rules":["Poki"],
+						"hosted_item": "PokiName_v"
+						},
+						{
+						"name":"Hoven Vendor",
+						"access_rules":["Hoven"],
+						"hosted_item": "HovenName_v"
+						},
+						{
+						"name":"Oltanis Vendor",
+						"access_rules":["Oltanis"],
+						"hosted_item": "OltanisName_v"
+						},
+                    ]
+                  },
 	//Novalis
 {
         "name":"Novalis",
@@ -19,7 +106,8 @@
                       {
                         "map":"map",
                         "x":270,
-                        "y":280
+                        "y":280,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -69,6 +157,49 @@
                       }
                     ]
                   },
+                  //Gold Weapon Vendors
+                  {
+                    "name":"Gold Weapon Room",
+                    "access_rules":[
+			"Heli,[NGWRO]",
+			"PDA,[NGWRO]",
+			"Thruster,[NGWRO]",
+			],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":450,
+                        "y":350
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"20,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Bomb_G",
+						"access_rules": "Bomb"
+                      },
+					  {
+                        "name":"30,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Pyro_G",
+						"access_rules": "Pyro"
+                      },
+					  {
+                        "name":"20,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Blaster_G",
+						"access_rules": "Blaster"
+                      },
+					  {
+                        "name":"10,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Doom_G",
+						"access_rules": "Doom"
+                      },
+					  {
+                        "name":"10,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Suck_G",
+						"access_rules": "Suck"
+                      },
+                    ]
+                  },
     		]
       },
 	//Kerwan
@@ -84,7 +215,8 @@
                       {
                         "map":"map",
                         "x":800,
-                        "y":400
+                        "y":400,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -246,7 +378,8 @@
                       {
                         "map":"map",
                         "x":1800,
-                        "y":300
+                        "y":300,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -286,7 +419,7 @@
 			"Tres,Swingshot,Thruster",
 			"Heli,[Tres],[Swingshot]",			//SI
 			"Thruster,[Tres],[Swingshot]",			//SI
-			"[Tres],[Swingshot]",				//Packless SI (This Sucks)
+			"[Tres],[Swingshot],[Heli]",				//Packless SI (This Sucks)
 			"PDA,[Tres],[Swingshot],[Heli]",		//PDA sideflips
 			"PDA,[Tres],[Swingshot],[Thruster]",		//PDA sideflips
 			"Decoy,[Tres],[Swingshot],[Heli]",		//Decoy Clip
@@ -323,7 +456,8 @@
                       {
                         "map":"map",
                         "x":2300,
-                        "y":400
+                        "y":400,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -418,7 +552,8 @@
                       {
                         "map":"map",
                         "x":2900,
-                        "y":450
+                        "y":450,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -556,7 +691,8 @@
                       {
                         "map":"map",
                         "x":620,
-                        "y":750
+                        "y":750,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -614,11 +750,9 @@
                     "name":"Destroy the bombers",
                     "access_rules":[
 			"Magne",
-			"Thruster",
+			"Thruster,[Magne]",//Tight Jump
 			"PDA,[Magne]",		//PDA Sideflip
-			"PDA,[Thruster]",	//PDA Sideflip
 			"Heli,[Magne]",		//Tight Jump and SI
-			"Heli,[Thruster]"	//Tight Jump and SI
 			],
                     "map_locations":[
                       {
@@ -641,6 +775,7 @@
 	//Orxon
 {
         "name":"Orxon",
+        "color": "#059134",
         "access_rules":["Orxon"],
         "children":[
 					//Vendor
@@ -651,7 +786,8 @@
                       {
                         "map":"map",
                         "x":1220,
-                        "y":830
+                        "y":830,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -758,7 +894,8 @@
 			"O2,Thruster,[Swingshot],[Magne]",	//Tiptoes, SIs and Tight jumps
 			"O2,Thruster,Swingshot,Magne",		
 			"O2,Heli,Swingshot,Magne",
-			"O2,PDA,[Thruster],[Swingshot],[Magne]"	//PDA Sideflip
+			"O2,PDA,[Thruster],[Swingshot],[Magne]",	//PDA Sideflip
+			"O2,Heli,[Swingshot],[Magne]"		//Momentum Chain
 			],
                     "map_locations":[
                       {
@@ -791,7 +928,8 @@
                       {
                         "map":"map",
                         "x":1850,
-                        "y":580
+                        "y":580,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -836,7 +974,8 @@
                       {
                         "map":"map",
                         "x":2300,
-                        "y":930
+                        "y":930,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -894,7 +1033,8 @@
                     "name":"Give Raritanium",
                     "access_rules":[
 			"Hydrod,Tres,Raritanium",
-			"Hydro,O2,Raritanium,[Tres],[Hydrod]"	//Under Map Swim
+			"Hydro,O2,Raritanium,[Tres],[Hydrod]",	//Under Map Swim
+			"Raritanium,Decoy,PDA,[Tres],[Hydrod]"	    //Decoy Clip then PDA sideflip
 			],
                     "map_locations":[
                       {
@@ -927,7 +1067,8 @@
                       {
                         "map":"map",
                         "x":2880,
-                        "y":910
+                        "y":910,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -1054,6 +1195,54 @@
                       }
                     ]
                   },
+                  //Gold Weapon Vendors
+                  {
+                    "name":"Gold Weapon Room",
+                    "access_rules":[
+			"Tres,Magne,Swingshot,Dev",
+			"Tres,Magne,Swingshot,Visi",
+			"Thruster,[Magne],[Tres],[Swingshot],[Dev]",	//Ground Pound Cancel, Neutral Double Jump
+			"Thruster,[Magne],[Tres],[Swingshot],[Visi]",	//Ground Pound Cancel, Neutral Double Jump
+			"Heli,[Magne],[Tres],[Swingshot],[Dev]",	//Tight High Jump, Momentum Chain
+			"Heli,[Magne],[Tres],[Swingshot],[Visi]",	//Tight High Jump, Momentum Chain	
+			"PDA,[Magne],[Tres],[Swingshot],[Dev]",		//PDA Sideflip
+			"PDA,[Magne],[Tres],[Swingshot],[Visi]"		//PDA Sideflip
+			],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":110,
+                        "y":1170
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"20,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Bomb_G",
+						"access_rules": "Bomb"
+                      },
+					  {
+                        "name":"30,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Pyro_G",
+						"access_rules": "Pyro"
+                      },
+					  {
+                        "name":"20,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Blaster_G",
+						"access_rules": "Blaster"
+                      },
+					  {
+                        "name":"10,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Doom_G",
+						"access_rules": "Doom"
+                      },
+					  {
+                        "name":"10,000 Bolts + 4 Gold Bolts",
+						"hosted_item": "Suck_G",
+						"access_rules": "Suck"
+                      },
+                    ]
+                  },
     		]
       },
 	//Oltanis
@@ -1069,7 +1258,8 @@
                       {
                         "map":"map",
                         "x":810,
-                        "y":1340
+                        "y":1340,
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
@@ -1207,7 +1397,8 @@
 			"Hologuise,Thruster,Swingshot",
 			"Thruster,[Hologuise],[Swingshot]",		//Slide Edge Glide
 			"PDA,[Thruster],[Hologuise],[Swingshot]",	//PDA Sideflip
-			"Hologuise,Swingshot,[Thruster]"		//OoB jumps, Ghost Ratchet
+			"Hologuise,Swingshot,[Thruster]",		//OoB jumps, Ghost Ratchet
+			"Heli,[Hologuise],[Swingshot],[Thruster]"		//Momentum Chain up cliff side
 			],
                     "map_locations":[
                       {
@@ -1264,7 +1455,7 @@
 			"PDA,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//PDA Sideflip
 			"Visi,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//Visibomb the switch
 			"Suck,Heli,Hover,Swingshot,[Grind],[$Kalebo_switch]",			//Swingshot Swag
-			"Suck,Thruster,Hover,Swingshot,[Grind],[$Kalebo_switch]"		//Swingshot Swag
+			"Thruster,Hover,[Swingshot],[Grind],[$Kalebo_switch]"			//Thruster Jump
 			],
                     "map_locations":[
                       {
