@@ -1162,4 +1162,64 @@
     "img": "images/Chicken.png",
     "codes": "NGWRO"
   },
+    	//Weapon Vendor
+	{
+    "name": "Weapon Locations",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Vendor.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Vendor.png",
+        "codes":"Weapons"
+      }
+    ]
+  },
+  	//Gold Weapon setting
+	{
+    "name": "Gold Weapon Locations",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Gold_Weapons.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Gold_Weapons.png",
+        "codes":"Gold_Weapons"
+      }
+    ]
+  },
+  	//AGB
+	  {
+    "name": "Gold Bolt Locations",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/Gold_Bolt.png",
+        "inherit_codes": false,
+	"img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Gold_Bolt.png",
+        "codes":"AGB"
+      }
+    ]
+  },
 ]

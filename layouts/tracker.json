@@ -63,6 +63,18 @@
 	]
         }
     },
+    "options_popup": {
+      "type": "group",
+      "header": "Settings",
+      "content": {
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "1,4",
+        "rows": [
+          ["AGB"],["Gold_Weapons"],["Weapons"]
+                ]
+      }
+    },
     "tracker_default": {
         "type": "container",
         "background": "#877373",
@@ -81,10 +93,16 @@
                             "header": "Items",
 							"h_alignment": "stretch",
                             "dock": "left",
-                            "content": {
+							"header_content": 	{
+								"type": "button_popup",
+								"style": "settings",
+								"popup_background": "#50877373",
+								"layout": "options_popup"
+												},
+                            "content":	{
                                 "type": "layout",
                                 "key": "shared_item_grid"
-                            }
+										}
 						},
 						{
 								"type": "group",
@@ -124,10 +142,16 @@
                             "header": "Items",
 							"h_alignment": "stretch",
                             "dock": "top",
-                            "content": {
+							"header_content": 	{
+								"type": "button_popup",
+								"style": "settings",
+								"popup_background": "#50877373",
+								"layout": "options_popup"
+												},
+                            "content":	{
                                 "type": "layout",
                                 "key": "shared_item_grid"
-                            }
+										}
                         },
                         {
                             "type": "group",

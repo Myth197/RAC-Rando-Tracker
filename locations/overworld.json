@@ -9,12 +9,14 @@
 	//Vendor
 	                  {
                     "name":"Vendor",
+					"color": "#6b70d7",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":2700,
                         "y":1400,
+						"visibility_rules":["Weapons"]
                       }
                     ],
                     "sections": [
@@ -96,6 +98,7 @@
 	//Novalis
 {
         "name":"Novalis",
+		"color": "#546258",
         "access_rules":["Novalis"],
         "children":[
 		         //Vendor
@@ -120,6 +123,7 @@
                   //Save the Chairman
                   {
                     "name":"Save the Chairman",
+					"color": "#546258",
                     "access_rules":[""],
                     "map_locations":[
                       {
@@ -140,6 +144,7 @@
                   //Plumber
                   {
                     "name":"Explore the waterworks",
+					"color": "#546258",
                     "access_rules":[""],
                     "map_locations":[
                       {
@@ -157,19 +162,91 @@
                       }
                     ]
                   },
+                  //Gold Bolt 1
+                  {
+                    "name":"Waterworks Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":380,
+                        "y":330,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+                  //Gold Bolt 2
+                  {
+                    "name":"Cave Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[
+					"[$Rock_Explosion]",		//Under Map Swim
+					],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":130,
+                        "y":350,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+                  //Gold Bolt 3
+                  {
+                    "name":"Amoeboid Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[
+					"[Hydro]",		//Under Map Swim
+					],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":60,
+                        "y":300,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
                   //Gold Weapon Vendors
                   {
                     "name":"Gold Weapon Room",
+					"color": "#ffb300",
                     "access_rules":[
-			"Heli,[NGWRO]",
-			"PDA,[NGWRO]",
-			"Thruster,[NGWRO]",
-			],
+						"Heli,[NGWRO]",
+						"PDA,[NGWRO]",
+						"Thruster,[NGWRO]",
+									],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":450,
-                        "y":350
+                        "y":350,
+					"visibility_rules":["Gold_Weapons"],
                       }
                     ],
                     "sections": [
@@ -205,6 +282,7 @@
 	//Kerwan
 {
         "name":"Kerwan",
+		"color": "#3e5243",
         "access_rules":["Kerwan"],
         "children":[
 				    //Vendor
@@ -291,16 +369,91 @@
                       }
                     ]
                   },
+				    //Gold Bolt 1
+                  {
+                    "name":"Underpass Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":800,
+                        "y":450,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 2
+                  {
+                    "name":"Fitness Course Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[
+					"Heli",
+					"Thruster",
+					"PDA,[Heli]"	//PDA Sideflip
+					],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":700,
+                        "y":310,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 3
+                  {
+                    "name":"Train Station Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[
+					"Heli",
+					"Thruster",
+					"PDA,[Heli]"	//PDA sideflip
+					],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":820,
+                        "y":100,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
     		]
       },
 	//Aridia
 {
         "name":"Aridia",
+		"color": "#192039",
         "access_rules":["Aridia"],
         "children":[
                   //Skid
                   {
-                    "name":"Help Skid get to his ship",
+                    "name":"Kill the Sand Sharks",
                     "access_rules":[""],
                     "map_locations":[
                       {
@@ -320,7 +473,7 @@
                   },
                   //Trespasser
                   {
-                    "name":"Use your Swingshot",
+                    "name":"Construction Zone",
                     "access_rules":[
 			"Thruster,[Swingshot]",		//ISF
 			"Heli,[Swingshot]",		//Sinaflips
@@ -338,14 +491,21 @@
                       {
                         "name":"Trespasser",
                         "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
+						"chest_unopened_img":"images/Gadget.png",
+						"chest_opened_img":"images/Gadget.png",
+                      },
+					  {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"visibility_rules":["AGB"],
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
                       }
                     ]
                   },
                   //Agent
                   {
-                    "name":"Bring Prize to agent",
+                    "name":"Bring Zoomerator to agent",
                     "access_rules":["Zoom"],
                     "map_locations":[
                       {
@@ -360,6 +520,82 @@
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 2
+                  {
+                    "name":"Cave Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[
+					"$Rock_Explosion",
+					"Heli,[$Rock_Explosion]", 		//SIs
+					"Thruster,[$Rock_Explosion]",	//ISF
+					"PDA,[$Rock_Explosion]"			//PDA Sideflip
+					],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1250,
+                        "y":450,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 1
+                  {
+                    "name":"Island Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1420,
+                        "y":250,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 4
+                  {
+                    "name":"Laser Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+						"Magne",
+						"Thruster,[Magne]",		//ISF
+						"Heli,[Magne]",			//Sinaflips
+						"PDA,[Magne]",			//PDA sideflip
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1400,
+                        "y":50,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
                       }
                     ]
                   },
@@ -401,7 +637,8 @@
                       {
                         "map":"map",
                         "x":1960,
-                        "y":200
+                        "y":200,
+						"visibility_rules":["Weapons"]
                       }
                     ],
                     "sections": [
@@ -574,7 +811,8 @@
                       {
                         "map":"map",
                         "x":3000,
-                        "y":150
+                        "y":150,
+						"visibility_rules":["Weapons"]
                       }
                     ],
                     "sections": [
@@ -1198,6 +1436,7 @@
                   //Gold Weapon Vendors
                   {
                     "name":"Gold Weapon Room",
+					"color": "#ffb300",
                     "access_rules":[
 			"Tres,Magne,Swingshot,Dev",
 			"Tres,Magne,Swingshot,Visi",
@@ -1212,7 +1451,8 @@
                       {
                         "map":"map",
                         "x":110,
-                        "y":1170
+                        "y":1170,
+					"visibility_rules":["Gold_Weapons"],
                       }
                     ],
                     "sections": [
@@ -1277,7 +1517,8 @@
                       {
                         "map":"map",
                         "x":890,
-                        "y":1440
+                        "y":1440,
+						"visibility_rules":["Weapons"]
                       }
                     ],
                     "sections": [
