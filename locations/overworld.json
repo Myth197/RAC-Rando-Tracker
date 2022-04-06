@@ -16,82 +16,83 @@
                         "map":"map",
                         "x":2700,
                         "y":1400,
-						"visibility_rules":["Weapons"]
+						"visibility_rules":["vendor"]
                       }
                     ],
                     "sections": [
 						{
 						"name":"Novalis Vendor",
 						"access_rules":["Novalis"],
-						"hosted_item": "NovalisName_v"
+						"hosted_item": "Novalis_v"
 						},
 						{
 						"name":"Kerwan Vendor",
 						"access_rules":["Kerwan"],
-						"hosted_item": "KerwanName_v"
+						"hosted_item": "Kerwan_v"
 						},						
 						{
 						"name":"Eudora Vendor",
 						"access_rules":["Eudora"],
-						"hosted_item": "EudoraName_v"
+						"hosted_item": "Eudora_v"
 						},
 						{
 						"name":"Blarg Vendor",
 						"access_rules":["Blarg"],
-						"hosted_item": "BlargName_v"
+						"hosted_item": "Blarg_v"
 						},
 						{
 						"name":"Rilgar Vendor",
 						"access_rules":["Rilgar"],
-						"hosted_item": "RilgarName_v"
+						"hosted_item": "Rilgar_v"
 						},
 						{
 						"name":"Batalia Vendor",
 						"access_rules":["Batalia"],
-						"hosted_item": "BataliaName_v"
+						"hosted_item": "Batalia_v"
 						},
 						{
 						"name":"Orxon Vendor",
 						"access_rules":[
-						"Orxon,[Novalis]",
-						"Orxon,[Kerwan]",
-						"Orxon,[Aridia]",
-						"Orxon,[Eudora]",
-						"Orxon,[Blarg]",
-						"Orxon,[Rilgar]",
-						"Orxon,[Umbris]",
-						"Orxon,[Batalia]",
-						"Orxon,[Gaspar]",
-						"Orxon,[Poki]",
-						"Orxon,[Hoven]",
-						"Orxon,[Gemlik]",
-						"Orxon,[Oltanis]",
-						"Orxon,[Quartu]",
-						"Orxon,[Kalebo]",
-						"Orxon,[Fleet]",
-						"Orxon,[Veldin]",
+						"Orxon,O2",
+						"Orxon,Novalis",
+						"Orxon,Kerwan",
+						"Orxon,Aridia",
+						"Orxon,Eudora",
+						"Orxon,Blarg",
+						"Orxon,Rilgar",
+						"Orxon,Umbris",
+						"Orxon,Batalia",
+						"Orxon,Gaspar",
+						"Orxon,Poki",
+						"Orxon,Hoven",
+						"Orxon,Gemlik",
+						"Orxon,Oltanis",
+						"Orxon,Quartu",
+						"Orxon,Kalebo",
+						"Orxon,Fleet",
+						"Orxon,Veldin",
 						],
-						"hosted_item": "OrxonName_v"
+						"hosted_item": "Orxon_v"
 						},
 						{
 						"name":"Gaspar Vendor",
 						"access_rules":["Gaspar"],
-						"hosted_item": "GasparName_v"
+						"hosted_item": "Gaspar_v"
 						},
 						{
 						"name":"Poki Vendor",
 						"access_rules":["Poki"],
-						"hosted_item": "PokiName_v"
+						"hosted_item": "Poki_v"
 						},
 						{
 						"name":"Hoven Vendor",
 						"access_rules":["Hoven"],
-						"hosted_item": "HovenName_v"
+						"hosted_item": "Hoven_v"
 						},
 						{
 						"name":"Oltanis Vendor",
 						"access_rules":["Oltanis"],
-						"hosted_item": "OltanisName_v"
+						"hosted_item": "Oltanis_v"
 						},
                     ]
                   },
@@ -103,20 +104,20 @@
         "children":[
 		         //Vendor
                   {
-                    "name":"Vendor - Pyrocitor",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":270,
                         "y":280,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"2,500 Bolts",
-						"hosted_item": "Pyro"
+						"name":"Novalis Vendor",
+						"hosted_item": "Novalis_v"
 						},
                     ]
                   },
@@ -287,20 +288,20 @@
         "children":[
 				    //Vendor
                   {
-                    "name":"Vendor - Blaster",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":800,
                         "y":400,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"2,500 Bolts",
-						"hosted_item": "Blaster"
+						"name":"Kerwan Vendor",
+						"hosted_item": "Kerwan_v"
 						},
                     ]
                   },
@@ -608,26 +609,26 @@
         "children":[
 						    //Vendor
                   {
-                    "name":"Vendor - Glove of Doom",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":1800,
                         "y":300,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"7,500 Bolts",
-						"hosted_item": "Doom"
+						"name":"Eudora Vendor",
+						"hosted_item": "Eudora_v"
 						},
                     ]
                   },
 				  	//Suck Canon
                   {
-                    "name":"Suck Canon",
+                    "name":"Explore the Mills",
                     "access_rules":[
 						"Heli",
 						"Thruster",
@@ -644,7 +645,9 @@
                     "sections": [
 						{
 						"name":"Suck Canon",
-						"hosted_item": "Suck"
+                        "item_count":1,
+                	"chest_unopened_img":"images/Gadget.png",
+                	"chest_opened_img":"images/Gadget.png",
 						},
                     ]
                   },
@@ -687,20 +690,20 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Taunter",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":2300,
                         "y":400,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"2,500 Bolts",
-						"hosted_item": "Taunt"
+						"name":"Blarg Vendor",
+						"hosted_item": "Blarg_v"
 						},
                     ]
                   },
@@ -783,26 +786,26 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Mine Glove",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":2900,
                         "y":450,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"7,500 Bolts",
-						"hosted_item": "Mine"
+						"name":"Rilgar Vendor",
+						"hosted_item": "Rilgar_v"
 						},
                     ]
                   },
 				  	//Salesman
                   {
-                    "name":"RYNO Salesman",
+                    "name":"City District",
                     "access_rules":[
 					"[Heli]",
 					"[Thruster]"
@@ -817,8 +820,10 @@
                     ],
                     "sections": [
 						{
-						"name":"150,000 Bolts",
-						"hosted_item": "RYNO"
+						"name":"Shady Salesman",
+                        "item_count":1,
+                	"chest_unopened_img":"images/Gadget.png",
+                	"chest_opened_img":"images/Gadget.png",
 						},
                     ]
                   },
@@ -923,20 +928,20 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Devestator",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":620,
                         "y":750,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"10,000 Bolts",
-						"hosted_item": "Dev"
+						"name":"Batalia Vendor",
+						"hosted_item": "Batalia_v"
 						},
                     ]
                   },
@@ -1018,20 +1023,39 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Visibomb",
-                    "access_rules":[""],
+                    "name":"Vendor",
+                    "access_rules":[
+						"Orxon,O2",
+						"Orxon,Novalis",
+						"Orxon,Kerwan",
+						"Orxon,Aridia",
+						"Orxon,Eudora",
+						"Orxon,Blarg",
+						"Orxon,Rilgar",
+						"Orxon,Umbris",
+						"Orxon,Batalia",
+						"Orxon,Gaspar",
+						"Orxon,Poki",
+						"Orxon,Hoven",
+						"Orxon,Gemlik",
+						"Orxon,Oltanis",
+						"Orxon,Quartu",
+						"Orxon,Kalebo",
+						"Orxon,Fleet",
+						"Orxon,Veldin",
+						],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":1220,
                         "y":830,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"15,000 Bolts",
-						"hosted_item": "Visi"
+						"name":"Orxon Vendor",
+						"hosted_item": "Orxon_v"
 						},
                     ]
                   },
@@ -1160,20 +1184,20 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Walloper",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":1850,
                         "y":580,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"7,500 Bolts",
-						"hosted_item": "Wallop"
+						"name":"Gaspar Vendor",
+						"hosted_item": "Gaspar_v"
 						},
                     ]
                   },
@@ -1206,20 +1230,20 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Decoy Glove",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":2300,
                         "y":930,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"7,500 Bolts",
-						"hosted_item": "Decoy"
+						"name":"Poki Vendor",
+						"hosted_item": "Poki_v"
 						},
                     ]
                   },
@@ -1299,20 +1323,20 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Drone Devices",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":2880,
                         "y":910,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"7,500 Bolts",
-						"hosted_item": "Drone"
+						"name":"Hoven Vendor",
+						"hosted_item": "Hoven_v"
 						},
                     ]
                   },
@@ -1492,27 +1516,30 @@
         "children":[
 					//Vendor
                   {
-                    "name":"Vendor - Tesla Claw",
+                    "name":"Vendor",
                     "access_rules":[""],
                     "map_locations":[
                       {
                         "map":"map",
                         "x":810,
                         "y":1340,
-						"visibility_rules":["vendor"]
+						"visibility_rules":["weapon_plus"]
                       }
                     ],
                     "sections": [
 						{
-						"name":"40,000 Bolts",
-						"hosted_item": "Tesla"
+						"name":"Oltanis Vendor",
+						"hosted_item": "Oltanis_v"
 						},
                     ]
                   },
 					//Stealth Path
                   {
                     "name":"Search the destroyed city",
-                    "access_rules":[""],
+                    "access_rules":[
+					"Swingshot",
+					"PDA,[Swingshot]"
+					],
                     "map_locations":[
                       {
                         "map":"map",
@@ -1524,7 +1551,9 @@
                     "sections": [
 						{
 						"name":"Morph-o-ray",
-						"hosted_item": "Morph"
+                        "item_count":1,
+                	"chest_unopened_img":"images/Gadget.png",
+                	"chest_opened_img":"images/Gadget.png",
 						},
                     ]
                   },
