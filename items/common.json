@@ -1168,7 +1168,7 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 0,
+    "initial_stage_idx": 1,
     "stages":[
       {
         "img": "images/Vendor.png",
@@ -1178,7 +1178,13 @@
       },
       {
         "img": "images/Vendor.png",
-        "codes":"Weapons"
+        "inherit_codes": false,
+        "codes":"Weapons,vendor"
+      },
+      {
+        "img": "images/Vendor_plus.png",
+        "inherit_codes": false,
+        "codes":"Weapons,weapon_plus"
       }
     ]
   },
