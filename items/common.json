@@ -855,7 +855,7 @@
     "type": "consumable",
     "img": "images/Gold_Bolt.png",
     "codes": "Gold",
-  "max_quantity": 40
+	"max_quantity": 40
   },
 									//Vendor
 	//Novalis Weapon

@@ -23,75 +23,86 @@
 						{
 						"name":"Novalis Vendor",
 						"access_rules":["Novalis"],
+						"capture_item":true,
 						"hosted_item": "Novalis_v"
 						},
 						{
 						"name":"Kerwan Vendor",
 						"access_rules":["Kerwan"],
+						"capture_item":true,
 						"hosted_item": "Kerwan_v"
 						},						
 						{
 						"name":"Eudora Vendor",
 						"access_rules":["Eudora"],
+						"capture_item":true,
 						"hosted_item": "Eudora_v"
 						},
 						{
 						"name":"Blarg Vendor",
 						"access_rules":["Blarg"],
+						"capture_item":true,
 						"hosted_item": "Blarg_v"
 						},
 						{
 						"name":"Rilgar Vendor",
 						"access_rules":["Rilgar"],
+						"capture_item":true,
 						"hosted_item": "Rilgar_v"
 						},
 						{
 						"name":"Batalia Vendor",
 						"access_rules":["Batalia"],
+						"capture_item":true,
 						"hosted_item": "Batalia_v"
 						},
 						{
 						"name":"Orxon Vendor",
 						"access_rules":[
 						"Orxon,O2",
-						"Orxon,Novalis",
-						"Orxon,Kerwan",
-						"Orxon,Aridia",
-						"Orxon,Eudora",
-						"Orxon,Blarg",
-						"Orxon,Rilgar",
-						"Orxon,Umbris",
-						"Orxon,Batalia",
-						"Orxon,Gaspar",
-						"Orxon,Poki",
-						"Orxon,Hoven",
-						"Orxon,Gemlik",
-						"Orxon,Oltanis",
-						"Orxon,Quartu",
-						"Orxon,Kalebo",
-						"Orxon,Fleet",
-						"Orxon,Veldin",
+						"Orxon,Novalis,[O2]",
+						"Orxon,Kerwan,[O2]",
+						"Orxon,Aridia,[O2]",
+						"Orxon,Eudora,[O2]",
+						"Orxon,Blarg,[O2]",
+						"Orxon,Rilgar,[O2]",
+						"Orxon,Umbris,[O2]",
+						"Orxon,Batalia,[O2]",
+						"Orxon,Gaspar,[O2]",
+						"Orxon,Poki,[O2]",
+						"Orxon,Hoven,[O2]",
+						"Orxon,Gemlik,[O2]",
+						"Orxon,Oltanis,[O2]",
+						"Orxon,Quartu,[O2]",
+						"Orxon,Kalebo,[O2]",
+						"Orxon,Fleet,[O2]",
+						"Orxon,Veldin,[O2]",
 						],
+						"capture_item":true,
 						"hosted_item": "Orxon_v"
 						},
 						{
 						"name":"Gaspar Vendor",
 						"access_rules":["Gaspar"],
+						"capture_item":true,
 						"hosted_item": "Gaspar_v"
 						},
 						{
 						"name":"Poki Vendor",
 						"access_rules":["Poki"],
+						"capture_item":true,
 						"hosted_item": "Poki_v"
 						},
 						{
 						"name":"Hoven Vendor",
 						"access_rules":["Hoven"],
+						"capture_item":true,
 						"hosted_item": "Hoven_v"
 						},
 						{
 						"name":"Oltanis Vendor",
 						"access_rules":["Oltanis"],
+						"capture_item":true,
 						"hosted_item": "Oltanis_v"
 						},
                     ]
@@ -117,6 +128,7 @@
                     "sections": [
 						{
 						"name":"Novalis Vendor",
+						"capture_item":true,
 						"hosted_item": "Novalis_v"
 						},
                     ]
@@ -301,6 +313,7 @@
                     "sections": [
 						{
 						"name":"Kerwan Vendor",
+						"capture_item":true,
 						"hosted_item": "Kerwan_v"
 						},
                     ]
@@ -622,6 +635,7 @@
                     "sections": [
 						{
 						"name":"Eudora Vendor",
+						"capture_item":true,
 						"hosted_item": "Eudora_v"
 						},
                     ]
@@ -703,6 +717,7 @@
                     "sections": [
 						{
 						"name":"Blarg Vendor",
+						"capture_item":true,
 						"hosted_item": "Blarg_v"
 						},
                     ]
@@ -799,6 +814,7 @@
                     "sections": [
 						{
 						"name":"Rilgar Vendor",
+						"capture_item":true,
 						"hosted_item": "Rilgar_v"
 						},
                     ]
@@ -941,6 +957,7 @@
                     "sections": [
 						{
 						"name":"Batalia Vendor",
+						"capture_item":true,
 						"hosted_item": "Batalia_v"
 						},
                     ]
@@ -1026,23 +1043,23 @@
                     "name":"Vendor",
                     "access_rules":[
 						"Orxon,O2",
-						"Orxon,Novalis",
-						"Orxon,Kerwan",
-						"Orxon,Aridia",
-						"Orxon,Eudora",
-						"Orxon,Blarg",
-						"Orxon,Rilgar",
-						"Orxon,Umbris",
-						"Orxon,Batalia",
-						"Orxon,Gaspar",
-						"Orxon,Poki",
-						"Orxon,Hoven",
-						"Orxon,Gemlik",
-						"Orxon,Oltanis",
-						"Orxon,Quartu",
-						"Orxon,Kalebo",
-						"Orxon,Fleet",
-						"Orxon,Veldin",
+						"Orxon,Novalis,[O2]",
+						"Orxon,Kerwan,[O2]",
+						"Orxon,Aridia,[O2]",
+						"Orxon,Eudora,[O2]",
+						"Orxon,Blarg,[O2]",
+						"Orxon,Rilgar,[O2]",
+						"Orxon,Umbris,[O2]",
+						"Orxon,Batalia,[O2]",
+						"Orxon,Gaspar,[O2]",
+						"Orxon,Poki,[O2]",
+						"Orxon,Hoven,[O2]",
+						"Orxon,Gemlik,[O2]",
+						"Orxon,Oltanis,[O2]",
+						"Orxon,Quartu,[O2]",
+						"Orxon,Kalebo,[O2]",
+						"Orxon,Fleet,[O2]",
+						"Orxon,Veldin,[O2]",
 						],
                     "map_locations":[
                       {
@@ -1055,6 +1072,7 @@
                     "sections": [
 						{
 						"name":"Orxon Vendor",
+						"capture_item":true,
 						"hosted_item": "Orxon_v"
 						},
                     ]
@@ -1197,6 +1215,7 @@
                     "sections": [
 						{
 						"name":"Gaspar Vendor",
+						"capture_item":true,
 						"hosted_item": "Gaspar_v"
 						},
                     ]
@@ -1243,6 +1262,7 @@
                     "sections": [
 						{
 						"name":"Poki Vendor",
+						"capture_item":true,
 						"hosted_item": "Poki_v"
 						},
                     ]
@@ -1336,6 +1356,7 @@
                     "sections": [
 						{
 						"name":"Hoven Vendor",
+						"capture_item":true,
 						"hosted_item": "Hoven_v"
 						},
                     ]
@@ -1529,6 +1550,7 @@
                     "sections": [
 						{
 						"name":"Oltanis Vendor",
+						"capture_item":true,
 						"hosted_item": "Oltanis_v"
 						},
                     ]
