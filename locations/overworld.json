@@ -9,7 +9,8 @@
 	//Vendor
 	                  {
                     "name":"Vendor",
-					"color": "#6b70d7",
+					"color": "#6b70d7",			//OG color
+//					"color": "#000cff",			//Bright color
                     "access_rules":[""],
                     "map_locations":[
                       {
@@ -110,7 +111,8 @@
 	//Novalis
 {
         "name":"Novalis",
-		"color": "#546258",
+//		"color": "#546258",				//OG color
+		"color": "#6a9825",				//Alt color
         "access_rules":["Novalis"],
         "children":[
 		         //Vendor
@@ -136,7 +138,6 @@
                   //Save the Chairman
                   {
                     "name":"Save the Chairman",
-					"color": "#546258",
                     "access_rules":[""],
                     "map_locations":[
                       {
@@ -157,7 +158,6 @@
                   //Plumber
                   {
                     "name":"Explore the waterworks",
-					"color": "#546258",
                     "access_rules":[""],
                     "map_locations":[
                       {
@@ -295,7 +295,8 @@
 	//Kerwan
 {
         "name":"Kerwan",
-		"color": "#3e5243",
+//		"color": "#3e5243",			//OG color
+		"color": "#848777",			//Alt color
         "access_rules":["Kerwan"],
         "children":[
 				    //Vendor
@@ -462,7 +463,8 @@
 	//Aridia
 {
         "name":"Aridia",
-		"color": "#192039",
+//		"color": "#192039",			//OG color
+		"color": "#537dbc",			//Alt color
         "access_rules":["Aridia"],
         "children":[
                   //Skid
@@ -618,6 +620,8 @@
 	//Eudora
 {
         "name":"Eudora",
+//		"color": "#4c665a",			//OG color
+		"color": "#a7d0b1",			//Alt color
         "access_rules":["Eudora"],
         "children":[
 						    //Vendor
@@ -695,11 +699,38 @@
                       }
                     ]
                   },
+				    //Gold Bolt
+                  {
+                    "name":"Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+						"[Heli]",
+						"[Thruster]",
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":1860,
+                        "y":300,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
     		]
       },
 	//Blarg
 {
         "name":"Blarg Station",
+//		"color": "#2f2b1a",			//OG color
+		"color": "#764e23",			//Alt color
         "access_rules":["Blarg"],
         "children":[
 					//Vendor
@@ -792,11 +823,68 @@
                       }
                     ]
                   },
+				    //Gold Bolt 1
+                  {
+                    "name":"Outside Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+						"O2,Tres",
+						"O2,Decoy,[Tres]",		//DecoyClip
+						"[O2],Heli,[Tres]",		//Glide OoB
+						"[O2],Thruster,[Tres]",	//Glide OoB
+						"PDA,[Tres]"		//PDA sideflip
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2150,
+                        "y":375,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 2
+                  {
+                    "name":"Cages Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+						"Swingshot",
+						"PDA,[Swingshot]",	//PDA Sideflip
+						"Heli,[Swingshot]",	//Tight jump
+						"Thruster,[Swingshot]"	//Tight jump
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2280,
+                        "y":120,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
     		]
       },
 	//Blackwater
 {
         "name":"Rilgar",
+//		"color": "#0f2a3e",			//OG color
+		"color": "#78749c",			//Alt color
         "access_rules":["Rilgar"],
         "children":[
 					//Vendor
@@ -823,8 +911,8 @@
                   {
                     "name":"City District",
                     "access_rules":[
-					"[Heli]",
-					"[Thruster]"
+					"[Heli],[Metal]",
+					"[Thruster],[Metal]"
 					],
                     "map_locations":[
                       {
@@ -836,7 +924,7 @@
                     ],
                     "sections": [
 						{
-						"name":"Shady Salesman",
+						"name":"Shady Salesman - 150,000 Bolts",
                         "item_count":1,
                 	"chest_unopened_img":"images/Gadget.png",
                 	"chest_opened_img":"images/Gadget.png",
@@ -852,8 +940,7 @@
 			"Heli,[Hydrod],[Swingshot]",		//Sinaflip or ILJ
 			"Thruster,[Hydrod],[Swingshot]",	//ISF
 			"PDA,[Heli],[Hydrod],[Swingshot]",		//PDA sideflip
-			"Swingshot,[Heli],[Hydrod]",		//Under map swim
-			"O2,Hydro,[Heli],[Hydrod],[Swingshot]"			//Under map swim
+			"[Heli],[Hydrod],[Swingshot]"			//Under map swim
 			],
                     "map_locations":[
                       {
@@ -899,11 +986,68 @@
                       }
                     ]
                   },
+				    //Gold Bolt 1
+                  {
+                    "name":"Laser Maze Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+						"Heli",
+						"Thruster",
+						"PDA,[Heli]",		//PDA Sideflip
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2955,
+                        "y":110,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 2
+                  {
+                    "name":"Sewer Cave Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+			"O2,Heli,Hydrod,Swingshot",
+			"O2,Thruster,Hydrod,Swingshot",
+			"Heli,[O2],[Hydrod],[Swingshot]",		//Sinaflip or ILJ
+			"Thruster,[O2],[Hydrod],[Swingshot]",	//ISF
+			"PDA,[O2],[Heli],[Hydrod],[Swingshot]",		//PDA sideflip
+			"O2,[Heli],[Hydrod],[Swingshot]"			//Under map swim
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":2700,
+                        "y":160,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
     		]
       },
 	//Umbris
 {
         "name":"Umbris",
+//		"color": "#3b2a21",			//OG color
+		"color": "#c1723b",			//Alt color
         "access_rules":["Umbris"],
         "children":[
                   //Snagglebeast
@@ -935,11 +1079,75 @@
                       }
                     ]
                   },
+				    //Gold Bolt 1
+                  {
+                    "name":"Lighthouse Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+			"Swingshot,Heli",
+			"Swingshot,Thruster",
+			"Heli,[Swingshot]",					//ILJ
+			"Thruster,[Swingshot]",				//ISF
+			"PDA,[Swingshot],[Heli]",				//PDA sideflip
+			"PDA,[Swingshot],[Thruster]",			//PDA sideflip
+			"Swingshot,[Heli]",					//Tight swing at start, Ghost Ratchet
+			"Swingshot,[Thruster]",				//Tight swing at start, Ghost Ratchet
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":350,
+                        "y":800,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
+				    //Gold Bolt 2
+                  {
+                    "name":"Drop Down Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[
+			"Swingshot,Heli",
+			"Swingshot,Thruster",
+			"Heli,[Swingshot]",					//ILJ
+			"Thruster,[Swingshot]",				//ISF
+			"PDA,[Swingshot],[Heli]",				//PDA sideflip
+			"PDA,[Swingshot],[Thruster]",			//PDA sideflip
+			"Swingshot,[Heli]",					//Tight swing at start, Ghost Ratchet
+			"Swingshot,[Thruster]",				//Tight swing at start, Ghost Ratchet
+									],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":300,
+                        "y":750,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
     		]
       },
 	//Batalia
 {
         "name":"Batalia",
+//		"color": "#41473f",			//OG color
+		"color": "#a8aa6c",			//Alt color
         "access_rules":["Batalia"],
         "children":[
 					//Vendor
@@ -1030,12 +1238,35 @@
                       }
                     ]
                   },
+				    //Gold Bolt 1
+                  {
+                    "name":"House Roof Gold Bolt",
+					"color": "#ffb300",
+                    "access_rules":	[""],
+                    "map_locations":[
+                      {
+                        "map":"map",
+                        "x":695,
+                        "y":725,
+						"visibility_rules":["AGB"]
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name":"Gold Bolt",
+                        "item_count":1,
+						"chest_unopened_img":"images/Gold_Bolt.png",
+						"chest_opened_img":"images/Gold_Bolt.png",
+                      }
+                    ]
+                  },
     		]
 	},
 	//Orxon
 {
         "name":"Orxon",
-        "color": "#059134",
+//		"color": "#4a5f21",			//OG color
+		"color": "#90d603",			//Alt color
         "access_rules":["Orxon"],
         "children":[
 					//Vendor
@@ -1146,10 +1377,10 @@
                   {
                     "name":"Nanotech Vendor",
                     "access_rules":[
-			"O2,Thruster",
-			"O2,Heli",
-			"PDA,O2,[Heli]",	//PDA Sideflip
-			"PDA,O2,[Thruster]"	//PDA Sideflip
+			"O2,Thruster,Nanotech1",
+			"O2,Heli,Nanotech1",
+			"PDA,O2,[Heli],Nanotech1",	//PDA Sideflip
+			"PDA,O2,[Thruster],Nanotech1"	//PDA Sideflip
 			],
                     "map_locations":[
                       {
@@ -1198,6 +1429,8 @@
 	//Gaspar
 {
         "name":"Gaspar",
+//		"color": "#8f5221",			//OG color
+		"color": "#cd3e09",			//Alt color
         "access_rules":["Gaspar"],
         "children":[
 					//Vendor
@@ -1245,6 +1478,8 @@
 	//Poki
 {
         "name":"Pokitaru",
+//		"color": "#377079",			//OG color
+		"color": "#23cae4",			//Alt color
         "access_rules":["Poki"],
         "children":[
 					//Vendor
@@ -1339,6 +1574,8 @@
 	//Hoven
 {
         "name":"Hoven",
+//		"color": "#47555e",			//OG color
+		"color": "#b1d0e3",			//Alt color
         "access_rules":["Hoven"],
         "children":[
 					//Vendor
@@ -1372,6 +1609,8 @@
 			"[Visi]",
 			"[Tesla]",
 			"[RYNO]"],
+			"Swingshot,Heli,Sonic",		
+			"Swingshot,Thruster,Sonic",		
                     "map_locations":[
                       {
                         "map":"map",
@@ -1388,7 +1627,7 @@
                       }
                     ]
                   },
-                  //Shoot planes
+                  //water cave
                   {
                     "name":"Buy the Hydro-pack",
                     "access_rules":[
@@ -1447,6 +1686,8 @@
 	//Gemlik
 {
         "name":"Gemlik",
+//		"color": "#473d25",			//OG color
+		"color": "#ffe465",			//Alt color
         "access_rules":["Gemlik"],
         "children":[
                   //qwark
@@ -1533,6 +1774,8 @@
 	//Oltanis
 {
         "name":"Oltanis",
+//		"color": "#4d5049",			//OG color
+		"color": "#e1f7e4",			//Alt colorsss
         "access_rules":["Oltanis"],
         "children":[
 					//Vendor
@@ -1631,6 +1874,8 @@
 	//Quartu
 {
         "name":"Quartu",
+//		"color": "#2d4138",			//OG color
+		"color": "#2b8b52",			//Alt colorsss
         "access_rules":["Quartu"],
         "children":[
                   //Giant Clank
@@ -1713,6 +1958,8 @@
 	//Kalebo III
 {
         "name":"Kalebo III",
+//		"color": "#3f5d76",			//OG color
+		"color": "#0ace9f",			//Alt colorsss
         "access_rules":["Kalebo"],
         "children":[
                   //Giant Cock
@@ -1770,6 +2017,8 @@
 	//Fleet
 {
         "name":"Drek's Fleet",
+//		"color": "#323433",			//OG color
+		"color": "#00000f",			//Alt colorsss
         "access_rules":["Fleet"],
         "children":[
                   //Codebot
@@ -1826,6 +2075,8 @@
 	//Veldin
 {
         "name":"Veldin 2",
+//		"color": "#775e33",			//OG color
+		"color": "#cfa951",			//Alt colorsss
         "access_rules":["Veldin"],
         "children":[
                   //Drek

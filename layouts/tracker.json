@@ -69,7 +69,9 @@
         "h_alignment": "left",
         "item_margin": "1,4",
         "rows": [
-          ["Gold_Weapons"],["Weapons"]
+		\\["AGB"],
+		["Gold_Weapons"],
+		["Weapons"]
                 ]
       }
     },
