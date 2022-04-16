@@ -1608,9 +1608,9 @@
 			"[Dev]",
 			"[Visi]",
 			"[Tesla]",
-			"[RYNO]"],
+			"[RYNO]",
 			"Swingshot,Heli,Sonic",		
-			"Swingshot,Thruster,Sonic",		
+			"Swingshot,Thruster,Sonic"],	
                     "map_locations":[
                       {
                         "map":"map",
