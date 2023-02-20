@@ -1550,7 +1550,7 @@
                     "name":"Give Raritanium",
                     "access_rules":[
 			"Hydrod,Tres,Raritanium",
-			"Hydro,O2,Raritanium,[Tres],[Hydrod]",	//Under Map Swim
+			"O2,Raritanium,[Tres],[Hydrod]",	//Under Map Swim
 			"Raritanium,Decoy,PDA,[Tres],[Hydrod]"	    //Decoy Clip then PDA sideflip
 			],
                     "map_locations":[
