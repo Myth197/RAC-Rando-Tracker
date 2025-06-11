@@ -1,2108 +1,2175 @@
-
 [
   {
-    "name":"World",
-    "chest_unopened_img":"images/chicken.png",
-    "chest_opened_img":"images/chicken.png",
-    "children":
-    [
-	//Vendor
-	                  {
-                    "name":"Vendor",
-					"color": "#6b70d7",			//OG color
-//					"color": "#000cff",			//Bright color
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2700,
-                        "y":1400,
-						"visibility_rules":["vendor"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Novalis Vendor",
-						"access_rules":["Novalis"],
-						"capture_item":true,
-						"hosted_item": "Novalis_v"
-						},
-						{
-						"name":"Kerwan Vendor",
-						"access_rules":["Kerwan"],
-						"capture_item":true,
-						"hosted_item": "Kerwan_v"
-						},						
-						{
-						"name":"Eudora Vendor",
-						"access_rules":["Eudora"],
-						"capture_item":true,
-						"hosted_item": "Eudora_v"
-						},
-						{
-						"name":"Blarg Vendor",
-						"access_rules":["Blarg"],
-						"capture_item":true,
-						"hosted_item": "Blarg_v"
-						},
-						{
-						"name":"Rilgar Vendor",
-						"access_rules":["Rilgar"],
-						"capture_item":true,
-						"hosted_item": "Rilgar_v"
-						},
-						{
-						"name":"Batalia Vendor",
-						"access_rules":["Batalia"],
-						"capture_item":true,
-						"hosted_item": "Batalia_v"
-						},
-						{
-						"name":"Orxon Vendor",
-						"access_rules":[
-						"Orxon,O2",
-						"Orxon,Novalis,[O2]",
-						"Orxon,Kerwan,[O2]",
-						"Orxon,Aridia,[O2]",
-						"Orxon,Eudora,[O2]",
-						"Orxon,Blarg,[O2]",
-						"Orxon,Rilgar,[O2]",
-						"Orxon,Umbris,[O2]",
-						"Orxon,Batalia,[O2]",
-						"Orxon,Gaspar,[O2]",
-						"Orxon,Poki,[O2]",
-						"Orxon,Hoven,[O2]",
-						"Orxon,Gemlik,[O2]",
-						"Orxon,Oltanis,[O2]",
-						"Orxon,Quartu,[O2]",
-						"Orxon,Kalebo,[O2]",
-						"Orxon,Fleet,[O2]",
-						"Orxon,Veldin,[O2]",
-						],
-						"capture_item":true,
-						"hosted_item": "Orxon_v"
-						},
-						{
-						"name":"Gaspar Vendor",
-						"access_rules":["Gaspar"],
-						"capture_item":true,
-						"hosted_item": "Gaspar_v"
-						},
-						{
-						"name":"Poki Vendor",
-						"access_rules":["Poki"],
-						"capture_item":true,
-						"hosted_item": "Poki_v"
-						},
-						{
-						"name":"Hoven Vendor",
-						"access_rules":["Hoven"],
-						"capture_item":true,
-						"hosted_item": "Hoven_v"
-						},
-						{
-						"name":"Oltanis Vendor",
-						"access_rules":["Oltanis"],
-						"capture_item":true,
-						"hosted_item": "Oltanis_v"
-						},
-                    ]
-                  },
-	//Novalis
-{
-        "name":"Novalis",
-//		"color": "#546258",				//OG color
-		"color": "#6a9825",				//Alt color
-        "access_rules":["Novalis"],
-        "children":[
-		         //Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":270,
-                        "y":280,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Novalis Vendor",
-						"capture_item":true,
-						"hosted_item": "Novalis_v"
-						},
-                    ]
-                  },
-                  //Save the Chairman
-                  {
-                    "name":"Save the Chairman",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":280,
-                        "y":180
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Chairman",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png"
-                      }
-                    ]
-                  },
-                  //Plumber
-                  {
-                    "name":"Explore the waterworks",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":390,
-                        "y":210
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Plumber - 500 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Gold Bolt 1
-                  {
-                    "name":"Waterworks Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":380,
-                        "y":330,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-                  //Gold Bolt 2
-                  {
-                    "name":"Cave Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[
-					"[$Rock_Explosion]",		//Under Map Swim
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":130,
-                        "y":350,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-                  //Gold Bolt 3
-                  {
-                    "name":"Amoeboid Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[
-					"[Hydro]",		//Under Map Swim
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":60,
-                        "y":300,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-                  //Gold Weapon Vendors
-                  {
-                    "name":"Gold Weapon Room",
-					"color": "#ffb300",
-                    "access_rules":[
-						"Heli,[NGWRO]",
-						"PDA,[NGWRO]",
-						"Thruster,[NGWRO]",
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":450,
-                        "y":350,
-					"visibility_rules":["Gold_Weapons"],
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"20,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Bomb_G",
-						"access_rules": "Bomb"
-                      },
-					  {
-                        "name":"30,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Pyro_G",
-						"access_rules": "Pyro"
-                      },
-					  {
-                        "name":"20,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Blaster_G",
-						"access_rules": "Blaster"
-                      },
-					  {
-                        "name":"10,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Doom_G",
-						"access_rules": "Doom"
-                      },
-					  {
-                        "name":"10,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Suck_G",
-						"access_rules": "Suck"
-                      },
-                    ]
-                  },
-    		]
+    "name": "World",
+    "chest_unopened_img": "images/chicken.png",
+    "chest_opened_img": "images/chicken.png",
+    "children": [
+      {
+        "name": "Vendor",
+        "color": "#6b70d7",
+        "access_rules": [
+          ""
+        ],
+        "map_locations": [
+          {
+            "map": "map",
+            "x": 2700,
+            "y": 1400,
+            "visibility_rules": [
+              "vendor"
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "name": "Novalis Vendor",
+            "access_rules": [
+              "Novalis"
+            ],
+            "capture_item": true,
+            "hosted_item": "Novalis_v"
+          },
+          {
+            "name": "Kerwan Vendor",
+            "access_rules": [
+              "Kerwan"
+            ],
+            "capture_item": true,
+            "hosted_item": "Kerwan_v"
+          },
+          {
+            "name": "Eudora Vendor",
+            "access_rules": [
+              "Eudora"
+            ],
+            "capture_item": true,
+            "hosted_item": "Eudora_v"
+          },
+          {
+            "name": "Blarg Vendor",
+            "access_rules": [
+              "Blarg"
+            ],
+            "capture_item": true,
+            "hosted_item": "Blarg_v"
+          },
+          {
+            "name": "Rilgar Vendor",
+            "access_rules": [
+              "Rilgar"
+            ],
+            "capture_item": true,
+            "hosted_item": "Rilgar_v"
+          },
+          {
+            "name": "Batalia Vendor",
+            "access_rules": [
+              "Batalia"
+            ],
+            "capture_item": true,
+            "hosted_item": "Batalia_v"
+          },
+          {
+            "name": "Orxon Vendor",
+            "access_rules": [
+              "Orxon,O2",
+              "Orxon,Novalis,[O2]",
+              "Orxon,Kerwan,[O2]",
+              "Orxon,Aridia,[O2]",
+              "Orxon,Eudora,[O2]",
+              "Orxon,Blarg,[O2]",
+              "Orxon,Rilgar,[O2]",
+              "Orxon,Umbris,[O2]",
+              "Orxon,Batalia,[O2]",
+              "Orxon,Gaspar,[O2]",
+              "Orxon,Poki,[O2]",
+              "Orxon,Hoven,[O2]",
+              "Orxon,Gemlik,[O2]",
+              "Orxon,Oltanis,[O2]",
+              "Orxon,Quartu,[O2]",
+              "Orxon,Kalebo,[O2]",
+              "Orxon,Fleet,[O2]",
+              "Orxon,Veldin,[O2]"
+            ],
+            "capture_item": true,
+            "hosted_item": "Orxon_v"
+          },
+          {
+            "name": "Gaspar Vendor",
+            "access_rules": [
+              "Gaspar"
+            ],
+            "capture_item": true,
+            "hosted_item": "Gaspar_v"
+          },
+          {
+            "name": "Poki Vendor",
+            "access_rules": [
+              "Poki"
+            ],
+            "capture_item": true,
+            "hosted_item": "Poki_v"
+          },
+          {
+            "name": "Hoven Vendor",
+            "access_rules": [
+              "Hoven"
+            ],
+            "capture_item": true,
+            "hosted_item": "Hoven_v"
+          },
+          {
+            "name": "Oltanis Vendor",
+            "access_rules": [
+              "Oltanis"
+            ],
+            "capture_item": true,
+            "hosted_item": "Oltanis_v"
+          }
+        ]
       },
-	//Kerwan
-{
-        "name":"Kerwan",
-//		"color": "#3e5243",			//OG color
-		"color": "#848777",			//Alt color
-        "access_rules":["Kerwan"],
-        "children":[
-				    //Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":800,
-                        "y":400,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Kerwan Vendor",
-						"capture_item":true,
-						"hosted_item": "Kerwan_v"
-						},
-                    ]
-                  },
-                  //Al's Shack
-                  {
-                    "name":"Al's Roboshack",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":860,
-                        "y":290
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Al - 1,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Helga
-                  {
-                    "name":"Fitness Course",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":640,
-                        "y":480
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Helga - 1,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Train
-                  {
-                    "name":"Ride the Robot Train",
-                    "access_rules":[	
-			"Heli",
-			"Thruster",
-			"PDA,[Heli]",		//PDA Sideflips
-			"PDA,[Thruster]"	//PDA Sideflips
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":840,
-                        "y":440
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Train",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 1
-                  {
-                    "name":"Underpass Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":800,
-                        "y":450,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 2
-                  {
-                    "name":"Fitness Course Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[
-					"Heli",
-					"Thruster",
-					"PDA,[Heli]"	//PDA Sideflip
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":700,
-                        "y":310,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 3
-                  {
-                    "name":"Train Station Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[
-					"Heli",
-					"Thruster",
-					"PDA,[Heli]"	//PDA sideflip
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":820,
-                        "y":100,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Novalis",
+        "color": "#6a9825",
+        "access_rules": [
+          "Novalis"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 270,
+                "y": 280,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Novalis Vendor",
+                "capture_item": true,
+                "hosted_item": "Novalis_v"
+              }
+            ]
+          },
+          {
+            "name": "Save the Chairman",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 280,
+                "y": 180
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chairman",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Explore the waterworks",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 390,
+                "y": 210
+              }
+            ],
+            "sections": [
+              {
+                "name": "Plumber - 500 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Waterworks Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 380,
+                "y": 330,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Cave Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "[$Rock_Explosion]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 130,
+                "y": 350,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Amoeboid Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "[Hydro]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 60,
+                "y": 300,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Gold Weapon Room",
+            "color": "#ffb300",
+            "access_rules": [
+              "Heli,[NGWRO]",
+              "PDA,[NGWRO]",
+              "Thruster,[NGWRO]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 450,
+                "y": 350,
+                "visibility_rules": [
+                  "Gold_Weapons"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Left, 20,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Bomb_G",
+                "access_rules": "Bomb"
+              },
+              {
+                "name": "Left Middle, 30,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Pyro_G",
+                "access_rules": "Pyro"
+              },
+              {
+                "name": "Middle, 20,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Blaster_G",
+                "access_rules": "Blaster"
+              },
+              {
+                "name": "Right Middle, 10,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Doom_G",
+                "access_rules": "Doom"
+              },
+              {
+                "name": "Right, 10,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Suck_G",
+                "access_rules": "Suck"
+              }
+            ]
+          }
+        ]
       },
-	//Aridia
-{
-        "name":"Aridia",
-//		"color": "#192039",			//OG color
-		"color": "#537dbc",			//Alt color
-        "access_rules":["Aridia"],
-        "children":[
-                  //Skid
-                  {
-                    "name":"Kill the Sand Sharks",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1430,
-                        "y":350
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Skid",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Trespasser
-                  {
-                    "name":"Construction Zone",
-                    "access_rules":[
-			"Thruster,[Swingshot]",		//ISF
-			"Heli,[Swingshot]",		//Sinaflips
-			"PDA,[Swingshot]",		//PDA Sideflips
-			"Swingshot"
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1145,
-                        "y":110
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Trespasser",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gadget.png",
-						"chest_opened_img":"images/Gadget.png",
-                      },
-					  {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"visibility_rules":["AGB"],
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-                  //Agent
-                  {
-                    "name":"Bring Zoomerator to agent",
-                    "access_rules":["Zoom"],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1430,
-                        "y":110
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Agent",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 2
-                  {
-                    "name":"Cave Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[
-					"$Rock_Explosion",
-					"Heli,[$Rock_Explosion]", 		//SIs
-					"Thruster,[$Rock_Explosion]",	//ISF
-					"PDA,[$Rock_Explosion]"			//PDA Sideflip
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1250,
-                        "y":450,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 1
-                  {
-                    "name":"Island Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1420,
-                        "y":250,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 4
-                  {
-                    "name":"Laser Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-						"Magne",
-						"Thruster,[Magne]",		//ISF
-						"Heli,[Magne]",			//Sinaflips
-						"PDA,[Magne]",			//PDA sideflip
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1400,
-                        "y":50,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Kerwan",
+        "color": "#848777",
+        "access_rules": [
+          "Kerwan"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 800,
+                "y": 400,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Kerwan Vendor",
+                "capture_item": true,
+                "hosted_item": "Kerwan_v"
+              }
+            ]
+          },
+          {
+            "name": "Al's Roboshack",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 860,
+                "y": 290
+              }
+            ],
+            "sections": [
+              {
+                "name": "Al - 1,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Fitness Course",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 640,
+                "y": 480
+              }
+            ],
+            "sections": [
+              {
+                "name": "Helga - 1,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Ride the Robot Train",
+            "access_rules": [
+              "Heli",
+              "Thruster",
+              "PDA,[Heli]",
+              "PDA,[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 840,
+                "y": 440
+              }
+            ],
+            "sections": [
+              {
+                "name": "Train",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Underpass Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 800,
+                "y": 450,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Fitness Course Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Heli",
+              "Thruster",
+              "PDA,[Heli]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 700,
+                "y": 310,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Train Station Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Heli",
+              "Thruster",
+              "PDA,[Heli]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 820,
+                "y": 100,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Eudora
-{
-        "name":"Eudora",
-//		"color": "#4c665a",			//OG color
-		"color": "#a7d0b1",			//Alt color
-        "access_rules":["Eudora"],
-        "children":[
-						    //Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1800,
-                        "y":300,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Eudora Vendor",
-						"capture_item":true,
-						"hosted_item": "Eudora_v"
-						},
-                    ]
-                  },
-				  	//Suck Canon
-                  {
-                    "name":"Explore the Mills",
-                    "access_rules":[
-						"Heli",
-						"Thruster",
-						"PDA,[Heli]"	//PDA Sideflip
-						],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1960,
-                        "y":200,
-						"visibility_rules":["Weapons"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Suck Canon",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-						},
-                    ]
-                  },
-                  //Confront Robot Lieutenant
-                  {
-                    "name":"Confront Robot Lieutenant",
-                    "access_rules":[
-			"Tres,Swingshot,Heli",
-			"Tres,Swingshot,Thruster",
-			"Heli,[Tres],[Swingshot]",			//SI
-			"Thruster,[Tres],[Swingshot]",			//SI
-			"[Tres],[Swingshot],[Heli]",				//Packless SI (This Sucks)
-			"PDA,[Tres],[Swingshot],[Heli]",		//PDA sideflips
-			"PDA,[Tres],[Swingshot],[Thruster]",		//PDA sideflips
-			"Decoy,[Tres],[Swingshot],[Heli]",		//Decoy Clip
-			"Decoy,[Tres],[Swingshot],[Thruster]"		//Decoy Clip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1850,
-                        "y":350
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Robot Lieutenant",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt
-                  {
-                    "name":"Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-						"[Heli]",
-						"[Thruster]",
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1860,
-                        "y":300,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Aridia",
+        "color": "#537dbc",
+        "access_rules": [
+          "Aridia"
+        ],
+        "children": [
+          {
+            "name": "Kill the Sand Sharks",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1430,
+                "y": 350
+              }
+            ],
+            "sections": [
+              {
+                "name": "Skid",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Construction Zone",
+            "access_rules": [
+              "Thruster,[Swingshot]",
+              "Heli,[Swingshot]",
+              "PDA,[Swingshot]",
+              "Swingshot"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1145,
+                "y": 110
+              }
+            ],
+            "sections": [
+              {
+                "name": "Trespasser",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              },
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "visibility_rules": [
+                  "AGB"
+                ],
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Bring Zoomerator to agent",
+            "access_rules": [
+              "Zoom"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1430,
+                "y": 110
+              }
+            ],
+            "sections": [
+              {
+                "name": "Agent",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Cave Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "$Rock_Explosion",
+              "Heli,[$Rock_Explosion]",
+              "Thruster,[$Rock_Explosion]",
+              "PDA,[$Rock_Explosion]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1250,
+                "y": 450,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Island Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1420,
+                "y": 250,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Laser Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Magne",
+              "Thruster,[Magne]",
+              "Heli,[Magne]",
+              "PDA,[Magne]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1400,
+                "y": 50,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Blarg
-{
-        "name":"Blarg Station",
-//		"color": "#2f2b1a",			//OG color
-		"color": "#764e23",			//Alt color
-        "access_rules":["Blarg"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2300,
-                        "y":400,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Blarg Vendor",
-						"capture_item":true,
-						"hosted_item": "Blarg_v"
-						},
-                    ]
-                  },
-                  //Clank section
-                  {
-                    "name":"Journey outside the airlock",
-                    "access_rules":[
-			"Tres",
-			"Heli,[Tres]",		//Glide Out of Bounds
-			"Thruster,[Tres]",	//Glide Out of Bounds
-			"PDA,[Tres]"		//PDA sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2220,
-                        "y":350
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Outside",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Warship
-                  {
-                    "name":"Destroy the warship",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2580,
-                        "y":380
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Warship",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Alien Queen
-                  {
-                    "name":"Explore the space station",
-                    "access_rules":[
-			"Swingshot",
-			"PDA,[Swingshot]",	//PDA Sideflip
-			"Heli,[Swingshot]",	//Tight jump
-			"Thruster,[Swingshot]"	//Tight jump
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2160,
-                        "y":185
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Fred - 2,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 1
-                  {
-                    "name":"Outside Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-						"O2,Tres",
-						"O2,Decoy,[Tres]",		//DecoyClip
-						"[O2],Heli,[Tres]",		//Glide OoB
-						"[O2],Thruster,[Tres]",	//Glide OoB
-						"PDA,[Tres]"		//PDA sideflip
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2150,
-                        "y":375,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 2
-                  {
-                    "name":"Cages Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-						"Swingshot",
-						"PDA,[Swingshot]",	//PDA Sideflip
-						"Heli,[Swingshot]",	//Tight jump
-						"Thruster,[Swingshot]"	//Tight jump
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2280,
-                        "y":120,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Eudora",
+        "color": "#a7d0b1",
+        "access_rules": [
+          "Eudora"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1800,
+                "y": 300,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Eudora Vendor",
+                "capture_item": true,
+                "hosted_item": "Eudora_v"
+              }
+            ]
+          },
+          {
+            "name": "Explore the Mills",
+            "access_rules": [
+              "Heli",
+              "Thruster",
+              "PDA,[Heli]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1960,
+                "y": 200,
+                "visibility_rules": [
+                  "Weapons"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Suck Canon",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Confront Robot Lieutenant",
+            "access_rules": [
+              "Tres,Swingshot,Heli",
+              "Tres,Swingshot,Thruster",
+              "Heli,[Tres],[Swingshot]",
+              "Thruster,[Tres],[Swingshot]",
+              "[Tres],[Swingshot],[Heli]",
+              "PDA,[Tres],[Swingshot],[Heli]",
+              "PDA,[Tres],[Swingshot],[Thruster]",
+              "Decoy,[Tres],[Swingshot],[Heli]",
+              "Decoy,[Tres],[Swingshot],[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1850,
+                "y": 350
+              }
+            ],
+            "sections": [
+              {
+                "name": "Robot Lieutenant",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "[Heli]",
+              "[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1860,
+                "y": 300,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Blackwater
-{
-        "name":"Rilgar",
-//		"color": "#0f2a3e",			//OG color
-		"color": "#78749c",			//Alt color
-        "access_rules":["Rilgar"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2900,
-                        "y":450,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Rilgar Vendor",
-						"capture_item":true,
-						"hosted_item": "Rilgar_v"
-						},
-                    ]
-                  },
-				  	//Salesman
-                  {
-                    "name":"City District",
-                    "access_rules":[
-					"[Heli],[Metal]",
-					"[Thruster],[Metal]"
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":3000,
-                        "y":150,
-						"visibility_rules":["Weapons"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Shady Salesman - 150,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-						},
-                    ]
-                  },
-                  //Sewers
-                  {
-                    "name":"Locate Captain Qwark",
-                    "access_rules":[
-			"Heli,Hydrod,Swingshot",
-			"Thruster,Hydrod,Swingshot",
-			"Heli,[Hydrod],[Swingshot]",		//Sinaflip or ILJ
-			"Thruster,[Hydrod],[Swingshot]",	//ISF
-			"PDA,[Heli],[Hydrod],[Swingshot]",		//PDA sideflip
-			"[Heli],[Hydrod],[Swingshot]"			//Under map swim
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2760,
-                        "y":335
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Bouncer - 4,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Hoverboard Race
-                  {
-                    "name":"Win the Hoverboard Race",
-                    "access_rules":[
-			"Hover,Heli",
-			"Hover,Thruster",
-			"Hover,[Heli]",		//Under map swim
-			"Hover,[Thruster]",	//Under map swim
-			"Thruster,[Hover]",	//ISF into racetrack
-			"Heli,[Hover]",		//Sinaflip or ISJ into racetrack
-			"PDA,[Hover]"		//PDA sideflip to racetrack
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2845,
-                        "y":290
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Hoverboard Girl",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 1
-                  {
-                    "name":"Laser Maze Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-						"Heli",
-						"Thruster",
-						"PDA,[Heli]",		//PDA Sideflip
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2955,
-                        "y":110,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 2
-                  {
-                    "name":"Sewer Cave Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-			"O2,Heli,Hydrod,Swingshot",
-			"O2,Thruster,Hydrod,Swingshot",
-			"Heli,[O2],[Hydrod],[Swingshot]",		//Sinaflip or ILJ
-			"Thruster,[O2],[Hydrod],[Swingshot]",	//ISF
-			"PDA,[O2],[Heli],[Hydrod],[Swingshot]",		//PDA sideflip
-			"O2,[Heli],[Hydrod],[Swingshot]"			//Under map swim
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2700,
-                        "y":160,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Blarg Station",
+        "color": "#764e23",
+        "access_rules": [
+          "Blarg"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2300,
+                "y": 400,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Blarg Vendor",
+                "capture_item": true,
+                "hosted_item": "Blarg_v"
+              }
+            ]
+          },
+          {
+            "name": "Journey outside the airlock",
+            "access_rules": [
+              "Tres",
+              "Heli,[Tres]",
+              "Thruster,[Tres]",
+              "PDA,[Tres]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2220,
+                "y": 350
+              }
+            ],
+            "sections": [
+              {
+                "name": "Outside",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Destroy the warship",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2580,
+                "y": 380
+              }
+            ],
+            "sections": [
+              {
+                "name": "Warship",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Explore the space station",
+            "access_rules": [
+              "Swingshot",
+              "PDA,[Swingshot]",
+              "Heli,[Swingshot]",
+              "Thruster,[Swingshot]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2160,
+                "y": 185
+              }
+            ],
+            "sections": [
+              {
+                "name": "Fred - 2,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Outside Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "O2,Tres",
+              "O2,Decoy,[Tres]",
+              "[O2],Heli,[Tres]",
+              "[O2],Thruster,[Tres]",
+              "PDA,[Tres]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2150,
+                "y": 375,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Cages Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Swingshot",
+              "PDA,[Swingshot]",
+              "Heli,[Swingshot]",
+              "Thruster,[Swingshot]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2280,
+                "y": 120,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Umbris
-{
-        "name":"Umbris",
-//		"color": "#3b2a21",			//OG color
-		"color": "#c1723b",			//Alt color
-        "access_rules":["Umbris"],
-        "children":[
-                  //Snagglebeast
-                  {
-                    "name":"Destroy the Snagglebeast",
-                    "access_rules":[
-			"Hydrod,Swingshot,Heli",
-			"Hydrod,Swingshot,Thruster",
-			"Heli,[Swingshot],[Hydrod]",	//ILJ
-			"Thruster,[Swingshot],[Hydrod]",	//ISF
-			"PDA,[Swingshot],[Hydrod],[Heli]",		//PDA sideflip
-			"PDA,[Swingshot],[Hydrod],[Thruster]",	//PDA sideflip
-			"Swingshot,[Hydrod],[Heli]",		//Tight swing at start, Ghost Ratchet
-			"Swingshot,[Hydrod],[Thruster]",	//Tight swing at start, Ghost Ratchet
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":220,
-                        "y":560
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Snagglebeast",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 1
-                  {
-                    "name":"Lighthouse Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-			"Swingshot,Heli",
-			"Swingshot,Thruster",
-			"Heli,[Swingshot]",					//ILJ
-			"Thruster,[Swingshot]",				//ISF
-			"PDA,[Swingshot],[Heli]",				//PDA sideflip
-			"PDA,[Swingshot],[Thruster]",			//PDA sideflip
-			"Swingshot,[Heli]",					//Tight swing at start, Ghost Ratchet
-			"Swingshot,[Thruster]",				//Tight swing at start, Ghost Ratchet
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":350,
-                        "y":800,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 2
-                  {
-                    "name":"Drop Down Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[
-			"Swingshot,Heli",
-			"Swingshot,Thruster",
-			"Heli,[Swingshot]",					//ILJ
-			"Thruster,[Swingshot]",				//ISF
-			"PDA,[Swingshot],[Heli]",				//PDA sideflip
-			"PDA,[Swingshot],[Thruster]",			//PDA sideflip
-			"Swingshot,[Heli]",					//Tight swing at start, Ghost Ratchet
-			"Swingshot,[Thruster]",				//Tight swing at start, Ghost Ratchet
-									],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":300,
-                        "y":750,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Rilgar",
+        "color": "#78749c",
+        "access_rules": [
+          "Rilgar"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2900,
+                "y": 450,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Rilgar Vendor",
+                "capture_item": true,
+                "hosted_item": "Rilgar_v"
+              }
+            ]
+          },
+          {
+            "name": "City District",
+            "access_rules": [
+              "[Heli],[Metal]",
+              "[Thruster],[Metal]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 3000,
+                "y": 150,
+                "visibility_rules": [
+                  "Weapons"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Shady Salesman - 150,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Locate Captain Qwark",
+            "access_rules": [
+              "Heli,Hydrod,Swingshot",
+              "Thruster,Hydrod,Swingshot",
+              "Heli,[Hydrod],[Swingshot]",
+              "Thruster,[Hydrod],[Swingshot]",
+              "PDA,[Heli],[Hydrod],[Swingshot]",
+              "[Heli],[Hydrod],[Swingshot]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2760,
+                "y": 335
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bouncer - 4,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Win the Hoverboard Race",
+            "access_rules": [
+              "Hover,Heli",
+              "Hover,Thruster",
+              "Hover,[Heli]",
+              "Hover,[Thruster]",
+              "Thruster,[Hover]",
+              "Heli,[Hover]",
+              "PDA,[Hover]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2845,
+                "y": 290
+              }
+            ],
+            "sections": [
+              {
+                "name": "Hoverboard Girl",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Laser Maze Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Heli",
+              "Thruster",
+              "PDA,[Heli]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2955,
+                "y": 110,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Sewer Cave Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "O2,Heli,Hydrod,Swingshot",
+              "O2,Thruster,Hydrod,Swingshot",
+              "Heli,[O2],[Hydrod],[Swingshot]",
+              "Thruster,[O2],[Hydrod],[Swingshot]",
+              "PDA,[O2],[Heli],[Hydrod],[Swingshot]",
+              "O2,[Heli],[Hydrod],[Swingshot]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2700,
+                "y": 160,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Batalia
-{
-        "name":"Batalia",
-//		"color": "#41473f",			//OG color
-		"color": "#a8aa6c",			//Alt color
-        "access_rules":["Batalia"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":620,
-                        "y":750,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Batalia Vendor",
-						"capture_item":true,
-						"hosted_item": "Batalia_v"
-						},
-                    ]
-                  },
-                  //Commando
-                  {
-                    "name":"Meet the Commando at city",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":775,
-                        "y":610
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Commando",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Grind Rail
-                  {
-                    "name":"Ride the grind rail",
-                    "access_rules":[
-			"Grind",
-			"Heli,[Grind]",		//SI
-			"PDA,[Grind]"],		//PDA Sideflip
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":850,
-                        "y":900
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Deserter - 2,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Turret
-                  {
-                    "name":"Destroy the bombers",
-                    "access_rules":[
-			"Magne",
-			"Thruster,[Magne]",//Tight Jump
-			"PDA,[Magne]",		//PDA Sideflip
-			"Heli,[Magne]",		//Tight Jump and SI
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":570,
-                        "y":590
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Plumber",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-				    //Gold Bolt 1
-                  {
-                    "name":"House Roof Gold Bolt",
-					"color": "#ffb300",
-                    "access_rules":	[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":695,
-                        "y":725,
-						"visibility_rules":["AGB"]
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gold Bolt",
-                        "item_count":1,
-						"chest_unopened_img":"images/Gold_Bolt.png",
-						"chest_opened_img":"images/Gold_Bolt.png",
-                      }
-                    ]
-                  },
-    		]
-	},
-	//Orxon
-{
-        "name":"Orxon",
-//		"color": "#4a5f21",			//OG color
-		"color": "#90d603",			//Alt color
-        "access_rules":["Orxon"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[
-						"Orxon,O2",
-						"Orxon,Novalis,[O2]",
-						"Orxon,Kerwan,[O2]",
-						"Orxon,Aridia,[O2]",
-						"Orxon,Eudora,[O2]",
-						"Orxon,Blarg,[O2]",
-						"Orxon,Rilgar,[O2]",
-						"Orxon,Umbris,[O2]",
-						"Orxon,Batalia,[O2]",
-						"Orxon,Gaspar,[O2]",
-						"Orxon,Poki,[O2]",
-						"Orxon,Hoven,[O2]",
-						"Orxon,Gemlik,[O2]",
-						"Orxon,Oltanis,[O2]",
-						"Orxon,Quartu,[O2]",
-						"Orxon,Kalebo,[O2]",
-						"Orxon,Fleet,[O2]",
-						"Orxon,Veldin,[O2]",
-						],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1220,
-                        "y":830,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Orxon Vendor",
-						"capture_item":true,
-						"hosted_item": "Orxon_v"
-						},
-                    ]
-                  },
-                  //Clank 1st item
-                  {
-                    "name":"Search the labs",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1250,
-                        "y":900
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Magneboots",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Clank 2nd item
-                  {
-                    "name":"Traverse the wilderness",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1270,
-                        "y":850
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Infobot",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-		// Nanotech Vendor 1
-                  {
-                    "name":"Nanotech Vendor",
-                    "access_rules":[
-			"O2,Thruster",
-			"O2,Heli",
-			"PDA,O2,[Heli]",	//PDA Sideflip
-			"PDA,O2,[Thruster]"	//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1100,
-                        "y":850
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Buy Premium Nanotech - 4,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-		// Nanotech Vendor 2
-                  {
-                    "name":"Nanotech Vendor",
-                    "access_rules":[
-			"O2,Thruster,Nanotech1",
-			"O2,Heli,Nanotech1",
-			"PDA,O2,[Heli],Nanotech1",	//PDA Sideflip
-			"PDA,O2,[Thruster],Nanotech1"	//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1145,
-                        "y":850
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Buy Ultra Nanotech - 30,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Infobot chase
-                  {
-                    "name":"Explore as Ratchet",
-                    "access_rules":[
-			"O2,Thruster,[Swingshot],[Magne]",	//Tiptoes, SIs and Tight jumps
-			"O2,Thruster,Swingshot,Magne",		
-			"O2,Heli,Swingshot,Magne",
-			"O2,PDA,[Thruster],[Swingshot],[Magne]",	//PDA Sideflip
-			"O2,Heli,[Swingshot],[Magne]"		//Momentum Chain
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1385,
-                        "y":760
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Infobot",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-    		]
-	},
-	//Gaspar
-{
-        "name":"Gaspar",
-//		"color": "#8f5221",			//OG color
-		"color": "#cd3e09",			//Alt color
-        "access_rules":["Gaspar"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1850,
-                        "y":580,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Gaspar Vendor",
-						"capture_item":true,
-						"hosted_item": "Gaspar_v"
-						},
-                    ]
-                  },
-                  //Pilots Helmet
-                  {
-                    "name":"Find the Pilot's Helmet",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1940,
-                        "y":715
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Pilot's Helmet",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-    		]
-	},
-	//Poki
-{
-        "name":"Pokitaru",
-//		"color": "#377079",			//OG color
-		"color": "#23cae4",			//Alt color
-        "access_rules":["Poki"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2300,
-                        "y":930,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Poki Vendor",
-						"capture_item":true,
-						"hosted_item": "Poki_v"
-						},
-                    ]
-                  },
-                  //Bob
-                  {
-                    "name":"Buy Thruster Pack",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2460,
-                        "y":660
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Bob - 2,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Shoot planes
-                  {
-                    "name":"Destroy the blarg ships",
-                    "access_rules":[
-			"Pilot,Thruster",
-			"Decoy,Pilot,[Thruster]"	//Decoy Clip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2520,
-                        "y":660
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Guy",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Sewers
-                  {
-                    "name":"Give Raritanium",
-                    "access_rules":[
-			"Hydrod,Tres,Raritanium",
-			"O2,Raritanium,[Tres],[Hydrod]",	//Under Map Swim
-			"Raritanium,Decoy,PDA,[Tres],[Hydrod]"	    //Decoy Clip then PDA sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2380,
-                        "y":1000
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Fred",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Umbris",
+        "color": "#c1723b",
+        "access_rules": [
+          "Umbris"
+        ],
+        "children": [
+          {
+            "name": "Destroy the Snagglebeast",
+            "access_rules": [
+              "Hydrod,Swingshot,Heli",
+              "Hydrod,Swingshot,Thruster",
+              "Heli,[Swingshot],[Hydrod]",
+              "Thruster,[Swingshot],[Hydrod]",
+              "PDA,[Swingshot],[Hydrod],[Heli]",
+              "PDA,[Swingshot],[Hydrod],[Thruster]",
+              "Swingshot,[Hydrod],[Heli]",
+              "Swingshot,[Hydrod],[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 220,
+                "y": 560
+              }
+            ],
+            "sections": [
+              {
+                "name": "Snagglebeast",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Lighthouse Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Swingshot,Heli",
+              "Swingshot,Thruster",
+              "Heli,[Swingshot]",
+              "Thruster,[Swingshot]",
+              "PDA,[Swingshot],[Heli]",
+              "PDA,[Swingshot],[Thruster]",
+              "Swingshot,[Heli]",
+              "Swingshot,[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 350,
+                "y": 800,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Drop Down Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "Swingshot,Heli",
+              "Swingshot,Thruster",
+              "Heli,[Swingshot]",
+              "Thruster,[Swingshot]",
+              "PDA,[Swingshot],[Heli]",
+              "PDA,[Swingshot],[Thruster]",
+              "Swingshot,[Heli]",
+              "Swingshot,[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 300,
+                "y": 750,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Hoven
-{
-        "name":"Hoven",
-//		"color": "#47555e",			//OG color
-		"color": "#b1d0e3",			//Alt color
-        "access_rules":["Hoven"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2880,
-                        "y":910,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Hoven Vendor",
-						"capture_item":true,
-						"hosted_item": "Hoven_v"
-						},
-                    ]
-                  },
-                  //planetbuster
-                  {
-                    "name":"Destory the Planetbuster",
-                    "access_rules":[
-			"[Pyro]",
-			"[Blaster]",
-			"[Suck]",
-			"[Dev]",
-			"[Visi]",
-			"[Tesla]",
-			"[RYNO]",
-			"Swingshot,Heli,Sonic",		
-			"Swingshot,Thruster,Sonic"],	
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2915,
-                        "y":875
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Turret",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //water cave
-                  {
-                    "name":"Buy the Hydro-pack",
-                    "access_rules":[
-			"Hydrod",
-			"PDA,[Hydrod]",		//PDA Sideflip
-			"Thruster,[Hydrod]",	//ISF
-			"Heli,[Hydrod]"		//Sinaflip or ILJ
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":3050,
-                        "y":585
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Edwina - 2,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Drill Guy
-                  {
-                    "name":"Explore the Icy Wastes",
-                    "access_rules":[
-			"Swingshot,Heli",		
-			"Swingshot,Thruster",		
-			"Swingshot,[Heli]",		//Swingshot Swag
-			"Swingshot,[Thruster]",		//Swingshot Swag
-			"Thruster,[Swingshot]",		//ISF
-			"Heli,[Swingshot]",		//Sinaflip, ILJ or Tight jumps
-			"PDA,[Swingshot],[Heli]",	//PDA Sideflips
-			"PDA,[Swingshot],[Thruster]"	//PDA Sideflips
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2810,
-                        "y":965
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Aw Heck",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Batalia",
+        "color": "#a8aa6c",
+        "access_rules": [
+          "Batalia"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 620,
+                "y": 750,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Batalia Vendor",
+                "capture_item": true,
+                "hosted_item": "Batalia_v"
+              }
+            ]
+          },
+          {
+            "name": "Meet the Commando at city",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 775,
+                "y": 610
+              }
+            ],
+            "sections": [
+              {
+                "name": "Commando",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Ride the grind rail",
+            "access_rules": [
+              "Grind",
+              "Heli,[Grind]",
+              "PDA,[Grind]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 850,
+                "y": 900
+              }
+            ],
+            "sections": [
+              {
+                "name": "Deserter - 2,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Destroy the bombers",
+            "access_rules": [
+              "Magne",
+              "Thruster,[Magne]",
+              "PDA,[Magne]",
+              "Heli,[Magne]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 570,
+                "y": 590
+              }
+            ],
+            "sections": [
+              {
+                "name": "Plumber",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "House Roof Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 695,
+                "y": 725,
+                "visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "chest_opened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          }
+        ]
       },
-	//Gemlik
-{
-        "name":"Gemlik",
-//		"color": "#473d25",			//OG color
-		"color": "#ffe465",			//Alt color
-        "access_rules":["Gemlik"],
-        "children":[
-                  //qwark
-                  {
-                    "name":"Explore Base",
-                    "access_rules":[
-			"Tres,Magne,Swingshot,Dev",
-			"Tres,Magne,Swingshot,Visi",
-			"Thruster,[Magne],[Tres],[Swingshot],[Dev]",	//Ground Pound Cancel, Neutral Double Jump
-			"Thruster,[Magne],[Tres],[Swingshot],[Visi]",	//Ground Pound Cancel, Neutral Double Jump
-			"Heli,[Magne],[Tres],[Swingshot],[Dev]",	//Tight High Jump, Momentum Chain
-			"Heli,[Magne],[Tres],[Swingshot],[Visi]",	//Tight High Jump, Momentum Chain	
-			"PDA,[Magne],[Tres],[Swingshot],[Dev]",		//PDA Sideflip
-			"PDA,[Magne],[Tres],[Swingshot],[Visi]"		//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":160,
-                        "y":1180
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Qwark",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Gold Weapon Vendors
-                  {
-                    "name":"Gold Weapon Room",
-					"color": "#ffb300",
-                    "access_rules":[
-			"Tres,Magne,Swingshot,Dev",
-			"Tres,Magne,Swingshot,Visi",
-			"Thruster,[Magne],[Tres],[Swingshot],[Dev]",	//Ground Pound Cancel, Neutral Double Jump
-			"Thruster,[Magne],[Tres],[Swingshot],[Visi]",	//Ground Pound Cancel, Neutral Double Jump
-			"Heli,[Magne],[Tres],[Swingshot],[Dev]",	//Tight High Jump, Momentum Chain
-			"Heli,[Magne],[Tres],[Swingshot],[Visi]",	//Tight High Jump, Momentum Chain	
-			"PDA,[Magne],[Tres],[Swingshot],[Dev]",		//PDA Sideflip
-			"PDA,[Magne],[Tres],[Swingshot],[Visi]"		//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":110,
-                        "y":1170,
-					"visibility_rules":["Gold_Weapons"],
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"20,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Bomb_G",
-						"access_rules": "Bomb"
-                      },
-					  {
-                        "name":"30,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Pyro_G",
-						"access_rules": "Pyro"
-                      },
-					  {
-                        "name":"20,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Blaster_G",
-						"access_rules": "Blaster"
-                      },
-					  {
-                        "name":"10,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Doom_G",
-						"access_rules": "Doom"
-                      },
-					  {
-                        "name":"10,000 Bolts + 4 Gold Bolts",
-						"hosted_item": "Suck_G",
-						"access_rules": "Suck"
-                      },
-                    ]
-                  },
-    		]
+      {
+        "name": "Orxon",
+        "color": "#90d603",
+        "access_rules": [
+          "Orxon"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              "Orxon,O2",
+              "Orxon,Novalis,[O2]",
+              "Orxon,Kerwan,[O2]",
+              "Orxon,Aridia,[O2]",
+              "Orxon,Eudora,[O2]",
+              "Orxon,Blarg,[O2]",
+              "Orxon,Rilgar,[O2]",
+              "Orxon,Umbris,[O2]",
+              "Orxon,Batalia,[O2]",
+              "Orxon,Gaspar,[O2]",
+              "Orxon,Poki,[O2]",
+              "Orxon,Hoven,[O2]",
+              "Orxon,Gemlik,[O2]",
+              "Orxon,Oltanis,[O2]",
+              "Orxon,Quartu,[O2]",
+              "Orxon,Kalebo,[O2]",
+              "Orxon,Fleet,[O2]",
+              "Orxon,Veldin,[O2]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1220,
+                "y": 830,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Orxon Vendor",
+                "capture_item": true,
+                "hosted_item": "Orxon_v"
+              }
+            ]
+          },
+          {
+            "name": "Search the labs",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1250,
+                "y": 900
+              }
+            ],
+            "sections": [
+              {
+                "name": "Magneboots",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Traverse the wilderness",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1270,
+                "y": 850
+              }
+            ],
+            "sections": [
+              {
+                "name": "Infobot",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Nanotech Vendor",
+            "access_rules": [
+              "O2,Thruster",
+              "O2,Heli",
+              "PDA,O2,[Heli]",
+              "PDA,O2,[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1100,
+                "y": 850
+              }
+            ],
+            "sections": [
+              {
+                "name": "Buy Premium Nanotech - 4,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Nanotech Vendor",
+            "access_rules": [
+              "O2,Thruster,Nanotech1",
+              "O2,Heli,Nanotech1",
+              "PDA,O2,[Heli],Nanotech1",
+              "PDA,O2,[Thruster],Nanotech1"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1145,
+                "y": 850
+              }
+            ],
+            "sections": [
+              {
+                "name": "Buy Ultra Nanotech - 30,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Explore as Ratchet",
+            "access_rules": [
+              "O2,Thruster,[Swingshot],[Magne]",
+              "O2,Thruster,Swingshot,Magne",
+              "O2,Heli,Swingshot,Magne",
+              "O2,PDA,[Thruster],[Swingshot],[Magne]",
+              "O2,Heli,[Swingshot],[Magne]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1385,
+                "y": 760
+              }
+            ],
+            "sections": [
+              {
+                "name": "Infobot",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          }
+        ]
       },
-	//Oltanis
-{
-        "name":"Oltanis",
-//		"color": "#4d5049",			//OG color
-		"color": "#e1f7e4",			//Alt colorsss
-        "access_rules":["Oltanis"],
-        "children":[
-					//Vendor
-                  {
-                    "name":"Vendor",
-                    "access_rules":[""],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":810,
-                        "y":1340,
-						"visibility_rules":["weapon_plus"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Oltanis Vendor",
-						"capture_item":true,
-						"hosted_item": "Oltanis_v"
-						},
-                    ]
-                  },
-					//Stealth Path
-                  {
-                    "name":"Search the destroyed city",
-                    "access_rules":[
-					"Swingshot",
-					"PDA,[Swingshot]"
-					],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":890,
-                        "y":1440,
-						"visibility_rules":["Weapons"]
-                      }
-                    ],
-                    "sections": [
-						{
-						"name":"Morph-o-ray",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-						},
-                    ]
-                  },
-                  //qwark
-                  {
-                    "name":"Purchase the PDA from 'Steve'",
-                    "access_rules":[
-			"Magne",
-			"PDA,[Magne]"	//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":840,
-                        "y":1400
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"'Steve' - 1,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //deafguy
-                  {
-                    "name":"Find Survivors",
-                    "access_rules":[
-			"Grind",
-			"PDA,[Grind]",		//PDA Sideflip
-			"Magne,[Grind]"		//Magnewalk
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":750,
-                        "y":1290
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Scrap Merchant - 2,000 Bolts",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-    		]
-	},
-	//Quartu
-{
-        "name":"Quartu",
-//		"color": "#2d4138",			//OG color
-		"color": "#2b8b52",			//Alt colorsss
-        "access_rules":["Quartu"],
-        "children":[
-                  //Giant Clank
-                  {
-                    "name":"Destroy the Ultra-Mechs",
-                    "access_rules":[
-			"Swingshot",
-			"Heli,[Swingshot]",	//Momentum Chain
-			"Thruster,[Swingshot]",	//Neutral double jump ground pound cancel
-			"PDA,[Swingshot]"	//PDA sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1100,
-                        "y":1300
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Giant Clank",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-                  //Water Section
-                  {
-                    "name":"Water Path",
-                    "access_rules":[
-			"O2,Hydro",
-			"Heli,[O2],[Hydro]",		//SI
-			"PDA,[O2],[Hydro]"		//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1400,
-                        "y":1350
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Bolt-Grabber",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //Robot Section
-                  {
-                    "name":"Robot Facility",
-                    "access_rules":[
-			"Hologuise,Thruster,Swingshot",
-			"Thruster,[Hologuise],[Swingshot]",		//Slide Edge Glide
-			"PDA,[Thruster],[Hologuise],[Swingshot]",	//PDA Sideflip
-			"Hologuise,Swingshot,[Thruster]",		//OoB jumps, Ghost Ratchet
-			"Heli,[Hologuise],[Swingshot],[Thruster]"		//Momentum Chain up cliff side
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1365,
-                        "y":1175
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Clank's Mum",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Gaspar",
+        "color": "#cd3e09",
+        "access_rules": [
+          "Gaspar"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1850,
+                "y": 580,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gaspar Vendor",
+                "capture_item": true,
+                "hosted_item": "Gaspar_v"
+              }
+            ]
+          },
+          {
+            "name": "Find the Pilot's Helmet",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1940,
+                "y": 715
+              }
+            ],
+            "sections": [
+              {
+                "name": "Pilot's Helmet",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          }
+        ]
       },
-	//Kalebo III
-{
-        "name":"Kalebo III",
-//		"color": "#3f5d76",			//OG color
-		"color": "#0ace9f",			//Alt colorsss
-        "access_rules":["Kalebo"],
-        "children":[
-                  //Giant Cock
-                  {
-                    "name":"Gadgetron Help Desk",
-                    "access_rules":[
-			"Grind",
-			"PDA,[Grind]"	//PDA Sideflip
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1910,
-                        "y":1285
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Desk Girl",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //War path
-                  {
-                    "name":"Win Hoverboard Race",
-                    "access_rules":[
-			"$Kalebo_switch,Heli,Swingshot,Grind,Hover",
-			"$Kalebo_switch,Thruster,Swingshot,Grind,Hover",
-			"PDA,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//PDA Sideflip
-			"Visi,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",	//Visibomb the switch
-			"Suck,Heli,Hover,Swingshot,[Grind],[$Kalebo_switch]",			//Swingshot Swag
-			"Thruster,Hover,[Swingshot],[Grind],[$Kalebo_switch]"			//Thruster Jump
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":1650,
-                        "y":1170
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Gadgetron CEO",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Pokitaru",
+        "color": "#23cae4",
+        "access_rules": [
+          "Poki"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2300,
+                "y": 930,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Poki Vendor",
+                "capture_item": true,
+                "hosted_item": "Poki_v"
+              }
+            ]
+          },
+          {
+            "name": "Buy Thruster Pack",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2460,
+                "y": 660
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bob - 2,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Destroy the blarg ships",
+            "access_rules": [
+              "Pilot,Thruster",
+              "Decoy,Pilot,[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2520,
+                "y": 660
+              }
+            ],
+            "sections": [
+              {
+                "name": "Guy",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Give Raritanium",
+            "access_rules": [
+              "Hydrod,Tres,Raritanium",
+              "O2,Raritanium,[Tres],[Hydrod]",
+              "Raritanium,Decoy,PDA,[Tres],[Hydrod]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2380,
+                "y": 1000
+              }
+            ],
+            "sections": [
+              {
+                "name": "Fred",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          }
+        ]
       },
-	//Fleet
-{
-        "name":"Drek's Fleet",
-//		"color": "#323433",			//OG color
-		"color": "#00000f",			//Alt colorsss
-        "access_rules":["Fleet"],
-        "children":[
-                  //Codebot
-                  {
-                    "name":"Water Path",
-                    "access_rules":[
-			"O2,Hydro",
-			"[O2],[Hydro]"	//Out of Bounds walk
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2320,
-                        "y":1325
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Codebot",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Gadget.png",
-                	"chest_opened_img":"images/Gadget.png",
-                      }
-                    ]
-                  },
-                  //War path
-                  {
-                    "name":"Fight through the ships",
-                    "access_rules":[
-			"Hologuise,Magne",
-			"PDA,[Hologuise],[Magne]",		//PDA Sideflip
-			"Magne,[Hologuise]",			//Hyperstrike Robots through shields
-			"Thruster,[Hologuise],[Magne]"		//Ground Poun Clip or Ground Pound Cancel
-
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2513,
-                        "y":1145
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Drek's Bridge",
-                        "item_count":1,
-                	"chest_unopened_img":"images/Infobot.png",
-                	"chest_opened_img":"images/Infobot.png",
-                      }
-                    ]
-                  },
-    		]
-	},
-	//Veldin
-{
-        "name":"Veldin 2",
-//		"color": "#775e33",			//OG color
-		"color": "#cfa951",			//Alt colorsss
-        "access_rules":["Veldin"],
-        "children":[
-                  //Drek
-                  {
-                    "name":"Defeat Drek",
-                    "access_rules":[
-			"Tres,Magne,Hydrod,Thruster,Swingshot",
-			"Thruster, Heli, Swingshot,[Tres],[Magne],[Hydrod]",	//SI and Ghost Ratchet
-			"Thruster,PDA,[Swingshot],[Tres],[Magne],[Hydrod]"	//PDA Sideflips
-			],
-                    "map_locations":[
-                      {
-                        "map":"map",
-                        "x":2905,
-                        "y":1405
-                      }
-                    ],
-                    "sections": [
-                      {
-                        "name":"Win Game",
-                        "item_count":1
-                      }
-                    ]
-                  },
-    		]
+      {
+        "name": "Hoven",
+        "color": "#b1d0e3",
+        "access_rules": [
+          "Hoven"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2880,
+                "y": 910,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Hoven Vendor",
+                "capture_item": true,
+                "hosted_item": "Hoven_v"
+              }
+            ]
+          },
+          {
+            "name": "Destory the Planetbuster",
+            "access_rules": [
+              "[Pyro]",
+              "[Blaster]",
+              "[Suck]",
+              "[Dev]",
+              "[Visi]",
+              "[Tesla]",
+              "[RYNO]",
+              "Swingshot,Heli,Sonic",
+              "Swingshot,Thruster,Sonic"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2915,
+                "y": 875
+              }
+            ],
+            "sections": [
+              {
+                "name": "Turret",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Buy the Hydro-pack",
+            "access_rules": [
+              "Hydrod",
+              "PDA,[Hydrod]",
+              "Thruster,[Hydrod]",
+              "Heli,[Hydrod]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 3050,
+                "y": 585
+              }
+            ],
+            "sections": [
+              {
+                "name": "Edwina - 2,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Explore the Icy Wastes",
+            "access_rules": [
+              "Swingshot,Heli",
+              "Swingshot,Thruster",
+              "Swingshot,[Heli]",
+              "Swingshot,[Thruster]",
+              "Thruster,[Swingshot]",
+              "Heli,[Swingshot]",
+              "PDA,[Swingshot],[Heli]",
+              "PDA,[Swingshot],[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2810,
+                "y": 965
+              }
+            ],
+            "sections": [
+              {
+                "name": "Aw Heck",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          }
+        ]
       },
+      {
+        "name": "Gemlik",
+        "color": "#ffe465",
+        "access_rules": [
+          "Gemlik"
+        ],
+        "children": [
+          {
+            "name": "Explore Base",
+            "access_rules": [
+              "Tres,Magne,Swingshot,Dev",
+              "Tres,Magne,Swingshot,Visi",
+              "Thruster,[Magne],[Tres],[Swingshot],[Dev]",
+              "Thruster,[Magne],[Tres],[Swingshot],[Visi]",
+              "Heli,[Magne],[Tres],[Swingshot],[Dev]",
+              "Heli,[Magne],[Tres],[Swingshot],[Visi]",
+              "PDA,[Magne],[Tres],[Swingshot],[Dev]",
+              "PDA,[Magne],[Tres],[Swingshot],[Visi]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 160,
+                "y": 1180
+              }
+            ],
+            "sections": [
+              {
+                "name": "Qwark",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Gold Weapon Room",
+            "color": "#ffb300",
+            "access_rules": [
+              "Tres,Magne,Swingshot,Dev",
+              "Tres,Magne,Swingshot,Visi",
+              "Thruster,[Magne],[Tres],[Swingshot],[Dev]",
+              "Thruster,[Magne],[Tres],[Swingshot],[Visi]",
+              "Heli,[Magne],[Tres],[Swingshot],[Dev]",
+              "Heli,[Magne],[Tres],[Swingshot],[Visi]",
+              "PDA,[Magne],[Tres],[Swingshot],[Dev]",
+              "PDA,[Magne],[Tres],[Swingshot],[Visi]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 110,
+                "y": 1170,
+                "visibility_rules": [
+                  "Gold_Weapons"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Left, 20,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Bomb_G",
+                "access_rules": "Bomb"
+              },
+              {
+                "name": "Left Middle, 30,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Pyro_G",
+                "access_rules": "Pyro"
+              },
+              {
+                "name": "Middle, 20,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Blaster_G",
+                "access_rules": "Blaster"
+              },
+              {
+                "name": "Right Middle, 10,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Doom_G",
+                "access_rules": "Doom"
+              },
+              {
+                "name": "Right, 10,000 Bolts + 4 Gold Bolts",
+                "hosted_item": "Suck_G",
+                "access_rules": "Suck"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Oltanis",
+        "color": "#e1f7e4",
+        "access_rules": [
+          "Oltanis"
+        ],
+        "children": [
+          {
+            "name": "Vendor",
+            "access_rules": [
+              ""
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 810,
+                "y": 1340,
+                "visibility_rules": [
+                  "weapon_plus"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Oltanis Vendor",
+                "capture_item": true,
+                "hosted_item": "Oltanis_v"
+              }
+            ]
+          },
+          {
+            "name": "Search the destroyed city",
+            "access_rules": [
+              "Swingshot",
+              "PDA,[Swingshot]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 890,
+                "y": 1440,
+                "visibility_rules": [
+                  "Weapons"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Morph-o-ray",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Purchase the PDA from 'Steve'",
+            "access_rules": [
+              "Magne",
+              "PDA,[Magne]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 840,
+                "y": 1400
+              }
+            ],
+            "sections": [
+              {
+                "name": "'Steve' - 1,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Find Survivors",
+            "access_rules": [
+              "Grind",
+              "PDA,[Grind]",
+              "Magne,[Grind]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 750,
+                "y": 1290
+              }
+            ],
+            "sections": [
+              {
+                "name": "Scrap Merchant - 2,000 Bolts",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Quartu",
+        "color": "#2b8b52",
+        "access_rules": [
+          "Quartu"
+        ],
+        "children": [
+          {
+            "name": "Destroy the Ultra-Mechs",
+            "access_rules": [
+              "Swingshot",
+              "Heli,[Swingshot]",
+              "Thruster,[Swingshot]",
+              "PDA,[Swingshot]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1100,
+                "y": 1300
+              }
+            ],
+            "sections": [
+              {
+                "name": "Giant Clank",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          },
+          {
+            "name": "Water Path",
+            "access_rules": [
+              "O2,Hydro",
+              "Heli,[O2],[Hydro]",
+              "PDA,[O2],[Hydro]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1400,
+                "y": 1350
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bolt-Grabber",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Robot Facility",
+            "access_rules": [
+              "Hologuise,Thruster,Swingshot",
+              "Thruster,[Hologuise],[Swingshot]",
+              "PDA,[Thruster],[Hologuise],[Swingshot]",
+              "Hologuise,Swingshot,[Thruster]",
+              "Heli,[Hologuise],[Swingshot],[Thruster]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1365,
+                "y": 1175
+              }
+            ],
+            "sections": [
+              {
+                "name": "Clank's Mum",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kalebo III",
+        "color": "#0ace9f",
+        "access_rules": [
+          "Kalebo"
+        ],
+        "children": [
+          {
+            "name": "Gadgetron Help Desk",
+            "access_rules": [
+              "Grind",
+              "PDA,[Grind]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1910,
+                "y": 1285
+              }
+            ],
+            "sections": [
+              {
+                "name": "Desk Girl",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Win Hoverboard Race",
+            "access_rules": [
+              "$Kalebo_switch,Heli,Swingshot,Grind,Hover",
+              "$Kalebo_switch,Thruster,Swingshot,Grind,Hover",
+              "PDA,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",
+              "Visi,Hover,[Swingshot],[Grind],[Heli],[$Kalebo_switch]",
+              "Suck,Heli,Hover,Swingshot,[Grind],[$Kalebo_switch]",
+              "Thruster,Hover,[Swingshot],[Grind],[$Kalebo_switch]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1650,
+                "y": 1170
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gadgetron CEO",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Drek's Fleet",
+        "color": "#00000f",
+        "access_rules": [
+          "Fleet"
+        ],
+        "children": [
+          {
+            "name": "Water Path",
+            "access_rules": [
+              "O2,Hydro",
+              "[O2],[Hydro]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2320,
+                "y": 1325
+              }
+            ],
+            "sections": [
+              {
+                "name": "Codebot",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gadget.png",
+                "chest_opened_img": "images/Gadget.png"
+              }
+            ]
+          },
+          {
+            "name": "Fight through the ships",
+            "access_rules": [
+              "Hologuise,Magne",
+              "PDA,[Hologuise],[Magne]",
+              "Magne,[Hologuise]",
+              "Thruster,[Hologuise],[Magne]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2513,
+                "y": 1145
+              }
+            ],
+            "sections": [
+              {
+                "name": "Drek's Bridge",
+                "item_count": 1,
+                "chest_unopened_img": "images/Infobot.png",
+                "chest_opened_img": "images/Infobot.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Veldin 2",
+        "color": "#cfa951",
+        "access_rules": [
+          "Veldin"
+        ],
+        "children": [
+          {
+            "name": "Defeat Drek",
+            "access_rules": [
+              "Tres,Magne,Hydrod,Thruster,Swingshot",
+              "Thruster, Heli, Swingshot,[Tres],[Magne],[Hydrod]",
+              "Thruster,PDA,[Swingshot],[Tres],[Magne],[Hydrod]"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2905,
+                "y": 1405
+              }
+            ],
+            "sections": [
+              {
+                "name": "Win Game",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 ]

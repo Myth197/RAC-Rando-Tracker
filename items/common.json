@@ -1,179 +1,149 @@
 [
-							//Gadgets
-  //Tresspasser
   {
     "name": "Trespasser",
     "type": "toggle",
     "img": "images/Trespasser.png",
     "codes": "Tres"
   },
-  //Hydrodisplacer
   {
     "name": "Hydrodisplacer",
     "type": "toggle",
     "img": "images/Hydrodisplacer.png",
     "codes": "Hydrod"
   },
-  //Swingshot
   {
     "name": "Swingshot",
     "type": "toggle",
     "img": "images/Swingshot.png",
     "codes": "Swingshot"
   },
-  //PDA
   {
     "name": "PDA",
     "type": "toggle",
     "img": "images/PDA.png",
     "codes": "PDA"
   },
-  //Metal_Detector
   {
     "name": "Metal Detector",
     "type": "toggle",
     "img": "images/Metal_Detector.png",
     "codes": "Metal"
   },
-  //Hologuise
   {
     "name": "Hologuise",
     "type": "toggle",
     "img": "images/Hologuise.png",
     "codes": "Hologuise"
   },
-	//Packs
-  //Heli
   {
     "name": "Heli-pack",
     "type": "toggle",
     "img": "images/Heli.png",
     "codes": "Heli"
   },
-  //Thruster
   {
     "name": "Thruster-pack",
     "type": "toggle",
     "img": "images/Thruster.png",
     "codes": "Thruster"
   },
-  //Hydro
   {
     "name": "Hydro-pack",
     "type": "toggle",
     "img": "images/Hydro.png",
     "codes": "Hydro"
   },
-	//Helmets
-  //O2
   {
     "name": "O2 Mask",
     "type": "toggle",
     "img": "images/O2.png",
     "codes": "O2"
   },
-  //Sonic
   {
     "name": "Sonic Summoner",
     "type": "toggle",
     "img": "images/Sonic.png",
     "codes": "Sonic"
   },
-  //Pilot
   {
     "name": "Pilot Helmet",
     "type": "toggle",
     "img": "images/Pilot.png",
     "codes": "Pilot"
   },
-	//Boots
-  //Grind
   {
     "name": "Grind Boots",
     "type": "toggle",
     "img": "images/Grind.png",
     "codes": "Grind"
   },
-  //Magneboots
   {
     "name": "Magneboots",
     "type": "toggle",
     "img": "images/Magneboots.png",
     "codes": "Magne"
   },
-	//Items
-  //Hoverboard
   {
     "name": "Hoverboard",
     "type": "toggle",
     "img": "images/Hoverboard.png",
     "codes": "Hover"
   },
-  //Persuader
   {
     "name": "Persuader",
     "type": "toggle",
     "img": "images/Persuader.png",
     "codes": "Persuader"
   },
-  //Bolt_Grabber
   {
     "name": "Bolt Grabber",
     "type": "toggle",
     "img": "images/Bolt_Grabber.png",
     "codes": "Bolt_Grabber"
   },
-  //Nanotech1
   {
     "name": "Premium Nanotech",
     "type": "toggle",
     "img": "images/Nanotech1.png",
     "codes": "Nanotech1"
   },
-  //Nanotech2
   {
     "name": "Ultra Nanotech",
     "type": "toggle",
     "img": "images/Nanotech2.png",
     "codes": "Nanotech2"
   },
-  //Map-o-Matic
   {
     "name": "Map-o-Matic",
     "type": "toggle",
     "img": "images/Map-o-Matic.png",
     "codes": "Map-o-Matic"
   },
-  //Zoomerator
   {
     "name": "Zoomerator",
     "type": "toggle",
     "img": "images/Zoomerator.png",
     "codes": "Zoom"
   },
-  //Raritanium
   {
     "name": "Raritanium",
     "type": "toggle",
     "img": "images/Raritanium.png",
     "codes": "Raritanium"
   },
-  //Codebot
   {
     "name": "Codebot",
     "type": "toggle",
     "img": "images/Codebot.png",
     "codes": "Codebot"
   },
-						//Info Bots
-  //Novalis
   {
     "name": "Novalis",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Novalis.png",
         "inherit_codes": false,
@@ -182,483 +152,464 @@
       },
       {
         "img": "images/Novalis_i.png",
-        "codes":"Novalis"
+        "codes": "Novalis"
       }
     ]
   },
- {
-   "name": "Novalis",
-   "type": "toggle_badged",
-   "base_item": "Novalis",
-   "img": "images/Overlay_Novalis.png",
-   "codes": "NovalisName"
- },
-  //Kerwan
+  {
+    "name": "Novalis",
+    "type": "toggle_badged",
+    "base_item": "Novalis",
+    "img": "images/Overlay_Novalis.png",
+    "codes": "NovalisName"
+  },
   {
     "name": "Kerwan",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Kerwan.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Kerwan_i.png",
-        "codes":"Kerwan"
+        "codes": "Kerwan"
       }
     ]
   },
- {
-   "name": "Kerwan",
-   "type": "toggle_badged",
-   "base_item": "Kerwan",
-   "img": "images/Overlay_Kerwan.png",
-   "codes": "KerwanName"
- },
-  //Aridia
+  {
+    "name": "Kerwan",
+    "type": "toggle_badged",
+    "base_item": "Kerwan",
+    "img": "images/Overlay_Kerwan.png",
+    "codes": "KerwanName"
+  },
   {
     "name": "Aridia",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Aridia.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Aridia_i.png",
-        "codes":"Aridia"
+        "codes": "Aridia"
       }
     ]
   },
- {
-   "name": "Aridia",
-   "type": "toggle_badged",
-   "base_item": "Aridia",
-   "img": "images/Overlay_Aridia.png",
-   "codes": "AridiaName"
- },
-  //Eudora
+  {
+    "name": "Aridia",
+    "type": "toggle_badged",
+    "base_item": "Aridia",
+    "img": "images/Overlay_Aridia.png",
+    "codes": "AridiaName"
+  },
   {
     "name": "Eudora",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Eudora.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Eudora_i.png",
-        "codes":"Eudora"
+        "codes": "Eudora"
       }
     ]
   },
- {
-   "name": "Eudora",
-   "type": "toggle_badged",
-   "base_item": "Eudora",
-   "img": "images/Overlay_Eudora.png",
-   "codes": "EudoraName"
- },
-  //Blarg
+  {
+    "name": "Eudora",
+    "type": "toggle_badged",
+    "base_item": "Eudora",
+    "img": "images/Overlay_Eudora.png",
+    "codes": "EudoraName"
+  },
   {
     "name": "Blarg Station",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Blarg.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Blarg_i.png",
-        "codes":"Blarg"
+        "codes": "Blarg"
       }
     ]
   },
- {
-   "name": "Blarg",
-   "type": "toggle_badged",
-   "base_item": "Blarg",
-   "img": "images/Overlay_Blarg.png",
-   "codes": "BlargName"
- },
-  //Rilgar
+  {
+    "name": "Blarg",
+    "type": "toggle_badged",
+    "base_item": "Blarg",
+    "img": "images/Overlay_Blarg.png",
+    "codes": "BlargName"
+  },
   {
     "name": "Rilgar",
     "type": "progressive",
     "allow_disabled": false,
     "initial_stage_idx": 0,
     "loop": true,
-    "stages":[
+    "stages": [
       {
         "img": "images/Rilgar.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Rilgar_i.png",
-        "codes":"Rilgar"
+        "codes": "Rilgar"
       }
     ]
   },
- {
-   "name": "Rilgar",
-   "type": "toggle_badged",
-   "base_item": "Rilgar",
-   "img": "images/Overlay_Rilgar.png",
-   "codes": "RilgarName"
- },
-  //Umbris
+  {
+    "name": "Rilgar",
+    "type": "toggle_badged",
+    "base_item": "Rilgar",
+    "img": "images/Overlay_Rilgar.png",
+    "codes": "RilgarName"
+  },
   {
     "name": "Umbris",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Umbris.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Umbris_i.png",
-        "codes":"Umbris"
+        "codes": "Umbris"
       }
     ]
   },
- {
-   "name": "Umbris",
-   "type": "toggle_badged",
-   "base_item": "Umbris",
-   "img": "images/Overlay_Umbris.png",
-   "codes": "UmbrisName"
- },
-  //Batalia
+  {
+    "name": "Umbris",
+    "type": "toggle_badged",
+    "base_item": "Umbris",
+    "img": "images/Overlay_Umbris.png",
+    "codes": "UmbrisName"
+  },
   {
     "name": "Batalia",
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Batalia.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Batalia_i.png",
-        "codes":"Batalia"
+        "codes": "Batalia"
       }
     ]
   },
- {
-   "name": "Batalia",
-   "type": "toggle_badged",
-   "base_item": "Batalia",
-   "img": "images/Overlay_Batalia.png",
-   "codes": "BataliaName"
- },
-  //Orxon
+  {
+    "name": "Batalia",
+    "type": "toggle_badged",
+    "base_item": "Batalia",
+    "img": "images/Overlay_Batalia.png",
+    "codes": "BataliaName"
+  },
   {
     "name": "Orxon",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Orxon.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Orxon_i.png",
-        "codes":"Orxon"
+        "codes": "Orxon"
       }
     ]
   },
- {
-   "name": "Orxon",
-   "type": "toggle_badged",
-   "base_item": "Orxon",
-   "img": "images/Overlay_Orxon.png",
-   "codes": "OrxonName"
- },
-  //Gaspar
+  {
+    "name": "Orxon",
+    "type": "toggle_badged",
+    "base_item": "Orxon",
+    "img": "images/Overlay_Orxon.png",
+    "codes": "OrxonName"
+  },
   {
     "name": "Gaspar",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Gaspar.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Gaspar_i.png",
-        "codes":"Gaspar"
+        "codes": "Gaspar"
       }
     ]
   },
- {
-   "name": "Gaspar",
-   "type": "toggle_badged",
-   "base_item": "Gaspar",
-   "img": "images/Overlay_Gaspar.png",
-   "codes": "GasparName"
- },
-  //Poki
+  {
+    "name": "Gaspar",
+    "type": "toggle_badged",
+    "base_item": "Gaspar",
+    "img": "images/Overlay_Gaspar.png",
+    "codes": "GasparName"
+  },
   {
     "name": "Pokitaru",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Poki.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Poki_i.png",
-        "codes":"Poki"
+        "codes": "Poki"
       }
     ]
   },
- {
-   "name": "Pokitaru",
-   "type": "toggle_badged",
-   "base_item": "Poki",
-   "img": "images/Overlay_Poki.png",
-   "codes": "PokiName"
- },
-  //Hoven
+  {
+    "name": "Pokitaru",
+    "type": "toggle_badged",
+    "base_item": "Poki",
+    "img": "images/Overlay_Poki.png",
+    "codes": "PokiName"
+  },
   {
     "name": "Hoven",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Hoven.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Hoven_i.png",
-        "codes":"Hoven"
+        "codes": "Hoven"
       }
     ]
   },
- {
-   "name": "Hoven",
-   "type": "toggle_badged",
-   "base_item": "Hoven",
-   "img": "images/Overlay_Hoven.png",
-   "codes": "HovenName"
- },
-  //Gemlik
+  {
+    "name": "Hoven",
+    "type": "toggle_badged",
+    "base_item": "Hoven",
+    "img": "images/Overlay_Hoven.png",
+    "codes": "HovenName"
+  },
   {
     "name": "Gemlik Base",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Gemlik.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Gemlik_i.png",
-        "codes":"Gemlik"
+        "codes": "Gemlik"
       }
     ]
   },
- {
-   "name": "Gemlik Base",
-   "type": "toggle_badged",
-   "base_item": "Gemlik",
-   "img": "images/Overlay_Gemlik.png",
-   "codes": "GemlikName"
- },
-  //Oltanis
+  {
+    "name": "Gemlik Base",
+    "type": "toggle_badged",
+    "base_item": "Gemlik",
+    "img": "images/Overlay_Gemlik.png",
+    "codes": "GemlikName"
+  },
   {
     "name": "Oltanis",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Oltanis.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Oltanis_i.png",
-        "codes":"Oltanis"
+        "codes": "Oltanis"
       }
     ]
   },
- {
-   "name": "Oltanis",
-   "type": "toggle_badged",
-   "base_item": "Oltanis",
-   "img": "images/Overlay_Oltanis.png",
-   "codes": "OltanisName"
- },
-  //Quartu
+  {
+    "name": "Oltanis",
+    "type": "toggle_badged",
+    "base_item": "Oltanis",
+    "img": "images/Overlay_Oltanis.png",
+    "codes": "OltanisName"
+  },
   {
     "name": "Quartu",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Quartu.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Quartu_i.png",
-        "codes":"Quartu"
+        "codes": "Quartu"
       }
     ]
   },
- {
-   "name": "Quartu",
-   "type": "toggle_badged",
-   "base_item": "Quartu",
-   "img": "images/Overlay_Quartu.png",
-   "codes": "QuartuName"
- },
-  //Kalebo III
+  {
+    "name": "Quartu",
+    "type": "toggle_badged",
+    "base_item": "Quartu",
+    "img": "images/Overlay_Quartu.png",
+    "codes": "QuartuName"
+  },
   {
     "name": "Kalebo III",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Kalebo III.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Kalebo III_i.png",
-        "codes":"Kalebo"
+        "codes": "Kalebo"
       }
     ]
   },
- {
-   "name": "Kalebo III",
-   "type": "toggle_badged",
-   "base_item": "Kalebo",
-   "img": "images/Overlay_Kalebo.png",
-   "codes": "KaleboName"
- },
-  //Fleet
+  {
+    "name": "Kalebo III",
+    "type": "toggle_badged",
+    "base_item": "Kalebo",
+    "img": "images/Overlay_Kalebo.png",
+    "codes": "KaleboName"
+  },
   {
     "name": "Drek's Fleet",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Fleet.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Fleet_i.png",
-        "codes":"Fleet"
+        "codes": "Fleet"
       }
     ]
   },
- {
-   "name": "Drek's Fleet",
-   "type": "toggle_badged",
-   "base_item": "Fleet",
-   "img": "images/Overlay_Fleet.png",
-   "codes": "FleetName"
- },
-  //Veldin
+  {
+    "name": "Drek's Fleet",
+    "type": "toggle_badged",
+    "base_item": "Fleet",
+    "img": "images/Overlay_Fleet.png",
+    "codes": "FleetName"
+  },
   {
     "name": "Veldin",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Veldin.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Veldin_i.png",
-        "codes":"Veldin"
+        "codes": "Veldin"
       }
     ]
   },
- {
-   "name": "Veldin",
-   "type": "toggle_badged",
-   "base_item": "Veldin",
-   "img": "images/Overlay_Veldin.png",
-   "codes": "VeldinName"
- },
-  						//Weapons
-	//Bombs
+  {
+    "name": "Veldin",
+    "type": "toggle_badged",
+    "base_item": "Veldin",
+    "img": "images/Overlay_Veldin.png",
+    "codes": "VeldinName"
+  },
   {
     "name": "Bomb Glove",
     "type": "progressive",
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Bomb.png",
         "inherit_codes": false,
@@ -666,15 +617,14 @@
       },
       {
         "img": "images/Bomb_G.png",
-        "codes":"Bomb_G"
+        "codes": "Bomb_G"
       }
     ]
   },
-	//Pyro
   {
     "name": "Pyrocitor",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Pyro.png",
         "inherit_codes": false,
@@ -682,15 +632,14 @@
       },
       {
         "img": "images/Pyro_G.png",
-        "codes":"Pyro_G"
+        "codes": "Pyro_G"
       }
     ]
   },
-	//Blaster
   {
     "name": "Blaster",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Blaster.png",
         "inherit_codes": false,
@@ -698,15 +647,14 @@
       },
       {
         "img": "images/Blaster_G.png",
-        "codes":"Blaster_G"
+        "codes": "Blaster_G"
       }
     ]
   },
-	//Doom
   {
     "name": "Glove of Doom",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Doom.png",
         "inherit_codes": false,
@@ -714,15 +662,14 @@
       },
       {
         "img": "images/Doom_G.png",
-        "codes":"Doom_G"
+        "codes": "Doom_G"
       }
     ]
   },
-	//Mine
   {
     "name": "Mine Glove",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Mine.png",
         "inherit_codes": false,
@@ -730,22 +677,20 @@
       },
       {
         "img": "images/Mine_G.png",
-        "codes":"Mine_G"
+        "codes": "Mine_G"
       }
     ]
   },
-	//Taunter
   {
     "name": "Taunter",
     "type": "toggle",
     "img": "images/Taunt.png",
     "codes": "Taunt"
   },
-	//Suck
   {
     "name": "Suck Canon",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Suck.png",
         "inherit_codes": false,
@@ -753,15 +698,14 @@
       },
       {
         "img": "images/Suck_G.png",
-        "codes":"Suck_G"
+        "codes": "Suck_G"
       }
     ]
   },
-	//Devastator
   {
     "name": "Devastator",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Dev.png",
         "inherit_codes": false,
@@ -769,29 +713,26 @@
       },
       {
         "img": "images/Dev_G.png",
-        "codes":"Dev_G"
+        "codes": "Dev_G"
       }
     ]
   },
-	//Walloper
   {
     "name": "Walloper",
     "type": "toggle",
     "img": "images/Wallop.png",
     "codes": "Wallop"
   },
-	//Visibomb
   {
     "name": "Visibomb",
     "type": "toggle",
     "img": "images/Visi.png",
     "codes": "Visi"
   },
-	//Decoy
   {
     "name": "Decoy Glove",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Decoy.png",
         "inherit_codes": false,
@@ -799,22 +740,20 @@
       },
       {
         "img": "images/Decoy_G.png",
-        "codes":"Decoy_G"
+        "codes": "Decoy_G"
       }
     ]
   },
-	//Drone
   {
     "name": "Drone Devices",
     "type": "toggle",
     "img": "images/Drone.png",
     "codes": "Drone"
   },
-	//Tesla
   {
     "name": "Tesla Claw",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Tesla.png",
         "inherit_codes": false,
@@ -822,15 +761,14 @@
       },
       {
         "img": "images/Tesla_G.png",
-        "codes":"Tesla_G"
+        "codes": "Tesla_G"
       }
     ]
   },
-	//Morph
   {
     "name": "Morph-o-Ray",
     "type": "progressive",
-    "stages":[
+    "stages": [
       {
         "img": "images/Morph.png",
         "inherit_codes": false,
@@ -838,394 +776,376 @@
       },
       {
         "img": "images/Morph_G.png",
-        "codes":"Morph_G"
+        "codes": "Morph_G"
       }
     ]
   },
-	//RYNO
   {
     "name": "R.Y.N.O.",
     "type": "toggle",
     "img": "images/RYNO.png",
     "codes": "RYNO"
   },
-  	//Gold Bolts
   {
     "name": "Gold Bolts",
     "type": "consumable",
     "img": "images/Gold_Bolt.png",
     "codes": "Gold",
-	"max_quantity": 40
+    "max_quantity": 40
   },
-									//Vendor
-	//Novalis Weapon
-	  {
+  {
     "name": "Novalis Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Novalis_v"
+        "codes": "Novalis_v"
       }
     ]
   },
-   {
-   "name": "Novalis Vendor",
-   "type": "toggle_badged",
-   "base_item": "Novalis_v",
-   "img": "images/Overlay_Novalis.png",
-   "codes": "NovalisName_v"
- },	
-	//Kerwan	Weapon
-	  {
+  {
+    "name": "Novalis Vendor",
+    "type": "toggle_badged",
+    "base_item": "Novalis_v",
+    "img": "images/Overlay_Novalis.png",
+    "codes": "NovalisName_v"
+  },
+  {
     "name": "Kerwan Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Kerwan_v"
+        "codes": "Kerwan_v"
       }
     ]
   },
-   {
-   "name": "Kerwan Vendor",
-   "type": "toggle_badged",
-   "base_item": "Kerwan_v",
-   "img": "images/Overlay_Kerwan.png",
-   "codes": "KerwanName_v"
- },
- 	//Eudora	Weapon
-	  {
+  {
+    "name": "Kerwan Vendor",
+    "type": "toggle_badged",
+    "base_item": "Kerwan_v",
+    "img": "images/Overlay_Kerwan.png",
+    "codes": "KerwanName_v"
+  },
+  {
     "name": "Eudora Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Eudora_v"
+        "codes": "Eudora_v"
       }
     ]
   },
-   {
-   "name": "Eudora Vendor",
-   "type": "toggle_badged",
-   "base_item": "Eudora_v",
-   "img": "images/Overlay_Eudora.png",
-   "codes": "EudoraName_v"
- },
- 	//Blarg	Weapon
-	  {
+  {
+    "name": "Eudora Vendor",
+    "type": "toggle_badged",
+    "base_item": "Eudora_v",
+    "img": "images/Overlay_Eudora.png",
+    "codes": "EudoraName_v"
+  },
+  {
     "name": "Blarg Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Blarg_v"
+        "codes": "Blarg_v"
       }
     ]
   },
-   {
-   "name": "Blarg Vendor",
-   "type": "toggle_badged",
-   "base_item": "Blarg_v",
-   "img": "images/Overlay_Blarg.png",
-   "codes": "BlargName_v"
- },
- 	//Rilgar	Weapon
-	  {
+  {
+    "name": "Blarg Vendor",
+    "type": "toggle_badged",
+    "base_item": "Blarg_v",
+    "img": "images/Overlay_Blarg.png",
+    "codes": "BlargName_v"
+  },
+  {
     "name": "Rilgar Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Rilgar_v"
+        "codes": "Rilgar_v"
       }
     ]
   },
-   {
-   "name": "Rilgar Vendor",
-   "type": "toggle_badged",
-   "base_item": "Rilgar_v",
-   "img": "images/Overlay_Rilgar.png",
-   "codes": "RilgarName_v"
- },
- 	//Batalia	Weapon
-	  {
+  {
+    "name": "Rilgar Vendor",
+    "type": "toggle_badged",
+    "base_item": "Rilgar_v",
+    "img": "images/Overlay_Rilgar.png",
+    "codes": "RilgarName_v"
+  },
+  {
     "name": "Batalia Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Batalia_v"
+        "codes": "Batalia_v"
       }
     ]
   },
-   {
-   "name": "Batalia Vendor",
-   "type": "toggle_badged",
-   "base_item": "Batalia_v",
-   "img": "images/Overlay_Batalia.png",
-   "codes": "BataliaName_v"
- },
- 	//Orxon	Weapon
-	  {
+  {
+    "name": "Batalia Vendor",
+    "type": "toggle_badged",
+    "base_item": "Batalia_v",
+    "img": "images/Overlay_Batalia.png",
+    "codes": "BataliaName_v"
+  },
+  {
     "name": "Orxon Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Orxon_v"
+        "codes": "Orxon_v"
       }
     ]
   },
-   {
-   "name": "Orxon Vendor",
-   "type": "toggle_badged",
-   "base_item": "Orxon_v",
-   "img": "images/Overlay_Orxon.png",
-   "codes": "OrxonName_v"
- },
- 	//Gaspar Weapon
-	  {
+  {
+    "name": "Orxon Vendor",
+    "type": "toggle_badged",
+    "base_item": "Orxon_v",
+    "img": "images/Overlay_Orxon.png",
+    "codes": "OrxonName_v"
+  },
+  {
     "name": "Gaspar Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Gaspar_v"
+        "codes": "Gaspar_v"
       }
     ]
   },
-   {
-   "name": "Gaspar Vendor",
-   "type": "toggle_badged",
-   "base_item": "Gaspar_v",
-   "img": "images/Overlay_Gaspar.png",
-   "codes": "GasparName_v"
- },
- 	//Poki Weapon
-	  {
+  {
+    "name": "Gaspar Vendor",
+    "type": "toggle_badged",
+    "base_item": "Gaspar_v",
+    "img": "images/Overlay_Gaspar.png",
+    "codes": "GasparName_v"
+  },
+  {
     "name": "Pokitaru Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Poki_v"
+        "codes": "Poki_v"
       }
     ]
   },
-   {
-   "name": "Pokitaru Vendor",
-   "type": "toggle_badged",
-   "base_item": "Poki_v",
-   "img": "images/Overlay_Poki.png",
-   "codes": "PokiName_v"
- },
- 	//Hoven Weapon
-	  {
+  {
+    "name": "Pokitaru Vendor",
+    "type": "toggle_badged",
+    "base_item": "Poki_v",
+    "img": "images/Overlay_Poki.png",
+    "codes": "PokiName_v"
+  },
+  {
     "name": "Hoven Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Hoven_v"
+        "codes": "Hoven_v"
       }
     ]
   },
-   {
-   "name": "Hoven Vendor",
-   "type": "toggle_badged",
-   "base_item": "Hoven_v",
-   "img": "images/Overlay_Hoven.png",
-   "codes": "HovenName_v"
- },
- 	//Oltanis Weapon
-	  {
+  {
+    "name": "Hoven Vendor",
+    "type": "toggle_badged",
+    "base_item": "Hoven_v",
+    "img": "images/Overlay_Hoven.png",
+    "codes": "HovenName_v"
+  },
+  {
     "name": "Oltanis Vendor",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Chicken.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Chicken.png",
-        "codes":"Oltanis_v"
+        "codes": "Oltanis_v"
       }
     ]
   },
-   {
-   "name": "Oltanis Vendor",
-   "type": "toggle_badged",
-   "base_item": "Oltanis_v",
-   "img": "images/Overlay_Oltanis.png",
-   "codes": "OltanisName_v"
- },
-	//Novalis Gold Weapon Room OoB
+  {
+    "name": "Oltanis Vendor",
+    "type": "toggle_badged",
+    "base_item": "Oltanis_v",
+    "img": "images/Overlay_Oltanis.png",
+    "codes": "OltanisName_v"
+  },
   {
     "name": "Novalis Gold Weapon Room OoB",
     "type": "toggle",
     "img": "images/Chicken.png",
     "codes": "NGWRO"
   },
-    	//Weapon Vendor
-	{
+  {
     "name": "Weapon Locations",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 1,
-    "stages":[
+    "stages": [
       {
         "img": "images/Vendor.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Vendor.png",
         "inherit_codes": false,
-        "codes":"Weapons,vendor"
+        "codes": "Weapons,vendor"
       },
       {
         "img": "images/Vendor_plus.png",
         "inherit_codes": false,
-        "codes":"Weapons,weapon_plus"
+        "codes": "Weapons,weapon_plus"
       }
     ]
   },
-  	//Gold Weapon setting
-	{
+  {
     "name": "Gold Weapon Locations",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Gold_Weapons.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Gold_Weapons.png",
-        "codes":"Gold_Weapons"
+        "codes": "Gold_Weapons"
       }
     ]
   },
-  	//AGB
-	  {
+  {
     "name": "Gold Bolt Locations",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
-    "stages":[
+    "stages": [
       {
         "img": "images/Gold_Bolt.png",
         "inherit_codes": false,
-	"img_mods": "@disabled",
+        "img_mods": "@disabled",
         "codes": ""
       },
       {
         "img": "images/Gold_Bolt.png",
-        "codes":"AGB"
+        "codes": "AGB"
       }
     ]
-  },
+  }
 ]
