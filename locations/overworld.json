@@ -15,7 +15,7 @@
             "map": "map",
             "x": 2700,
             "y": 1400,
-            "visibility_rules": [
+            "restrict_visibility_rules": [
               "vendor"
             ]
           }
@@ -145,7 +145,7 @@
                 "map": "map",
                 "x": 270,
                 "y": 280,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -211,7 +211,7 @@
                 "map": "map",
                 "x": 380,
                 "y": 330,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -236,7 +236,7 @@
                 "map": "map",
                 "x": 130,
                 "y": 350,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -261,7 +261,7 @@
                 "map": "map",
                 "x": 60,
                 "y": 300,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -278,46 +278,46 @@
           {
             "name": "Gold Weapon Room",
             "color": "#ffb300",
-            "access_rules": [
-              "Heli,[NGWRO]",
-              "PDA,[NGWRO]",
-              "Thruster,[NGWRO]"
-            ],
             "map_locations": [
               {
                 "map": "map",
                 "x": 450,
                 "y": 350,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "Gold_Weapons"
                 ]
               }
             ],
             "sections": [
               {
-                "name": "Left, 20,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Bomb_G",
-                "access_rules": "Bomb"
+                "name": "Bomb Glove, 20,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Bomb",
+                "chest_unopened_img": "images/Bomb.png",
+                "chest_opened_img": "images/Bomb_G.png"
               },
               {
-                "name": "Left Middle, 30,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Pyro_G",
-                "access_rules": "Pyro"
+                "name": "Pyrocitor, 30,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Pyro",
+                "chest_unopened_img": "images/Pyro.png",
+                "chest_opened_img": "images/Pyro_G.png"
               },
               {
-                "name": "Middle, 20,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Blaster_G",
-                "access_rules": "Blaster"
+                "name": "Blaster, 20,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Blaster",
+                "chest_unopened_img": "images/Blaster.png",
+                "chest_opened_img": "images/Blaster_G.png"
               },
               {
-                "name": "Right Middle, 10,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Doom_G",
-                "access_rules": "Doom"
+                "name": "Glove of Doom, 10,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Doom",
+                "chest_unopened_img": "images/Doom.png",
+                "chest_opened_img": "images/Doom_G.png"
               },
               {
-                "name": "Right, 10,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Suck_G",
-                "access_rules": "Suck"
+                "name": "Suck Canon, 10,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Suck",
+                "chest_unopened_img": "images/Suck.png",
+                "chest_opened_img": "images/Suck_G.png"
               }
             ]
           }
@@ -340,7 +340,7 @@
                 "map": "map",
                 "x": 800,
                 "y": 400,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -430,7 +430,7 @@
                 "map": "map",
                 "x": 800,
                 "y": 450,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -457,7 +457,7 @@
                 "map": "map",
                 "x": 700,
                 "y": 310,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -484,7 +484,7 @@
                 "map": "map",
                 "x": 820,
                 "y": 100,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -553,7 +553,7 @@
               {
                 "name": "Gold Bolt",
                 "item_count": 1,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ],
                 "chest_unopened_img": "images/Gold_Bolt.png",
@@ -596,7 +596,7 @@
                 "map": "map",
                 "x": 1250,
                 "y": 450,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -621,7 +621,7 @@
                 "map": "map",
                 "x": 1420,
                 "y": 250,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -649,7 +649,7 @@
                 "map": "map",
                 "x": 1400,
                 "y": 50,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -682,7 +682,7 @@
                 "map": "map",
                 "x": 1800,
                 "y": 300,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -707,7 +707,7 @@
                 "map": "map",
                 "x": 1960,
                 "y": 200,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "Weapons"
                 ]
               }
@@ -762,7 +762,7 @@
                 "map": "map",
                 "x": 1860,
                 "y": 300,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -795,7 +795,7 @@
                 "map": "map",
                 "x": 2300,
                 "y": 400,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -892,7 +892,7 @@
                 "map": "map",
                 "x": 2150,
                 "y": 375,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -920,7 +920,7 @@
                 "map": "map",
                 "x": 2280,
                 "y": 120,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -953,7 +953,7 @@
                 "map": "map",
                 "x": 2900,
                 "y": 450,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -977,7 +977,7 @@
                 "map": "map",
                 "x": 3000,
                 "y": 150,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "Weapons"
                 ]
               }
@@ -1057,7 +1057,7 @@
                 "map": "map",
                 "x": 2955,
                 "y": 110,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -1087,7 +1087,7 @@
                 "map": "map",
                 "x": 2700,
                 "y": 160,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -1156,7 +1156,7 @@
                 "map": "map",
                 "x": 350,
                 "y": 800,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -1188,7 +1188,7 @@
                 "map": "map",
                 "x": 300,
                 "y": 750,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -1221,7 +1221,7 @@
                 "map": "map",
                 "x": 620,
                 "y": 750,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -1313,7 +1313,7 @@
                 "map": "map",
                 "x": 695,
                 "y": 725,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "AGB"
                 ]
               }
@@ -1363,7 +1363,7 @@
                 "map": "map",
                 "x": 1220,
                 "y": 830,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -1510,7 +1510,7 @@
                 "map": "map",
                 "x": 1850,
                 "y": 580,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -1563,7 +1563,7 @@
                 "map": "map",
                 "x": 2300,
                 "y": 930,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -1661,7 +1661,7 @@
                 "map": "map",
                 "x": 2880,
                 "y": 910,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -1810,36 +1810,41 @@
                 "map": "map",
                 "x": 110,
                 "y": 1170,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "Gold_Weapons"
                 ]
               }
             ],
             "sections": [
               {
-                "name": "Left, 20,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Bomb_G",
-                "access_rules": "Bomb"
+                "name": "Tesla Claw, 60,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Tesla",
+                "chest_unopened_img": "images/Tesla.png",
+                "chest_opened_img": "images/Tesla_G.png"
               },
               {
-                "name": "Left Middle, 30,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Pyro_G",
-                "access_rules": "Pyro"
+                "name": "Devastator, 60,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Dev",
+                "chest_unopened_img": "images/Dev.png",
+                "chest_opened_img": "images/Dev_G.png"
               },
               {
-                "name": "Middle, 20,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Blaster_G",
-                "access_rules": "Blaster"
+                "name": "Mine Glove, 10,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Mine",
+                "chest_unopened_img": "images/Mine.png",
+                "chest_opened_img": "images/Mine_G.png"
               },
               {
-                "name": "Right Middle, 10,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Doom_G",
-                "access_rules": "Doom"
+                "name": "Morph-o-ray, 20,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Morph",
+                "chest_unopened_img": "images/Morph.png",
+                "chest_opened_img": "images/Morph_G.png"
               },
               {
-                "name": "Right, 10,000 Bolts + 4 Gold Bolts",
-                "hosted_item": "Suck_G",
-                "access_rules": "Suck"
+                "name": "Decoy Glove, 10,000 Bolts + 4 Gold Bolts",
+                "access_rules": "Decoy",
+                "chest_unopened_img": "images/Decoy.png",
+                "chest_opened_img": "images/Decoy_G.png"
               }
             ]
           }
@@ -1862,7 +1867,7 @@
                 "map": "map",
                 "x": 810,
                 "y": 1340,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
               }
@@ -1886,7 +1891,7 @@
                 "map": "map",
                 "x": 890,
                 "y": 1440,
-                "visibility_rules": [
+                "restrict_visibility_rules": [
                   "Weapons"
                 ]
               }
@@ -2164,7 +2169,7 @@
             "sections": [
               {
                 "name": "Win Game",
-                "item_count": 1
+                "hosted_item": "Goal"
               }
             ]
           }
