@@ -2,7 +2,7 @@
   {
     "name": "map",
     "img": "images/map.png",
-    "map_locations":5,
-    "location_size": 50
+    "location_size": 30,
+    "location_border_thickness": 5
   }
 ]
