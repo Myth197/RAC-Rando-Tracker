@@ -1,38 +1,106 @@
 {
-    "shared_item_grid": {
-        "type": "array",
-        "orientation": "vertical",
-        "content": [
-            {
-                "type": "itemgrid",
-                "h_alignment": "center",
-                "item_size": 40,
-                "item_margin": "1,1",
-                "rows": [
-                    ["Bomb",    "Pyro",     "Blaster",  "Doom",     "Mine"],
-                    ["Taunt",   "Suck",     "Dev",      "Wallop",   "Visi"],
-                    ["Decoy",   "Drone",    "Tesla",    "Morph",    "RYNO"],
-                    ["Tres",    "Hydrod",   "Swingshot",    "Hover",        "Persuader",    "Bolt_Grabber"],
-                    ["PDA",     "Metal",    "Hologuise",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"],
-                    ["Heli",    "Thruster", "Hydro",        "Zoom",         "Raritanium",   "Codebot"],
-                    ["O2",      "Sonic",    "Pilot",        "Grind",        "Magne",        "Gold"]
-                ]
-            },
-            {
-                "type": "itemgrid",
-                "v_alignment": "top",
-                "margin": "2,0,2,0",
-                "item_size": 60,
-                "item_margin": "3,3",
-                "rows": [
-                    ["NovalisName", "KerwanName",   "AridiaName",   "EudoraName",   "BlargName",    "RilgarName"],
-                    ["UmbrisName",  "BataliaName",  "OrxonName",    "GasparName",   "PokiName",     "HovenName"],
-                    ["GemlikName",  "OltanisName",  "QuartuName",   "KaleboName",   "FleetName",    "VeldinName"]
-                ]
-            }
-        ]
+    "shared_weapon_grid_h": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_size": 40,
+            "item_margin": "1,1",
+            "rows": [
+                ["Bomb",    "Pyro",     "Blaster",  "Doom",     "Mine"],
+                ["Taunt",   "Suck",     "Dev",      "Wallop",   "Visi"],
+                ["Decoy",   "Drone",    "Tesla",    "Morph",    "RYNO"]
+            ]
+        }
     },
-    "shared_vendor_grid": {
+    "shared_weapon_grid_v": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_size": 40,
+            "item_margin": "1,1",
+            "rows": [
+                ["Bomb",    "Pyro",     "Blaster",  "Doom",     "Mine"],
+                ["Taunt",   "Suck",     "Dev",      "Wallop",   "Visi"],
+                ["Decoy",   "Drone",    "Tesla",    "Morph",    "RYNO"]
+            ]
+        }
+    },
+    "shared_item_grid_h": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_size": 40,
+            "item_margin": "1,1",
+            "rows": [
+                ["Tres",        "PDA",          "Heli",     "O2",       "Hover",        "Persuader",    "Bolt_Grabber", "Grind"],
+                ["Hydrod",      "Metal",        "Thruster", "Sonic",    "Nanotech1",    "Nanotech2",    "Map-o-Matic",  "Magne"],
+                ["Swingshot",   "Hologuise",    "Hydro",    "Pilot",    "Zoom",         "Raritanium",   "Codebot",      "Gold"]
+            ]
+        }
+    },
+    "shared_item_grid_v": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_size": 40,
+            "item_margin": "1,1",
+            "rows": [
+                ["Tres",        "Hydrod",   "Swingshot",    "Gold",         ""              ],
+                ["PDA",         "Metal",    "Hologuise",    "Grind",        "Magne"         ],
+                ["Heli",        "O2",       "Hover",        "Persuader",    "Bolt_Grabber"  ],
+                ["Thruster",    "Sonic",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"   ],
+                ["Hydro",       "Pilot",    "Zoom",         "Raritanium",   "Codebot"       ]
+            ]
+        }
+    },
+    "shared_planet_grid_h": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "v_alignment": "top",
+            "item_size": 59,
+            "item_margin": "3,3",
+            "rows": [
+                ["NovalisName", "AridiaName",   "BlargName",    "UmbrisName",   "OrxonName",    "PokiName",     "GemlikName",   "QuartuName",   "FleetName"],
+                ["KerwanName",  "EudoraName",   "RilgarName",   "BataliaName",  "GasparName",   "HovenName",    "OltanisName",  "KaleboName",   "VeldinName"]
+            ]
+        }
+    },
+    "shared_planet_grid_v": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "v_alignment": "top",
+            "item_size": 60,
+            "item_margin": "3,3",
+            "rows": [
+                ["NovalisName", "KerwanName",   "AridiaName"],
+                ["EudoraName",   "BlargName",    "RilgarName"],
+                ["UmbrisName",  "BataliaName",  "OrxonName"],
+                ["GasparName",   "PokiName",     "HovenName"],
+                ["GemlikName",  "OltanisName",  "QuartuName"],
+                ["KaleboName",   "FleetName",    "VeldinName"]
+            ]
+        }
+    },
+    "shared_vendor_grid_h": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_size": 59,
+            "item_margin": "3,3",
+            "rows": [
+			    ["NovalisName_v",   "KerwanName_v", "",             "EudoraName_v", "BlargName_v",  "RilgarName_v"],
+                ["BataliaName_v",   "OrxonName_v",  "GasparName_v", "PokiName_v",   "HovenName_v",  "OltanisName_v"]
+            ]
+        }
+    },
+    "shared_vendor_grid_v": {
         "type": "container",
         "content": {
             "type": "itemgrid",
@@ -100,35 +168,48 @@
             "content": [
                 {
                     "type": "dock",
-                    "dock": "bottom",
+                    "dock": "left",
                     "v_alignment": "stretch",
                     "margin": "0,0,3,0",
                     "content": [
                         {
                             "type": "group",
+                            "header": "Weapons",
+                            "h_alignment": "stretch",
+                            "dock": "top",
+                            "content": {
+                                    "type": "layout",
+                                    "key": "shared_weapon_grid_v"
+                                }
+                        },
+                        {
+                            "type": "group",
                             "header": "Items",
                             "h_alignment": "stretch",
-                            "dock": "left",
-                            "header_content": {
-                                "type": "button_popup",
-                                "style": "settings",
-                                "popup_background": "#50877373",
-                                "layout": "options_popup"
-                            },
+                            "dock": "top",
                             "content": {
                                 "type": "layout",
-                                "key": "shared_item_grid"
+                                "key": "shared_item_grid_v"
                             }
                         },
                         {
                             "type": "group",
-                            "header": "Pinned Locations",
+                            "header": "Planets",
+                            "h_alignment": "stretch",
+                            "dock": "top",
                             "content": {
-                                "type": "recentpins",
-                                "style": "wrap",
-                                "v_alignment": "stretch",
-                                "orientation": "vertical",
-                                "compact": true
+                                "type": "layout",
+                                "key": "shared_planet_grid_v"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Vendors",
+                            "h_alignment": "stretch",
+                            "dock": "top",
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_vendor_grid_v"
                             }
                         }
                     ]
@@ -136,7 +217,7 @@
                 {
                     "type": "map",
                     "maps": [
-                        "map"
+                        "map_v"
                     ]
                 }
             ]
@@ -151,38 +232,48 @@
             "content": [
                 {
                     "type": "dock",
-                    "dock": "left",
+                    "dock": "bottom",
                     "v_alignment": "stretch",
                     "margin": "0,0,3,0",
                     "content": [
                         {
                             "type": "group",
+                            "header": "Weapons",
+                            "h_alignment": "stretch",
+                            "dock": "left",
+                            "content": {
+                                    "type": "layout",
+                                    "key": "shared_weapon_grid_h"
+                                }
+                        },
+                        {
+                            "type": "group",
                             "header": "Items",
                             "h_alignment": "stretch",
-                            "dock": "top",
-                            "header_content": {
-                                "type": "button_popup",
-                                "style": "settings",
-                                "popup_background": "#50877373",
-                                "layout": "options_popup"
-                            },
+                            "dock": "left",
                             "content": {
                                 "type": "layout",
-                                "key": "shared_item_grid"
+                                "key": "shared_item_grid_h"
                             }
                         },
                         {
                             "type": "group",
-                            "width": 413,
-                            "header": "Pinned Items",
+                            "header": "Planets",
                             "h_alignment": "stretch",
-                            "dock": "top",
+                            "dock": "left",
                             "content": {
-                                "type": "recentpins",
-                                "style": "wrap",
-                                "v_alignment": "stretch",
-                                "orientation": "vertical",
-                                "compact": true
+                                "type": "layout",
+                                "key": "shared_planet_grid_h"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Vendors",
+                            "h_alignment": "stretch",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_vendor_grid_h"
                             }
                         }
                     ]

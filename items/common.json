@@ -791,6 +791,7 @@
     "type": "consumable",
     "img": "images/Gold_Bolt.png",
     "codes": "Gold",
+    "overlay_align": "left",
     "max_quantity": 40
   },
   {
@@ -801,13 +802,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Novalis_v"
       }
     ]
@@ -817,7 +818,8 @@
     "type": "toggle_badged",
     "base_item": "Novalis_v",
     "img": "images/Overlay_Novalis.png",
-    "codes": "NovalisName_v"
+    "codes": "NovalisName_v",
+    "overlay_align": "stretch"
   },
   {
     "name": "Kerwan Vendor",
@@ -827,13 +829,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Kerwan_v"
       }
     ]
@@ -853,13 +855,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Eudora_v"
       }
     ]
@@ -879,13 +881,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Blarg_v"
       }
     ]
@@ -905,13 +907,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Rilgar_v"
       }
     ]
@@ -931,13 +933,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Batalia_v"
       }
     ]
@@ -957,13 +959,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Orxon_v"
       }
     ]
@@ -983,13 +985,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Gaspar_v"
       }
     ]
@@ -1009,13 +1011,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Poki_v"
       }
     ]
@@ -1035,13 +1037,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Hoven_v"
       }
     ]
@@ -1061,13 +1063,13 @@
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
-        "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/Chicken.png",
+        "img": "images/Vendor.png",
+        "img_mods": "@disabled",
         "codes": "Oltanis_v"
       }
     ]
@@ -1151,7 +1153,9 @@
   {
     "name": "Goal",
     "type": "toggle",
-    "img": "images/Chicken.png",
+    "img": "images/Drek.png",
+    "img_mods": "@disabled",
+    "disabled_img_mods": "",
     "codes": "Goal"
   }
 ]
