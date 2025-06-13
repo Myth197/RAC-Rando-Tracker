@@ -655,25 +655,61 @@
               {
                 "map": "map",
                 "x": 1145,
-                "y": 110
+                "y": 110,
+                "force_visibility_rules": [
+                  "AGB"
+                ]
               },
               {
                 "map": "map_v",
                 "x": 1145,
-                "y": 110
+                "y": 110,
+                "force_visibility_rules": [
+                  "AGB"
+                ]
               }
             ],
             "sections": [
               {
                 "name": "Trespasser",
-                "item_count": 1
+                "hosted_item": "TresDummy"
+              }
+            ]
+          },
+          {
+            "name": "Construction Zone",
+            "access_rules": [
+              "Thruster,[Swingshot]",
+              "Heli,[Swingshot]",
+              "PDA,[Swingshot]",
+              "Swingshot"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1145,
+                "y": 110,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 1145,
+                "y": 110,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Trespasser",
+                "hosted_item": "TresDummy"
               },
               {
                 "name": "Gold Bolt",
                 "item_count": 1,
-                "restrict_visibility_rules": [
-                  "AGB"
-                ],
                 "chest_unopened_img": "images/Gold_Bolt.png"
               }
             ]

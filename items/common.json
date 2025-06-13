@@ -1018,6 +1018,21 @@
     ]
   },
   {
+    "name": "Trespasser dummy",
+    "type": "progressive",
+    "allow_disabled":false,
+    "stages": [
+      {
+        "img": "images/chest_closed.png",
+        "codes": ""
+      },
+      {
+        "img": "images/chest_open.png",
+        "codes": "TresDummy"
+      }
+    ]
+  },
+  {
     "name": "Goal",
     "type": "toggle",
     "img": "images/Drek.png",
