@@ -70,6 +70,9 @@ function Vendor_activate(code)
       if previous_code == code then
         break
       end
+      if (code == "O2" or previous_code == "O2") and item == "Orxon_v" then
+        break
+      end
       if previous_code .. "_v" == item then
         break
       end
@@ -79,6 +82,9 @@ function Vendor_activate(code)
       Vendor_flags[item] = 0
       trip = 1
     elseif Vendor_flags[item] == 1 and item == code then
+      if (code == "O2" or previous_code == "O2") and item == "Orxon_v" then
+        break
+      end
       if previous_code == code then
         break
       end
@@ -92,6 +98,9 @@ function Vendor_activate(code)
       trip = 1
     elseif Vendor_flags[item] == 2 and item == code then
       if previous_code == code then
+        break
+      end
+      if (code == "O2" or previous_code == "O2") and item == "Orxon_v" then
         break
       end
       if previous_code .. "_v" == item then
@@ -115,6 +124,7 @@ function Vendor_activate(code)
   if depth == 0 then
     previous_code = ""
   end
+  print("Flags: " .. Vendor_flags["Orxon_v"])
 end
 
 function Vendor_clear(code)
