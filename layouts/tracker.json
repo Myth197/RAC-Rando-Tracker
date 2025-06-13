@@ -35,9 +35,9 @@
             "item_size": 40,
             "item_margin": "1,1",
             "rows": [
-                ["Tres",        "PDA",          "Heli",     "O2",       "Hover",        "Persuader",    "Bolt_Grabber", "Grind"],
-                ["Hydrod",      "Metal",        "Thruster", "Sonic",    "Nanotech1",    "Nanotech2",    "Map-o-Matic",  "Magne"],
-                ["Swingshot",   "Hologuise",    "Hydro",    "Pilot",    "Zoom",         "Raritanium",   "Codebot",      "Gold"]
+                ["Swingshot",   "Hologuise",    "Hydro",    "Pilot",    "Gold",    "Hover",        "Persuader",    "Bolt_Grabber"],
+                ["Hydrod",      "Metal",        "Thruster", "Sonic",    "Magne",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"],
+                ["Tres",        "PDA",          "Heli",     "O2",       "Grind",     "Zoom",         "Raritanium",   "Codebot"]
             ]
         }
     },
@@ -51,9 +51,9 @@
             "rows": [
                 ["Tres",        "Hydrod",   "Swingshot",    "Gold",         ""              ],
                 ["PDA",         "Metal",    "Hologuise",    "Grind",        "Magne"         ],
-                ["Heli",        "O2",       "Hover",        "Persuader",    "Bolt_Grabber"  ],
+                ["Hydro",       "Pilot",    "Hover",        "Persuader",    "Bolt_Grabber"  ],
                 ["Thruster",    "Sonic",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"   ],
-                ["Hydro",       "Pilot",    "Zoom",         "Raritanium",   "Codebot"       ]
+                ["Heli",        "O2",       "Zoom",         "Raritanium",   "Codebot"       ]
             ]
         }
     },
@@ -95,8 +95,8 @@
             "item_size": 59,
             "item_margin": "3,3",
             "rows": [
-			    ["NovalisName_v",   "KerwanName_v", "",             "EudoraName_v", "BlargName_v",  "RilgarName_v"],
-                ["BataliaName_v",   "OrxonName_v",  "GasparName_v", "PokiName_v",   "HovenName_v",  "OltanisName_v"]
+			    ["Novalis_v",   "Kerwan_v", "",             "Eudora_v", "Blarg_v",  "Rilgar_v"],
+                ["Batalia_v",   "Orxon_v",  "Gaspar_v", "Poki_v",   "Hoven_v",  "Oltanis_v"]
             ]
         }
     },
@@ -107,8 +107,8 @@
             "h_alignment": "center",
             "item_margin": "3,3",
             "rows": [
-			    ["NovalisName_v",   "KerwanName_v", "",             "EudoraName_v", "BlargName_v",  "RilgarName_v"],
-                ["BataliaName_v",   "OrxonName_v",  "GasparName_v", "PokiName_v",   "HovenName_v",  "OltanisName_v"]
+			    ["Novalis_v",   "Kerwan_v", "",             "Eudora_v", "Blarg_v",  "Rilgar_v"],
+                ["Batalia_v",   "Orxon_v",  "Gaspar_v", "Poki_v",   "Hoven_v",  "Oltanis_v"]
             ]
         }
     },

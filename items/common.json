@@ -797,289 +797,156 @@
   {
     "name": "Novalis Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Novalis_v"
       }
     ]
   },
   {
-    "name": "Novalis Vendor",
-    "type": "toggle_badged",
-    "base_item": "Novalis_v",
-    "img": "images/Overlay_Novalis.png",
-    "codes": "NovalisName_v",
-    "overlay_align": "stretch"
-  },
-  {
     "name": "Kerwan Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Kerwan_v"
       }
     ]
   },
   {
-    "name": "Kerwan Vendor",
-    "type": "toggle_badged",
-    "base_item": "Kerwan_v",
-    "img": "images/Overlay_Kerwan.png",
-    "codes": "KerwanName_v"
-  },
-  {
     "name": "Eudora Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Eudora_v"
       }
     ]
   },
   {
-    "name": "Eudora Vendor",
-    "type": "toggle_badged",
-    "base_item": "Eudora_v",
-    "img": "images/Overlay_Eudora.png",
-    "codes": "EudoraName_v"
-  },
-  {
     "name": "Blarg Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Blarg_v"
       }
     ]
   },
   {
-    "name": "Blarg Vendor",
-    "type": "toggle_badged",
-    "base_item": "Blarg_v",
-    "img": "images/Overlay_Blarg.png",
-    "codes": "BlargName_v"
-  },
-  {
     "name": "Rilgar Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Rilgar_v"
       }
     ]
   },
   {
-    "name": "Rilgar Vendor",
-    "type": "toggle_badged",
-    "base_item": "Rilgar_v",
-    "img": "images/Overlay_Rilgar.png",
-    "codes": "RilgarName_v"
-  },
-  {
     "name": "Batalia Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Batalia_v"
       }
     ]
   },
   {
-    "name": "Batalia Vendor",
-    "type": "toggle_badged",
-    "base_item": "Batalia_v",
-    "img": "images/Overlay_Batalia.png",
-    "codes": "BataliaName_v"
-  },
-  {
     "name": "Orxon Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Orxon_v"
       }
     ]
   },
   {
-    "name": "Orxon Vendor",
-    "type": "toggle_badged",
-    "base_item": "Orxon_v",
-    "img": "images/Overlay_Orxon.png",
-    "codes": "OrxonName_v"
-  },
-  {
     "name": "Gaspar Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Gaspar_v"
       }
     ]
   },
   {
-    "name": "Gaspar Vendor",
-    "type": "toggle_badged",
-    "base_item": "Gaspar_v",
-    "img": "images/Overlay_Gaspar.png",
-    "codes": "GasparName_v"
-  },
-  {
     "name": "Pokitaru Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Poki_v"
       }
     ]
   },
   {
-    "name": "Pokitaru Vendor",
-    "type": "toggle_badged",
-    "base_item": "Poki_v",
-    "img": "images/Overlay_Poki.png",
-    "codes": "PokiName_v"
-  },
-  {
     "name": "Hoven Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Hoven_v"
       }
     ]
   },
   {
-    "name": "Hoven Vendor",
-    "type": "toggle_badged",
-    "base_item": "Hoven_v",
-    "img": "images/Overlay_Hoven.png",
-    "codes": "HovenName_v"
-  },
-  {
     "name": "Oltanis Vendor",
     "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
     "stages": [
       {
         "img": "images/Vendor.png",
-        "inherit_codes": false,
         "codes": ""
       },
       {
-        "img": "images/Vendor.png",
-        "img_mods": "@disabled",
+        "img": "images/Vendor_done.png",
         "codes": "Oltanis_v"
       }
     ]
-  },
-  {
-    "name": "Oltanis Vendor",
-    "type": "toggle_badged",
-    "base_item": "Oltanis_v",
-    "img": "images/Overlay_Oltanis.png",
-    "codes": "OltanisName_v"
   },
   {
     "name": "Novalis Gold Weapon Room OoB",
@@ -1098,7 +965,7 @@
         "img": "images/Vendor.png",
         "inherit_codes": false,
         "img_mods": "@disabled",
-        "codes": ""
+        "codes": "Weapons_vanilla"
       },
       {
         "img": "images/Vendor.png",

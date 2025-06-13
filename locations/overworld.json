@@ -1823,6 +1823,16 @@
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
+              },
+              {
+                "map": "map_v",
+                "x": 300,
+                "y": 1600,
+                "size": 40,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "weapon_plus"
+                ]
               }
             ],
             "sections": [
@@ -1843,6 +1853,11 @@
                 "map": "map",
                 "x": 1940,
                 "y": 715
+              },
+              {
+                "map": "map_v",
+                "x": 390,
+                "y": 1735
               }
             ],
             "sections": [
@@ -1876,6 +1891,16 @@
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
+              },
+              {
+                "map": "map_v",
+                "x": 750,
+                "y": 1950,
+                "size": 40,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "weapon_plus"
+                ]
               }
             ],
             "sections": [
@@ -1896,6 +1921,11 @@
                 "map": "map",
                 "x": 2460,
                 "y": 660
+              },
+              {
+                "map": "map_v",
+                "x": 910,
+                "y": 1680
               }
             ],
             "sections": [
@@ -1917,6 +1947,11 @@
                 "map": "map",
                 "x": 2520,
                 "y": 660
+              },
+              {
+                "map": "map_v",
+                "x": 970,
+                "y": 1680
               }
             ],
             "sections": [
@@ -1939,6 +1974,11 @@
                 "map": "map",
                 "x": 2380,
                 "y": 1000
+              },
+              {
+                "map": "map_v",
+                "x": 830,
+                "y": 2020
               }
             ],
             "sections": [
@@ -1973,6 +2013,16 @@
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
+              },
+              {
+                "map": "map_v",
+                "x": 1330,
+                "y": 1950,
+                "size": 40,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "weapon_plus"
+                ]
               }
             ],
             "sections": [
@@ -2001,6 +2051,11 @@
                 "map": "map",
                 "x": 2915,
                 "y": 875
+              },
+              {
+                "map": "map_v",
+                "x": 1365,
+                "y": 1900
               }
             ],
             "sections": [
@@ -2023,6 +2078,11 @@
                 "map": "map",
                 "x": 3050,
                 "y": 585
+              },
+              {
+                "map": "map_v",
+                "x": 1505,
+                "y": 1610
               }
             ],
             "sections": [
@@ -2050,6 +2110,11 @@
                 "map": "map",
                 "x": 2810,
                 "y": 965
+              },
+              {
+                "map": "map_v",
+                "x": 1260,
+                "y": 2000
               }
             ],
             "sections": [
@@ -2086,6 +2151,11 @@
                 "map": "map",
                 "x": 160,
                 "y": 1180
+              },
+              {
+                "map": "map_v",
+                "x": 160,
+                "y": 2215
               }
             ],
             "sections": [
@@ -2114,6 +2184,16 @@
                 "map": "map",
                 "x": 110,
                 "y": 1170,
+                "size": 40,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "Gold_Weapons"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 110,
+                "y": 2205,
                 "size": 40,
                 "shape": "diamond",
                 "restrict_visibility_rules": [
@@ -2178,6 +2258,16 @@
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
+              },
+              {
+                "map": "map_v",
+                "x": 810,
+                "y": 2375,
+                "size": 40,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "weapon_plus"
+                ]
               }
             ],
             "sections": [
@@ -2202,6 +2292,14 @@
                 "restrict_visibility_rules": [
                   "Weapons"
                 ]
+              },
+              {
+                "map": "map_v",
+                "x": 890,
+                "y": 2475,
+                "restrict_visibility_rules": [
+                  "Weapons"
+                ]
               }
             ],
             "sections": [
@@ -2222,6 +2320,11 @@
                 "map": "map",
                 "x": 840,
                 "y": 1400
+              },
+              {
+                "map": "map_v",
+                "x": 840,
+                "y": 2435
               }
             ],
             "sections": [
@@ -2244,6 +2347,11 @@
                 "map": "map",
                 "x": 750,
                 "y": 1290
+              },
+              {
+                "map": "map_v",
+                "x": 750,
+                "y": 2325
               }
             ],
             "sections": [
@@ -2276,6 +2384,11 @@
                 "map": "map",
                 "x": 1100,
                 "y": 1300
+              },
+              {
+                "map": "map_v",
+                "x": 1100,
+                "y": 2335
               }
             ],
             "sections": [
@@ -2298,6 +2411,11 @@
                 "map": "map",
                 "x": 1400,
                 "y": 1350
+              },
+              {
+                "map": "map_v",
+                "x": 1400,
+                "y": 2385
               }
             ],
             "sections": [
@@ -2321,6 +2439,11 @@
                 "map": "map",
                 "x": 1365,
                 "y": 1175
+              },
+              {
+                "map": "map_v",
+                "x": 1365,
+                "y": 2210
               }
             ],
             "sections": [
@@ -2350,6 +2473,11 @@
                 "map": "map",
                 "x": 1910,
                 "y": 1285
+              },
+              {
+                "map": "map_v",
+                "x": 363,
+                "y": 2835
               }
             ],
             "sections": [
@@ -2375,6 +2503,11 @@
                 "map": "map",
                 "x": 1650,
                 "y": 1170
+              },
+              {
+                "map": "map_v",
+                "x": 100,
+                "y": 2720
               }
             ],
             "sections": [
@@ -2405,6 +2538,11 @@
                 "map": "map",
                 "x": 2320,
                 "y": 1325
+              },
+              {
+                "map": "map_v",
+                "x": 765,
+                "y": 2875
               }
             ],
             "sections": [
@@ -2427,6 +2565,11 @@
                 "map": "map",
                 "x": 2513,
                 "y": 1145
+              },
+              {
+                "map": "map_v",
+                "x": 965,
+                "y": 2700
               }
             ],
             "sections": [
@@ -2457,6 +2600,11 @@
                 "map": "map",
                 "x": 2905,
                 "y": 1405
+              },
+              {
+                "map": "map_v",
+                "x": 1355,
+                "y": 2955
               }
             ],
             "sections": [
