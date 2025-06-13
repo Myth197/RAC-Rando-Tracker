@@ -62,11 +62,12 @@
         "content": {
             "type": "itemgrid",
             "v_alignment": "top",
-            "item_size": 59,
-            "item_margin": "3,3",
+            "item_size": 40,
+            "item_margin": "1,1",
             "rows": [
-                ["NovalisName", "AridiaName",   "BlargName",    "UmbrisName",   "OrxonName",    "PokiName",     "GemlikName",   "QuartuName",   "FleetName"],
-                ["KerwanName",  "EudoraName",   "RilgarName",   "BataliaName",  "GasparName",   "HovenName",    "OltanisName",  "KaleboName",   "VeldinName"]
+                ["Novalis", "Kerwan",   "Aridia", "Eudora",   "Blarg",    "Rilgar"],
+                ["Umbris",  "Batalia",  "Orxon", "Gaspar",   "Poki",     "Hoven"],
+                ["Gemlik",  "Oltanis",  "Quartu", "Kalebo",   "Fleet",    "Veldin"]
             ]
         }
     },
@@ -75,15 +76,15 @@
         "content": {
             "type": "itemgrid",
             "v_alignment": "top",
-            "item_size": 60,
-            "item_margin": "3,3",
+            "item_size": 40,
+            "item_margin": "1,1",
             "rows": [
-                ["NovalisName", "KerwanName",   "AridiaName"],
-                ["EudoraName",   "BlargName",    "RilgarName"],
-                ["UmbrisName",  "BataliaName",  "OrxonName"],
-                ["GasparName",   "PokiName",     "HovenName"],
-                ["GemlikName",  "OltanisName",  "QuartuName"],
-                ["KaleboName",   "FleetName",    "VeldinName"]
+                ["Novalis", "Kerwan",   "Aridia"],
+                ["Eudora",   "Blarg",    "Rilgar"],
+                ["Umbris",  "Batalia",  "Orxon"],
+                ["Gaspar",   "Poki",     "Hoven"],
+                ["Gemlik",  "Oltanis",  "Quartu"],
+                ["Kalebo",   "Fleet",    "Veldin"]
             ]
         }
     },
@@ -92,11 +93,12 @@
         "content": {
             "type": "itemgrid",
             "h_alignment": "center",
-            "item_size": 59,
-            "item_margin": "3,3",
+            "item_size": 40,
+            "item_margin": "1,1",
             "rows": [
-			    ["Novalis_v",   "Kerwan_v", "",             "Eudora_v", "Blarg_v",  "Rilgar_v"],
-                ["Batalia_v",   "Orxon_v",  "Gaspar_v", "Poki_v",   "Hoven_v",  "Oltanis_v"]
+                ["Novalis_v",   "Kerwan_v",     "",         "Eudora_v", "Blarg_v",  "Rilgar_v"  ],
+                ["",            "Batalia_v",    "Orxon_v",  "Gaspar_v", "Poki_v",   "Hoven_v"   ],
+                ["",            "Oltanis_v",    "",         "",         "",         ""          ]
             ]
         }
     },
@@ -105,10 +107,14 @@
         "content": {
             "type": "itemgrid",
             "h_alignment": "center",
-            "item_margin": "3,3",
+            "item_size": 40,
+            "item_margin": "1,1",
             "rows": [
-			    ["Novalis_v",   "Kerwan_v", "",             "Eudora_v", "Blarg_v",  "Rilgar_v"],
-                ["Batalia_v",   "Orxon_v",  "Gaspar_v", "Poki_v",   "Hoven_v",  "Oltanis_v"]
+                ["Novalis_v",   "Kerwan_v",     ""          ],
+                ["Eudora_v",    "Blarg_v",      "Rilgar_v"  ],
+                ["",            "Batalia_v",    "Orxon_v"   ],
+                ["Gaspar_v",    "Poki_v",       "Hoven_v"   ],
+                ["",            "Oltanis_v",      ""          ]
             ]
         }
     },

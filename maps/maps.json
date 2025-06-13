@@ -3,12 +3,12 @@
     "name": "map",
     "img": "images/map.png",
     "location_size": 30,
-    "location_border_thickness": 5
+    "location_border_thickness": 7
   },
   {
     "name": "map_v",
     "img": "images/map_v.png",
     "location_size": 30,
-    "location_border_thickness": 5
+    "location_border_thickness": 10
   }
 ]

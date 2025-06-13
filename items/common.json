@@ -157,13 +157,6 @@
     ]
   },
   {
-    "name": "Novalis",
-    "type": "toggle_badged",
-    "base_item": "Novalis",
-    "img": "images/Overlay_Novalis.png",
-    "codes": "NovalisName"
-  },
-  {
     "name": "Kerwan",
     "type": "progressive",
     "allow_disabled": false,
@@ -181,13 +174,6 @@
         "codes": "Kerwan"
       }
     ]
-  },
-  {
-    "name": "Kerwan",
-    "type": "toggle_badged",
-    "base_item": "Kerwan",
-    "img": "images/Overlay_Kerwan.png",
-    "codes": "KerwanName"
   },
   {
     "name": "Aridia",
@@ -209,13 +195,6 @@
     ]
   },
   {
-    "name": "Aridia",
-    "type": "toggle_badged",
-    "base_item": "Aridia",
-    "img": "images/Overlay_Aridia.png",
-    "codes": "AridiaName"
-  },
-  {
     "name": "Eudora",
     "type": "progressive",
     "allow_disabled": false,
@@ -233,13 +212,6 @@
         "codes": "Eudora"
       }
     ]
-  },
-  {
-    "name": "Eudora",
-    "type": "toggle_badged",
-    "base_item": "Eudora",
-    "img": "images/Overlay_Eudora.png",
-    "codes": "EudoraName"
   },
   {
     "name": "Blarg Station",
@@ -261,13 +233,6 @@
     ]
   },
   {
-    "name": "Blarg",
-    "type": "toggle_badged",
-    "base_item": "Blarg",
-    "img": "images/Overlay_Blarg.png",
-    "codes": "BlargName"
-  },
-  {
     "name": "Rilgar",
     "type": "progressive",
     "allow_disabled": false,
@@ -285,13 +250,6 @@
         "codes": "Rilgar"
       }
     ]
-  },
-  {
-    "name": "Rilgar",
-    "type": "toggle_badged",
-    "base_item": "Rilgar",
-    "img": "images/Overlay_Rilgar.png",
-    "codes": "RilgarName"
   },
   {
     "name": "Umbris",
@@ -313,13 +271,6 @@
     ]
   },
   {
-    "name": "Umbris",
-    "type": "toggle_badged",
-    "base_item": "Umbris",
-    "img": "images/Overlay_Umbris.png",
-    "codes": "UmbrisName"
-  },
-  {
     "name": "Batalia",
     "type": "progressive",
     "loop": true,
@@ -337,13 +288,6 @@
         "codes": "Batalia"
       }
     ]
-  },
-  {
-    "name": "Batalia",
-    "type": "toggle_badged",
-    "base_item": "Batalia",
-    "img": "images/Overlay_Batalia.png",
-    "codes": "BataliaName"
   },
   {
     "name": "Orxon",
@@ -365,13 +309,6 @@
     ]
   },
   {
-    "name": "Orxon",
-    "type": "toggle_badged",
-    "base_item": "Orxon",
-    "img": "images/Overlay_Orxon.png",
-    "codes": "OrxonName"
-  },
-  {
     "name": "Gaspar",
     "type": "progressive",
     "allow_disabled": false,
@@ -389,13 +326,6 @@
         "codes": "Gaspar"
       }
     ]
-  },
-  {
-    "name": "Gaspar",
-    "type": "toggle_badged",
-    "base_item": "Gaspar",
-    "img": "images/Overlay_Gaspar.png",
-    "codes": "GasparName"
   },
   {
     "name": "Pokitaru",
@@ -417,13 +347,6 @@
     ]
   },
   {
-    "name": "Pokitaru",
-    "type": "toggle_badged",
-    "base_item": "Poki",
-    "img": "images/Overlay_Poki.png",
-    "codes": "PokiName"
-  },
-  {
     "name": "Hoven",
     "type": "progressive",
     "allow_disabled": false,
@@ -441,13 +364,6 @@
         "codes": "Hoven"
       }
     ]
-  },
-  {
-    "name": "Hoven",
-    "type": "toggle_badged",
-    "base_item": "Hoven",
-    "img": "images/Overlay_Hoven.png",
-    "codes": "HovenName"
   },
   {
     "name": "Gemlik Base",
@@ -469,13 +385,6 @@
     ]
   },
   {
-    "name": "Gemlik Base",
-    "type": "toggle_badged",
-    "base_item": "Gemlik",
-    "img": "images/Overlay_Gemlik.png",
-    "codes": "GemlikName"
-  },
-  {
     "name": "Oltanis",
     "type": "progressive",
     "allow_disabled": false,
@@ -493,13 +402,6 @@
         "codes": "Oltanis"
       }
     ]
-  },
-  {
-    "name": "Oltanis",
-    "type": "toggle_badged",
-    "base_item": "Oltanis",
-    "img": "images/Overlay_Oltanis.png",
-    "codes": "OltanisName"
   },
   {
     "name": "Quartu",
@@ -521,13 +423,6 @@
     ]
   },
   {
-    "name": "Quartu",
-    "type": "toggle_badged",
-    "base_item": "Quartu",
-    "img": "images/Overlay_Quartu.png",
-    "codes": "QuartuName"
-  },
-  {
     "name": "Kalebo III",
     "type": "progressive",
     "allow_disabled": false,
@@ -545,13 +440,6 @@
         "codes": "Kalebo"
       }
     ]
-  },
-  {
-    "name": "Kalebo III",
-    "type": "toggle_badged",
-    "base_item": "Kalebo",
-    "img": "images/Overlay_Kalebo.png",
-    "codes": "KaleboName"
   },
   {
     "name": "Drek's Fleet",
@@ -573,13 +461,6 @@
     ]
   },
   {
-    "name": "Drek's Fleet",
-    "type": "toggle_badged",
-    "base_item": "Fleet",
-    "img": "images/Overlay_Fleet.png",
-    "codes": "FleetName"
-  },
-  {
     "name": "Veldin",
     "type": "progressive",
     "allow_disabled": false,
@@ -597,13 +478,6 @@
         "codes": "Veldin"
       }
     ]
-  },
-  {
-    "name": "Veldin",
-    "type": "toggle_badged",
-    "base_item": "Veldin",
-    "img": "images/Overlay_Veldin.png",
-    "codes": "VeldinName"
   },
   {
     "name": "Bomb Glove",
@@ -1020,7 +894,7 @@
   {
     "name": "Trespasser dummy",
     "type": "progressive",
-    "allow_disabled":false,
+    "allow_disabled": false,
     "stages": [
       {
         "img": "images/chest_closed.png",
