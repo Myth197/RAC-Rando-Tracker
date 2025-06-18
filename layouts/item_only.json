@@ -47,7 +47,7 @@
                         },
                         {
                             "type": "group",
-                            "header": "Equipment",
+                            "header": "Gadgets",
                             "h_alignment": "stretch",
                             "dock": "top",
                             "content": {
@@ -70,8 +70,8 @@
                                         "item_size": 40,
                                         "item_margin": "1,6",
                                         "rows": [
-                                            ["",    "Hydro",    "Thruster", "Heli", ""],
-                                            ["",    "Pilot", "Sonic", "O2", ""],
+                                            ["",    "Heli", "Thruster", "Hydro", ""],
+                                            ["",    "O2",   "Sonic",    "Pilot", ""],
                                             ["Grind",    "Magne"]
                                         ]
                                     }
@@ -151,7 +151,7 @@
                         },
                         {
                             "type": "group",
-                            "header": "Equipment",
+                            "header": "Gadgets",
                             "h_alignment": "stretch",
                             "dock": "left",
                             "content": {
@@ -174,7 +174,7 @@
                                         "item_size": 40,
                                         "item_margin": "1,1",
                                         "rows": [
-                                            ["Hydro",    "Thruster", "Heli"]
+                                            ["Heli",    "Thruster", "Hydro"]
                                         ]
                                     },
                                     {
@@ -183,7 +183,7 @@
                                         "item_size": 40,
                                         "item_margin": "1,1",
                                         "rows": [
-                                            ["Pilot", "Sonic", "O2"]
+                                            ["O2", "Sonic", "Pilot"]
                                         ]
                                     },
                                     {
