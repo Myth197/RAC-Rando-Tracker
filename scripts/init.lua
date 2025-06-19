@@ -52,4 +52,6 @@ for v, name in pairs(Planets) do
 	end
 end
 
+-- TODO: Badge Text for Settings
+
 ScriptHost:AddWatchForCode("Vendor in Logic", "*", Vendor_activate)

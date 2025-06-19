@@ -7,9 +7,6 @@
       {
         "name": "Vendor",
         "color": "#6b70d7",
-        "access_rules": [
-          ""
-        ],
         "map_locations": [
           {
             "map": "map",
@@ -34,109 +31,70 @@
         ],
         "sections": [
           {
-            "name": "Novalis Vendor",
-            "access_rules": [
-              "Novalis"
-            ],
-            "capture_item": true,
-            "hosted_item": "Novalis_v"
+            "ref": "Novalis/Vendor/Novalis Vendor"
           },
           {
-            "name": "Kerwan Vendor",
-            "access_rules": [
-              "Kerwan"
-            ],
-            "capture_item": true,
-            "hosted_item": "Kerwan_v"
+            "ref": "Kerwan/Vendor/Kerwan Vendor"
           },
           {
-            "name": "Eudora Vendor",
-            "access_rules": [
-              "Eudora"
-            ],
-            "capture_item": true,
-            "hosted_item": "Eudora_v"
+            "ref": "Eudora/Vendor/Eudora Vendor"
           },
           {
-            "name": "Blarg Vendor",
-            "access_rules": [
-              "Blarg"
-            ],
-            "capture_item": true,
-            "hosted_item": "Blarg_v"
+            "ref": "Blarg/Vendor/Blarg Vendor"
           },
           {
-            "name": "Rilgar Vendor",
-            "access_rules": [
-              "Rilgar"
-            ],
-            "capture_item": true,
-            "hosted_item": "Rilgar_v"
+            "ref": "Rilgar/Vendor/Rilgar Vendor"
           },
           {
-            "name": "Batalia Vendor",
-            "access_rules": [
-              "Batalia"
-            ],
-            "capture_item": true,
-            "hosted_item": "Batalia_v"
+            "ref": "Batalia/Vendor/Batalia Vendor"
           },
           {
-            "name": "Orxon Vendor",
-            "access_rules": [
-              "Orxon,O2",
-              "Orxon,Novalis,[O2]",
-              "Orxon,Kerwan,[O2]",
-              "Orxon,Aridia,[O2]",
-              "Orxon,Eudora,[O2]",
-              "Orxon,Blarg,[O2]",
-              "Orxon,Rilgar,[O2]",
-              "Orxon,Umbris,[O2]",
-              "Orxon,Batalia,[O2]",
-              "Orxon,Gaspar,[O2]",
-              "Orxon,Poki,[O2]",
-              "Orxon,Hoven,[O2]",
-              "Orxon,Gemlik,[O2]",
-              "Orxon,Oltanis,[O2]",
-              "Orxon,Quartu,[O2]",
-              "Orxon,Kalebo,[O2]",
-              "Orxon,Fleet,[O2]",
-              "Orxon,Veldin,[O2]"
-            ],
-            "capture_item": true,
-            "hosted_item": "Orxon_v"
+            "ref": "Orxon/Vendor/Orxon Vendor"
           },
           {
-            "name": "Gaspar Vendor",
-            "access_rules": [
-              "Gaspar"
-            ],
-            "capture_item": true,
-            "hosted_item": "Gaspar_v"
+            "ref": "Gaspar/Vendor/Gaspar Vendor"
           },
           {
-            "name": "Poki Vendor",
-            "access_rules": [
-              "Poki"
-            ],
-            "capture_item": true,
-            "hosted_item": "Poki_v"
+            "ref": "Pokitaru/Vendor/Poki Vendor"
           },
           {
-            "name": "Hoven Vendor",
-            "access_rules": [
-              "Hoven"
-            ],
-            "capture_item": true,
-            "hosted_item": "Hoven_v"
+            "ref": "Hoven/Vendor/Hoven Vendor"
           },
           {
-            "name": "Oltanis Vendor",
-            "access_rules": [
-              "Oltanis"
-            ],
-            "capture_item": true,
-            "hosted_item": "Oltanis_v"
+            "ref": "Oltanis/Vendor/Oltanis Vendor"
+          },
+          {
+            "ref": "Novalis/Vendor/Vanilla Pyrocitor"
+          },
+          {
+            "ref": "Kerwan/Vendor/Vanilla Blaster"
+          },
+          {
+            "ref": "Eudora/Vendor/Vanilla Glove of Doom"
+          },
+          {
+            "ref": "Blarg/Vendor/Vanilla Taunter"
+          },
+          {
+            "ref": "Rilgar/Vendor/Vanilla Mine Glove"
+          },
+          {
+            "ref": "Batalia/Vendor/Vanilla Devastator"
+          },
+          {
+            "ref": "Orxon/Vendor/Vanilla Visibomb"
+          },
+          {
+            "ref": "Gaspar/Vendor/Vanilla Walloper"
+          },
+          {
+            "ref": "Pokitaru/Vendor/Vanilla Decoy Glove"
+          },
+          {
+            "ref": "Hoven/Vendor/Vanilla Drone Devices"
+          },
+          {
+            "ref": "Oltanis/Vendor/Vanilla Tesla Claw"
           }
         ]
       },
@@ -150,7 +108,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[Metal]"
             ],
             "map_locations": [
               {
@@ -178,7 +136,14 @@
               {
                 "name": "Novalis Vendor",
                 "capture_item": true,
-                "hosted_item": "Novalis_v"
+                "hosted_item": "Novalis_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Pyrocitor",
+                "capture_item": true,
+                "hosted_item": "Pyro",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -331,6 +296,11 @@
           {
             "name": "Gold Weapon Room",
             "color": "#ffb300",
+            "inspectable_sequence_break": true,
+            "access_rules": [
+              "{}",
+              "$Gold|4,[$Gold|40],[Metal]"
+            ],
             "map_locations": [
               {
                 "map": "map",
@@ -398,7 +368,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[Metal]"
             ],
             "map_locations": [
               {
@@ -426,7 +396,14 @@
               {
                 "name": "Kerwan Vendor",
                 "capture_item": true,
+                "visibility_rules": "Weapons",
                 "hosted_item": "Kerwan_v"
+              },
+              {
+                "name": "Vanilla Blaster",
+                "capture_item": true,
+                "hosted_item": "Blaster",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -655,62 +632,24 @@
               {
                 "map": "map",
                 "x": 1145,
-                "y": 110,
-                "force_visibility_rules": [
-                  "AGB"
-                ]
+                "y": 110
               },
               {
                 "map": "map_v",
                 "x": 1145,
-                "y": 110,
-                "force_visibility_rules": [
-                  "AGB"
-                ]
+                "y": 110
               }
             ],
             "sections": [
               {
                 "name": "Trespasser",
-                "hosted_item": "TresDummy"
-              }
-            ]
-          },
-          {
-            "name": "Construction Zone",
-            "access_rules": [
-              "Thruster,[Swingshot]",
-              "Heli,[Swingshot]",
-              "PDA,[Swingshot]",
-              "Swingshot"
-            ],
-            "map_locations": [
-              {
-                "map": "map",
-                "x": 1145,
-                "y": 110,
-                "restrict_visibility_rules": [
-                  "AGB"
-                ]
-              },
-              {
-                "map": "map_v",
-                "x": 1145,
-                "y": 110,
-                "restrict_visibility_rules": [
-                  "AGB"
-                ]
-              }
-            ],
-            "sections": [
-              {
-                "name": "Trespasser",
-                "hosted_item": "TresDummy"
+                "item_count": 1
               },
               {
                 "name": "Gold Bolt",
                 "item_count": 1,
-                "chest_unopened_img": "images/Gold_Bolt.png"
+                "chest_unopened_img": "images/Gold_Bolt.png",
+                "visibility_rules": "AGB"
               }
             ]
           },
@@ -853,7 +792,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[Metal]"
             ],
             "map_locations": [
               {
@@ -881,7 +820,14 @@
               {
                 "name": "Eudora Vendor",
                 "capture_item": true,
-                "hosted_item": "Eudora_v"
+                "hosted_item": "Eudora_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Glove of Doom",
+                "capture_item": true,
+                "hosted_item": "Doom",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -896,24 +842,24 @@
               {
                 "map": "map",
                 "x": 1960,
-                "y": 200,
-                "restrict_visibility_rules": [
-                  "Weapons"
-                ]
+                "y": 200
               },
               {
                 "map": "map_v",
                 "x": 415,
-                "y": 710,
-                "restrict_visibility_rules": [
-                  "Weapons"
-                ]
+                "y": 710
               }
             ],
             "sections": [
               {
                 "name": "Suck Canon",
+                "visibility_rules": "Weapons",
                 "item_count": 1
+              },
+              {
+                "name": "Vanilla Suck Canon",
+                "visibility_rules": "Weapons_vanilla",
+                "hosted_item": "Suck"
               }
             ]
           },
@@ -986,7 +932,7 @@
         ]
       },
       {
-        "name": "Blarg Station",
+        "name": "Blarg",
         "color": "#764e23",
         "access_rules": [
           "Blarg"
@@ -995,7 +941,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[$Metal_Detector]"
             ],
             "map_locations": [
               {
@@ -1023,7 +969,14 @@
               {
                 "name": "Blarg Vendor",
                 "capture_item": true,
-                "hosted_item": "Blarg_v"
+                "hosted_item": "Blarg_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Taunter",
+                "capture_item": true,
+                "hosted_item": "Taunt",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -1189,7 +1142,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[$Metal_Detector]"
             ],
             "map_locations": [
               {
@@ -1217,7 +1170,14 @@
               {
                 "name": "Rilgar Vendor",
                 "capture_item": true,
-                "hosted_item": "Rilgar_v"
+                "hosted_item": "Rilgar_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Mine Glove",
+                "capture_item": true,
+                "hosted_item": "Mine",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -1231,24 +1191,25 @@
               {
                 "map": "map",
                 "x": 3000,
-                "y": 150,
-                "restrict_visibility_rules": [
-                  "Weapons"
-                ]
+                "y": 150
               },
               {
                 "map": "map_v",
                 "x": 1450,
-                "y": 665,
-                "restrict_visibility_rules": [
-                  "Weapons"
-                ]
+                "y": 665
               }
             ],
             "sections": [
               {
                 "name": "Shady Salesman - 150,000 Bolts",
                 "item_count": 1,
+                "visibility_rules": "Weapons",
+                "chest_unopened_img": "images/Shady.png"
+              },
+              {
+                "name": "Vanilla RYNO - 150,000 Bolts",
+                "visibility_rules": "Weapons_vanilla",
+                "hosted_item": "RYNO",
                 "chest_unopened_img": "images/Shady.png"
               }
             ]
@@ -1516,7 +1477,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[Metal]"
             ],
             "map_locations": [
               {
@@ -1544,7 +1505,14 @@
               {
                 "name": "Batalia Vendor",
                 "capture_item": true,
-                "hosted_item": "Batalia_v"
+                "hosted_item": "Batalia_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Devastator",
+                "capture_item": true,
+                "hosted_item": "Dev",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -1672,24 +1640,24 @@
           {
             "name": "Vendor",
             "access_rules": [
-              "Orxon,O2",
-              "Orxon,Novalis,[O2]",
-              "Orxon,Kerwan,[O2]",
-              "Orxon,Aridia,[O2]",
-              "Orxon,Eudora,[O2]",
-              "Orxon,Blarg,[O2]",
-              "Orxon,Rilgar,[O2]",
-              "Orxon,Umbris,[O2]",
-              "Orxon,Batalia,[O2]",
-              "Orxon,Gaspar,[O2]",
-              "Orxon,Poki,[O2]",
-              "Orxon,Hoven,[O2]",
-              "Orxon,Gemlik,[O2]",
-              "Orxon,Oltanis,[O2]",
-              "Orxon,Quartu,[O2]",
-              "Orxon,Kalebo,[O2]",
-              "Orxon,Fleet,[O2]",
-              "Orxon,Veldin,[O2]"
+              "O2,[$Metal_Detector]",
+              "Novalis,[O2],[Metal]",
+              "Kerwan,[O2],[Metal]",
+              "Aridia,[O2],[Metal]",
+              "Eudora,[O2],[Metal]",
+              "Blarg,[O2],[$Metal_Detector]",
+              "Rilgar,[O2],[$Metal_Detector]",
+              "Umbris,[O2],[$Metal_Detector]",
+              "Batalia,[O2],[Metal]",
+              "Gaspar,[O2],[$Metal_Detector]",
+              "Poki,[O2],[Metal]",
+              "Hoven,[O2],[Metal]",
+              "Gemlik,[O2],[$Metal_Detector]",
+              "Oltanis,[O2],[$Metal_Detector]",
+              "Quartu,[O2],[Metal]",
+              "Kalebo,[O2],[$Metal_Detector]",
+              "Fleet,[O2],[$Metal_Detector]",
+              "Veldin,[O2],[$Metal_Detector]"
             ],
             "map_locations": [
               {
@@ -1717,7 +1685,14 @@
               {
                 "name": "Orxon Vendor",
                 "capture_item": true,
-                "hosted_item": "Orxon_v"
+                "hosted_item": "Orxon_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Visibomb",
+                "capture_item": true,
+                "hosted_item": "Visi",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -1847,7 +1822,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[$Metal_Detector]"
             ],
             "map_locations": [
               {
@@ -1875,7 +1850,14 @@
               {
                 "name": "Gaspar Vendor",
                 "capture_item": true,
-                "hosted_item": "Gaspar_v"
+                "hosted_item": "Gaspar_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Walloper",
+                "capture_item": true,
+                "hosted_item": "Wallop",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -1915,7 +1897,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[Metal]"
             ],
             "map_locations": [
               {
@@ -1943,7 +1925,14 @@
               {
                 "name": "Poki Vendor",
                 "capture_item": true,
-                "hosted_item": "Poki_v"
+                "hosted_item": "Poki_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Decoy Glove",
+                "capture_item": true,
+                "hosted_item": "Decoy",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -2037,7 +2026,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[Metal]"
             ],
             "map_locations": [
               {
@@ -2065,7 +2054,14 @@
               {
                 "name": "Hoven Vendor",
                 "capture_item": true,
-                "hosted_item": "Hoven_v"
+                "hosted_item": "Hoven_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Drone Devices",
+                "capture_item": true,
+                "hosted_item": "Drone",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -2205,15 +2201,13 @@
           {
             "name": "Gold Weapon Room",
             "color": "#ffb300",
+            "inspectable_sequence_break": true,
             "access_rules": [
+              "{Thruster}",
+              "{Heli}",
+              "{PDA}",
               "Tres,Magne,Swingshot,Dev",
-              "Tres,Magne,Swingshot,Visi",
-              "Thruster,[Magne],[Tres],[Swingshot],[Dev]",
-              "Thruster,[Magne],[Tres],[Swingshot],[Visi]",
-              "Heli,[Magne],[Tres],[Swingshot],[Dev]",
-              "Heli,[Magne],[Tres],[Swingshot],[Visi]",
-              "PDA,[Magne],[Tres],[Swingshot],[Dev]",
-              "PDA,[Magne],[Tres],[Swingshot],[Visi]"
+              "Tres,Magne,Swingshot,Visi"
             ],
             "map_locations": [
               {
@@ -2240,31 +2234,73 @@
             "sections": [
               {
                 "name": "Tesla Claw, 60,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Tesla",
+                "access_rules": [
+                  "{}",
+                  "Tesla,$Gold|4,[$Gold|40],[Metal]",
+                  "Thruster,Tesla,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Thruster,Tesla,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "Heli,Tesla,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Heli,Tesla,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "PDA,Tesla,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "PDA,Tesla,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]"
+                ],
                 "chest_unopened_img": "images/Tesla.png",
                 "chest_opened_img": "images/Tesla_G.png"
               },
               {
                 "name": "Devastator, 60,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Dev",
+                "access_rules": [
+                  "{}",
+                  "Dev,$Gold|4,[$Gold|40],[Metal]",
+                  "Thruster,Dev,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot]",
+                  "Heli,Dev,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot]",
+                  "PDA,Dev,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot]"
+                ],
                 "chest_unopened_img": "images/Dev.png",
                 "chest_opened_img": "images/Dev_G.png"
               },
               {
                 "name": "Mine Glove, 10,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Mine",
+                "access_rules": [
+                  "{}",
+                  "Mine,$Gold|4,[$Gold|40],[Metal]",
+                  "Thruster,Mine,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Thruster,Mine,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "Heli,Mine,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Heli,Mine,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "PDA,Mine,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "PDA,Mine,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]"
+                ],
                 "chest_unopened_img": "images/Mine.png",
                 "chest_opened_img": "images/Mine_G.png"
               },
               {
                 "name": "Morph-o-ray, 20,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Morph",
+                "access_rules": [
+                  "{}",
+                  "Morph,$Gold|4,[$Gold|40],[Metal]",
+                  "Thruster,Morph,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Thruster,Morph,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "Heli,Morph,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Heli,Morph,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "PDA,Morph,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "PDA,Morph,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]"
+                ],
                 "chest_unopened_img": "images/Morph.png",
                 "chest_opened_img": "images/Morph_G.png"
               },
               {
                 "name": "Decoy Glove, 10,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Decoy",
+                "access_rules": [
+                  "{}",
+                  "Decoy,$Gold|4,[$Gold|40],[Metal]",
+                  "Thruster,Decoy,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Thruster,Decoy,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "Heli,Decoy,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "Heli,Decoy,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]",
+                  "PDA,Decoy,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Dev]",
+                  "PDA,Decoy,$Gold|4,[$Gold|40],[Metal],[Magne],[Tres],[Swingshot],[Visi]"
+                ],
                 "chest_unopened_img": "images/Decoy.png",
                 "chest_opened_img": "images/Decoy_G.png"
               }
@@ -2282,7 +2318,7 @@
           {
             "name": "Vendor",
             "access_rules": [
-              ""
+              "[$Metal_Detector]"
             ],
             "map_locations": [
               {
@@ -2310,7 +2346,14 @@
               {
                 "name": "Oltanis Vendor",
                 "capture_item": true,
-                "hosted_item": "Oltanis_v"
+                "hosted_item": "Oltanis_v",
+                "visibility_rules": "Weapons"
+              },
+              {
+                "name": "Vanilla Tesla Claw",
+                "capture_item": true,
+                "hosted_item": "Tesla",
+                "visibility_rules": "Weapons_vanilla"
               }
             ]
           },
@@ -2324,24 +2367,24 @@
               {
                 "map": "map",
                 "x": 890,
-                "y": 1440,
-                "restrict_visibility_rules": [
-                  "Weapons"
-                ]
+                "y": 1440
               },
               {
                 "map": "map_v",
                 "x": 890,
-                "y": 2475,
-                "restrict_visibility_rules": [
-                  "Weapons"
-                ]
+                "y": 2475
               }
             ],
             "sections": [
               {
                 "name": "Morph-o-ray",
+                "visibility_rules": "Weapons",
                 "item_count": 1
+              },
+              {
+                "name": "Vanilla Morph-o-ray",
+                "visibility_rules": "Weapons_vanilla",
+                "hosted_item": "Morph"
               }
             ]
           },

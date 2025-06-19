@@ -28,18 +28,107 @@ function Rock_Explosion()
   end
 end
 
+function Metal_Detector()
+  if Tracker:ProviderCountForCode("Metal") == 0 then
+    return 0
+  elseif Tracker:ProviderCountForCode("Novalis") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Kerwan") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Aridia") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Eudora") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Blarg") > 0 and (Tracker:ProviderCountForCode("Swingshot") > 0 or (Tracker:ProviderCountForCode("O2") > 0 and Tracker:ProviderCountForCode("Tres") > 0)) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Rilgar") > 0 and (Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Umbris") > 0 and Tracker:ProviderCountForCode("Swingshot") > 0 and (Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Batalia") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Orxon") > 0 and Tracker:ProviderCountForCode("O2") > 0 and (Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Gaspar") > 0 and (Tracker:ProviderCountForCode("Swingshot") > 0 or Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Poki") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Hoven") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Gemlik") > 0 and (Tracker:ProviderCountForCode("Tres") > 0 and Tracker:ProviderCountForCode("Magne") > 0 and Tracker:ProviderCountForCode("Swingshot") > 0 and (Tracker:ProviderCountForCode("Dev") > 0 or Tracker:ProviderCountForCode("Visi") > 0)) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Oltanis") > 0 and (Tracker:ProviderCountForCode("Magne") > 0 or Tracker:ProviderCountForCode("Swingshot") > 0) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Quartu") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("Kalebo") > 0 and (Tracker:ProviderCountForCode("Grind") > 0 or (Kalebo_switch > 0 and (Tracker:ProviderCountForCode("Swingshot") > 0 or Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0))) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Fleet") > 0 and (Tracker:ProviderCountForCode("Hologuise") > 0 or (Tracker:ProviderCountForCode("O2") > 0 and Tracker:ProviderCountForCode("Hydro") > 0)) then
+    return 1
+  elseif Tracker:ProviderCountForCode("Veldin") > 0 and Tracker:ProviderCountForCode("Tres") > 0 and Tracker:ProviderCountForCode("Magne") > 0 and Tracker:ProviderCountForCode("Hydrod") > 0 and Tracker:ProviderCountForCode("Thruster") > 0 and Tracker:ProviderCountForCode("Swingshot") > 0 then
+    return 1
+  end
+end
+-- TODO: `^$func` to set accessibility level for golden weapon shops
+function Gold(count)
+  if Tracker:ProviderCountForCode("Gold") >= tonumber(count) then
+    return 1
+  else
+    return 0
+  end
+end
+
+-- local Metal_Detector_Spots = {
+--   ["Novalis_1"] = "Nothing, 1st cave",
+--   ["Novalis_2"] = "Nothing, Before Bridge",
+--   ["Kerwan_1"] = "Nothing, Training Course start",
+--   ["Kerwan_2"] = "Nothing, Before Al",
+--   ["Aridia_1"] = "Nothing, Construction zone upper",
+--   ["Aridia_2"] = "Nothing, Construction zone lower",
+--   ["Eudora_1"] = "Nothing, After 3rd Bridge",
+--   ["Eudora_2"] = "Heli/Thruster, After Suck",
+--   ["Blarg_1"] = "O2, Tres, Near Outside Gold Bolt",
+--   ["Blarg_2"] = "Swingshot, before Animal Cages Checkpoint",
+--   ["Rilgar_1"] = "Heli/Thruster, Ameboid Fight Cave",
+--   ["Rilgar_2"] = "Heli/Thruster, by hoverboard race",
+--   ["Umbris_1"] = "Swingshot, Heli/Thruster, Near first pad puzzle",
+--   ["Umbris_2"] = "Hydrodisplacer, Swingshot, Heli/Thruster, Snagglebeast Arena",
+--   ["Batalia_1"] = "Nothing, near cliff gold bolt",
+--   ["Batalia_2"] = "Magneboots, near the turret",
+--   ["Orxon_1"] = "O2, Heli/Thruster, Clank only cave near Gold Bolt",
+--   ["Orxon_2"] = "O2, Heli/Thruster, near Sniper skillpoint pipe",
+--   ["Gaspar_1"] = "Swingshot, After 2nd Ship destroyed",
+--   ["Gaspar_2"] = "Heli/Thruster, Cave before Gold Bolt",
+--   ["Poki_1"] = "Nothing, Before 2nd boat ride",
+--   ["Poki_2"] = "Hydrodisplacer, Tres, After first Trespasser lock",
+--   ["Hoven_1"] = "Nothing, 1st switch puzzle in west section",
+--   ["Hoven_2"] = "Hydrodisplacer, near Edwina",
+--   ["Gemlik_1"] = "Tres,Magne,Swingshot,Dev/Vis, Trespasser lock for turret bunker",
+--   ["Gemlik_2"] = "Tres,Magne,Swingshot,Dev/Vis, Qwark runway",
+--   ["Oltanis_1"] = "Magneboots, Final Ice patch before Steve",
+--   ["Oltanis_2"] = "Swingshot, Below Morph-o-ray",
+--   ["Quartu_1"] = "Nothing, Below Ship area",
+--   ["Quartu_2"] = "Swingshot, Giant Clank Pad",
+--   ["Kalebo_1"] = "$Kalebo_switch, Swingshot/Heli/Thruster, Bottom area below first yellow swingshot target",
+--   ["Kalebo_2"] = "Grind, By Help Desk",
+--   ["Fleet_1"] = "O2,Hydro, End of water path",
+--   ["Fleet_2"] = "Hologuise, Drek's Flagship First Room (before outside)",
+--   ["Veldin_1"] = "Tres, Magne, Hydrod, Thruster, Swingshot, Mushroom Cave near Final Gold Bolt",
+--   ["Veldin_2"] = "Tres, Magne, Hydrod, Thruster, Swingshot, Giant Clank Area",
+-- }
+
 local Vendors = {
-  ['@Vendor/Novalis Vendor'] = "Novalis_v",
-  ['@Vendor/Kerwan Vendor'] = "Kerwan_v",
-  ['@Vendor/Eudora Vendor'] = "Eudora_v",
-  ['@Vendor/Blarg Vendor'] = "Blarg_v",
-  ['@Vendor/Rilgar Vendor'] = "Rilgar_v",
-  ['@Vendor/Batalia Vendor'] = "Batalia_v",
-  ['@Vendor/Orxon Vendor'] = "Orxon_v",
-  ['@Vendor/Gaspar Vendor'] = "Gaspar_v",
-  ['@Vendor/Poki Vendor'] = "Poki_v",
-  ['@Vendor/Hoven Vendor'] = "Hoven_v",
-  ['@Vendor/Oltanis Vendor'] = "Oltanis_v",
+  ['@Novalis/Vendor/Novalis Vendor'] = "Novalis_v",
+  ['@Kerwan/Vendor/Kerwan Vendor'] = "Kerwan_v",
+  ['@Eudora/Vendor/Eudora Vendor'] = "Eudora_v",
+  ['@Blarg/Vendor/Blarg Vendor'] = "Blarg_v",
+  ['@Rilgar/Vendor/Rilgar Vendor'] = "Rilgar_v",
+  ['@Batalia/Vendor/Batalia Vendor'] = "Batalia_v",
+  ['@Orxon/Vendor/Orxon Vendor'] = "Orxon_v",
+  ['@Gaspar/Vendor/Gaspar Vendor'] = "Gaspar_v",
+  ['@Pokitaru/Vendor/Poki Vendor'] = "Poki_v",
+  ['@Hoven/Vendor/Hoven Vendor'] = "Hoven_v",
+  ['@Oltanis/Vendor/Oltanis Vendor'] = "Oltanis_v",
 }
 
 local Vendor_flags = {
@@ -59,32 +148,26 @@ local Vendor_flags = {
 local previous_code = ""
 local depth = 0
 
-function Vendor_activate(code)
+function Vendor_activate(code) -- TODO: Metal Detector Compatability, BUG: Planet selection marks collected
   depth = depth + 1
   for location, item in pairs(Vendors) do
     local trip = 0
-    if Tracker:FindObjectForCode(location).AccessibilityLevel == AccessibilityLevel.Normal and Vendor_flags[item] == 0 then
+    if Tracker:FindObjectForCode(location).AccessibilityLevel >= AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 0 then
       Vendor_flags[item] = 1
       trip = 1
     elseif Vendor_flags[item] == 0 and item == code then
       if previous_code == code then
         break
       end
-      if (code == "O2" or previous_code == "O2") and item == "Orxon_v" then
-        break
-      end
       if previous_code .. "_v" == item then
         break
       end
       Vendor_flags[item] = 2
       trip = 1
-    elseif Tracker:FindObjectForCode(location).AccessibilityLevel < AccessibilityLevel.Normal and Vendor_flags[item] == 1 then
+    elseif Tracker:FindObjectForCode(location).AccessibilityLevel < AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 1 then
       Vendor_flags[item] = 0
       trip = 1
     elseif Vendor_flags[item] == 1 and item == code then
-      if (code == "O2" or previous_code == "O2") and item == "Orxon_v" then
-        break
-      end
       if previous_code == code then
         break
       end
@@ -93,14 +176,11 @@ function Vendor_activate(code)
       end
       Vendor_flags[item] = 2
       trip = 1
-    elseif Tracker:FindObjectForCode(location).AccessibilityLevel < AccessibilityLevel.Normal and Vendor_flags[item] == 2 then
+    elseif Tracker:FindObjectForCode(location).AccessibilityLevel < AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 2 then
       Vendor_flags[item] = 0
       trip = 1
     elseif Vendor_flags[item] == 2 and item == code then
       if previous_code == code then
-        break
-      end
-      if (code == "O2" or previous_code == "O2") and item == "Orxon_v" then
         break
       end
       if previous_code .. "_v" == item then
@@ -124,7 +204,6 @@ function Vendor_activate(code)
   if depth == 0 then
     previous_code = ""
   end
-  print("Flags: " .. Vendor_flags["Orxon_v"])
 end
 
 function Vendor_clear(code)

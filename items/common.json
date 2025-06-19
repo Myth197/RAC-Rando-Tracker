@@ -829,7 +829,7 @@
     "codes": "NGWRO"
   },
   {
-    "name": "Weapon Locations",
+    "name": "Vendor Visibility",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -839,36 +839,43 @@
         "img": "images/Vendor.png",
         "inherit_codes": false,
         "img_mods": "@disabled",
-        "codes": "Weapons_vanilla"
+        "codes": ""
       },
       {
         "img": "images/Vendor.png",
         "inherit_codes": false,
-        "codes": "Weapons,vendor"
+        "codes": "vendor"
       },
       {
         "img": "images/Vendor_plus.png",
         "inherit_codes": false,
-        "codes": "Weapons,weapon_plus"
+        "codes": "weapon_plus"
       }
     ]
   },
   {
-    "name": "Gold Weapon Locations",
+    "name": "Weapon options",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 0,
+    "initial_stage_idx": 1,
     "stages": [
       {
-        "img": "images/Gold_Weapons.png",
+        "img": "images/Weapons.png",
         "inherit_codes": false,
         "img_mods": "@disabled",
-        "codes": ""
+        "BadgeText": "vanilla",
+        "codes": "Weapons_vanilla"
       },
       {
-        "img": "images/Gold_Weapons.png",
-        "codes": "Gold_Weapons"
+        "img": "images/Weapons.png",
+        "inherit_codes": false,
+        "codes": "Weapons"
+      },
+      {
+        "img": "images/Weapons_Gold.png",
+        "inherit_codes": false,
+        "codes": "Weapons, Gold_Weapons"
       }
     ]
   },
@@ -888,21 +895,6 @@
       {
         "img": "images/Gold_Bolt.png",
         "codes": "AGB"
-      }
-    ]
-  },
-  {
-    "name": "Trespasser dummy",
-    "type": "progressive",
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/chest_closed.png",
-        "codes": ""
-      },
-      {
-        "img": "images/chest_open.png",
-        "codes": "TresDummy"
       }
     ]
   },
