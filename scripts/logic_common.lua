@@ -166,17 +166,17 @@ function Update_Setting(code)
 end
 
 local Vendors = {
-  ['@Novalis/Vendor/Novalis Vendor'] = "Novalis_v",
-  ['@Kerwan/Vendor/Kerwan Vendor'] = "Kerwan_v",
-  ['@Eudora/Vendor/Eudora Vendor'] = "Eudora_v",
-  ['@Blarg/Vendor/Blarg Vendor'] = "Blarg_v",
-  ['@Rilgar/Vendor/Rilgar Vendor'] = "Rilgar_v",
-  ['@Batalia/Vendor/Batalia Vendor'] = "Batalia_v",
-  ['@Orxon/Vendor/Orxon Vendor'] = "Orxon_v",
-  ['@Gaspar/Vendor/Gaspar Vendor'] = "Gaspar_v",
-  ['@Pokitaru/Vendor/Poki Vendor'] = "Poki_v",
-  ['@Hoven/Vendor/Hoven Vendor'] = "Hoven_v",
-  ['@Oltanis/Vendor/Oltanis Vendor'] = "Oltanis_v",
+  ['@Novalis/Novalis Vendor/Novalis Vendor - 2,500'] = "Novalis_v",
+  ['@Kerwan/Kerwan Vendor/Kerwan Vendor - 2,500'] = "Kerwan_v",
+  ['@Eudora/Eudora Vendor/Eudora Vendor - 7,500'] = "Eudora_v",
+  ['@Blarg/Blarg Vendor/Blarg Vendor - 2,500'] = "Blarg_v",
+  ['@Rilgar/Rilgar Vendor/Rilgar Vendor - 7,500'] = "Rilgar_v",
+  ['@Batalia/Batalia Vendor/Batalia Vendor - 10,000'] = "Batalia_v",
+  ['@Orxon/Orxon Vendor/Orxon Vendor - 15,000'] = "Orxon_v",
+  ['@Gaspar/Gaspar Vendor/Gaspar Vendor - 7,500'] = "Gaspar_v",
+  ['@Pokitaru/Poki Vendor/Poki Vendor - 7,500'] = "Poki_v",
+  ['@Hoven/Hoven Vendor/Hoven Vendor - 7,500'] = "Hoven_v",
+  ['@Oltanis/Oltanis Vendor/Oltanis Vendor - 40,000'] = "Oltanis_v",
 }
 
 local Vendor_flags = {
@@ -198,6 +198,10 @@ local depth = 0
 
 function Vendor_activate(code) -- TODO: Metal Detector Compatability, BUG: Planet selection marks collected
   depth = depth + 1
+  if depth > 10 then
+    ScriptHost:RemoveWatchForCode("Vendor in Logic")
+    error("Vendor Loop detected", 10)
+  end
   for location, item in pairs(Vendors) do
     local trip = 0
     if Tracker:FindObjectForCode(location).AccessibilityLevel >= AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 0 then
@@ -251,14 +255,6 @@ function Vendor_activate(code) -- TODO: Metal Detector Compatability, BUG: Plane
   end
   if depth == 0 then
     previous_code = ""
-  end
-end
-
-function Vendor_clear(code)
-  for location, item in pairs(Vendors) do
-    if code == item then
-      Tracker:FindObjectForCode(code).CurrentStage = 2
-    end
   end
 end
 

@@ -1,5 +1,6 @@
 --  Load configuration options up front
 DEBUG = true
+Tracker.BulkUpdate = true
 Tracker:AddItems("items/common.json")
 
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
@@ -59,4 +60,7 @@ Update_Setting("Weapons")
 ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
 Update_Setting("Vendor")
 
-ScriptHost:AddWatchForCode("Vendor in Logic", "*", Vendor_activate)
+-- TODO: Vanilla Golden Weapons
+-- ScriptHost:AddWatchForCode("Vendor in Logic", "*", Vendor_activate)
+
+Tracker.BulkUpdate = false

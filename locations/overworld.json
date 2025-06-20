@@ -31,70 +31,70 @@
         ],
         "sections": [
           {
-            "ref": "Novalis/Vendor/Novalis Vendor"
+            "ref": "Novalis/Novalis Vendor/Novalis Vendor - 2,500"
           },
           {
-            "ref": "Kerwan/Vendor/Kerwan Vendor"
+            "ref": "Kerwan/Kerwan Vendor/Kerwan Vendor - 2,500"
           },
           {
-            "ref": "Eudora/Vendor/Eudora Vendor"
+            "ref": "Eudora/Eudora Vendor/Eudora Vendor - 7,500"
           },
           {
-            "ref": "Blarg/Vendor/Blarg Vendor"
+            "ref": "Blarg/Blarg Vendor/Blarg Vendor - 2,500"
           },
           {
-            "ref": "Rilgar/Vendor/Rilgar Vendor"
+            "ref": "Rilgar/Rilgar Vendor/Rilgar Vendor - 7,500"
           },
           {
-            "ref": "Batalia/Vendor/Batalia Vendor"
+            "ref": "Batalia/Batalia Vendor/Batalia Vendor - 10,000"
           },
           {
-            "ref": "Orxon/Vendor/Orxon Vendor"
+            "ref": "Orxon/Orxon Vendor/Orxon Vendor - 15,000"
           },
           {
-            "ref": "Gaspar/Vendor/Gaspar Vendor"
+            "ref": "Gaspar/Gaspar Vendor/Gaspar Vendor - 7,500"
           },
           {
-            "ref": "Pokitaru/Vendor/Poki Vendor"
+            "ref": "Pokitaru/Poki Vendor/Poki Vendor - 7,500"
           },
           {
-            "ref": "Hoven/Vendor/Hoven Vendor"
+            "ref": "Hoven/Hoven Vendor/Hoven Vendor - 7,500"
           },
           {
-            "ref": "Oltanis/Vendor/Oltanis Vendor"
+            "ref": "Oltanis/Oltanis Vendor/Oltanis Vendor - 40,000"
           },
           {
-            "ref": "Novalis/Vendor/Vanilla Pyrocitor"
+            "ref": "Novalis/Novalis Vendor/Vanilla Pyrocitor - 2,500"
           },
           {
-            "ref": "Kerwan/Vendor/Vanilla Blaster"
+            "ref": "Kerwan/Kerwan Vendor/Vanilla Blaster - 2,500"
           },
           {
-            "ref": "Eudora/Vendor/Vanilla Glove of Doom"
+            "ref": "Eudora/Eudora Vendor/Vanilla Glove of Doom - 7,500"
           },
           {
-            "ref": "Blarg/Vendor/Vanilla Taunter"
+            "ref": "Blarg/Blarg Vendor/Vanilla Taunter - 2,500"
           },
           {
-            "ref": "Rilgar/Vendor/Vanilla Mine Glove"
+            "ref": "Rilgar/Rilgar Vendor/Vanilla Mine Glove - 7,500"
           },
           {
-            "ref": "Batalia/Vendor/Vanilla Devastator"
+            "ref": "Batalia/Batalia Vendor/Vanilla Devastator - 10,000"
           },
           {
-            "ref": "Orxon/Vendor/Vanilla Visibomb"
+            "ref": "Orxon/Orxon Vendor/Vanilla Visibomb - 15,000"
           },
           {
-            "ref": "Gaspar/Vendor/Vanilla Walloper"
+            "ref": "Gaspar/Gaspar Vendor/Vanilla Walloper - 7,500"
           },
           {
-            "ref": "Pokitaru/Vendor/Vanilla Decoy Glove"
+            "ref": "Pokitaru/Poki Vendor/Vanilla Decoy Glove - 7,500"
           },
           {
-            "ref": "Hoven/Vendor/Vanilla Drone Devices"
+            "ref": "Hoven/Hoven Vendor/Vanilla Drone Devices - 7,500"
           },
           {
-            "ref": "Oltanis/Vendor/Vanilla Tesla Claw"
+            "ref": "Oltanis/Oltanis Vendor/Vanilla Tesla Claw - 40,000"
           }
         ]
       },
@@ -106,7 +106,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Novalis Vendor",
             "access_rules": [
               "[Metal]"
             ],
@@ -134,13 +134,14 @@
             ],
             "sections": [
               {
-                "name": "Novalis Vendor",
+                "name": "Novalis Vendor - 2,500",
                 "capture_item": true,
-                "hosted_item": "Novalis_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Pyrocitor",
+                "name": "Vanilla Pyrocitor - 2,500",
                 "capture_item": true,
                 "hosted_item": "Pyro",
                 "visibility_rules": "Weapons_vanilla"
@@ -366,7 +367,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Kerwan Vendor",
             "access_rules": [
               "[Metal]"
             ],
@@ -394,13 +395,14 @@
             ],
             "sections": [
               {
-                "name": "Kerwan Vendor",
+                "name": "Kerwan Vendor - 2,500",
                 "capture_item": true,
-                "visibility_rules": "Weapons",
-                "hosted_item": "Kerwan_v"
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
+                "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Blaster",
+                "name": "Vanilla Blaster - 2,500",
                 "capture_item": true,
                 "hosted_item": "Blaster",
                 "visibility_rules": "Weapons_vanilla"
@@ -790,7 +792,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Eudora Vendor",
             "access_rules": [
               "[Metal]"
             ],
@@ -818,13 +820,14 @@
             ],
             "sections": [
               {
-                "name": "Eudora Vendor",
+                "name": "Eudora Vendor - 7,500",
                 "capture_item": true,
-                "hosted_item": "Eudora_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Glove of Doom",
+                "name": "Vanilla Glove of Doom - 7,500",
                 "capture_item": true,
                 "hosted_item": "Doom",
                 "visibility_rules": "Weapons_vanilla"
@@ -939,7 +942,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Blarg Vendor",
             "access_rules": [
               "[$Metal_Detector]"
             ],
@@ -967,13 +970,14 @@
             ],
             "sections": [
               {
-                "name": "Blarg Vendor",
+                "name": "Blarg Vendor - 2,500",
                 "capture_item": true,
-                "hosted_item": "Blarg_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Taunter",
+                "name": "Vanilla Taunter - 2,500",
                 "capture_item": true,
                 "hosted_item": "Taunt",
                 "visibility_rules": "Weapons_vanilla"
@@ -1140,7 +1144,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Rilgar Vendor",
             "access_rules": [
               "[$Metal_Detector]"
             ],
@@ -1168,13 +1172,14 @@
             ],
             "sections": [
               {
-                "name": "Rilgar Vendor",
+                "name": "Rilgar Vendor - 7,500",
                 "capture_item": true,
-                "hosted_item": "Rilgar_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Mine Glove",
+                "name": "Vanilla Mine Glove - 7,500",
                 "capture_item": true,
                 "hosted_item": "Mine",
                 "visibility_rules": "Weapons_vanilla"
@@ -1475,7 +1480,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Batalia Vendor",
             "access_rules": [
               "[Metal]"
             ],
@@ -1503,13 +1508,14 @@
             ],
             "sections": [
               {
-                "name": "Batalia Vendor",
+                "name": "Batalia Vendor - 10,000",
                 "capture_item": true,
-                "hosted_item": "Batalia_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Devastator",
+                "name": "Vanilla Devastator - 10,000",
                 "capture_item": true,
                 "hosted_item": "Dev",
                 "visibility_rules": "Weapons_vanilla"
@@ -1638,7 +1644,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Orxon Vendor",
             "access_rules": [
               "O2,[$Metal_Detector]",
               "Novalis,[O2],[Metal]",
@@ -1683,13 +1689,14 @@
             ],
             "sections": [
               {
-                "name": "Orxon Vendor",
+                "name": "Orxon Vendor - 15,000",
                 "capture_item": true,
-                "hosted_item": "Orxon_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Visibomb",
+                "name": "Vanilla Visibomb - 15,000",
                 "capture_item": true,
                 "hosted_item": "Visi",
                 "visibility_rules": "Weapons_vanilla"
@@ -1820,7 +1827,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Gaspar Vendor",
             "access_rules": [
               "[$Metal_Detector]"
             ],
@@ -1848,13 +1855,14 @@
             ],
             "sections": [
               {
-                "name": "Gaspar Vendor",
+                "name": "Gaspar Vendor - 7,500",
                 "capture_item": true,
-                "hosted_item": "Gaspar_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Walloper",
+                "name": "Vanilla Walloper - 7,500",
                 "capture_item": true,
                 "hosted_item": "Wallop",
                 "visibility_rules": "Weapons_vanilla"
@@ -1895,7 +1903,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Poki Vendor",
             "access_rules": [
               "[Metal]"
             ],
@@ -1923,13 +1931,14 @@
             ],
             "sections": [
               {
-                "name": "Poki Vendor",
+                "name": "Poki Vendor - 7,500",
                 "capture_item": true,
-                "hosted_item": "Poki_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Decoy Glove",
+                "name": "Vanilla Decoy Glove - 7,500",
                 "capture_item": true,
                 "hosted_item": "Decoy",
                 "visibility_rules": "Weapons_vanilla"
@@ -2024,7 +2033,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Hoven Vendor",
             "access_rules": [
               "[Metal]"
             ],
@@ -2052,13 +2061,14 @@
             ],
             "sections": [
               {
-                "name": "Hoven Vendor",
+                "name": "Hoven Vendor - 7,500",
                 "capture_item": true,
-                "hosted_item": "Hoven_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Drone Devices",
+                "name": "Vanilla Drone Devices - 7,500",
                 "capture_item": true,
                 "hosted_item": "Drone",
                 "visibility_rules": "Weapons_vanilla"
@@ -2316,7 +2326,7 @@
         ],
         "children": [
           {
-            "name": "Vendor",
+            "name": "Oltanis Vendor",
             "access_rules": [
               "[$Metal_Detector]"
             ],
@@ -2344,13 +2354,14 @@
             ],
             "sections": [
               {
-                "name": "Oltanis Vendor",
+                "name": "Oltanis Vendor - 40,000",
                 "capture_item": true,
-                "hosted_item": "Oltanis_v",
+                "chest_unopened_img": "images/Vendor.png",
+                "chest_opened_img": "images/Vendor_done.png",
                 "visibility_rules": "Weapons"
               },
               {
-                "name": "Vanilla Tesla Claw",
+                "name": "Vanilla Tesla Claw - 40,000",
                 "capture_item": true,
                 "hosted_item": "Tesla",
                 "visibility_rules": "Weapons_vanilla"
