@@ -101,14 +101,11 @@
       {
         "name": "Novalis",
         "color": "#6a9825",
-        "access_rules": [
-          "Novalis"
-        ],
         "children": [
           {
             "name": "Novalis Vendor",
             "access_rules": [
-              "[Metal]"
+              "^$Novalis"
             ],
             "map_locations": [
               {
@@ -151,7 +148,7 @@
           {
             "name": "Save the Chairman",
             "access_rules": [
-              ""
+              "^$Novalis"
             ],
             "map_locations": [
               {
@@ -176,7 +173,7 @@
           {
             "name": "Explore the waterworks",
             "access_rules": [
-              ""
+              "^$Novalis"
             ],
             "map_locations": [
               {
@@ -202,7 +199,7 @@
             "name": "Waterworks Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              ""
+              "^$Novalis"
             ],
             "map_locations": [
               {
@@ -234,7 +231,7 @@
             "name": "Cave Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "[$Rock_Explosion]"
+              "^$Novalis|Cave"
             ],
             "map_locations": [
               {
@@ -266,7 +263,7 @@
             "name": "Amoeboid Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "[Hydro]"
+              "^$Novalis|Ameboid"
             ],
             "map_locations": [
               {
@@ -297,11 +294,6 @@
           {
             "name": "Gold Weapon Room",
             "color": "#ffb300",
-            "inspectable_sequence_break": true,
-            "access_rules": [
-              "{}",
-              "$Gold|4,[$Gold|40],[Metal]"
-            ],
             "map_locations": [
               {
                 "map": "map",
@@ -327,31 +319,41 @@
             "sections": [
               {
                 "name": "Bomb Glove, 20,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Bomb",
+                "access_rules": [
+                  "^$Novalis|Gold|Bomb"
+                ],
                 "chest_unopened_img": "images/Bomb.png",
                 "chest_opened_img": "images/Bomb_G.png"
               },
               {
                 "name": "Pyrocitor, 30,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Pyro",
+                "access_rules": [
+                  "^$Novalis|Gold|Pyro"
+                ],
                 "chest_unopened_img": "images/Pyro.png",
                 "chest_opened_img": "images/Pyro_G.png"
               },
               {
                 "name": "Blaster, 20,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Blaster",
+                "access_rules": [
+                  "^$Novalis|Gold|Blaster"
+                ],
                 "chest_unopened_img": "images/Blaster.png",
                 "chest_opened_img": "images/Blaster_G.png"
               },
               {
                 "name": "Glove of Doom, 10,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Doom",
+                "access_rules": [
+                  "^$Novalis|Gold|Doom"
+                ],
                 "chest_unopened_img": "images/Doom.png",
                 "chest_opened_img": "images/Doom_G.png"
               },
               {
                 "name": "Suck Canon, 10,000 Bolts + 4 Gold Bolts",
-                "access_rules": "Suck",
+                "access_rules": [
+                  "^$Novalis|Gold|Suck"
+                ],
                 "chest_unopened_img": "images/Suck.png",
                 "chest_opened_img": "images/Suck_G.png"
               }

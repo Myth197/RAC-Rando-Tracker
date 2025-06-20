@@ -7,10 +7,10 @@ Tracker.BulkUpdate = true
 Tracker:AddItems("items/common.json")
 
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-	require("scripts.logic_common")
 	Tracker:AddMaps("maps/maps.json")
+	require("scripts.logic_common")
+	require("scripts.logic_locations")
 	Tracker:AddLayouts("layouts/tracker.json")
-	Tracker:AddLayouts("layouts/standard_broadcast.json")
 	Tracker:AddLocations("locations/overworld.json")
 else
 	Tracker:AddLayouts("layouts/item_only.json")

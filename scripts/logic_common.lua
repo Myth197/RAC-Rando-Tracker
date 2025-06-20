@@ -1,94 +1,211 @@
 ---@alias WeaponBool
----| 1 # valid weapon collected
----| 0 # no valid weapon
+---| true # valid weapon collected
+---| false # no valid weapon
 
 ---True if a weapon can be used to hit a switch on Kalebo III
 ---@return WeaponBool
 function Kalebo_switch()
-  if Tracker:ProviderCountForCode("Bomb") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Blaster") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Dev") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Visi") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Tesla") > 0 then
-    return 1
-  else
-    return Tracker:ProviderCountForCode("RYNO")
+  local weapons = { "Bomb", "Blaster", "Dev", "Visi", "Tesla", "RYNO" }
+  for _, weapon in pairs(weapons) do
+    if Tracker:ProviderCountForCode(weapon) > 0 then
+      return true
+    end
   end
+  return false
 end
 
 ---True if an explosive weapon is obtained
 ---@return WeaponBool
 function Rock_Explosion()
-  if Tracker:ProviderCountForCode("Bomb") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Mine") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Dev") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Visi") > 0 then
-    return 1
-  else
-    return Tracker:ProviderCountForCode("RYNO")
+  local weapons = { "Bomb", "Mine", "Dev", "Visi", "RYNO" }
+  for _, weapon in pairs(weapons) do
+    if Tracker:ProviderCountForCode(weapon) > 0 then
+      return true
+    end
   end
+  return false
 end
 
 ---@alias LocationReachable
----| 1 # Location is Reachable
----| 0 # Location is not Reachable
+---| true # Location is Reachable
+---| false # Location is not Reachable
 
 ---Returns true if there is access to any Metal Detector location.
 ---
 ---**TODO**: *Update if conditions to use functions used in the rest of the logic*
 ---@return LocationReachable
 function Metal_Detector()
-  if Tracker:ProviderCountForCode("Metal") == 0 then
-    return 0
-  elseif Tracker:ProviderCountForCode("Novalis") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Kerwan") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Aridia") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Eudora") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Blarg") > 0 and (Tracker:ProviderCountForCode("Swingshot") > 0 or (Tracker:ProviderCountForCode("O2") > 0 and Tracker:ProviderCountForCode("Tres") > 0)) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Rilgar") > 0 and (Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Umbris") > 0 and Tracker:ProviderCountForCode("Swingshot") > 0 and (Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Batalia") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Orxon") > 0 and Tracker:ProviderCountForCode("O2") > 0 and (Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Gaspar") > 0 and (Tracker:ProviderCountForCode("Swingshot") > 0 or Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Poki") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Hoven") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Gemlik") > 0 and (Tracker:ProviderCountForCode("Tres") > 0 and Tracker:ProviderCountForCode("Magne") > 0 and Tracker:ProviderCountForCode("Swingshot") > 0 and (Tracker:ProviderCountForCode("Dev") > 0 or Tracker:ProviderCountForCode("Visi") > 0)) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Oltanis") > 0 and (Tracker:ProviderCountForCode("Magne") > 0 or Tracker:ProviderCountForCode("Swingshot") > 0) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Quartu") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("Kalebo") > 0 and (Tracker:ProviderCountForCode("Grind") > 0 or (Kalebo_switch > 0 and (Tracker:ProviderCountForCode("Swingshot") > 0 or Tracker:ProviderCountForCode("Heli") > 0 or Tracker:ProviderCountForCode("Thruster") > 0))) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Fleet") > 0 and (Tracker:ProviderCountForCode("Hologuise") > 0 or (Tracker:ProviderCountForCode("O2") > 0 and Tracker:ProviderCountForCode("Hydro") > 0)) then
-    return 1
-  elseif Tracker:ProviderCountForCode("Veldin") > 0 and Tracker:ProviderCountForCode("Tres") > 0 and Tracker:ProviderCountForCode("Magne") > 0 and Tracker:ProviderCountForCode("Hydrod") > 0 and Tracker:ProviderCountForCode("Thruster") > 0 and Tracker:ProviderCountForCode("Swingshot") > 0 then
-    return 1
+  local canReach = false
+  if Tracker:ProviderCountForCode("Metal") > 0 then
+    for _, name in pairs(Planets) do
+      if Early_Metal_Detector(name) then
+        if Tracker:ProviderCountForCode(name) > 0 then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#region Blarg
+      elseif name == "Blarg" then
+        if Tracker:ProviderCountForCode("Swingshot") > 0 or
+            (
+              Tracker:ProviderCountForCode("O2") > 0 and
+              Tracker:ProviderCountForCode("Tres") > 0
+            ) then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Rilgar
+      elseif name == "Rilgar" then
+        if Tracker:ProviderCountForCode("Heli") > 0 or
+            Tracker:ProviderCountForCode("Thruster") > 0
+        then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Umbris
+      elseif name == "Umbris" then
+        if Tracker:ProviderCountForCode("Swingshot") > 0 and
+            (
+              Tracker:ProviderCountForCode("Heli") > 0 or
+              Tracker:ProviderCountForCode("Thruster") > 0
+            ) then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Orxon
+      elseif name == "Orxon" then
+        if Tracker:ProviderCountForCode("O2") > 0 and
+            (
+              Tracker:ProviderCountForCode("Heli") > 0 or
+              Tracker:ProviderCountForCode("Thruster") > 0
+            ) then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Gaspar
+      elseif name == "Gaspar" then
+        if Tracker:ProviderCountForCode("Swingshot") > 0 or
+            Tracker:ProviderCountForCode("Heli") > 0 or
+            Tracker:ProviderCountForCode("Thruster") > 0
+        then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Gemlik
+      elseif name == "Gemlik" then
+        if Tracker:ProviderCountForCode("Tres") > 0 and
+            Tracker:ProviderCountForCode("Magne") > 0 and
+            Tracker:ProviderCountForCode("Swingshot") > 0 and
+            (
+              Tracker:ProviderCountForCode("Dev") > 0 or
+              Tracker:ProviderCountForCode("Visi") > 0
+            ) then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Oltanis
+      elseif name == "Oltanis" then
+        if Tracker:ProviderCountForCode("Magne") > 0 or
+            Tracker:ProviderCountForCode("Swingshot") > 0
+        then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Kalebo
+      elseif name == "Kalebo" then
+        if Tracker:ProviderCountForCode("Grind") > 0 or
+            (
+              Kalebo_switch() > 0 and
+              (
+                Tracker:ProviderCountForCode("Swingshot") > 0 or
+                Tracker:ProviderCountForCode("Heli") > 0 or
+                Tracker:ProviderCountForCode("Thruster") > 0
+              )
+            ) then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Fleet
+      elseif name == "Fleet" then
+        if Tracker:ProviderCountForCode("Hologuise") > 0 or
+            (
+              Tracker:ProviderCountForCode("O2") > 0 and
+              Tracker:ProviderCountForCode("Hydro") > 0
+            )
+        then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+        --#region Veldin
+      elseif name == "Veldin" then
+        if Tracker:ProviderCountForCode("Tres") > 0 and
+            Tracker:ProviderCountForCode("Magne") > 0 and
+            Tracker:ProviderCountForCode("Hydrod") > 0 and
+            Tracker:ProviderCountForCode("Thruster") > 0 and
+            Tracker:ProviderCountForCode("Swingshot") > 0
+        then
+          canReach = true
+          goto exitLoop
+        else
+          goto nextPlanet
+        end
+        --#endregion
+      end
+      ::nextPlanet::
+    end
+    ::exitLoop::
   end
+  return canReach
+end
+
+---Checks the list of planets that have metal detector spots reachable with no items
+---@param name string Name of the planet to be evaluated
+---@return boolean canAccess Returns true if the evaluated planet is in the list
+---@see Metal_Detector
+function Early_Metal_Detector(name)
+  ---@type boolean
+  local canAccess = false
+  local list = { "Novalis", "Kerwan", "Aridia", "Eudora", "Batalia", "Poki", "Hoven", "Quartu" }
+  for _, planet in pairs(list) do
+    if name == planet then
+      canAccess = true
+      break
+    end
+  end
+  return true
 end
 
 ---@alias GoldAmount
----| 1 # Gold Bolt amount acquired
----| 0 # not enough Gold Bolts
+---| true # Gold Bolt amount acquired
+---| false # not enough Gold Bolts
 
 
 --- Takes a number of Gold Bolts and returns true if that many have been collected
@@ -97,9 +214,9 @@ end
 --- @return GoldAmount
 function Gold(count)
   if Tracker:ProviderCountForCode("Gold") >= tonumber(count) then
-    return 1
+    return true
   else
-    return 0
+    return false
   end
 end
 
