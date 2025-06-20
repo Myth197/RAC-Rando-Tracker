@@ -1,3 +1,9 @@
+---@alias WeaponBool
+---| 1 # valid weapon collected
+---| 0 # no valid weapon
+
+---True if a weapon can be used to hit a switch on Kalebo III
+---@return WeaponBool
 function Kalebo_switch()
   if Tracker:ProviderCountForCode("Bomb") > 0 then
     return 1
@@ -14,6 +20,8 @@ function Kalebo_switch()
   end
 end
 
+---True if an explosive weapon is obtained
+---@return WeaponBool
 function Rock_Explosion()
   if Tracker:ProviderCountForCode("Bomb") > 0 then
     return 1
@@ -28,6 +36,14 @@ function Rock_Explosion()
   end
 end
 
+---@alias LocationReachable
+---| 1 # Location is Reachable
+---| 0 # Location is not Reachable
+
+---Returns true if there is access to any Metal Detector location.
+---
+---**TODO**: *Update if conditions to use functions used in the rest of the logic*
+---@return LocationReachable
 function Metal_Detector()
   if Tracker:ProviderCountForCode("Metal") == 0 then
     return 0
@@ -69,7 +85,16 @@ function Metal_Detector()
     return 1
   end
 end
--- TODO: `^$func` to set accessibility level for golden weapon shops
+
+---@alias GoldAmount
+---| 1 # Gold Bolt amount acquired
+---| 0 # not enough Gold Bolts
+
+
+--- Takes a number of Gold Bolts and returns true if that many have been collected
+--- @param count integer The number of Gold bolts to compare to
+--- **TODO**: *`^$func` to set accessibility level for golden weapon shops*
+--- @return GoldAmount
 function Gold(count)
   if Tracker:ProviderCountForCode("Gold") >= tonumber(count) then
     return 1
@@ -120,6 +145,7 @@ end
 ---called by code watch for pack settings
 ---@param code string name for setting to update badge text and formatting, based off current stage
 function Update_Setting(code)
+  ---@class JsonItem
   local object = Tracker:FindObjectForCode(code)
   object:SetOverlayFontSize(12)
   object:SetOverlayAlign("center")
@@ -165,6 +191,7 @@ function Update_Setting(code)
   end
 end
 
+---@type table Table pairing each vendor location with an item associated to their current accessibility stage
 local Vendors = {
   ['@Novalis/Novalis Vendor/Novalis Vendor - 2,500'] = "Novalis_v",
   ['@Kerwan/Kerwan Vendor/Kerwan Vendor - 2,500'] = "Kerwan_v",
@@ -179,6 +206,7 @@ local Vendors = {
   ['@Oltanis/Oltanis Vendor/Oltanis Vendor - 40,000'] = "Oltanis_v",
 }
 
+---@type table Table of Flags storing the current accessibility stage of the vendor
 local Vendor_flags = {
   ["Novalis_v"] = 0,
   ["Kerwan_v"] = 0,
@@ -193,10 +221,17 @@ local Vendor_flags = {
   ["Oltanis_v"] = 0,
 }
 
+---@type string code of the most recently changed item detected by the watch
 local previous_code = ""
+---@type integer counter for how deep the recursive updating is, breaks the recursion beyond a certain depth
 local depth = 0
 
-function Vendor_activate(code) -- TODO: Metal Detector Compatability, BUG: Planet selection marks collected
+---Called by code watch to update vendor indicators on the tracker based on current accessibility
+---@param code string detected by the code watch
+---**TODO**: *Metal Detector Compatability*
+---
+---**BUG**: *Planet selection marks collected*
+function Vendor_activate(code)
   depth = depth + 1
   if depth > 10 then
     ScriptHost:RemoveWatchForCode("Vendor in Logic")
@@ -258,6 +293,9 @@ function Vendor_activate(code) -- TODO: Metal Detector Compatability, BUG: Plane
   end
 end
 
+---Sets the highlight colouring of a location on the map
+---@param loc string Tracker location to highlight
+---@param priority highlight Priority value, used to set the colour of the highlight
 function Highlight(loc, priority)
   Tracker:FindObjectForCode(loc).Highlight = priority
   -- example

@@ -1,4 +1,5 @@
 --  Load configuration options up front
+
 DEBUG = true
 Tracker.BulkUpdate = true
 Tracker:AddItems("items/common.json")
@@ -16,7 +17,7 @@ end
 
 Tracker:AddLayouts("layouts/standard_broadcast.json")
 
-
+---Table of All Planets
 Planets = {
 	"Novalis",
 	"Kerwan",
@@ -38,14 +39,19 @@ Planets = {
 	"Veldin"
 }
 
-for v, name in pairs(Planets) do
+for _, name in pairs(Planets) do
+	---@type JsonItem
+	---@diagnostic disable-next-line: assign-type-mismatch
 	local infobot = Tracker:FindObjectForCode(name)
 	infobot.BadgeText = string.sub(name, 1, 3)
 	infobot:SetOverlayFontSize(12)
 	infobot:SetOverlayAlign("center")
+	---Checks the planet has a valid vendor
 	if pcall(function()
 			Tracker:FindObjectForCode(name .. "_v").BadgeText = "Test"
 		end) then
+		---@type JsonItem
+		---@diagnostic disable-next-line: assign-type-mismatch
 		local vendor = Tracker:FindObjectForCode(name .. "_v")
 		vendor.BadgeText = string.sub(name, 1, 3)
 		vendor:SetOverlayFontSize(12)
