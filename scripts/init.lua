@@ -52,6 +52,11 @@ for v, name in pairs(Planets) do
 	end
 end
 
--- TODO: Badge Text for Settings
+ScriptHost:AddWatchForCode("Gold Bolts Setting", "AGB", Update_Setting)
+Update_Setting("AGB")
+ScriptHost:AddWatchForCode("Weapon Setting", "Weapons", Update_Setting)
+Update_Setting("Weapons")
+ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
+Update_Setting("Vendor")
 
 ScriptHost:AddWatchForCode("Vendor in Logic", "*", Vendor_activate)

@@ -117,6 +117,54 @@ end
 --   ["Veldin_2"] = "Tres, Magne, Hydrod, Thruster, Swingshot, Giant Clank Area",
 -- }
 
+---called by code watch for pack settings
+---@param code string name for setting to update badge text and formatting, based off current stage
+function Update_Setting(code)
+  local object = Tracker:FindObjectForCode(code)
+  object:SetOverlayFontSize(12)
+  object:SetOverlayAlign("center")
+  object:SetOverlayBackground("#80000000")
+  if code == "AGB" then
+    ScriptHost:RemoveWatchForCode("Gold Bolts Setting")
+    if object.CurrentStage == 0 then
+      object.BadgeText = "Vanilla"
+      object.BadgeTextColor = "#A0A0A0"
+    else
+      object.BadgeText = "Shuffled"
+      object.BadgeTextColor = "#FFFF00"
+    end
+    ScriptHost:AddWatchForCode("Gold Bolts Setting", "AGB", Update_Setting)
+  elseif code == "Weapons" then
+    ScriptHost:RemoveWatchForCode("Weapon Setting")
+    if object.CurrentStage == 0 then
+      object.BadgeText = "Vanilla"
+      object.BadgeTextColor = "#A0A0A0"
+    elseif object.CurrentStage == 1 then
+      object.BadgeText = "Weapons Shuffled"
+      object.BadgeTextColor = "#FFFFFF"
+    else
+      object.BadgeText = "Gold Shuffled"
+      object.BadgeTextColor = "#FFFF00"
+    end
+    ScriptHost:AddWatchForCode("Weapon Setting", "Weapons", Update_Setting)
+  elseif code == "Vendor" then
+    ScriptHost:RemoveWatchForCode("Vendor Setting")
+    if object.CurrentStage == 0 then
+      object.BadgeText = "Hidden"
+      object.BadgeTextColor = "#A0A0A0"
+    elseif object.CurrentStage == 1 then
+      object.BadgeText = "One Visible"
+      object.BadgeTextColor = "#FFFFFF"
+    else
+      object.BadgeText = "All Visible"
+      object.BadgeTextColor = "#00FFFF"
+    end
+    ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
+  else
+    print("New Setting needs Badge Compatability: " .. code)
+  end
+end
+
 local Vendors = {
   ['@Novalis/Vendor/Novalis Vendor'] = "Novalis_v",
   ['@Kerwan/Vendor/Kerwan Vendor'] = "Kerwan_v",

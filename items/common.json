@@ -847,7 +847,7 @@
         "codes": "vendor"
       },
       {
-        "img": "images/Vendor_plus.png",
+        "img": "images/Vendor.png",
         "inherit_codes": false,
         "codes": "weapon_plus"
       }
