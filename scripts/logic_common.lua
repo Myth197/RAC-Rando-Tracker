@@ -142,6 +142,67 @@ end
 --   ["Veldin_2"] = "Tres, Magne, Hydrod, Thruster, Swingshot, Giant Clank Area",
 -- }
 
+---Updates any locations that are affected by the detected change
+---
+---**TODO**: *Create Update Function for items that callsback their parents to percolate updates*
+---@param code string
+function Update_Access(code)
+  if CACHING then
+    Cache = Cache + 1
+    if Cache > 99999 then
+      print("Cache explosion")
+      Reset = true
+      return
+    end
+    if Reset then
+      Function_cache = {}
+    end
+    if Function_cache[code] then
+      Function_cache[code] = _G[code]()
+      print("Updated Access to: " .. code .. " -> " .. LookupAccess(Function_cache[code]))
+    end
+  end
+end
+
+---Caches the result of function calls
+---@param name string
+---@return integer
+function Cached_Function(name)
+  if CACHING then
+    print("Cache lookup: " .. name)
+    ---@type integer
+    local f = Function_cache[name]
+    if not f then
+      print("----new cached item")
+      f = _G[name]()
+      Function_cache[name] = f
+    end
+    print("Access: " .. LookupAccess(f))
+    return f
+  end
+  return _G[name]()
+end
+
+---@alias AccessName string
+---| "None"
+---| "Partial"
+---| "Inspect"
+---| "SequenceBreak"
+---| "Normal"
+---| "Cleared"
+
+---Looks up the name of the value of the AccessibilityLevel enum
+---@param num integer number value of the accessibility level to lookup
+---@return AccessName
+function LookupAccess(num)
+  for key, value in pairs(AccessibilityLevel) do
+    if value == num then
+      return key
+    end
+  end
+  return "ERROR"
+end
+
 ---called by code watch for pack settings
 ---@param code string name for setting to update badge text and formatting, based off current stage
 function Update_Setting(code)

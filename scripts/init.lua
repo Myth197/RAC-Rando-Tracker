@@ -1,11 +1,13 @@
 --  Load configuration options up front
 
 DEBUG = true
+---@type boolean True when saving function evaluations for performance improvements
+CACHING = false
 Tracker.BulkUpdate = true
 Tracker:AddItems("items/common.json")
 
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-	ScriptHost:LoadScript("scripts/logic_common.lua")
+	require("scripts.logic_common")
 	Tracker:AddMaps("maps/maps.json")
 	Tracker:AddLayouts("layouts/tracker.json")
 	Tracker:AddLayouts("layouts/standard_broadcast.json")
@@ -67,6 +69,14 @@ ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
 Update_Setting("Vendor")
 
 -- TODO: Vanilla Golden Weapons
+
+if CACHING then
+	Cache = 0
+	Reset = false
+	Function_cache = {}
+end
+
+-- ScriptHost:AddWatchForCode("AccessUpdating", "*", Update_Access)
 -- ScriptHost:AddWatchForCode("Vendor in Logic", "*", Vendor_activate)
 
 Tracker.BulkUpdate = false
