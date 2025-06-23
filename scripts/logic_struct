@@ -1,0 +1,51 @@
+--Attempt at a recursive data struct for logic processing
+
+
+local b = { func = "has", "Heli" }
+
+local a =
+{ "AND",
+  { "has_all",
+    { "Metal", "Blarg" }
+  },
+  { "OR",
+    { "has",
+      { "Swingshot", 1 }
+    },
+    { "has_all",
+      { "O2", "Tres" }
+    }
+  }
+}
+
+RACLogic:Evaluate(a)
+
+---@param Data table<function,table,...>
+---@return boolean
+function RACLogic:Evaluate(Data)
+  return self[Data[1]](table.unpack(Data, 2, #Data))
+end
+
+---@param Data table<table,table,...>
+---@return boolean
+function RACLogic:AND(Data)
+  for _, value in ipairs(Data) do
+    if not self:Evaluate(value) then
+      return false
+    end
+  end
+
+  return true
+end
+
+---@param Data table<table,table,...>
+---@return boolean
+function RACLogic:OR(Data)
+  for _, value in ipairs(Data) do
+    if self:Evaluate(value) then
+      return true
+    end
+  end
+
+  return false
+end

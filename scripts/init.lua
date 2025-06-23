@@ -15,9 +15,8 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 else
 	Tracker:AddLayouts("layouts/item_only.json")
 end
-
-
 Tracker:AddLayouts("layouts/standard_broadcast.json")
+RACLogic:__init__()
 
 ---Table of All Planets
 Planets = {

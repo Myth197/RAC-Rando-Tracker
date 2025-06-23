@@ -1,29 +1,127 @@
----@alias WeaponBool
----| true # valid weapon collected
----| false # no valid weapon
+---- RACLogic ----
 
----True if a weapon can be used to hit a switch on Kalebo III
----@return WeaponBool
-function Kalebo_switch()
-  local weapons = { "Bomb", "Blaster", "Dev", "Visi", "Tesla", "RYNO" }
-  for _, weapon in pairs(weapons) do
-    if Tracker:ProviderCountForCode(weapon) > 0 then
+---@class RACLogic
+RACLogic = {
+  ["Early_Metal_Detector"] = { ["Novalis"] = 1, ["Kerwan"] = 1, ["Aridia"] = 1, ["Eudora"] = 1, ["Batalia"] = 1, ["Poki"] = 1, ["Hoven"] = 1, ["Quartu"] = 1 }, -- Any
+  --["Blarg"] = { ["Swingshot"] = 1, ["O2"] = 1, ["Tres"] = 1 },
+  --["Rilgar"] = { ["Heli"] = 1, ["Thruster"] = 1 }, -- ["Pack"]
+  --["Umbris"] = { ["Swingshot"] = 1, ["Heli"] = 1, ["Thruster"] = 1 },
+  --["Orxon"] = { ["O2"] = 1, ["Heli"] = 1, ["Thruster"] = 1 },
+  ["Gaspar"] = { ["Swingshot"] = 1, ["Heli"] = 1, ["Thruster"] = 1 }, -- Any
+  --["Gemlik"] = {[] = 1, },
+  --["Oltanis"] = {[] = 1, },
+  --["Kalebo"] = {[] = 1, },
+  --["Fleet"] = {[] = 1, },
+  ["Veldin"] = { ["Tres"] = 1, ["Magne"] = 1, ["Hydrod"] = 1, ["Thruster"] = 1, ["Swingshot"] = 1, }, -- All
+  ["Kalebo_Switch"] = { ["Bomb"] = 1, ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["Tesla"] = 1, ["RYNO"] = 1 },
+  ["Rock_Explosion"] = { ["Bomb"] = 1, ["Mine"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
+  ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 }
+}
+
+
+function RACLogic:__init__()
+  ---@type table
+  local itemlists = {}
+  for key, value in pairs(self) do
+    if not string.find(tostring(value), "function") then
+      print(key)
+      table.insert(itemlists, key)
+    end
+  end
+  self.All_Lists = itemlists
+end
+
+---@param items table<string,integer>
+---@return boolean --true when the item count has been obtained
+function RACLogic:has(items)
+  for item, count in pairs(items) do
+    return Tracker:ProviderCountForCode(item) >= count
+  end
+end
+
+---@param items table<string,integer>
+---@return boolean --true when the item count has not been obtained
+function RACLogic:hasnt(items)
+  for item, count in pairs(items) do
+    return Tracker:ProviderCountForCode(item) < count
+  end
+end
+
+---@see RACLogic
+---@param listname table<string,integer> key name for list in RACLogic
+---@return boolean --true when any element of the list is obtained
+function RACLogic:has_any(listname)
+  for item, count in pairs(listname) do
+    if self:has { [item] = count } then
+      return true
+    end
+  end
+
+  return false
+end
+
+---@see RACLogic
+---@param listname table<string,integer> key name for list in RACLogic
+---@return boolean --true when all elements of the list are not obtained
+function RACLogic:has_none(listname)
+  for item, count in pairs(listname) do
+    if self:has { [item] = count } then
+      return false
+    end
+  end
+  return true
+end
+
+---@see RACLogic
+---@param listname table<string,integer> key name for list in RACLogic
+---@return boolean --true when all elements of the list are obtained
+function RACLogic:has_all(listname)
+  for item, count in pairs(listname) do
+    if self:hasnt { [item] = count } then
+      return false
+    end
+  end
+  return true
+end
+
+---@see RACLogic
+---@param listname table<string,integer> key name for list in RACLogic
+---@return boolean --true when any element of the list is not obtained
+function RACLogic:has_notall(listname)
+  for item, count in pairs(listname) do
+    if self:hasnt { [item] = count } then
       return true
     end
   end
   return false
 end
 
----True if an explosive weapon is obtained
----@return WeaponBool
-function Rock_Explosion()
-  local weapons = { "Bomb", "Mine", "Dev", "Visi", "RYNO" }
-  for _, weapon in pairs(weapons) do
-    if Tracker:ProviderCountForCode(weapon) > 0 then
-      return true
-    end
-  end
-  return false
+---@see RACLogic
+---@param listname string key name for list in RACLogic
+---@return boolean --true when any element of the list is obtained
+function RACLogic:lookup_has_any(listname)
+  return self:has_any(self[listname])
+end
+
+---@see RACLogic
+---@param listname string key name for list in RACLogic
+---@return boolean --true when all elements of the list are not obtained
+function RACLogic:lookup_has_none(listname)
+  return self:has_none(self[listname])
+end
+
+---@see RACLogic
+---@param listname string key name for list in RACLogic
+---@return boolean --true when all elements of the list are obtained
+function RACLogic:lookup_has_all(listname)
+  return self:has_all(self[listname])
+end
+
+---@see RACLogic
+---@param listname string key name for list in RACLogic
+---@return boolean --true when any element of the list is not obtained
+function RACLogic:lookup_has_notall(listname)
+  return self:has_notall(self[listname])
 end
 
 ---@alias LocationReachable
@@ -36,188 +134,86 @@ end
 ---@return LocationReachable
 function Metal_Detector()
   local canReach = false
-  if Tracker:ProviderCountForCode("Metal") > 0 then
-    for _, name in pairs(Planets) do
-      if Early_Metal_Detector(name) then
-        if Tracker:ProviderCountForCode(name) > 0 then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#region Blarg
-      elseif name == "Blarg" then
-        if Tracker:ProviderCountForCode("Swingshot") > 0 or
-            (
-              Tracker:ProviderCountForCode("O2") > 0 and
-              Tracker:ProviderCountForCode("Tres") > 0
-            ) then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Rilgar
-      elseif name == "Rilgar" then
-        if Tracker:ProviderCountForCode("Heli") > 0 or
-            Tracker:ProviderCountForCode("Thruster") > 0
-        then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Umbris
-      elseif name == "Umbris" then
-        if Tracker:ProviderCountForCode("Swingshot") > 0 and
-            (
-              Tracker:ProviderCountForCode("Heli") > 0 or
-              Tracker:ProviderCountForCode("Thruster") > 0
-            ) then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Orxon
-      elseif name == "Orxon" then
-        if Tracker:ProviderCountForCode("O2") > 0 and
-            (
-              Tracker:ProviderCountForCode("Heli") > 0 or
-              Tracker:ProviderCountForCode("Thruster") > 0
-            ) then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Gaspar
-      elseif name == "Gaspar" then
-        if Tracker:ProviderCountForCode("Swingshot") > 0 or
-            Tracker:ProviderCountForCode("Heli") > 0 or
-            Tracker:ProviderCountForCode("Thruster") > 0
-        then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Gemlik
-      elseif name == "Gemlik" then
-        if Tracker:ProviderCountForCode("Tres") > 0 and
-            Tracker:ProviderCountForCode("Magne") > 0 and
-            Tracker:ProviderCountForCode("Swingshot") > 0 and
-            (
-              Tracker:ProviderCountForCode("Dev") > 0 or
-              Tracker:ProviderCountForCode("Visi") > 0
-            ) then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Oltanis
-      elseif name == "Oltanis" then
-        if Tracker:ProviderCountForCode("Magne") > 0 or
-            Tracker:ProviderCountForCode("Swingshot") > 0
-        then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Kalebo
-      elseif name == "Kalebo" then
-        if Tracker:ProviderCountForCode("Grind") > 0 or
-            (
-              Kalebo_switch() > 0 and
-              (
-                Tracker:ProviderCountForCode("Swingshot") > 0 or
-                Tracker:ProviderCountForCode("Heli") > 0 or
-                Tracker:ProviderCountForCode("Thruster") > 0
-              )
-            ) then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Fleet
-      elseif name == "Fleet" then
-        if Tracker:ProviderCountForCode("Hologuise") > 0 or
-            (
-              Tracker:ProviderCountForCode("O2") > 0 and
-              Tracker:ProviderCountForCode("Hydro") > 0
-            )
-        then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
-        --#region Veldin
-      elseif name == "Veldin" then
-        if Tracker:ProviderCountForCode("Tres") > 0 and
-            Tracker:ProviderCountForCode("Magne") > 0 and
-            Tracker:ProviderCountForCode("Hydrod") > 0 and
-            Tracker:ProviderCountForCode("Thruster") > 0 and
-            Tracker:ProviderCountForCode("Swingshot") > 0
-        then
-          canReach = true
-          goto exitLoop
-        else
-          goto nextPlanet
-        end
-        --#endregion
+  if RACLogic:has { ["Metal"] = 1 } then
+    if RACLogic:lookup_has_any("Early_Metal_Detector") then
+      canReach = true
+      --#region Blarg
+    elseif RACLogic:has { ["Blarg"] = 1 } then
+      if RACLogic:has { ["Swingshot"] = 1 } or
+          RACLogic:has_all { ["O2"] = 1, ["Tres"] = 1 }
+      then
+        canReach = true
       end
-      ::nextPlanet::
+      --#endregion
+      --#region Rilgar
+    elseif RACLogic:has { ["Rilgar"] = 1 } then
+      if RACLogic:lookup_has_any("Pack") then
+        canReach = true
+      end
+      --#endregion
+      --#region Umbris
+    elseif RACLogic:has { ["Umbris"] = 1 } then
+      if RACLogic:has { ["Swingshot"] = 1 } and
+          RACLogic:lookup_has_any("Pack")
+      then
+        canReach = true
+      end
+      --#endregion
+      --#region Orxon
+    elseif RACLogic:has { ["Orxon"] = 1 } then
+      if RACLogic:has { ["O2"] = 1 } and
+          RACLogic:lookup_has_any("Pack")
+      then
+        canReach = true
+      end
+      --#endregion
+      --#region Gaspar
+    elseif RACLogic:has { ["Gaspar"] = 1 } then
+      if RACLogic:lookup_has_any("Gaspar") then
+        canReach = true
+      end
+      --#endregion
+      --#region Gemlik
+    elseif RACLogic:has { ["Gemlik"] = 1 } then
+      if RACLogic:has_all { ["Tres"] = 1, ["Magne"] = 1, ["Swingshot"] = 1 } and
+          RACLogic:has_any { ["Dev"] = 1, ["Visi"] = 1 }
+      then
+        canReach = true
+      end
+      --#endregion
+      --#region Oltanis
+    elseif RACLogic:has { ["Oltanis"] = 1 } then
+      if RACLogic:has_any { ["Magne"] = 1, ["Swingshot"] = 1 } then
+        canReach = true
+      end
+      --#endregion
+      --#region Kalebo
+    elseif RACLogic:has { ["Kalebo"] = 1 } then
+      if RACLogic:has { ["Grind"] = 1 } or
+          (
+            RACLogic:lookup_has_any("Kalebo_switch") and
+            RACLogic:lookup_has_any("Gaspar") -- Swingshot, Heli or Thruster
+          ) then
+        canReach = true
+      end
+      --#endregion
+      --#region Fleet
+    elseif RACLogic:has { ["Fleet"] = 1 } then
+      if RACLogic:has { ["Hologuise"] = 1 } or
+          RACLogic:has_all { ["O2"] = 1, ["Hydro"] = 1, }
+      then
+        canReach = true
+      end
+      --#endregion
+      --#region Veldin
+    elseif RACLogic:has { ["Veldin"] = 1 } then
+      if RACLogic:lookup_has_all("Veldin") then -- List of items to reach the end of veldin
+        canReach = true
+      end
+      --#endregion
     end
-    ::exitLoop::
   end
   return canReach
-end
-
----Checks the list of planets that have metal detector spots reachable with no items
----@param name string Name of the planet to be evaluated
----@return boolean canAccess Returns true if the evaluated planet is in the list
----@see Metal_Detector
-function Early_Metal_Detector(name)
-  ---@type boolean
-  local canAccess = false
-  local list = { "Novalis", "Kerwan", "Aridia", "Eudora", "Batalia", "Poki", "Hoven", "Quartu" }
-  for _, planet in pairs(list) do
-    if name == planet then
-      canAccess = true
-      break
-    end
-  end
-  return true
-end
-
----@alias GoldAmount
----| true # Gold Bolt amount acquired
----| false # not enough Gold Bolts
-
-
---- Takes a number of Gold Bolts and returns true if that many have been collected
---- @param count integer The number of Gold bolts to compare to
---- **TODO**: *`^$func` to set accessibility level for golden weapon shops*
---- @return GoldAmount
-function Gold(count)
-  if Tracker:ProviderCountForCode("Gold") >= tonumber(count) then
-    return true
-  else
-    return false
-  end
 end
 
 -- local Metal_Detector_Spots = {
@@ -415,6 +411,7 @@ function Vendor_activate(code)
     ScriptHost:RemoveWatchForCode("Vendor in Logic")
     error("Vendor Loop detected", 10)
   end
+
   for location, item in pairs(Vendors) do
     local trip = 0
     if Tracker:FindObjectForCode(location).AccessibilityLevel >= AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 0 then
@@ -424,9 +421,11 @@ function Vendor_activate(code)
       if previous_code == code then
         break
       end
+
       if previous_code .. "_v" == item then
         break
       end
+
       Vendor_flags[item] = 2
       trip = 1
     elseif Tracker:FindObjectForCode(location).AccessibilityLevel < AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 1 then
@@ -436,9 +435,11 @@ function Vendor_activate(code)
       if previous_code == code then
         break
       end
+
       if previous_code .. "_v" == item then
         break
       end
+
       Vendor_flags[item] = 2
       trip = 1
     elseif Tracker:FindObjectForCode(location).AccessibilityLevel < AccessibilityLevel.SequenceBreak and Vendor_flags[item] == 2 then
@@ -448,24 +449,28 @@ function Vendor_activate(code)
       if previous_code == code then
         break
       end
+
       if previous_code .. "_v" == item then
         break
       end
+
       Vendor_flags[item] = 1
       trip = 1
     end
+
     if trip == 1 then
       previous_code = code
       Tracker:FindObjectForCode(item).CurrentStage = Vendor_flags[item]
-    else
     end
   end
+
   depth = depth - 1
   for k, v in pairs(Vendor_flags) do
     if depth == 0 or v ~= Tracker:FindObjectForCode(k).CurrentStage then
       Vendor_flags[k] = Tracker:FindObjectForCode(k).CurrentStage
     end
   end
+
   if depth == 0 then
     previous_code = ""
   end

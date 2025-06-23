@@ -19,39 +19,27 @@
 ---@param weapon? string The weapon in the gold weapon shop being evaluated
 ---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
 function Novalis(Location, weapon)
-    if DEBUG then
-        if Location and weapon then
-            print("Checking: " .. Location .. ", " .. weapon)
-        elseif Location then
-            print("Checking: " .. Location)
-        else
-            print("Checking: Default Location")
-        end
-    end
     ---@type accessibilityLevel Accessibility Level to be returned
     local access = AccessibilityLevel.None
-    ---@type boolean True when the infobot has been optained
-    local infobot = Tracker:ProviderCountForCode("Novalis") > 0
-    if infobot then
+    if RACLogic:has { ["Novalis"] = 1 } then
         access = AccessibilityLevel.Normal
         if (
                 Location == "Cave" and
-                not Rock_Explosion()
+                RACLogic:lookup_has_none("Rock_Explosion")
             ) or (
                 Location == "Ameboid" and
-                Tracker:ProviderCountForCode("Hydro") == 0
+                RACLogic:hasnt { ["Hydro"] = 1 }
             ) then
             access = AccessibilityLevel.SequenceBreak
         elseif Location == "Gold" and
             (
-                not Gold(40) or
-                not Metal_Detector() or
-                ---@diagnostic disable-next-line: param-type-mismatch
-                Tracker:ProviderCountForCode(weapon) == 0
+            ---@diagnostic disable-next-line: param-type-mismatch
+                RACLogic:has_notall { ["Gold"] = 40, [weapon] = 1 } or
+                not Metal_Detector()
             ) then
             access = AccessibilityLevel.SequenceBreak
             ---@diagnostic disable-next-line: param-type-mismatch
-            if not Gold(4) or Tracker:ProviderCountForCode(weapon) == 0 then
+            if RACLogic:has_notall { ["Gold"] = 4, [weapon] = 1 } then
                 access = AccessibilityLevel.Inspect
             end
         end
@@ -60,3 +48,75 @@ function Novalis(Location, weapon)
 end
 
 --#endregion
+--#region Kerwan
+
+---Kerwan general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Kerwan(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    if RACLogic:has { ["Kerwan"] = 1 } then
+        if Location == "Train" or Location == "StationGB" then
+            if RACLogic:has_any(RACLogic["Pack"]) then
+                access = AccessibilityLevel.Normal
+            elseif RACLogic:has { ["PDA"] = 1 } then
+                access = AccessibilityLevel.SequenceBreak
+            end
+        elseif Location == "CourseGB" then
+            if RACLogic:has { ["Heli"] = 1 } then
+                access = AccessibilityLevel.Normal
+            elseif RACLogic:has_any { ["Thruster"] = 1, ["PDA"] = 1 } then
+                access = AccessibilityLevel.SequenceBreak
+            end
+        else
+            access = AccessibilityLevel.Normal
+        end
+    end
+    return access
+end
+
+---Aridia general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Aridia(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    return access
+end
+
+---Eudora general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Eudora(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    return access
+end
+
+---Blarg general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Blarg(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    return access
+end
+
+---Rilgar general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Rilgar(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    return access
+end
+
+---Umbris general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Umbris(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    return access
+end

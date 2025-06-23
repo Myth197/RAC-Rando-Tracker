@@ -364,14 +364,11 @@
       {
         "name": "Kerwan",
         "color": "#848777",
-        "access_rules": [
-          "Kerwan"
-        ],
         "children": [
           {
             "name": "Kerwan Vendor",
             "access_rules": [
-              "[Metal]"
+              "^$Kerwan"
             ],
             "map_locations": [
               {
@@ -414,7 +411,7 @@
           {
             "name": "Al's Roboshack",
             "access_rules": [
-              ""
+              "^$Kerwan"
             ],
             "map_locations": [
               {
@@ -439,7 +436,7 @@
           {
             "name": "Fitness Course",
             "access_rules": [
-              ""
+              "^$Kerwan"
             ],
             "map_locations": [
               {
@@ -464,10 +461,7 @@
           {
             "name": "Ride the Robot Train",
             "access_rules": [
-              "Heli",
-              "Thruster",
-              "PDA,[Heli]",
-              "PDA,[Thruster]"
+              "^$Kerwan|Train"
             ],
             "map_locations": [
               {
@@ -493,7 +487,7 @@
             "name": "Underpass Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              ""
+              "^$Kerwan"
             ],
             "map_locations": [
               {
@@ -525,9 +519,7 @@
             "name": "Fitness Course Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Heli",
-              "Thruster",
-              "PDA,[Heli]"
+              "^$Kerwan|CourseGB"
             ],
             "map_locations": [
               {
@@ -538,7 +530,6 @@
                   "AGB"
                 ]
               },
-              
               {
                 "map": "map_v",
                 "x": 700,
@@ -560,9 +551,7 @@
             "name": "Train Station Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Heli",
-              "Thruster",
-              "PDA,[Heli]"
+              "^$Kerwan|StationGB"
             ],
             "map_locations": [
               {
@@ -1138,7 +1127,7 @@
           }
         ]
       },
-      { 
+      {
         "name": "Rilgar",
         "color": "#78749c",
         "access_rules": [
