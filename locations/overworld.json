@@ -584,14 +584,11 @@
       {
         "name": "Aridia",
         "color": "#537dbc",
-        "access_rules": [
-          "Aridia"
-        ],
         "children": [
           {
             "name": "Kill the Sand Sharks",
             "access_rules": [
-              ""
+              "^$Aridia"
             ],
             "map_locations": [
               {
@@ -616,10 +613,7 @@
           {
             "name": "Construction Zone",
             "access_rules": [
-              "Thruster,[Swingshot]",
-              "Heli,[Swingshot]",
-              "PDA,[Swingshot]",
-              "Swingshot"
+              "^$Aridia|Swing"
             ],
             "map_locations": [
               {
@@ -649,7 +643,7 @@
           {
             "name": "Bring Zoomerator to agent",
             "access_rules": [
-              "Zoom"
+              "^$Aridia|Agent"
             ],
             "map_locations": [
               {
@@ -675,10 +669,7 @@
             "name": "Cave Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "$Rock_Explosion",
-              "Heli,[$Rock_Explosion]",
-              "Thruster,[$Rock_Explosion]",
-              "PDA,[$Rock_Explosion]"
+              "^$Aridia|CaveGB"
             ],
             "map_locations": [
               {
@@ -710,7 +701,7 @@
             "name": "Island Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              ""
+              "^$Aridia"
             ],
             "map_locations": [
               {
@@ -742,10 +733,7 @@
             "name": "Laser Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Magne",
-              "Thruster,[Magne]",
-              "Heli,[Magne]",
-              "PDA,[Magne]"
+              "^$Aridia|Laser"
             ],
             "map_locations": [
               {

@@ -15,7 +15,8 @@ RACLogic = {
   ["Veldin"] = { ["Tres"] = 1, ["Magne"] = 1, ["Hydrod"] = 1, ["Thruster"] = 1, ["Swingshot"] = 1, }, -- All
   ["Kalebo_Switch"] = { ["Bomb"] = 1, ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["Tesla"] = 1, ["RYNO"] = 1 },
   ["Rock_Explosion"] = { ["Bomb"] = 1, ["Mine"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
-  ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 }
+  ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 },
+  ["Speedtech"] = { ["Heli"] = 1, ["Thruster"] = 1, ["PDA"] = 1 }
 }
 
 

@@ -57,8 +57,10 @@ function Kerwan(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Kerwan"] = 1 } then
-        if Location == "Train" or Location == "StationGB" then
-            if RACLogic:has_any(RACLogic["Pack"]) then
+        if Location == "Train" or
+            Location == "StationGB"
+        then
+            if RACLogic:lookup_has_any("Pack") then
                 access = AccessibilityLevel.Normal
             elseif RACLogic:has { ["PDA"] = 1 } then
                 access = AccessibilityLevel.SequenceBreak
@@ -82,6 +84,31 @@ end
 function Aridia(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
+    if RACLogic:has { ["Aridia"] = 1 } then
+        if Location == nil or
+            (
+                Location == "Swing" and
+                RACLogic:has { ["Swingshot"] = 1 }
+            ) or (
+                Location == "Laser" and
+                RACLogic:has { ["Magne"] = 1 }
+            ) or (
+                Location == "Agent" and
+                RACLogic:has { ["Zoom"] = 1 }
+            ) or (
+                Location == "CaveGB" and
+                RACLogic:lookup_has_any("Rock_Explosion")
+            ) then
+            access = AccessibilityLevel.Normal
+        elseif RACLogic:lookup_has_any("Speedtech") and
+            (
+                Location == "Swing" or
+                Location == "Laser" or
+                Location == "CaveGB"
+            ) then
+            access = AccessibilityLevel.SequenceBreak
+        end
+    end
     return access
 end
 
