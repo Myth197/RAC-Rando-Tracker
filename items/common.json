@@ -899,6 +899,25 @@
     ]
   },
   {
+    "name": "Skill Point Locations",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 1,
+    "stages": [
+      {
+        "img": "images/Chicken.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/Chicken.png",
+        "codes": "SP"
+      }
+    ]
+  },
+  {
     "name": "Goal",
     "type": "toggle",
     "img": "images/Drek.png",

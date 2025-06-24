@@ -42,6 +42,10 @@ function Novalis(Location, weapon)
             if RACLogic:has_notall { ["Gold"] = 4, [weapon] = 1 } then
                 access = AccessibilityLevel.Inspect
             end
+        elseif Location == "SP" and
+            RACLogic:lookup_has_none("Ranged")
+        then
+            access = AccessibilityLevel.None
         end
     end
     return access
@@ -64,9 +68,16 @@ function Kerwan(Location)
             ) or (
                 Location == "CourseGB" and
                 RACLogic:has { ["Heli"] = 1 }
+            ) or (
+                Location == "Blimp" and
+                RACLogic:lookup_has_any("LongRanged")
+            ) or (
+                Location == "Qwark" and
+                RACLogic:lookup_has_any("Qwark_bot")
             )
         then
             access = AccessibilityLevel.Normal
+        elseif Location == "Blimp" or Location == "Qwark" then
         else
             access = AccessibilityLevel.SequenceBreak
         end
@@ -125,6 +136,9 @@ function Eudora(Location)
             ) or (
                 Location == "Boss" and
                 RACLogic:has_all { ["Tres"] = 1, ["Swingshot"] = 1, ["Heli"] = 1 }
+            ) or (
+                Location == "SP" and
+                RACLogic:lookup_has_any("Ranged")
             ) then
             access = AccessibilityLevel.Normal
         end

@@ -149,7 +149,8 @@
                     [
                         "AGB",
                         "Weapons",
-                        "Vendor"
+                        "Vendor",
+                        "SP"
                     ]
 				]
 			}
@@ -167,7 +168,7 @@
     },
     "tracker_default": {
         "type": "container",
-        "background": "#877373",
+        "background": "#505858",
         "content": {
             "type": "dock",
             "dropshadow": true,
@@ -231,7 +232,7 @@
     },
     "tracker_horizontal": {
         "type": "container",
-        "background": "#877373",
+        "background": "#505858",
         "content": {
             "type": "dock",
             "dropshadow": true,

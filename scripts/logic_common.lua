@@ -15,9 +15,12 @@ RACLogic = {
   ["Veldin"] = { ["Tres"] = 1, ["Magne"] = 1, ["Hydrod"] = 1, ["Thruster"] = 1, ["Swingshot"] = 1, }, -- All
   ["Kalebo_Switch"] = { ["Bomb"] = 1, ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["Tesla"] = 1, ["RYNO"] = 1 },
   ["Rock_Explosion"] = { ["Bomb"] = 1, ["Mine"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
+  ["Ranged"] = { ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
+  ["LongRanged"] = { ["Dev"] = 1, ["Visi"] = 1 },
+  ["Qwark_bot"] = { ["Bomb"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 }, -- TODO: Can this be done with the Mine glove?
   ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 },
   ["Speedtech"] = { ["Heli"] = 1, ["Thruster"] = 1, ["PDA"] = 1 },
-  ["Proxy"] = {["Bomb"] = 1, ["Doom"] = 1, ["Mine"] = 1, ["Decoy"] = 1, ["Drone"] = 1}
+  ["Proxy"] = { ["Bomb"] = 1, ["Doom"] = 1, ["Mine"] = 1, ["Decoy"] = 1, ["Drone"] = 1 }
 }
 
 
@@ -362,6 +365,16 @@ function Update_Setting(code)
       object.BadgeTextColor = "#00FFFF"
     end
     ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
+  elseif code == "SP" then
+    ScriptHost:RemoveWatchForCode("Skillpoint Setting")
+    if object.CurrentStage == 0 then
+      object.BadgeText = "Skillpoints Off"
+      object.BadgeTextColor = "#A0A0A0"
+    else
+      object.BadgeText = "Skillpoints On"
+      object.BadgeTextColor = "#FFFFFF"
+    end
+    ScriptHost:AddWatchForCode("Skillpoint Setting", "SP", Update_Setting)
   else
     print("New Setting needs Badge Compatability: " .. code)
   end

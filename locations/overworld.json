@@ -12,7 +12,6 @@
             "map": "map",
             "x": 2700,
             "y": 1400,
-            
             "shape": "trapezoid",
             "restrict_visibility_rules": [
               "vendor"
@@ -22,7 +21,6 @@
             "map": "map_v",
             "x": 1150,
             "y": 2950,
-            
             "shape": "trapezoid",
             "restrict_visibility_rules": [
               "vendor"
@@ -112,7 +110,6 @@
                 "map": "map",
                 "x": 270,
                 "y": 280,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -122,7 +119,6 @@
                 "map": "map_v",
                 "x": 270,
                 "y": 280,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -299,7 +295,6 @@
                 "map": "map",
                 "x": 450,
                 "y": 350,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
@@ -309,7 +304,6 @@
                 "map": "map_v",
                 "x": 450,
                 "y": 350,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
@@ -358,6 +352,42 @@
                 "chest_opened_img": "images/Suck_G.png"
               }
             ]
+          },
+          {
+            "name": "Skillpoint",
+            "color": "#ff0000",
+            "access_rules": [
+              "^$Novalis|SP"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 250,
+                "y": 250,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 250,
+                "y": 250,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Take Aim - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
           }
         ]
       },
@@ -375,7 +405,6 @@
                 "map": "map",
                 "x": 800,
                 "y": 400,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -385,7 +414,6 @@
                 "map": "map_v",
                 "x": 800,
                 "y": 400,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -410,9 +438,6 @@
           },
           {
             "name": "Al's Roboshack",
-            "access_rules": [
-              "^$Kerwan"
-            ],
             "map_locations": [
               {
                 "map": "map",
@@ -429,7 +454,19 @@
               {
                 "name": "Al - 1,000 Bolts",
                 "item_count": 1,
+                "access_rules": [
+                  "^$Kerwan"
+                ],
                 "chest_unopened_img": "images/Al.png"
+              },
+              {
+                "name": "Strike a Pose - Skillpoint",
+                "item_count": 1,
+                "access_rules": [
+                  "^$Kerwan|CourseGB"
+                ],
+                "chest_unopened_img": "images/Chicken.png",
+                "visibility_rules": "SP"
               }
             ]
           },
@@ -576,6 +613,78 @@
                 "name": "Gold Bolt",
                 "item_count": 1,
                 "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Blimpy",
+            "color": "#ffb300",
+            "access_rules": [
+              "^$Kerwan|Blimp"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 800,
+                "y": 240,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 800,
+                "y": 240,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Shoot down the Blimp - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
+          },
+          {
+            "name": "Qwarktastic",
+            "color": "#ffb300",
+            "access_rules": [
+              "^$Kerwan|Qwark"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 760,
+                "y": 420,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 760,
+                "y": 420,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Destroy the Qwark Robot - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
               }
             ]
           }
@@ -777,7 +886,6 @@
                 "map": "map",
                 "x": 1800,
                 "y": 300,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -787,7 +895,6 @@
                 "map": "map_v",
                 "x": 255,
                 "y": 810,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -896,6 +1003,42 @@
                 "chest_unopened_img": "images/Gold_Bolt.png"
               }
             ]
+          },
+          {
+            "name": "Any Ten",
+            "color": "#ff0000",
+            "access_rules": [
+              "^$Eudora|SP"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1830,
+                "y": 250,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 295,
+                "y": 760,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
           }
         ]
       },
@@ -913,7 +1056,6 @@
                 "map": "map",
                 "x": 2300,
                 "y": 400,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -923,7 +1065,6 @@
                 "map": "map_v",
                 "x": 750,
                 "y": 920,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1016,6 +1157,12 @@
                 "name": "Fred - 2,000 Bolts",
                 "item_count": 1,
                 "chest_unopened_img": "images/Fred.png"
+              },
+              {
+                "name": "Girl Trouble - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png",
+                "visibility_rules": "SP"
               }
             ]
           },
@@ -1102,7 +1249,6 @@
                 "map": "map",
                 "x": 2900,
                 "y": 450,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1112,7 +1258,6 @@
                 "map": "map_v",
                 "x": 1350,
                 "y": 965,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1438,7 +1583,6 @@
                 "map": "map",
                 "x": 620,
                 "y": 750,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1448,7 +1592,6 @@
                 "map": "map_v",
                 "x": 620,
                 "y": 1260,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1619,7 +1762,6 @@
                 "map": "map",
                 "x": 1220,
                 "y": 830,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1629,7 +1771,6 @@
                 "map": "map_v",
                 "x": 1220,
                 "y": 1340,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1780,7 +1921,6 @@
                 "map": "map",
                 "x": 1850,
                 "y": 580,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1790,7 +1930,6 @@
                 "map": "map_v",
                 "x": 300,
                 "y": 1600,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1856,7 +1995,6 @@
                 "map": "map",
                 "x": 2300,
                 "y": 930,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1866,7 +2004,6 @@
                 "map": "map_v",
                 "x": 750,
                 "y": 1950,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1986,7 +2123,6 @@
                 "map": "map",
                 "x": 2880,
                 "y": 910,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -1996,7 +2132,6 @@
                 "map": "map_v",
                 "x": 1330,
                 "y": 1950,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -2168,7 +2303,6 @@
                 "map": "map",
                 "x": 110,
                 "y": 1170,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
@@ -2178,7 +2312,6 @@
                 "map": "map_v",
                 "x": 110,
                 "y": 2205,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
@@ -2279,7 +2412,6 @@
                 "map": "map",
                 "x": 810,
                 "y": 1340,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -2289,7 +2421,6 @@
                 "map": "map_v",
                 "x": 810,
                 "y": 2375,
-                
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
