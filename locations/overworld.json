@@ -766,14 +766,11 @@
       {
         "name": "Eudora",
         "color": "#a7d0b1",
-        "access_rules": [
-          "Eudora"
-        ],
         "children": [
           {
             "name": "Eudora Vendor",
             "access_rules": [
-              "[Metal]"
+              "^$Eudora|Vendor"
             ],
             "map_locations": [
               {
@@ -816,9 +813,7 @@
           {
             "name": "Explore the Mills",
             "access_rules": [
-              "Heli",
-              "Thruster",
-              "PDA,[Heli]"
+              "^$Eudora|Suck"
             ],
             "map_locations": [
               {
@@ -848,15 +843,7 @@
           {
             "name": "Confront Robot Lieutenant",
             "access_rules": [
-              "Tres,Swingshot,Heli",
-              "Tres,Swingshot,Thruster",
-              "Heli,[Tres],[Swingshot]",
-              "Thruster,[Tres],[Swingshot]",
-              "[Tres],[Swingshot],[Heli]",
-              "PDA,[Tres],[Swingshot],[Heli]",
-              "PDA,[Tres],[Swingshot],[Thruster]",
-              "Decoy,[Tres],[Swingshot],[Heli]",
-              "Decoy,[Tres],[Swingshot],[Thruster]"
+              "^$Eudora|Boss"
             ],
             "map_locations": [
               {
@@ -882,8 +869,7 @@
             "name": "Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "[Heli]",
-              "[Thruster]"
+              "^$Eudora|GB"
             ],
             "map_locations": [
               {
