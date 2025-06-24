@@ -12,8 +12,8 @@
             "map": "map",
             "x": 2700,
             "y": 1400,
-            "size": 40,
-            "shape": "diamond",
+            
+            "shape": "trapezoid",
             "restrict_visibility_rules": [
               "vendor"
             ]
@@ -22,8 +22,8 @@
             "map": "map_v",
             "x": 1150,
             "y": 2950,
-            "size": 40,
-            "shape": "diamond",
+            
+            "shape": "trapezoid",
             "restrict_visibility_rules": [
               "vendor"
             ]
@@ -112,8 +112,8 @@
                 "map": "map",
                 "x": 270,
                 "y": 280,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -122,8 +122,8 @@
                 "map": "map_v",
                 "x": 270,
                 "y": 280,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -299,8 +299,8 @@
                 "map": "map",
                 "x": 450,
                 "y": 350,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
                 ]
@@ -309,8 +309,8 @@
                 "map": "map_v",
                 "x": 450,
                 "y": 350,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
                 ]
@@ -375,8 +375,8 @@
                 "map": "map",
                 "x": 800,
                 "y": 400,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -385,8 +385,8 @@
                 "map": "map_v",
                 "x": 800,
                 "y": 400,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -551,7 +551,7 @@
             "name": "Train Station Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "^$Kerwan|StationGB"
+              "^$Kerwan|Train"
             ],
             "map_locations": [
               {
@@ -777,8 +777,8 @@
                 "map": "map",
                 "x": 1800,
                 "y": 300,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -787,8 +787,8 @@
                 "map": "map_v",
                 "x": 255,
                 "y": 810,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -869,7 +869,7 @@
             "name": "Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "^$Eudora|GB"
+              "^$Eudora|Suck"
             ],
             "map_locations": [
               {
@@ -902,22 +902,19 @@
       {
         "name": "Blarg",
         "color": "#764e23",
-        "access_rules": [
-          "Blarg"
-        ],
         "children": [
           {
             "name": "Blarg Vendor",
             "access_rules": [
-              "[$Metal_Detector]"
+              "^$Blarg"
             ],
             "map_locations": [
               {
                 "map": "map",
                 "x": 2300,
                 "y": 400,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -926,8 +923,8 @@
                 "map": "map_v",
                 "x": 750,
                 "y": 920,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -952,10 +949,7 @@
           {
             "name": "Journey outside the airlock",
             "access_rules": [
-              "Tres",
-              "Heli,[Tres]",
-              "Thruster,[Tres]",
-              "PDA,[Tres]"
+              "^$Blarg|Outside"
             ],
             "map_locations": [
               {
@@ -979,7 +973,7 @@
           {
             "name": "Destroy the warship",
             "access_rules": [
-              ""
+              "^$Blarg"
             ],
             "map_locations": [
               {
@@ -1003,10 +997,7 @@
           {
             "name": "Explore the space station",
             "access_rules": [
-              "Swingshot",
-              "PDA,[Swingshot]",
-              "Heli,[Swingshot]",
-              "Thruster,[Swingshot]"
+              "^$Blarg|Queen"
             ],
             "map_locations": [
               {
@@ -1032,11 +1023,7 @@
             "name": "Outside Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "O2,Tres",
-              "O2,Decoy,[Tres]",
-              "[O2],Heli,[Tres]",
-              "[O2],Thruster,[Tres]",
-              "PDA,[Tres]"
+              "^$Blarg|OutsideGB"
             ],
             "map_locations": [
               {
@@ -1068,10 +1055,7 @@
             "name": "Cages Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Swingshot",
-              "PDA,[Swingshot]",
-              "Heli,[Swingshot]",
-              "Thruster,[Swingshot]"
+              "^$Blarg|Queen"
             ],
             "map_locations": [
               {
@@ -1118,8 +1102,8 @@
                 "map": "map",
                 "x": 2900,
                 "y": 450,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1128,8 +1112,8 @@
                 "map": "map_v",
                 "x": 1350,
                 "y": 965,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1454,8 +1438,8 @@
                 "map": "map",
                 "x": 620,
                 "y": 750,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1464,8 +1448,8 @@
                 "map": "map_v",
                 "x": 620,
                 "y": 1260,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1635,8 +1619,8 @@
                 "map": "map",
                 "x": 1220,
                 "y": 830,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1645,8 +1629,8 @@
                 "map": "map_v",
                 "x": 1220,
                 "y": 1340,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1720,10 +1704,8 @@
           {
             "name": "Nanotech Vendor",
             "access_rules": [
-              "O2,Thruster",
-              "O2,Heli",
-              "PDA,O2,[Heli]",
-              "PDA,O2,[Thruster]"
+              "[O2],[Thruster]",
+              "[O2],[Heli]"
             ],
             "map_locations": [
               {
@@ -1748,7 +1730,7 @@
                 "item_count": 1,
                 "chest_unopened_img": "images/Nano_Vendor.png",
                 "access_rules": [
-                  "Nanotech1"
+                  "Nanotech1, [Metal]"
                 ]
               }
             ]
@@ -1756,11 +1738,8 @@
           {
             "name": "Explore as Ratchet",
             "access_rules": [
-              "O2,Thruster,[Swingshot],[Magne]",
-              "O2,Thruster,Swingshot,Magne",
-              "O2,Heli,Swingshot,Magne",
-              "O2,PDA,[Thruster],[Swingshot],[Magne]",
-              "O2,Heli,[Swingshot],[Magne]"
+              "[O2],[Thruster],[Swingshot],[Magne]",
+              "[O2],[Heli],[Swingshot],[Magne]"
             ],
             "map_locations": [
               {
@@ -1801,8 +1780,8 @@
                 "map": "map",
                 "x": 1850,
                 "y": 580,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1811,8 +1790,8 @@
                 "map": "map_v",
                 "x": 300,
                 "y": 1600,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1877,8 +1856,8 @@
                 "map": "map",
                 "x": 2300,
                 "y": 930,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -1887,8 +1866,8 @@
                 "map": "map_v",
                 "x": 750,
                 "y": 1950,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -2007,8 +1986,8 @@
                 "map": "map",
                 "x": 2880,
                 "y": 910,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -2017,8 +1996,8 @@
                 "map": "map_v",
                 "x": 1330,
                 "y": 1950,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -2189,8 +2168,8 @@
                 "map": "map",
                 "x": 110,
                 "y": 1170,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
                 ]
@@ -2199,8 +2178,8 @@
                 "map": "map_v",
                 "x": 110,
                 "y": 2205,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "Gold_Weapons"
                 ]
@@ -2300,8 +2279,8 @@
                 "map": "map",
                 "x": 810,
                 "y": 1340,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]
@@ -2310,8 +2289,8 @@
                 "map": "map_v",
                 "x": 810,
                 "y": 2375,
-                "size": 40,
-                "shape": "diamond",
+                
+                "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
                 ]

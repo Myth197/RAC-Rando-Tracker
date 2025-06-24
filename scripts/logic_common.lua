@@ -16,7 +16,8 @@ RACLogic = {
   ["Kalebo_Switch"] = { ["Bomb"] = 1, ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["Tesla"] = 1, ["RYNO"] = 1 },
   ["Rock_Explosion"] = { ["Bomb"] = 1, ["Mine"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
   ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 },
-  ["Speedtech"] = { ["Heli"] = 1, ["Thruster"] = 1, ["PDA"] = 1 }
+  ["Speedtech"] = { ["Heli"] = 1, ["Thruster"] = 1, ["PDA"] = 1 },
+  ["Proxy"] = {["Bomb"] = 1, ["Doom"] = 1, ["Mine"] = 1, ["Decoy"] = 1, ["Drone"] = 1}
 }
 
 
@@ -32,7 +33,7 @@ function RACLogic:__init__()
   self.All_Lists = itemlists
 end
 
----@param items table<string,integer>
+---@param items table<string,integer> list with a single element
 ---@return boolean --true when the item count has been obtained
 function RACLogic:has(items)
   for item, count in pairs(items) do
@@ -40,7 +41,7 @@ function RACLogic:has(items)
   end
 end
 
----@param items table<string,integer>
+---@param items table<string,integer> list with a single element
 ---@return boolean --true when the item count has not been obtained
 function RACLogic:hasnt(items)
   for item, count in pairs(items) do
@@ -49,7 +50,7 @@ function RACLogic:hasnt(items)
 end
 
 ---@see RACLogic
----@param listname table<string,integer> key name for list in RACLogic
+---@param listname table<string,integer> list of has requirements
 ---@return boolean --true when any element of the list is obtained
 function RACLogic:has_any(listname)
   for item, count in pairs(listname) do
@@ -62,7 +63,7 @@ function RACLogic:has_any(listname)
 end
 
 ---@see RACLogic
----@param listname table<string,integer> key name for list in RACLogic
+---@param listname table<string,integer> list of has requirements
 ---@return boolean --true when all elements of the list are not obtained
 function RACLogic:has_none(listname)
   for item, count in pairs(listname) do
@@ -74,7 +75,7 @@ function RACLogic:has_none(listname)
 end
 
 ---@see RACLogic
----@param listname table<string,integer> key name for list in RACLogic
+---@param listname table<string,integer> list of hasnt requirements
 ---@return boolean --true when all elements of the list are obtained
 function RACLogic:has_all(listname)
   for item, count in pairs(listname) do
@@ -86,7 +87,7 @@ function RACLogic:has_all(listname)
 end
 
 ---@see RACLogic
----@param listname table<string,integer> key name for list in RACLogic
+---@param listname table<string,integer> list of hasnt requirements
 ---@return boolean --true when any element of the list is not obtained
 function RACLogic:has_notall(listname)
   for item, count in pairs(listname) do

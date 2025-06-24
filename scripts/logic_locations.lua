@@ -29,16 +29,16 @@ function Novalis(Location, weapon)
             ) or (
                 Location == "Ameboid" and
                 RACLogic:hasnt { ["Hydro"] = 1 }
-            ) then
+            )
+        then
             access = AccessibilityLevel.SequenceBreak
         elseif Location == "Gold" and
             (
-            ---@diagnostic disable-next-line: param-type-mismatch
                 RACLogic:has_notall { ["Gold"] = 40, [weapon] = 1 } or
                 not Metal_Detector()
-            ) then
+            )
+        then
             access = AccessibilityLevel.SequenceBreak
-            ---@diagnostic disable-next-line: param-type-mismatch
             if RACLogic:has_notall { ["Gold"] = 4, [weapon] = 1 } then
                 access = AccessibilityLevel.Inspect
             end
@@ -57,22 +57,18 @@ function Kerwan(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Kerwan"] = 1 } then
-        if Location == "Train" or
-            Location == "StationGB"
+        if Location == nil or
+            (
+                Location == "Train" and
+                RACLogic:lookup_has_any("Pack")
+            ) or (
+                Location == "CourseGB" and
+                RACLogic:has { ["Heli"] = 1 }
+            )
         then
-            if RACLogic:lookup_has_any("Pack") then
-                access = AccessibilityLevel.Normal
-            elseif RACLogic:has_any { ["PDA"] = 1, ["Bomb"] = 1 } then
-                access = AccessibilityLevel.SequenceBreak
-            end
-        elseif Location == "CourseGB" then
-            if RACLogic:has { ["Heli"] = 1 } then
-                access = AccessibilityLevel.Normal
-            else
-                access = AccessibilityLevel.SequenceBreak
-            end
-        else
             access = AccessibilityLevel.Normal
+        else
+            access = AccessibilityLevel.SequenceBreak
         end
     end
     return access
@@ -119,28 +115,18 @@ function Eudora(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Eudora"] = 1 } then
+        access = AccessibilityLevel.SequenceBreak
         if (
                 Location == "Vendor" and
                 Metal_Detector()
             ) or (
-                (
-                    Location == "Suck" or
-                    Location == "GB"
-                ) and
+                Location == "Suck" and
                 RACLogic:has { ["Heli"] = 1 }
             ) or (
                 Location == "Boss" and
                 RACLogic:has_all { ["Tres"] = 1, ["Swingshot"] = 1, ["Heli"] = 1 }
             ) then
             access = AccessibilityLevel.Normal
-        elseif Location == "Vendor" or
-            Location == "Boss" or
-            Location == "GB" or
-            (
-                Location == "Suck" and
-                RACLogic:has_any { ["Thruster"] = 1, ["PDA"] = 1 }
-            ) then
-            access = AccessibilityLevel.SequenceBreak
         end
     end
     return access
@@ -153,7 +139,21 @@ function Blarg(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Blarg"] = 1 } then
-        access = AccessibilityLevel.Normal
+        if Location == nil or
+            (
+                Location == "Outside" and
+                RACLogic:has { ["Tres"] = 1 }
+            ) or (
+                Location == "Queen" and
+                RACLogic:has { ["Swingshot"] = 1 }
+            ) or (
+                Location == "OutsideGB" and
+                RACLogic:has_all { ["Tres"] = 1, ["O2"] = 1 }
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            access = AccessibilityLevel.SequenceBreak
+        end
     end
     return access
 end
