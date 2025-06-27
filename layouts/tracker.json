@@ -27,6 +27,20 @@
             ]
         }
     },
+    "shared_gadget_grid_h": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_size": 40,
+            "item_margin": "1,1",
+            "rows": [
+                ["Swingshot",   "Hologuise",    "Hydro",    "Pilot",    "Magne" ],
+                ["Hydrod",      "Metal",        "Thruster", "Sonic",    "Grind" ],
+                ["Tres",        "PDA",          "Heli",     "O2",       ""      ]
+            ]
+        }
+    },
     "shared_item_grid_h": {
         "type": "container",
         "content": {
@@ -35,9 +49,9 @@
             "item_size": 40,
             "item_margin": "1,1",
             "rows": [
-                ["Swingshot",   "Hologuise",    "Hydro",    "Pilot",    "Gold",    "Hover",        "Persuader",    "Bolt_Grabber"],
-                ["Hydrod",      "Metal",        "Thruster", "Sonic",    "Magne",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"],
-                ["Tres",        "PDA",          "Heli",     "O2",       "Grind",     "Zoom",         "Raritanium",   "Codebot"]
+                ["Hover",        "Persuader",    "Bolt_Grabber",    "Gold"  ],
+                ["Nanotech1",    "Nanotech2",    "Map-o-Matic",     ""      ],
+                ["Zoom",         "Raritanium",   "Codebot",         ""      ]
             ]
         }
     },
@@ -191,7 +205,7 @@
                         },
                         {
                             "type": "group",
-                            "header": "Items",
+                            "header": "Gadgets and Items",
                             "h_alignment": "stretch",
                             "dock": "top",
                             "content": {
@@ -252,6 +266,16 @@
                                     "type": "layout",
                                     "key": "shared_weapon_grid_h"
                                 }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Gadgets",
+                            "h_alignment": "stretch",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_gadget_grid_h"
+                            }
                         },
                         {
                             "type": "group",

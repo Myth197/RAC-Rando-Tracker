@@ -134,8 +134,6 @@ end
 ---| false # Location is not Reachable
 
 ---Returns true if there is access to any Metal Detector location.
----
----**TODO**: *Update if conditions to use functions used in the rest of the logic*
 ---@return LocationReachable
 function Metal_Detector()
   local canReach = false
