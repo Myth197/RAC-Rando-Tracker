@@ -1307,9 +1307,6 @@
       {
         "name": "Rilgar",
         "color": "#78749c",
-        "access_rules": [
-          "Rilgar"
-        ],
         "children": [
           {
             "name": "Rilgar Vendor",
@@ -1519,8 +1516,8 @@
             "map_locations": [
               {
                 "map": "map",
-                "x": 3040,
-                "y": 125,
+                "x": 3000,
+                "y": 425,
                 "size": 42,
                 "shape": "diamond",
                 "restrict_visibility_rules": [
@@ -1529,8 +1526,8 @@
               },
               {
                 "map": "map_v",
-                "x": 1490,
-                "y": 650,
+                "x": 1450,
+                "y": 950,
                 "size": 42,
                 "shape": "diamond",
                 "restrict_visibility_rules": [
@@ -1551,9 +1548,6 @@
       {
         "name": "Umbris",
         "color": "#c1723b",
-        "access_rules": [
-          "Umbris"
-        ],
         "children": [
           {
             "name": "Destroy the Snagglebeast",
@@ -1616,7 +1610,7 @@
             "name": "Drop Down Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "^$Umbris|GB"
+              "^$Umbris|Boss"
             ],
             "map_locations": [
               {
@@ -1649,14 +1643,11 @@
       {
         "name": "Batalia",
         "color": "#a8aa6c",
-        "access_rules": [
-          "Batalia"
-        ],
         "children": [
           {
             "name": "Batalia Vendor",
             "access_rules": [
-              "[Metal]"
+              "^$Batalia|Vendor"
             ],
             "map_locations": [
               {
@@ -1697,7 +1688,7 @@
           {
             "name": "Meet the Commando at city",
             "access_rules": [
-              ""
+              "^$Batalia"
             ],
             "map_locations": [
               {
@@ -1721,11 +1712,6 @@
           },
           {
             "name": "Ride the grind rail",
-            "access_rules": [
-              "Grind",
-              "Heli,[Grind]",
-              "PDA,[Grind]"
-            ],
             "map_locations": [
               {
                 "map": "map",
@@ -1741,18 +1727,27 @@
             "sections": [
               {
                 "name": "Deserter - 2,000 Bolts",
+                "access_rules": [
+                  "^$Batalia|Grind"
+                ],
                 "item_count": 1,
                 "chest_unopened_img": "images/Deserter.png"
+              },
+              {
+                "name": "Jumper - Skillpoint",
+                "access_rules": [
+                  "^$Batalia|GrindSP"
+                ],
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png",
+                "visibility_rules": "SP"
               }
             ]
           },
           {
             "name": "Destroy the bombers",
             "access_rules": [
-              "Magne",
-              "Thruster,[Magne]",
-              "PDA,[Magne]",
-              "Heli,[Magne]"
+              "^$Batalia|Turret"
             ],
             "map_locations": [
               {
@@ -1771,6 +1766,12 @@
                 "name": "Plumber",
                 "item_count": 1,
                 "chest_unopened_img": "images/Plumber.png"
+              },
+              {
+                "name": "Accuracy Counts - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png",
+                "visibility_rules": "SP"
               }
             ]
           },
@@ -1778,7 +1779,7 @@
             "name": "House Roof Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              ""
+              "^$Batalia"
             ],
             "map_locations": [
               {
@@ -1803,6 +1804,74 @@
                 "name": "Gold Bolt",
                 "item_count": 1,
                 "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Cliffside Gold Bolt",
+            "color": "#ffb300",
+            "access_rules": [
+              "^$Batalia|Cliff"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 880,
+                "y": 800,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 880,
+                "y": 1310,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Eat Lead",
+            "color": "#ff0000",
+            "access_rules": [
+              "^$Batalia|Tanks"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 695,
+                "y": 800,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 695,
+                "y": 1310,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
               }
             ]
           }
@@ -2760,6 +2829,9 @@
                 "name": "Gadgetron CEO",
                 "item_count": 1,
                 "chest_unopened_img": "images/CEO.png"
+              },
+              {
+                "ref": "Rilgar/Win the Hoverboard Race/Tricky - Skillpoint"
               }
             ]
           }

@@ -206,7 +206,6 @@ function Rilgar(Location)
                 RACLogic:has_all { ["Hydrod"] = 1, ["Swingshot"] = 1, ["O2"] = 1 }
             ) or (
                 Location == "Tank" and
-                RACLogic:lookup_has_any("Pack") and
                 RACLogic:has { ["Morph"] = 1 }
             ) then
             access = AccessibilityLevel.Normal
@@ -216,11 +215,7 @@ function Rilgar(Location)
                 Location == "Qwark" or
                 Location == "Hover" or
                 Location == "Maze" or
-                Location == "Sewer" or
-                (
-                    Location == "Tank" and
-                    RACLogic:has { ["Morph"] = 1 }
-                )
+                Location == "Sewer"
             then
                 access = AccessibilityLevel.SequenceBreak
             end
@@ -248,6 +243,48 @@ function Umbris(Location)
             access = AccessibilityLevel.Normal
         else
             access = AccessibilityLevel.SequenceBreak
+        end
+    end
+    return access
+end
+
+---Batalia general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Batalia(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    if RACLogic:has { ["Batalia"] = 1 } then
+        if Location == nil or
+            (
+                Location == "Vendor" and
+                Metal_Detector()
+            ) or (
+                (
+                    Location == "Grind" or
+                    Location == "GrindSP"
+                ) and
+                RACLogic:has { ["Grind"] = 1 }
+            ) or (
+                Location == "Turret" and
+                RACLogic:has { ["Magne"] = 1 }
+            ) or (
+                Location == "Cliff" and
+                RACLogic:lookup_has_any("Pack")
+            ) or (
+                Location == "Tanks" and
+                RACLogic:has_all { ["Sonic"] = 1, ["Magne"] = 1 }
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            if Location == "GrindSP" or
+                (
+                    Location == "Tanks" and
+                    RACLogic:hasnt { ["Sonic"] = 1 }
+                ) then
+            else
+                access = AccessibilityLevel.SequenceBreak
+            end
         end
     end
     return access
