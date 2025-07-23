@@ -182,8 +182,7 @@ function Rilgar(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Rilgar"] = 1 } then
-        if Location == nil or
-            (
+        if (
                 Location == "Vendor" and
                 Metal_Detector()
             ) or (
@@ -237,7 +236,19 @@ function Umbris(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Umbris"] = 1 } then
-        access = AccessibilityLevel.Normal
+        if (
+                Location == "Boss" and
+                RACLogic:lookup_has_any("Pack") and
+                RACLogic:has_all { ["Hydrod"] = 1, ["Swingshot"] = 1 }
+            ) or (
+                Location == "GB" and
+                RACLogic:lookup_has_any("Pack") and
+                RACLogic:has { ["Swingshot"] = 1 }
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            access = AccessibilityLevel.SequenceBreak
+        end
     end
     return access
 end

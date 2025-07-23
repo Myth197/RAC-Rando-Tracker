@@ -1558,14 +1558,7 @@
           {
             "name": "Destroy the Snagglebeast",
             "access_rules": [
-              "Hydrod,Swingshot,Heli",
-              "Hydrod,Swingshot,Thruster",
-              "Heli,[Swingshot],[Hydrod]",
-              "Thruster,[Swingshot],[Hydrod]",
-              "PDA,[Swingshot],[Hydrod],[Heli]",
-              "PDA,[Swingshot],[Hydrod],[Thruster]",
-              "Swingshot,[Hydrod],[Heli]",
-              "Swingshot,[Hydrod],[Thruster]"
+              "^$Umbris|Boss"
             ],
             "map_locations": [
               {
@@ -1591,14 +1584,7 @@
             "name": "Lighthouse Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Swingshot,Heli",
-              "Swingshot,Thruster",
-              "Heli,[Swingshot]",
-              "Thruster,[Swingshot]",
-              "PDA,[Swingshot],[Heli]",
-              "PDA,[Swingshot],[Thruster]",
-              "Swingshot,[Heli]",
-              "Swingshot,[Thruster]"
+              "^$Umbris|GB"
             ],
             "map_locations": [
               {
@@ -1630,14 +1616,7 @@
             "name": "Drop Down Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Swingshot,Heli",
-              "Swingshot,Thruster",
-              "Heli,[Swingshot]",
-              "Thruster,[Swingshot]",
-              "PDA,[Swingshot],[Heli]",
-              "PDA,[Swingshot],[Thruster]",
-              "Swingshot,[Heli]",
-              "Swingshot,[Thruster]"
+              "^$Umbris|GB"
             ],
             "map_locations": [
               {
