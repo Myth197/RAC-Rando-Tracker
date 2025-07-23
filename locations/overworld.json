@@ -869,6 +869,78 @@
                 "chest_unopened_img": "images/Gold_Bolt.png"
               }
             ]
+          },
+          {
+            "name": "Swing It",
+            "color": "#ff0000",
+            "access_rules": [
+              "^$Aridia|SwingSP"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1114,
+                "y": 180,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 1114,
+                "y": 180,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
+          },
+          {
+            "name": "Transported",
+            "color": "#ff0000",
+            "access_rules": [
+              "^$Aridia|Shoot"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1340,
+                "y": 300,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 1340,
+                "y": 300,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
           }
         ]
       },

@@ -97,6 +97,9 @@ function Aridia(Location)
                 Location == "Swing" and
                 RACLogic:has { ["Swingshot"] = 1 }
             ) or (
+                Location == "SwingSP" and
+                RACLogic:has { ["Swingshot"] = 1 }
+            ) or (
                 Location == "Laser" and
                 RACLogic:has { ["Magne"] = 1 }
             ) or (
@@ -105,14 +108,14 @@ function Aridia(Location)
             ) or (
                 Location == "CaveGB" and
                 RACLogic:lookup_has_any("Rock_Explosion")
+            ) or (
+                Location == "Shoot" and
+                RACLogic:lookup_has_any("Ranged")
             ) then
             access = AccessibilityLevel.Normal
         elseif Location == "Laser" or
             Location == "CaveGB" or
-            (
-                RACLogic:lookup_has_any("Speedtech") and
-                Location == "Swing"
-            ) then
+            Location == "Swing" then
             access = AccessibilityLevel.SequenceBreak
         end
     end
