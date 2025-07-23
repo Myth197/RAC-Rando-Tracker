@@ -182,7 +182,50 @@ function Rilgar(Location)
     ---@type integer Accessibility Level to be returned
     local access = AccessibilityLevel.None
     if RACLogic:has { ["Rilgar"] = 1 } then
-        access = AccessibilityLevel.Normal
+        if Location == nil or
+            (
+                Location == "Vendor" and
+                Metal_Detector()
+            ) or (
+                Location == "Shady" and
+                Metal_Detector() and
+                RACLogic:lookup_has_any("Pack")
+            ) or (
+                Location == "Qwark" and
+                RACLogic:lookup_has_any("Pack") and
+                RACLogic:has_all { ["Hydrod"] = 1, ["Swingshot"] = 1 }
+            ) or (
+                Location == "Hover" and
+                RACLogic:lookup_has_any("Pack") and
+                RACLogic:has { ["Hover"] = 1 }
+            ) or (
+                Location == "Maze" and
+                RACLogic:lookup_has_any("Pack")
+            ) or (
+                Location == "Sewer" and
+                RACLogic:lookup_has_any("Pack") and
+                RACLogic:has_all { ["Hydrod"] = 1, ["Swingshot"] = 1, ["O2"] = 1 }
+            ) or (
+                Location == "Tank" and
+                RACLogic:lookup_has_any("Pack") and
+                RACLogic:has { ["Morph"] = 1 }
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            if Location == "Vendor" or
+                Location == "Shady" or
+                Location == "Qwark" or
+                Location == "Hover" or
+                Location == "Maze" or
+                Location == "Sewer" or
+                (
+                    Location == "Tank" and
+                    RACLogic:has { ["Morph"] = 1 }
+                )
+            then
+                access = AccessibilityLevel.SequenceBreak
+            end
+        end
     end
     return access
 end

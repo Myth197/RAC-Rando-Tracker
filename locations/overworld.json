@@ -1314,7 +1314,7 @@
           {
             "name": "Rilgar Vendor",
             "access_rules": [
-              "[$Metal_Detector]"
+              "^$Rilgar|Vendor"
             ],
             "map_locations": [
               {
@@ -1355,8 +1355,7 @@
           {
             "name": "City District",
             "access_rules": [
-              "[Heli],[Metal]",
-              "[Thruster],[Metal]"
+              "^$Rilgar|Shady"
             ],
             "map_locations": [
               {
@@ -1388,12 +1387,7 @@
           {
             "name": "Locate Captain Qwark",
             "access_rules": [
-              "Heli,Hydrod,Swingshot",
-              "Thruster,Hydrod,Swingshot",
-              "Heli,[Hydrod],[Swingshot]",
-              "Thruster,[Hydrod],[Swingshot]",
-              "PDA,[Heli],[Hydrod],[Swingshot]",
-              "[Heli],[Hydrod],[Swingshot]"
+              "^$Rilgar|Qwark"
             ],
             "map_locations": [
               {
@@ -1418,13 +1412,7 @@
           {
             "name": "Win the Hoverboard Race",
             "access_rules": [
-              "Hover,Heli",
-              "Hover,Thruster",
-              "Hover,[Heli]",
-              "Hover,[Thruster]",
-              "Thruster,[Hover]",
-              "Heli,[Hover]",
-              "PDA,[Hover]"
+              "^$Rilgar|Hover"
             ],
             "map_locations": [
               {
@@ -1443,6 +1431,18 @@
                 "name": "Hoverboard Girl",
                 "item_count": 1,
                 "chest_unopened_img": "images/Hoverboard_Girl.png"
+              },
+              {
+                "name": "Tricky - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png",
+                "visibility_rules": "SP"
+              },
+              {
+                "name": "Speedy - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png",
+                "visibility_rules": "SP"
               }
             ]
           },
@@ -1450,9 +1450,7 @@
             "name": "Laser Maze Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "Heli",
-              "Thruster",
-              "PDA,[Heli]"
+              "^$Rilgar|Maze"
             ],
             "map_locations": [
               {
@@ -1484,12 +1482,7 @@
             "name": "Sewer Cave Gold Bolt",
             "color": "#ffb300",
             "access_rules": [
-              "O2,Heli,Hydrod,Swingshot",
-              "O2,Thruster,Hydrod,Swingshot",
-              "Heli,[O2],[Hydrod],[Swingshot]",
-              "Thruster,[O2],[Hydrod],[Swingshot]",
-              "PDA,[O2],[Heli],[Hydrod],[Swingshot]",
-              "O2,[Heli],[Hydrod],[Swingshot]"
+              "^$Rilgar|Sewer"
             ],
             "map_locations": [
               {
@@ -1514,6 +1507,42 @@
                 "name": "Gold Bolt",
                 "item_count": 1,
                 "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Cluck, Cluck",
+            "color": "#ff0000",
+            "access_rules": [
+              "^$Rilgar|Tank"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 3040,
+                "y": 125,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 1490,
+                "y": 650,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
               }
             ]
           }
