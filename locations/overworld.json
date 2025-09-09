@@ -354,7 +354,7 @@
             ]
           },
           {
-            "name": "Skillpoint",
+            "name": "Take Aim",
             "color": "#ff0000",
             "access_rules": [
               "^$Novalis|SP"
@@ -383,7 +383,7 @@
             ],
             "sections": [
               {
-                "name": "Take Aim - Skillpoint",
+                "name": "Shoot down a plane - Skillpoint",
                 "item_count": 1,
                 "chest_unopened_img": "images/Chicken.png"
               }
@@ -900,7 +900,7 @@
             ],
             "sections": [
               {
-                "name": "Skillpoint",
+                "name": "Swingshot without touching the ground - Skillpoint",
                 "item_count": 1,
                 "chest_unopened_img": "images/Chicken.png"
               }
@@ -936,7 +936,7 @@
             ],
             "sections": [
               {
-                "name": "Skillpoint",
+                "name": "Shoot down 3 planes - Skillpoint",
                 "item_count": 1,
                 "chest_unopened_img": "images/Chicken.png"
               }
@@ -1106,7 +1106,7 @@
             ],
             "sections": [
               {
-                "name": "Skillpoint",
+                "name": "Destroy 10 vehicles - Skillpoint",
                 "item_count": 1,
                 "chest_unopened_img": "images/Chicken.png"
               }
@@ -1537,7 +1537,7 @@
             ],
             "sections": [
               {
-                "name": "Skillpoint",
+                "name": "Morph a tank - Skillpoint",
                 "item_count": 1,
                 "chest_unopened_img": "images/Chicken.png"
               }
@@ -1869,7 +1869,7 @@
             ],
             "sections": [
               {
-                "name": "Skillpoint",
+                "name": "Use a Sand Mouse to destroy every tank - Skillpoint",
                 "item_count": 1,
                 "chest_unopened_img": "images/Chicken.png"
               }
@@ -2056,14 +2056,11 @@
       {
         "name": "Gaspar",
         "color": "#cd3e09",
-        "access_rules": [
-          "Gaspar"
-        ],
         "children": [
           {
             "name": "Gaspar Vendor",
             "access_rules": [
-              "[$Metal_Detector]"
+              "^$Gaspar|Vendor"
             ],
             "map_locations": [
               {
@@ -2104,7 +2101,7 @@
           {
             "name": "Find the Pilot's Helmet",
             "access_rules": [
-              ""
+              "^$Gaspar"
             ],
             "map_locations": [
               {
@@ -2122,6 +2119,138 @@
               {
                 "name": "Pilot's Helmet",
                 "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Destroy the Bombers",
+            "access_rules": [
+              "^$Gaspar|BombersGB"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2050,
+                "y": 865,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 500,
+                "y": 1885,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Volcano Gold Bolt",
+            "access_rules": [
+              "^$Gaspar|VolcanoGB"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1900,
+                "y": 580,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 350,
+                "y": 1600,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Destroyed",
+            "access_rules": [
+              "^$Gaspar|BombersSP"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1980,
+                "y": 850,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 430,
+                "y": 1870,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Destroy every docked ship - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
+          },
+          {
+            "name": "Gunner",
+            "access_rules": [
+              "^$Gaspar"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1850,
+                "y": 665,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 300,
+                "y": 1685,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Shoot down 5 ships in a turret - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
               }
             ]
           }

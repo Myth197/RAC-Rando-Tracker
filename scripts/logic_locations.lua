@@ -289,3 +289,38 @@ function Batalia(Location)
     end
     return access
 end
+
+---Gaspar general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Gaspar(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    if RACLogic:has { ["Gaspar"] = 1 } then
+        if Location == nil or
+            (
+                Location == "Vendor" and
+                Metal_Detector()
+            ) or (
+                Location == "BombersGB" and
+                RACLogic:has { ["Swingshot"] = 1 }
+            ) or (
+                Location == "VolcanoGB" and
+                RACLogic:lookup_has_any("Pack")
+            ) or (
+                Location == "BombersSP" and
+                (
+                    RACLogic:has { ["Visi"] = 1 } or
+                    (
+                        RACLogic:has { ["Swingshot"] = 1 } and
+                        RACLogic:lookup_has_any("Ranged")
+                    )
+                )
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            access = AccessibilityLevel.SequenceBreak
+        end
+    end
+    return access
+end
