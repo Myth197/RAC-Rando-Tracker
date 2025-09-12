@@ -6,21 +6,21 @@ RACLogic = {
   --["Blarg"] = { ["Swingshot"] = 1, ["O2"] = 1, ["Tres"] = 1 },
   --["Rilgar"] = { ["Heli"] = 1, ["Thruster"] = 1 }, -- ["Pack"]
   --["Umbris"] = { ["Swingshot"] = 1, ["Heli"] = 1, ["Thruster"] = 1 },
-  --["Orxon"] = { ["O2"] = 1, ["Heli"] = 1, ["Thruster"] = 1 },
+  ["Orxon"] = { ["Novalis"] = 1, ["Kerwan"] = 1, ["Aridia"] = 1, ["Eudora"] = 1, ["Blarg"] = 1, ["Rilgar"] = 1, ["Umbris"] = 1, ["Batalia"] = 1, ["Gaspar"] = 1, ["Poki"] = 1, ["Hoven"] = 1, ["Gemlik"] = 1, ["Oltanis"] = 1, ["Quartu"] = 1, ["Kalebo"] = 1, ["Fleet"] = 1, ["Veldin"] = 1 },
   ["Gaspar"] = { ["Swingshot"] = 1, ["Heli"] = 1, ["Thruster"] = 1 }, -- Any
   --["Gemlik"] = {[] = 1, },
   --["Oltanis"] = {[] = 1, },
   --["Kalebo"] = {[] = 1, },
   --["Fleet"] = {[] = 1, },
-  ["Veldin"] = { ["Tres"] = 1, ["Magne"] = 1, ["Hydrod"] = 1, ["Thruster"] = 1, ["Swingshot"] = 1, }, -- All
-  ["Kalebo_Switch"] = { ["Bomb"] = 1, ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["Tesla"] = 1, ["RYNO"] = 1 },
-  ["Rock_Explosion"] = { ["Bomb"] = 1, ["Mine"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
-  ["Ranged"] = { ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },
-  ["LongRanged"] = { ["Dev"] = 1, ["Visi"] = 1 },
-  ["Qwark_bot"] = { ["Bomb"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 }, -- TODO: Can this be done with the Mine glove?
-  ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 },
-  ["Speedtech"] = { ["Heli"] = 1, ["Thruster"] = 1, ["PDA"] = 1 },
-  ["Proxy"] = { ["Bomb"] = 1, ["Doom"] = 1, ["Mine"] = 1, ["Decoy"] = 1, ["Drone"] = 1 }
+  ["Veldin"] = { ["Tres"] = 1, ["Magne"] = 1, ["Hydrod"] = 1, ["Thruster"] = 1, ["Swingshot"] = 1, },            -- All
+  ["Kalebo_Switch"] = { ["Bomb"] = 1, ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["Tesla"] = 1, ["RYNO"] = 1 }, -- Any
+  ["Rock_Explosion"] = { ["Bomb"] = 1, ["Mine"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },                  -- Any
+  ["Ranged"] = { ["Blaster"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },                                     -- Any
+  ["LongRanged"] = { ["Dev"] = 1, ["Visi"] = 1 },                                                                -- Any
+  ["Qwark_bot"] = { ["Bomb"] = 1, ["Dev"] = 1, ["Visi"] = 1, ["RYNO"] = 1 },                                     -- Any -- TODO: Can this be done with the Mine glove?
+  ["Pack"] = { ["Heli"] = 1, ["Thruster"] = 1 },                                                                 -- Any
+  ["Speedtech"] = { ["Heli"] = 1, ["Thruster"] = 1, ["PDA"] = 1 },                                               -- Any
+  ["Proxy"] = { ["Bomb"] = 1, ["Doom"] = 1, ["Mine"] = 1, ["Decoy"] = 1 }                                        -- Any
 }
 
 
@@ -156,17 +156,13 @@ function Metal_Detector()
       --#endregion
       --#region Umbris
     elseif RACLogic:has { ["Umbris"] = 1 } then
-      if RACLogic:has { ["Swingshot"] = 1 } and
-          RACLogic:lookup_has_any("Pack")
-      then
+      if RACLogic:has_any { ["Swingshot"] = 1, ["Heli"] = 1 } then
         canReach = true
       end
       --#endregion
       --#region Orxon
     elseif RACLogic:has { ["Orxon"] = 1 } then
-      if RACLogic:has { ["O2"] = 1 } and
-          RACLogic:lookup_has_any("Pack")
-      then
+      if RACLogic:has_all { ["O2"] = 1, ["Heli"] = 1 } then
         canReach = true
       end
       --#endregion
@@ -179,7 +175,8 @@ function Metal_Detector()
       --#region Gemlik
     elseif RACLogic:has { ["Gemlik"] = 1 } then
       if RACLogic:has_all { ["Tres"] = 1, ["Magne"] = 1, ["Swingshot"] = 1 } and
-          RACLogic:has_any { ["Dev"] = 1, ["Visi"] = 1 }
+          RACLogic:has_any { ["Dev"] = 1, ["Visi"] = 1 } and
+          RACLogic:lookup_has_any("Pack")
       then
         canReach = true
       end

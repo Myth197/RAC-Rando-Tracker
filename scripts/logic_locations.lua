@@ -63,7 +63,10 @@ function Kerwan(Location)
     if RACLogic:has { ["Kerwan"] = 1 } then
         if Location == nil or
             (
-                Location == "Train" and
+                (
+                    Location == "Train" or
+                    Location == "ShopSP"
+                ) and
                 RACLogic:lookup_has_any("Pack")
             ) or (
                 Location == "CourseGB" and
@@ -233,12 +236,10 @@ function Umbris(Location)
     if RACLogic:has { ["Umbris"] = 1 } then
         if (
                 Location == "Boss" and
-                RACLogic:lookup_has_any("Pack") and
-                RACLogic:has_all { ["Hydrod"] = 1, ["Swingshot"] = 1 }
+                RACLogic:has_all { ["Hydrod"] = 1, ["Swingshot"] = 1, ["Heli"] = 1 }
             ) or (
                 Location == "GB" and
-                RACLogic:lookup_has_any("Pack") and
-                RACLogic:has { ["Swingshot"] = 1 }
+                RACLogic:has_all { ["Swingshot"] = 1, ["Heli"] = 1 }
             ) then
             access = AccessibilityLevel.Normal
         else
@@ -281,6 +282,72 @@ function Batalia(Location)
                 (
                     Location == "Tanks" and
                     RACLogic:hasnt { ["Sonic"] = 1 }
+                ) then
+            else
+                access = AccessibilityLevel.SequenceBreak
+            end
+        end
+    end
+    return access
+end
+
+---Orxon general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Orxon(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    if RACLogic:has { ["Orxon"] = 1 } then
+        if Location == nil or
+            (
+                Location == "Vendor" and
+                Metal_Detector()
+            ) or (
+                Location == "NanoVendor1" and
+                RACLogic:has_all { ["O2"] = 1, ["Heli"] = 1 }
+            ) or (
+                Location == "NanoVendor2" and
+                RACLogic:has_all { ["O2"] = 1, ["Heli"] = 1, ["Metal"] = 1 }
+            ) or (
+                Location == "Infobot" and
+                RACLogic:has_all { ["O2"] = 1, ["Swingshot"] = 1, ["Magne"] = 1, ["Heli"] = 1 }
+            ) or (
+                Location == "CavesGB" and
+                RACLogic:has { ["O2"] = 1 }
+            ) or (
+                Location == "TunnelGB" and
+                RACLogic:has_all { ["O2"] = 1, ["Swingshot"] = 1, ["Magne"] = 1, ["Heli"] = 1, ["Visi"] = 1 }
+            ) or (
+                Location == "SniperSP" and
+                RACLogic:has_all { ["O2"] = 1, ["Heli"] = 1 } and
+                RACLogic:has_any { ["Dev"] = 1, ["Blaster"] = 1, ["Visi"] = 1 }
+            ) or (
+                Location == "HeySP" and
+                RACLogic:has_all { ["O2"] = 1, ["Magne"] = 1, ["Taunt"] = 1 }
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            if RACLogic:hasnt { ["O2"] = 1 } and
+                (
+                    (
+                        Location == "CavesGB"
+                    ) or (
+                        Location == "TunnelGB"
+                    ) or (
+                        Location == "Vendor" and
+                        RACLogic:lookup_has_none("Orxon")
+                    )
+                ) or (
+                    Location == "SniperSP" and
+                    (
+                        RACLogic:has_none { ["Dev"] = 1, ["Blaster"] = 1, ["Visi"] = 1 } or
+                        RACLogic:hasnt { ["O2"] = 1 }
+                    )
+                ) or (
+                    Location == "HeySP" and
+                    (
+                        RACLogic:has_notall { ["Taunt"] = 1, ["O2"] = 1 }
+                    )
                 ) then
             else
                 access = AccessibilityLevel.SequenceBreak
