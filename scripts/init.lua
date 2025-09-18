@@ -66,6 +66,8 @@ ScriptHost:AddWatchForCode("Weapon Setting", "Weapons", Update_Setting)
 Update_Setting("Weapons")
 ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
 Update_Setting("Vendor")
+ScriptHost:AddWatchForCode("Vendor Logic", "Detector", Update_Setting)
+Update_Setting("Detector")
 ScriptHost:AddWatchForCode("Skillpoint Setting", "SP", Update_Setting)
 Update_Setting("SP")
 

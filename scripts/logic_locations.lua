@@ -301,7 +301,13 @@ function Orxon(Location)
         if Location == nil or
             (
                 Location == "Vendor" and
-                Metal_Detector()
+                (
+                    RACLogic:has_all { ["O2"] = 1, ["Heli"] = 1, ["Metal"] = 1 } or
+                    (
+                        RACLogic:lookup_has_any("Orxon") and
+                        Metal_Detector()
+                    )
+                )
             ) or (
                 Location == "NanoVendor1" and
                 RACLogic:has_all { ["O2"] = 1, ["Heli"] = 1 }

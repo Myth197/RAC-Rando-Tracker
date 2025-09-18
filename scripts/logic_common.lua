@@ -42,6 +42,7 @@ function RACLogic:has(items)
   for item, count in pairs(items) do
     return Tracker:ProviderCountForCode(item) >= count
   end
+  error("parameter for has() is not valid")
 end
 
 ---@param items table<string,integer> list with a single element
@@ -50,6 +51,7 @@ function RACLogic:hasnt(items)
   for item, count in pairs(items) do
     return Tracker:ProviderCountForCode(item) < count
   end
+  error("parameter for hasnt() is not valid")
 end
 
 ---@see RACLogic
@@ -136,6 +138,9 @@ end
 ---Returns true if there is access to any Metal Detector location.
 ---@return LocationReachable
 function Metal_Detector()
+  if Tracker:ProviderCountForCode("No_Bolt_Logic") > 0 then
+    return true
+  end
   local canReach = false
   if RACLogic:has { ["Metal"] = 1 } then
     if RACLogic:lookup_has_any("Early_Metal_Detector") then
@@ -360,6 +365,19 @@ function Update_Setting(code)
       object.BadgeTextColor = "#00FFFF"
     end
     ScriptHost:AddWatchForCode("Vendor Setting", "Vendor", Update_Setting)
+  elseif code == "Detector" then
+    ScriptHost:RemoveWatchForCode("Vendor Logic")
+    if object.CurrentStage == 0 then
+      object.BadgeText = "Ignore Logic"
+      object.BadgeTextColor = "#A0A0A0"
+    elseif object.CurrentStage == 1 then
+      object.BadgeText = "Any Bolts"
+      object.BadgeTextColor = "#FFFFFF"
+    else
+      object.BadgeText = "Metal Detector"
+      object.BadgeTextColor = "#FFFFFF"
+    end
+    ScriptHost:AddWatchForCode("Vendor Logic", "Detector", Update_Setting)
   elseif code == "SP" then
     ScriptHost:RemoveWatchForCode("Skillpoint Setting")
     if object.CurrentStage == 0 then

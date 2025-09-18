@@ -864,7 +864,6 @@
         "img": "images/Weapons.png",
         "inherit_codes": false,
         "img_mods": "@disabled",
-        "BadgeText": "vanilla",
         "codes": "Weapons_vanilla"
       },
       {
@@ -876,6 +875,31 @@
         "img": "images/Weapons_Gold.png",
         "inherit_codes": false,
         "codes": "Weapons, Gold_Weapons"
+      }
+    ]
+  },
+  {
+    "name": "Vendor Logic",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 1,
+    "stages": [
+      {
+        "img": "images/Purchase_Bolts.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": "No_Bolt_Logic"
+      },
+      {
+        "img": "images/Purchase_Bolts.png",
+        "inherit_codes": false,
+        "codes": "Bolt_Detector"
+      },
+      {
+        "img": "images/Purchase.png",
+        "inherit_codes": false,
+        "codes": "Detector"
       }
     ]
   },

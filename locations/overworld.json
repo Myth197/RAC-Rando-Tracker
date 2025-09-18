@@ -2063,12 +2063,18 @@
               {
                 "map": "map",
                 "x": 1350,
-                "y": 940
+                "y": 940,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
               },
               {
                 "map": "map_v",
                 "x": 1350,
-                "y": 1450
+                "y": 1450,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
               }
             ],
             "sections": [
