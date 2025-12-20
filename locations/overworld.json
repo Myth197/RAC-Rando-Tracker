@@ -2038,12 +2038,18 @@
               {
                 "map": "map",
                 "x": 1150,
-                "y": 900
+                "y": 900,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
               },
               {
                 "map": "map_v",
                 "x": 1150,
-                "y": 1410
+                "y": 1410,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
               }
             ],
             "sections": [
@@ -2363,20 +2369,17 @@
       {
         "name": "Pokitaru",
         "color": "#23cae4",
-        "access_rules": [
-          "Poki"
-        ],
         "children": [
           {
             "name": "Poki Vendor",
             "access_rules": [
-              "[Metal]"
+              "^$Poki|Vendor"
             ],
             "map_locations": [
               {
                 "map": "map",
                 "x": 2300,
-                "y": 930,
+                "y": 950,
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -2385,7 +2388,7 @@
               {
                 "map": "map_v",
                 "x": 750,
-                "y": 1950,
+                "y": 1970,
                 "shape": "trapezoid",
                 "restrict_visibility_rules": [
                   "weapon_plus"
@@ -2411,7 +2414,7 @@
           {
             "name": "Buy Thruster Pack",
             "access_rules": [
-              ""
+              "^$Poki"
             ],
             "map_locations": [
               {
@@ -2436,8 +2439,7 @@
           {
             "name": "Destroy the blarg ships",
             "access_rules": [
-              "Pilot,Thruster",
-              "Decoy,Pilot,[Thruster]"
+              "^$Poki|Ship"
             ],
             "map_locations": [
               {
@@ -2462,9 +2464,7 @@
           {
             "name": "Give Raritanium",
             "access_rules": [
-              "Hydrod,Tres,Raritanium",
-              "O2,Raritanium,[Tres],[Hydrod]",
-              "Raritanium,Decoy,PDA,[Tres],[Hydrod]"
+              "^$Poki|Rari"
             ],
             "map_locations": [
               {
@@ -2483,6 +2483,107 @@
                 "name": "Fred",
                 "item_count": 1,
                 "chest_unopened_img": "images/Fred_beach.png"
+              }
+            ]
+          },
+          {
+            "name": "Waterfall Gold Bolt",
+            "access_rules": [
+              "^$Poki|GB"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2200,
+                "y": 630,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 650,
+                "y": 1650,
+                "restrict_visibility_rules": [
+                  "AGB"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Gold Bolt",
+                "item_count": 1,
+                "chest_unopened_img": "images/Gold_Bolt.png"
+              }
+            ]
+          },
+          {
+            "name": "Alien Invasion",
+            "access_rules": [
+              "^$Poki|BombersSP"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2300,
+                "y": 900,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 750,
+                "y": 1920,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Destroy 3 flying ships with the Visibomb - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
+              }
+            ]
+          },
+          {
+            "name": "Buried Treasure",
+            "access_rules": [
+              "^$Poki"
+            ],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 2300,
+                "y": 750,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              },
+              {
+                "map": "map_v",
+                "x": 750,
+                "y": 1780,
+                "size": 42,
+                "shape": "diamond",
+                "restrict_visibility_rules": [
+                  "SP"
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Destroy all underwater Explosive crates - Skillpoint",
+                "item_count": 1,
+                "chest_unopened_img": "images/Chicken.png"
               }
             ]
           }

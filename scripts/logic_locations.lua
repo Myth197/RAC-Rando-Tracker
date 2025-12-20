@@ -397,3 +397,47 @@ function Gaspar(Location)
     end
     return access
 end
+
+---Poki general logic function, returns the accessibility level of the location parameter
+---@param Location? string
+---@return integer access None(Red), Normal(Green), SequenceBreak(Yellow) or Inspect(Blue)
+function Poki(Location)
+    ---@type integer Accessibility Level to be returned
+    local access = AccessibilityLevel.None
+    if RACLogic:has { ["Poki"] = 1 } then
+        if Location == nil or
+            (
+                Location == "Vendor" and
+                Metal_Detector()
+            ) or (
+                Location == "Ship" and
+                RACLogic:has_all { ["Pilot"] = 1, ["Thruster"] = 1 }
+            ) or (
+                Location == "Rari" and
+                RACLogic:has_all { ["Hydrod"] = 1, ["Tres"] = 1, ["Raritanium"] = 1 }
+            ) or (
+                Location == "GB" and
+                RACLogic:has_all { ["Thruster"] = 1, ["Swingshot"] = 1 }
+            ) or (
+                Location == "BombersSP" and
+                RACLogic:has { ["Visi"] = 1 }
+            ) then
+            access = AccessibilityLevel.Normal
+        else
+            if  (
+                    Location == "Ship" and
+                    RACLogic:hasnt { ["Pilot"] = 1 }
+                ) or (
+                    Location == "Rari" and 
+                    RACLogic:hasnt { ["Raritanium"] = 1 }
+                ) or (
+                    Location == "BombersSP" and 
+                    RACLogic:hasnt { ["Visi"] = 1 }
+                ) then
+            else
+                access = AccessibilityLevel.SequenceBreak
+            end
+        end
+    end
+    return access
+end
