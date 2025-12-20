@@ -18,13 +18,14 @@
     },
     "tracker_default": {
         "type": "container",
+        "background": "#505858",
         "content": {
             "type": "dock",
             "dropshadow": true,
             "content": [
                 {
                     "type": "dock",
-                    "dock": "left",
+                    "dock": "bottom",
                     "v_alignment": "stretch",
                     "margin": "0,0,3,0",
                     "content": [
@@ -60,12 +61,11 @@
                                         "item_size": 40,
                                         "item_margin": "1,1",
                                         "rows": [
-                                            ["Swingshot",   "Hologuise",    "Hydro",        "Pilot",        "Magne"],
-                                            ["Hydrod",      "Metal",        "Thruster",     "Sonic",        "Grind"],
-                                            ["Tres",        "PDA",          "Heli",         "O2",           ""],
-                                            ["",            "Hover",        "Persuader",    "Bolt_Grabber", "Gold"],
-                                            ["",            "Nanotech1",    "Nanotech2",    "Map-o-Matic",  ""],
-                                            ["",            "Zoom",         "Raritanium",   "Codebot",      ""]
+                                            ["Tres",        "Hydrod",   "Swingshot",    "Gold",         ""              ],
+                                            ["PDA",         "Metal",    "Hologuise",    "Grind",        "Magne"         ],
+                                            ["Hydro",       "Pilot",    "Hover",        "Persuader",    "Bolt_Grabber"  ],
+                                            ["Thruster",    "Sonic",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"   ],
+                                            ["Heli",        "O2",       "Zoom",         "Raritanium",   "Codebot"       ]
                                         ]
                                     }
                                 ]
@@ -97,6 +97,7 @@
     },
     "tracker_horizontal": {
         "type": "container",
+        "background": "#505858",
         "content": {
             "type": "dock",
             "dropshadow": true,
