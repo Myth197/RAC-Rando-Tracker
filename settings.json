@@ -2,5 +2,5 @@
     "auto_pin_capturing_locations": true,
     "auto_unpin_on_clear": true,
     "layout_swap_left_right": false,
-    "disabled_image_filter": "dim"
+    "disabled_image_filter": "saturation|0.5|bt601, brightness|0.5"
 }
