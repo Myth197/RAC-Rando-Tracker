@@ -47,7 +47,7 @@
                         },
                         {
                             "type": "group",
-                            "header": "Gadgets",
+                            "header": "Items",
                             "h_alignment": "stretch",
                             "dock": "top",
                             "content": {
@@ -60,39 +60,14 @@
                                         "item_size": 40,
                                         "item_margin": "1,1",
                                         "rows": [
-                                            ["",    "Tres", "Hydrod",   "Swingshot", ""],
-                                            ["",    "PDA",  "Metal",    "Hologuise", ""]
-                                        ]
-                                    },
-                                    {
-                                        "type": "itemgrid",
-                                        "h_alignment": "center",
-                                        "item_size": 40,
-                                        "item_margin": "1,6",
-                                        "rows": [
-                                            ["",    "Heli", "Thruster", "Hydro", ""],
-                                            ["",    "O2",   "Sonic",    "Pilot", ""],
-                                            ["Grind",    "Magne"]
+                                            ["Swingshot",   "Hologuise",    "Hydro",        "Pilot",        "Magne"],
+                                            ["Hydrod",      "Metal",        "Thruster",     "Sonic",        "Grind"],
+                                            ["Tres",        "PDA",          "Heli",         "O2",           ""],
+                                            ["",            "Hover",        "Persuader",    "Bolt_Grabber", "Gold"],
+                                            ["",            "Nanotech1",    "Nanotech2",    "Map-o-Matic",  ""],
+                                            ["",            "Zoom",         "Raritanium",   "Codebot",      ""]
                                         ]
                                     }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "group",
-                            "header": "Items",
-                            "h_alignment": "stretch",
-                            "dock": "top",
-                            "content": {
-                                "type": "itemgrid",
-                                "h_alignment": "center",
-                                "item_size": 40,
-                                "item_margin": "1,1",
-                                "rows": [
-                                    ["",    "Hover",        "Persuader",    "Bolt_Grabber", ""],
-                                    ["",    "Nanotech1",    "Nanotech2",    "Map-o-Matic",  ""],
-                                    ["",    "Zoom",         "Raritanium",   "Codebot",      ""],
-                                    ["",    "",             "Gold",         "",             ""]
                                 ]
                             }
                         },
@@ -151,7 +126,7 @@
                         },
                         {
                             "type": "group",
-                            "header": "Gadgets",
+                            "header": "Items",
                             "h_alignment": "stretch",
                             "dock": "left",
                             "content": {
@@ -164,54 +139,11 @@
                                         "item_size": 40,
                                         "item_margin": "1,1",
                                         "rows": [
-                                            ["Tres", "Hydrod",   "Swingshot"],
-                                            ["PDA",  "Metal",    "Hologuise"]
-                                        ]
-                                    },
-                                    {
-                                        "type": "itemgrid",
-                                        "h_alignment": "center",
-                                        "item_size": 40,
-                                        "item_margin": "1,1",
-                                        "rows": [
-                                            ["Heli",    "Thruster", "Hydro"]
-                                        ]
-                                    },
-                                    {
-                                        "type": "itemgrid",
-                                        "h_alignment": "center",
-                                        "item_size": 40,
-                                        "item_margin": "1,1",
-                                        "rows": [
-                                            ["O2", "Sonic", "Pilot"]
-                                        ]
-                                    },
-                                    {
-                                        "type": "itemgrid",
-                                        "h_alignment": "center",
-                                        "item_size": 40,
-                                        "item_margin": "1,1",
-                                        "rows": [
-                                            ["Grind",    "Magne"]
+                                            ["Tres",    "Hydrod",   "Swingshot",    "O2",       "Grind",    "Hover",        "Persuader",    "Bolt_Grabber"],
+                                            ["PDA",     "Metal",    "Hologuise",    "Sonic",    "Magne",    "Nanotech1",    "Nanotech2",    "Map-o-Matic"],
+                                            ["Heli",    "Thruster", "Hydro",        "Pilot",    "Gold",     "Zoom",         "Raritanium",   "Codebot"]
                                         ]
                                     }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "group",
-                            "header": "Items",
-                            "h_alignment": "stretch",
-                            "dock": "left",
-                            "content": {
-                                "type": "itemgrid",
-                                "h_alignment": "center",
-                                "item_size": 40,
-                                "item_margin": "1,1",
-                                "rows": [
-                                    ["Hover",        "Persuader",    "Bolt_Grabber",    "Gold"  ],
-                                    ["Nanotech1",    "Nanotech2",    "Map-o-Matic",     ""      ],
-                                    ["Zoom",         "Raritanium",   "Codebot",         ""      ]
                                 ]
                             }
                         },

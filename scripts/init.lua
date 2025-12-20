@@ -12,11 +12,12 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	require("scripts.logic_locations")
 	Tracker:AddLayouts("layouts/tracker.json")
 	Tracker:AddLocations("locations/overworld.json")
+	RACLogic:__init__()
 else
 	Tracker:AddLayouts("layouts/item_only.json")
 end
-Tracker:AddLayouts("layouts/standard_broadcast.json")
-RACLogic:__init__()
+---Tracker:AddLayouts("layouts/standard_broadcast.json")
+
 
 ---Table of All Planets
 Planets = {
